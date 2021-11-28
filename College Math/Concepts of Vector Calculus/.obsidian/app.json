@@ -1,0 +1,11 @@
+{
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "parametrizations",
+    "multivariable",
+    "piecewise",
+    "sidenote"
+  ],
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
+}

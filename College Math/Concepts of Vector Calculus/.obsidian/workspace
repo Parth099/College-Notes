@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "55c99ee33ee18b0e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ef96bb57fc1d6095",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Line Integrals Over Vector Fields.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "617c2886d8a2a420",
+    "type": "split",
+    "children": [
+      {
+        "id": "219991d275f0b01b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea3fd1f9d5fe952e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "8a239b21efce0b38",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "26c6050c467edc92",
+    "type": "split",
+    "children": [
+      {
+        "id": "eef01bf2aedce2af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04bffc56cc3c4308",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Line Integrals Over Vector Fields.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ef96bb57fc1d6095",
+  "lastOpenFiles": [
+    "Line Integrals Over Vector Fields.md",
+    "The Fundamental Theorem of Line Integrals.md",
+    "The Line Integral.md",
+    "Vector Fields.md",
+    "Greens Theorem.md",
+    "Curl and Divergence.md",
+    "Pasted image 20211128154249.png",
+    "Conservative Vector Fields.md",
+    "Arc Length.md",
+    "Images/GreensT-fig1.png"
+  ]
+}

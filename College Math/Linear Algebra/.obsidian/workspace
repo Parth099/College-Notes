@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "d37c2b89ba322156",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a8642e9175239cf",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "EigenValues and EigenVectors.md",
+            "mode": "preview"
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "65b95c01e6c434a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d48ddcd1b8fc55fd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5b0dee7e8d20bbbe",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "75e4457ed1cb1e33",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "eaadf9c8243baa0f",
+    "type": "split",
+    "children": [
+      {
+        "id": "63ad91fc15b6b9f3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a33d4ecfaed3fa0c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "EigenValues and EigenVectors.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "4a8642e9175239cf",
+  "lastOpenFiles": [
+    "EigenValues and EigenVectors.md",
+    "The Transpose.md"
+  ]
+}

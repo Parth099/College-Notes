@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "3aca3758366096aa",
+        "id": "24c24193f3a08797",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sliding Array Problems.md",
-            "mode": "preview"
+            "file": "CIS2168/Sorting/Merge Sort.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sliding Array Problems.md",
+                "file": "CIS2168/Sorting/Merge Sort.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +86,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "3aca3758366096aa",
+  "active": "24c24193f3a08797",
   "lastOpenFiles": [
-    "Sliding Array Problems.md"
+    "CIS2168/Sorting/Merge Sort.md",
+    "CIS2168/Sorting/Insertion Sort.md",
+    "CIS2168/Sorting/Sorting.md",
+    "ALGO/Sliding Array Problems.md"
   ]
 }

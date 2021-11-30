@@ -7,3 +7,5 @@ A Vector Field example:
 $$F(x, y, z) = \langle h(x, y, z), g(x, y, z), k(x, y, z) \rangle$$
 Notice how it gives each point on the plane a Vector.
 ![[VectorFieldEX1.png]]
+
+*A 2d example*

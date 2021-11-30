@@ -29,7 +29,7 @@ Note that the cut at $C_1, C_2$ is irrelevant. This is shown by the property in 
 
 These cuts can be made infinitely small such that:
 $$
-\int_C \vec{F}\cdot d\vec{r} = \sum_{i = 0}^{\infty} \int_{C_i} \vec{F}\cdot d\vec{r}
+\oint_C \vec{F}\cdot d\vec{r} = \sum_{i = 0}^{\infty} \int_{C_i} \vec{F}\cdot d\vec{r}
 $$
 Hence the double integral. We add up the internal curves inside the boundary curve $C$. 
 The $\dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y}$ will be explained below.
@@ -47,4 +47,7 @@ The $\dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y}$ will be ex
  
  #### The "Tiny" Piece
  
-[INS IMG HERE]
+![[GreensTinyPiece.png]]
+
+*Note: The $\Delta$ imperfections stem from the fact that limits were taken to obtain $\partial$ derivatives .
+

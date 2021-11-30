@@ -1,7 +1,12 @@
 {
   "spellcheck": true,
   "spellcheckDictionary": [
-    "subarray"
+    "subarray",
+    "MergeSort",
+    "Algo",
+    "subarrays",
+    "Linearithmic"
   ],
-  "showFrontmatter": true
+  "showFrontmatter": true,
+  "alwaysUpdateLinks": true
 }

@@ -8,7 +8,7 @@ Note: $\nabla f$  is the gradient of $f$
 
 Recall FTOC
 
-$$\int_a^b f^{\prime}(x) dx = f(b) - f(b)$$
+$$\int_a^b f^{\prime}(x)\mathop{dx} = f(b) - f(b)$$
 
 The point here is that we are integrating a "derivative" and such the integral depends on the endpoints. 
 

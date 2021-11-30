@@ -5,7 +5,8 @@
     "MergeSort",
     "Algo",
     "subarrays",
-    "Linearithmic"
+    "Linearithmic",
+    "reheaped"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true

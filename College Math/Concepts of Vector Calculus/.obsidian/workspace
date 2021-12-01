@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Greens Theorem.md",
+            "file": "Curl and Divergence.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Greens Theorem.md",
+                "file": "Curl and Divergence.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "ef96bb57fc1d6095",
   "lastOpenFiles": [
-    "Greens Theorem.md",
     "Curl and Divergence.md",
-    "Conservative Vector Fields.md",
     "The Line Integral.md",
-    "The Fundamental Theorem of Line Integrals.md",
+    "Math 2043 Final notes.md",
+    "Greens Theorem.md",
+    "Images/GreensTinyPiece.png",
+    "Images/divCurlZeroEx.png",
+    "Images/GreensT-fig1.png",
+    "Images/VectorFieldEX1.png",
     "Line Integrals Over Vector Fields.md",
-    "Vector Fields.md",
-    "Images/A.png",
-    "Arc Length.md",
-    "Pasted image 20211128154249.png"
+    "Arc Length.md"
   ]
 }

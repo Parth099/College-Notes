@@ -74,15 +74,15 @@ public static <T extends Comparable<T>> void shrinkHeap(T[] table){
 			int right = left + 1;  
 			int maxChild = left;  
 			if(right < n && table[right].compareTo(table[left]) > 0){  
-					maxChild = right;  
+				maxChild = right;  
 			}  
-				if(table[parent].compareTo(table[maxChild]) < 0){  
-					swap(table, parent, maxChild);  
+			if(table[parent].compareTo(table[maxChild]) < 0){  
+				swap(table, parent, maxChild);  
 				parent = maxChild;  
 			}  
-				else{  
-					break; //heap is restored  
-				}  
+			else{  
+				break; //heap is restored  
+			}  
 		}  
     }  
 }

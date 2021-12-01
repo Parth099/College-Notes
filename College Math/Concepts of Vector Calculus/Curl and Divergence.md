@@ -22,7 +22,7 @@ We can note that if $\vec{F} = \nabla f$ then:
 $$\text{curl}(\nabla f) = \vec{0}$$
 *The zero Vector*
 
-This gives us a way to see if a field is conservative.
+This gives us a way to see if a field is a [[Conservative Vector Fields]]
 
 ### Curl of  Conservative Fields
 if $\text{curl}(\vec{F}) = \vec{0}$ then: $\vec{F}$ **is** conservative ([[Vector Fields]]).

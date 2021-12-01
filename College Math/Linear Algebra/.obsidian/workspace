@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "EigenValues and EigenVectors.md",
+            "file": "The Transpose.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "EigenValues and EigenVectors.md",
+                "file": "The Transpose.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
   },
   "active": "4a8642e9175239cf",
   "lastOpenFiles": [
-    "EigenValues and EigenVectors.md",
-    "The Transpose.md"
+    "The Transpose.md",
+    "EigenValues and EigenVectors.md"
   ]
 }

@@ -6,12 +6,7 @@ Statement: Let $C$ be a positively oriented, piecewise-smooth, simple
 closed curve in the plane and let $D$ be the region bounded by $C$. If $P$ and $Q$ have
 continuous partial derivatives on an open region that contains $D$, then
 
-
 $$\oint_C \vec{F}\cdot d\vec{r} = {\iint}_{D} \dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y} dA$$
-
-
-
-
 
 ## Positively Oriented
  Positively Oriented means that for all points on a closed curve $C$ the region it encloses $D$ is **always** on the right. 

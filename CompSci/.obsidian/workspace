@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "01cdaf64bacfd13e",
+        "id": "65a1750ebab6fe01",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2168/Sorting/Heap Sort.md",
-            "mode": "preview"
+            "file": "CIS2168/Data Structures/Stack.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2168/Sorting/Heap Sort.md",
+                "file": "CIS2168/Data Structures/Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,13 +86,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "01cdaf64bacfd13e",
+  "active": "65a1750ebab6fe01",
   "lastOpenFiles": [
+    "CIS2168/Data Structures/Stack.md",
+    "CIS2168/Sorting/Sorting.md",
+    "CIS2168/Sorting/Quick Sort.md",
+    "CIS2168/Sorting/Merge Sort.md",
     "CIS2168/Sorting/Heap Sort.md",
     "CIS2168/Sorting/Insertion Sort.md",
-    "CIS2168/Sorting/Merge Sort.md",
-    "CIS2168/Sorting/Sorting.md",
-    "Untitled.md",
+    "Untitled 1.md",
     "ALGO/Sliding Array Problems.md"
   ]
 }

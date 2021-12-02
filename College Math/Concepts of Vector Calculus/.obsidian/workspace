@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Curl and Divergence.md",
+            "file": "Line Integrals Over Vector Fields.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Curl and Divergence.md",
+                "file": "Line Integrals Over Vector Fields.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "ef96bb57fc1d6095",
   "lastOpenFiles": [
-    "Curl and Divergence.md",
-    "The Line Integral.md",
-    "Math 2043 Final notes.md",
-    "Greens Theorem.md",
-    "Images/GreensTinyPiece.png",
-    "Images/divCurlZeroEx.png",
-    "Images/GreensT-fig1.png",
-    "Images/VectorFieldEX1.png",
     "Line Integrals Over Vector Fields.md",
-    "Arc Length.md"
+    "Curl and Divergence.md",
+    "Math 2043 Final notes.md",
+    "The Line Integral.md",
+    "Arc Length.md",
+    "Conservative Vector Fields.md",
+    "Vector Fields.md",
+    "Greens Theorem.md",
+    "img/GreensTinyPiece.png",
+    "img/divCurlZeroEx.png"
   ]
 }

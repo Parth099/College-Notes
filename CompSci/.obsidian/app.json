@@ -6,8 +6,12 @@
     "Algo",
     "subarrays",
     "Linearithmic",
-    "reheaped"
+    "reheaped",
+    "subprocesses",
+    "QuickSort",
+    "QuickSorting"
   ],
   "showFrontmatter": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "promptDelete": false
 }

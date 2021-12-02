@@ -31,7 +31,7 @@ $$\iint_S \vec{F}\cdot\mathop{d\vec{S}} = \iint_{S_1} \vec{F}\cdot\mathop{d\vec{
 Recall [[Curl and Divergence]]
 $$\text{curl }\vec{F} = \nabla \times \vec{F}$$
 $$
-\oint\vec{F}\cdot\mathop{d\vec{r}} = \iint_S \text{curl}(\vec{F})\mathop{d\vec{S}}
+\oint\vec{F}\cdot\mathop{d\vec{r}} = \iint_S\text{curl}(\vec{F})\cdot\mathop{d\vec{S}}
 $$
 
 Note that the RHS is a **SURFACE** Integral. 

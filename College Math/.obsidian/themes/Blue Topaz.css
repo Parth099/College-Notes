@@ -1,8 +1,8 @@
-/*蓝色托帕石，适合Obsidian v0.12.19。uid [20211125] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v0.12.19, uid [20211125] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v0.13.6。uid [20211202] flying fly flies制作，欢迎使用及分享，借鉴（copy）了许多主题，在此一一感谢。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v0.13.6, uid [20211202] created by flying fly flies. Feel free to use, share and modify. Thanks for all shared css themes which inspire me a lot. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
-@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @98yugan */
+@LillianWho @成雙酱 @嘴上云 @Cuman @Klaas @Thinkbond @Rainbell129(AKA Lavi) @awyugan */
 
 /* 
 ===========================    TIPS   ===============================
@@ -283,97 +283,110 @@ settings:
     default: false
   - 
     id: background-settings
-    title: Background Settings
-    title.zh: 背景设置
+    title: 1. General Settings
+    title.zh: 1. 整体性设置
     type: heading
     level: 1
-    collapsed: true
+    collapsed: false
   - 
-    id: background-settings-markdown-page
-    title: Note Page
-    title.zh: 笔记背景
+    id: color-settings
+    title: 1.1 Color Palette
+    title.zh: 1.1 颜色设置
     type: heading
     level: 2
     collapsed: true
-  - 
-    id: background-image-settings-switch
-    title: Switch off Background Images
-    title.zh: 移除笔记背景
-    type: class-toggle
-    default: false
-  - 
-    id: background-image-settings-markdown-page-options
-    title: Choose Images 
-    title.zh: 选择背景
+  -
+    id: color-scheme-options
+    title: Color Palette (from Topaz Community)
+    title.zh: 整体配色选择 (由Topaz社区贡献)
     type: class-select
     allowEmpty: false
-    default: background-image-settings-markdown-page-default
+    default: color-scheme-options-default
     options:
       - 
         label: Default
-        value: background-image-settings-markdown-page-default
+        value: color-scheme-options-default
       - 
-        label: Sea and Sky
-        value: background-image-settings-markdown-page-sea-and-sky
+        label: Avocado
+        value: color-scheme-options-avocado-topaz
       - 
-        label: Four Seasons
-        value: background-image-settings-markdown-page-four-seasons
-      - 
-        label: Woof Meow
-        value: background-image-settings-markdown-page-woof-meow
-      - 
-        label: White and Black
-        value: background-image-settings-markdown-page-white-and-black
-      - 
-        label: Kawaii
-        value: background-image-settings-markdown-page-kawaii 
-  -
-    id: background-image-settings-markdown-page-random
-    title: Random Background Images
-    title.zh: 随机背景
-    description: Images will be refreshed when Obsidian launches; network is needed
-    description.zh: 图片在Obsidian打开时刷新；需要联网 
-    type: class-toggle
-    default: false
-  - 
-    id: background-image-settings-markdown-page-random-options
-    title: Random image with a certain color
-    title.zh: 特定颜色的随机背景
-    type: class-select
-    allowEmpty: false
-    default: background-image-settings-markdown-page-random-default
-    options:
-      - 
-        label: None
-        value: background-image-settings-markdown-page-random-default
-      - 
-        label: Blue
-        value: background-image-settings-markdown-page-random-blue
-      - 
-        label: Green
-        value: background-image-settings-markdown-page-random-green
+        label: Monochrome 
+        value: color-scheme-options-monochrome-topaz
       - 
         label: Pink
-        value: background-image-settings-markdown-page-random-pink
-      -
-        label: Purple
-        value: background-image-settings-markdown-page-random-purple
-      -
-        label: Red
-        value: background-image-settings-markdown-page-random-red
+        value: color-scheme-options-pink-topaz
       - 
-        label: Yellow and Orange
-        value: background-image-settings-markdown-page-random-yellow-and-orange
+        label: ==↓👩😺 Created by Topaz Community 🐵🧑↓==
+        value: 
+      -
+        label: Flamingo (@Mouth on Cloud & @Rainbell)
+        value: color-scheme-options-flamingo
+      -
+        label: Honey milk (@LillianWho)
+        value: color-scheme-options-honey-milk-topaz
+      -
+        label: 榛子巧克力 (@LillianWho)
+        value: color-scheme-options-chocolate-topaz
+      - 
+        label: Lilac (@awyugan)
+        value: color-scheme-options-lilac
+      - 
+        label: Autumn (@LillianWho)
+        value: color-scheme-options-autumn-topaz  
+      -
+        label: 魔方 Rubik's Cube (@LillianWho)
+        value: color-scheme-options-lillimon-topaz 
   -
-    id: background-settings-workplace
-    title: Workplace
-    title.zh: 工作页面背景
+    id: color-magic
+    title: Color of Rubik's Cube palette
+    title.zh: 魔方配色
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: magic-main-color
+    title: main color
+    title.zh: 主题色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#95a503'
+    default-dark: '#95a503'
+  -
+    id: magic-low-color
+    title: low color
+    title.zh: 浅色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#e0e79a'
+    default-dark: '#e0e79a'
+  -
+    id: magic-deep-color
+    title: deep color
+    title.zh: 深色
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: '#746909'
+    default-dark: '#746909'
+  - 
+    id: background-settings
+    title: 1.2 Background Images
+    title.zh: 1.2 背景设置
     type: heading
     level: 2
     collapsed: true
   - 
+    id: background-settings-workplace
+    title: 1.2.1 Workplace background image
+    title.zh: 1.2.1 工作页面背景
+    type: heading
+    level: 3
+    collapsed: true
+  - 
     id: background-settings-workplace-style
-    title: Background image style
+    title:  Image Style
     title.zh: 背景样式
     type: class-select
     allowEmpty: false
@@ -473,52 +486,97 @@ settings:
     description.zh: 自定义背景。使用Default内格式设置网络图片。使用以下格式设置本地图片  url("app://local/D:/Documents/Pictures/Unsplash/UnsplashTemp.jpg")
     type: variable-text
     default: url("https://")
-  - 
-    id: color-settings
-    title: Color
-    title.zh: 颜色设置
-    type: heading
-    level: 1
-    collapsed: true
   -
-    id: color-scheme-options
-    title: Color scheme options (from Topaz Community)
-    title.zh: 整体配色选择 (由Topaz社区贡献)
+    id: background-settings-markdown-page
+    title: 1.2.2 Note Page Background Image
+    title.zh: 1.2.2 笔记背景
+    type: heading
+    level: 3
+    collapsed: true
+  - 
+    id: background-image-settings-switch
+    title: Switch off Background Images
+    title.zh: 移除笔记背景
+    type: class-toggle
+    default: false
+  - 
+    id: background-image-settings-markdown-page-options
+    title: Choose Images 
+    title.zh: 选择背景
     type: class-select
     allowEmpty: false
-    default: color-scheme-options-default
+    default: background-image-settings-markdown-page-default
     options:
       - 
         label: Default
-        value: color-scheme-options-default
+        value: background-image-settings-markdown-page-default
       - 
-        label: Avocado
-        value: color-scheme-options-avocado-topaz
+        label: Sea and Sky
+        value: background-image-settings-markdown-page-sea-and-sky
       - 
-        label: Monochrome 
-        value: color-scheme-options-monochrome-topaz
+        label: Four Seasons
+        value: background-image-settings-markdown-page-four-seasons
+      - 
+        label: Woof Meow
+        value: background-image-settings-markdown-page-woof-meow
+      - 
+        label: White and Black
+        value: background-image-settings-markdown-page-white-and-black
+      - 
+        label: Kawaii
+        value: background-image-settings-markdown-page-kawaii 
+  -
+    id: background-image-settings-markdown-page-random
+    title: Random Background Images
+    title.zh: 随机背景
+    description: Images will be refreshed when Obsidian launches; network is needed
+    description.zh: 图片在Obsidian打开时刷新；需要联网 
+    type: class-toggle
+    default: false
+  - 
+    id: background-image-settings-markdown-page-random-options
+    title: Random image with a certain color
+    title.zh: 特定颜色的随机背景
+    type: class-select
+    allowEmpty: false
+    default: background-image-settings-markdown-page-random-default
+    options:
+      - 
+        label: None
+        value: background-image-settings-markdown-page-random-default
+      - 
+        label: Blue
+        value: background-image-settings-markdown-page-random-blue
+      - 
+        label: Green
+        value: background-image-settings-markdown-page-random-green
       - 
         label: Pink
-        value: color-scheme-options-pink-topaz
-      - 
-        label: ==↓👩😺Created by Topaz Community🐵🧑↓==
-        value: 
+        value: background-image-settings-markdown-page-random-pink
       -
-        label: Flamingo (@Mouth on Cloud & @Rainbell)
-        value: color-scheme-options-flamingo
+        label: Purple
+        value: background-image-settings-markdown-page-random-purple
       -
-        label: Honey milk (@LillianWho)
-        value: color-scheme-options-honey-milk-topaz
-      -
-        label: 榛子巧克力 (@LillianWho)
-        value: color-scheme-options-chocolate-topaz
+        label: Red
+        value: background-image-settings-markdown-page-random-red
       - 
-        label: Lilac (@awyugan)
-        value: color-scheme-options-lilac
-      - 
-        label: Autumn (@LillianWho)
-        value: color-scheme-options-autumn-topaz  
+        label: Yellow and Orange
+        value: background-image-settings-markdown-page-random-yellow-and-orange
   -
+    id: background-settings
+    title: 2. Detail Settings
+    title.zh: 2. 细节设置
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: color-settings
+    title: 2.1 Color Settings
+    title.zh: 2.1 颜色设置
+    type: heading
+    level: 2
+    collapsed: true
+  - 
     id: text-normal
     title: Main text color
     type: variable-themed-color
@@ -528,10 +586,10 @@ settings:
     default-dark: '#bdbdbd'
   -
     id: background-color-settings
-    title: Background colors
-    title.zh: 背景颜色设置
+    title: 2.1.1 Background Colors
+    title.zh: 2.1.1 背景颜色设置
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: background-primary-bg-4-bt
@@ -575,10 +633,10 @@ settings:
     default-dark: '#333333'
   -
     id: accent-color-settings
-    title: Accent colors
-    title.zh: 强调色设置
+    title: 2.1.2 Accent Colors
+    title.zh: 2.1.2 强调色设置
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: interactive-accent
@@ -600,10 +658,10 @@ settings:
     default-dark: '#53aaf5'
   -
     id: header-color-settings
-    title: Header colors
-    title.zh: 标题颜色
+    title: 2.1.3 Header colors
+    title.zh: 2.1.3 标题颜色
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: h1-color
@@ -655,10 +713,10 @@ settings:
     default-dark: '#c173ee'
   -
     id: tag-color-settings
-    title: Tag colors
-    title.zh: 标签颜色
+    title: 2.1.4 Tag colors
+    title.zh: 2.1.4 标签颜色
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   - 
     id: tag1
@@ -734,10 +792,17 @@ settings:
     default-dark: '#2244d8'
   -
     id: font-settings
-    title: Font
-    title.zh: 字体设置
+    title: 2.2 Font
+    title.zh: 2.2 字体
     type: heading
-    level: 1
+    level: 2
+    collapsed: true
+  -
+    id: font-settings
+    title: 2.2.1 Font Family
+    title.zh: 2.2.1 字体设置
+    type: heading
+    level: 3
     collapsed: true
   -
     id: font-family-change-to-default
@@ -820,11 +885,18 @@ settings:
     type: variable-text
     default: "'Lucida Handwriting', 'Segoe UI Emoji'"
   - 
-    id: style-change-options
-    title: Style
-    title.zh: 样式设置
+    id: font-size-settings
+    title: 2.2.2 Font Size
+    title.zh: 2.2.1 字体大小设置
     type: heading
-    level: 1
+    level: 3
+    collapsed: true
+  -
+    id: style-change-options
+    title: 2.3 Element Style
+    title.zh: 2.3 其他样式设置
+    type: heading
+    level: 2
     collapsed: true
   -
     id: bt-status-off
@@ -846,11 +918,45 @@ settings:
     type: class-toggle
     default: false
   -
-    id: list-style-change-options-folder
-    title: List
-    title.zh: 列表
+    id: circular-checkbox
+    title: Circular Checkbox
+    title.zh: 圆形勾选框
+    type: class-toggle
+    default: false
+  -
+    id: fancy-hr-folder
+    title: 2.3.1 Horizontal Ruler (hr, ---)
+    title.zh: 2.3.1 分割线（hr，---）
     type: heading
-    level: 2
+    level: 3
+    collapsed: true
+  -
+    id: fancy-hr
+    title: Fancy Horizontal Ruler (hr)
+    title.zh: 装饰性分割线（hr，---）
+    type: class-toggle
+    default: false
+  -
+    id: fancy-hr-icon
+    title: Centre Icon
+    title.zh: 分割线中间图标
+    description: Do not remove the quotes
+    description.zh: 保留引号
+    type: variable-text
+    default: "'😀'"
+  -
+    id: fancy-hr-rotate
+    title: Degree of icon rotation 
+    title.zh: 图标旋转角度
+    type: variable-number
+    default: 0
+    format: deg
+  -
+    id: list-style-change-options-folder
+    title: 2.3.2 List
+    title.zh: 2.3.2 列表
+    type: heading
+    level: 3
     collapsed: true
   -
     id: list-style-change-options
@@ -880,10 +986,10 @@ settings:
         value: list-no-border
   - 
     id: folder-style-change-options-folder
-    title: Folder
-    title.zh: 文件夹
+    title: 2.3.3 Folder
+    title.zh: 2.3.3 文件夹
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: light-background-color-files
@@ -909,10 +1015,10 @@ settings:
     default: false
   - 
     id: folder-style-change-options-colorful-folder
-    title: Colorful Folder
-    title.zh: 多彩文件夹
+    title: 2.3.3.1 Colorful Folder
+    title.zh: 2.3.3.1 多彩文件夹
     type: heading
-    level: 3
+    level: 4
     collapsed: true
   -
     id: folder-style-change-options-colorful
@@ -947,10 +1053,10 @@ settings:
         value: folder-colorful-five
   - 
     id: blockquote-style-change-options-folder
-    title: Blockquote
-    title.zh: 引用框
+    title: 2.3.4 Blockquote
+    title.zh: 2.3.4 引用框
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: blockquote-style-change-options
@@ -980,10 +1086,10 @@ settings:
         value: blockquote-style-border-left
   - 
     id: export-pdf-style-folder
-    title: Exported PDF in Dark Mode
-    title.zh: 黑暗模式下导出PDF样式
+    title: 2.3.5 Exported PDF in Dark Mode
+    title.zh: 2.3.5 黑暗模式下导出PDF样式
     type: heading
-    level: 2
+    level: 3
     collapsed: true
   -
     id: export-pdf-style-options
@@ -1002,10 +1108,36 @@ settings:
       - 
         label: Dark Codebox
         value: export-pdf-style-default-dark-codebox
-  -  
+  -
+    id: embed-folder
+    title: 2.3.6 Embeds
+    title.zh: 2.3.6 嵌入样式
+    type: heading
+    level: 3
+    collapsed: true
+  -
+    id: naked-embed
+    title: Naked Embed
+    title.zh: 嵌入背景透明
+    type: class-toggle
+    default: false
+  -
+    id: embed-hd
+    title: hide embed headings
+    title.zh: 隐藏嵌入标题
+    type: class-toggle
+    default: false
+  - 
     id: style-options-for-other-plugins
-    title: For Other Plugins (Coming soon)
-    title.zh: 其他插件样式
+    title: 3. For Other Plugins (Coming soon)
+    title.zh: 3. 其他插件样式
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: style-options-for-calendar-plugin-header
+    title: 3.1 Calendar
+    title.zh: 3.1 日历插件样式
     type: heading
     level: 2
     collapsed: true
@@ -1027,10 +1159,10 @@ settings:
         value: style-options-for-calendar-plugin-style-two
   -
     id: style-options-for-admonition-plugin-header
-    title: Admonition Style
-    title.zh: Admonition插件样式
+    title: 3.2 Admonition Style
+    title.zh: 3.2 Admonition插件样式
     type: heading
-    level: 3
+    level: 2
     collapsed: true
   -
     id: style-options-for-admonition-plugin
@@ -1038,13 +1170,13 @@ settings:
     title.zh: 是否开启Admonition特别样式支持
     type: class-toggle
     default: false
-    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
+    description : 目前支持ad类型：bank 全透明框🔸def definition🔸thm theorem🔸lem lemma🔸cor corollary🔸pro proposition 🔸🔸hibox ❗使用方法❗下面以thm类型为例，在admonition插件的设置页面中，类型填 thm，标题填 定理，图标选择hand-point-right，颜色自己选比如浅绿色，添加成功后，在正文中使用代码块```ad-thm 即可激活。其他类型以此类推。  
   -
     id: style-options-for-kanban-plugin-header
-    title: Kanban (Coming soon)
-    title.zh: 其他插件样式
+    title: 3.3 Kanban (Coming soon)
+    title.zh: 3.3 其他插件样式
     type: heading
-    level: 3
+    level: 2
     collapsed: true
   -
     id: style-options-for-kanban-plugin-static
@@ -1078,6 +1210,60 @@ settings:
       - 
         label: Style 2
         value: style-options-for-kanban-plugin-dynamic-two
+  -
+    id: build-in-style-folder
+    title: 4. Built-in Style Intro
+    title.zh: 4. 内置样式介绍
+    description: There are some built-in CSS classes that should be manually declared in the YAML area. Details refer to the TIPS demo vault for Blue Topaz on Github.
+    description.zh: 主题内置css类，手动在文档YAML区域进行cssclass声明，详细用法可以参考主题tips库，可以在主题QQ群（社区）获取。
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: built-in-style-kanban
+    title: Pseudo-kanban
+    title.zh: 伪看板 kanban
+    type: heading
+    level: 2
+    collapsed: true
+    description:  ❗cssclass：kanban❗ A kind of kanban-liked style for unordered lists. (Adapted from Spectrum theme by @Wiktoria Mielcarek)
+    description.zh:  ❗cssclass：kanban❗ 实现类似看板样式并排显示，只对无序列表生效。改自Spectrum theme by @Wiktoria Mielcarek
+  -
+    id: built-in-style-code-wrap
+    title:  Code  Wrap
+    title.zh: 代码行自动换行 code-wrap
+    type: heading
+    level: 2
+    collapsed: true
+    description.zh:  ❗cssclass：code-wrap❗实现代码块中的代码行自动换行。
+    description:  ❗cssclass：code-wrap❗ Can be used to wrap code in code blocks for individual .md file
+  -
+    id: built-in-style-inline-list
+    title:  List in a horizontal row (inline list)
+    title.zh: 行内列表 inline-list
+    type: heading
+    level: 2
+    collapsed: true
+    description.zh:  ❗cssclass：inline-list❗列表项横向排布。
+    description:  ❗cssclass：inline-list❗ To make the list show in a horizontal row. Meanwhile, it makes the list show inline which can be used with inline images (like ![[xxx.jpg|inlineR]])
+  -
+    id: built-in-style-img-grid
+    title:  Image Grid
+    title.zh: 图片自适应横排显示 img-grid
+    type: heading
+    level: 2
+    collapsed: true
+    description.zh:  ❗cssclass：img-grid❗实现图片类似网格一样自适应横排显示。也可以使用类似格式单独调整![[obsidian_image.png|inl|100]]  (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
+    description: ❗cssclass：img-grid❗ To make images, which are not separated by line breaks, arrange in a grid in the preview mode. (adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css)
+  -
+    id: built-in-style-matrix
+    title: Eisenhower Matrix
+    title.zh: 表格四象图分布 matrix
+    type: heading
+    level: 2
+    collapsed: true
+    description:  ❗cssclass：matrix❗ Usage https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34 (Adapted from Spectrum theme by @Wiktoria Mielcarek)
+    description.zh:  ❗cssclass：matrix❗ 实现N*2表格四象限分布。表格内容使用![[XXX]]引入 见 https://forum.obsidian.md/t/theme-spectrum-version-1-0-0-and-resise-graphs-controls/12688/34。改自Spectrum theme by @Wiktoria Mielcarek
   -
     id: topaz-community
     title: Supported by Topaz Community 😁
@@ -1249,6 +1435,10 @@ settings:
 
   --background-settings-workplace-theme-light-custom: url("https://");
   --background-settings-workplace-theme-dark-custom: url("https://");
+  --blur-depth: 10px;
+
+  --fancy-hr-icon: '😀';
+  --fancy-hr-rotate: 0deg;
 }
 
 body.background-settings-workplace-style-blur.theme-light {
@@ -1385,7 +1575,7 @@ body.font-family-change-to-default.theme-dark .cm-strong.cm-em {
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
-  --internal-link-color-in-highlight: #74c7ff;
+  --internal-link-color-in-highlight: #39adfb;
 
   /*list*/
   --list-ul-block-color: #e19742a9;
@@ -2576,14 +2766,14 @@ body.color-scheme-options-monochrome-topaz.theme-dark {
   --table-background-color-odd: #0000001c;
   --table-border-color: #878787;
   --table-thead-background-color: #b3b3b363;
-  --table-hover-raw-color: #08569a21;
-  --table-hover-color: #1f65a221;
-  --table-hover-thead-color: #298c54c7;
+  --table-hover-raw-color: #4040401c;
+  --table-hover-color: #59595947;
+  --table-hover-thead-color: #6969691c;
 
   /*calendar*/
-  --calendar-week-color: #a2df94;
-  --calendar-week-hover: #61815c;
-  --calendar-week-background-color: #4a5842;
+  --calendar-week-color: #ededed;
+  --calendar-week-hover: #bfbfbf52;
+  --calendar-week-background-color: #b5b5b52e;
   --calendar-today-background-color: #8c4545;
 
   /*day planner*/
@@ -2854,14 +3044,14 @@ body.color-scheme-options-monochrome-topaz.theme-light {
   --table-background-color-odd: #ffffffaf;
   --table-border-color: #7d7d7d;
   --table-thead-background-color: #bdbdbdc7;
-  --table-hover-raw-color: #85bfee2f;
-  --table-hover-color: #5dacec34;
-  --table-hover-thead-color: #ddefff;
+  --table-hover-raw-color: #f0f0f063;
+  --table-hover-color: #e3e3e354;
+  --table-hover-thead-color: #ebebeb54;
 
   /*calendar*/
-  --calendar-week-color: #48b432;
-  --calendar-week-hover: #e9ffe3;
-  --calendar-week-background-color: #d6e6bf;
+  --calendar-week-color: #949494;
+  --calendar-week-hover: #b5b5b52e;
+  --calendar-week-background-color: #878787;
   --calendar-today-background-color: #aaeec6;
 
   /*day planner*/
@@ -3226,13 +3416,13 @@ body.color-scheme-options-pink-topaz.theme-light {
   --table-thead-background-color: #f4d6e6c7;
   --table-hover-raw-color: #fad1e92f;
   --table-hover-color: #e4a9bb34;
-  --table-hover-thead-color: #ddefff;
+  --table-hover-thead-color: #c8a7bc66;
 
   /*calendar*/
-  --calendar-week-color: #48b432;
-  --calendar-week-hover: #e9ffe3;
-  --calendar-week-background-color: #d6e6bf;
-  --calendar-today-background-color: #aaeec6;
+  --calendar-week-color: #b884a5c7;
+  --calendar-week-hover: #e3d8df66;
+  --calendar-week-background-color: #b884a599;
+  --calendar-today-background-color: #b1779c94;
 
   /*day planner*/
   --day-planner-pie: #eca95c;
@@ -3277,8 +3467,8 @@ body.color-scheme-options-pink-topaz.theme-light {
   --note-cloze: #000000;
 
   /* stickies */
-  --stickies-color-1: #b3e2b3;
-  --stickies-color-2: #e9c6f1;
+  --stickies-color-1: #e5c7dab5;
+  --stickies-color-2: #dac7afc7;
   --tape-color: #acacac65;
 
   /*Sliding panes*/
@@ -3420,9 +3610,9 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --embed-color: #4639413d;
   --search-result-file-title-color: #c0689b;
   --theme-color: var(--interactive-accent);
-  --theme-color-translucent: #637b717a;
-  --theme-color-translucent-1: #53695f7a;
-  --color-specification: #3ce252;
+  --theme-color-translucent: #c897b675;
+  --theme-color-translucent-1: #c897b63b;
+  --color-specification: #89396beb;
 
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -3504,7 +3694,7 @@ body.color-scheme-options-pink-topaz.theme-dark {
   /*calendar*/
   --calendar-week-color: #bb6396e6;
   --calendar-week-hover: #96798a6b;
-  --calendar-week-background-color: #4a5842;
+  --calendar-week-background-color: #c794948c;
   --calendar-today-background-color: #8c4545;
 
   /*day planner*/
@@ -3559,8 +3749,8 @@ body.color-scheme-options-pink-topaz.theme-dark {
   --note-cloze: #ffffff;
 
   /* stickies */
-  --stickies-color-1: #84c584;
-  --stickies-color-2: #c7a3cf;
+  --stickies-color-1: #ecb6d8c7;
+  --stickies-color-2: #ecd9b6c7;
   --tape-color: #99999967;
 
   /*Sliding panes*/
@@ -4057,7 +4247,7 @@ body.color-scheme-options-flamingo.theme-light #calendar-container .week-num:hov
 
 /*比上面那个还菜鸟的人做的一些修改*/
 body.color-scheme-options-flamingo.theme-light .nav-folder.mod-root>.nav-folder-title {
-  background-color: var(--background-secondary-alt-bg-3-bt)
+  background-color: var(--background-secondary-alt-bg-4-bt)
 }
 
 body.color-scheme-options-flamingo.theme-light .admonition {
@@ -4629,7 +4819,7 @@ body.color-scheme-options-honey-milk-topaz.theme-dark {
 
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
 
   --color-view-header-gradient-1: var(--bg-color2);
   --color-view-header-gradient-2: var(--bg-color);
@@ -5150,7 +5340,7 @@ body.color-scheme-options-chocolate-topaz.theme-dark {
 
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
   --background-4-sliding-panel: #252525ed;
   /* sliding panes 背景颜色 */
 
@@ -5530,7 +5720,7 @@ body.color-scheme-options-autumn-topaz.theme-dark {
   --event-item-color10:var(--color11);
 
   /*Sliding panes*/
-  --sliding-panes-header-color: var(--deep-color);
+  --sliding-panes-header-color: var(--color1);
 
   --checklist-bg-hover: #08080896;
 
@@ -5545,9 +5735,6 @@ body.color-scheme-options-autumn-topaz.theme-dark {
 
 
 }
-
-
-
 
 body.color-scheme-options-autumn-topaz #calendar-container {
   --color-background-heading: transparent;
@@ -5572,9 +5759,363 @@ body.color-scheme-options-autumn-topaz #calendar-container {
   padding: 0px 5px 0px 8px;
   margin: -21px -8px 0px -8px;
   line-height: 0.6;
+}
+
+body.color-scheme-options-lillimon-topaz.theme-light {
+
+  /*色系设置*/
+  --magic-low-color: #e0e79a;
+  --magic-main-color: #95a503;
+  --magic-deep-color: #746909;
+
+  --bg-color: #f8f8f5;
+  --bg-color2: #e7e7e4;
+
+  /*色系共 5 个值，3个主题色+2个背景色*/
+
+  --color1: var(--magic-low-color);
+  --color2: var(--magic-low-color);
+  --color3: var(--magic-low-color);
+  --color4: var(--magic-low-color);
+  --color5: var(--magic-main-color);
+  --color6: var(--magic-main-color);
+  --color7: var(--magic-main-color);
+  --color8: var(--magic-main-color);
+  --color9: var(--magic-deep-color);
+  --color10: var(--magic-deep-color);
+  --color11: var(--magic-deep-color);
+
+  --high-color: var(--color8);
+
+
+
+  /*色系设置结束*/
+
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  /* --background-secondary: var(--bg-color); */
+  --background-secondary-alt: var(--bg-color2);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+
+  --text-accent: var(--magic-main-color);
+  --text-accent-hover: var(--magic-low-color);
+
+
+  --interactive-accent-rgb: 215, 178, 88;
+  --interactive-accent: var(--magic-main-color);
+  --interactive-accent-hover: var(--magic-low-color);
+
+  --strong-em-highlight-color: var(--color11);
+
+
+  --search-result-file-matched-bg: var(--magic-low-color);
+
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
+
+
+  --embed-color: #b6d6ff4f;
+  --search-result-file-title-color: var(--magic-main-color);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: var(--magic-low-color);
+  --theme-color-translucent-1: var(--color1);
+  --color-specification: var(--high-color);
+
+
+  --internal-link-color-in-highlight: var(--magic-main-color);
+
+  /*list*/
+  --list-ul-block-color: var(--color5);
+  --list-ul-disc-color: var(--magic-main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--magic-low-color);
+  --list-ol-block-color: var(--magic-main-color);
+  --list-ol-number-color: var(--magic-main-color);
+  --list-ol-hover: var(--magic-low-color);
+
+  /*tags*/
+
+  --tag1: var(--color3);
+  --tag2: var(--color4);
+  --tag3: var(--color5);
+  --tag4: var(--color6);
+  --tag5: var(--color7);
+  --tag6: var(--color8);
+  --tag7: var(--color9);
+  --tag8: var(--color10);
+  --tag9: var(--color11);
+  --color-tag-edit: var(--magic-low-color);
+  --tag-dailynote: var(--magic-low-color);
+  --tag-dailynote-bg: var(--color3);
+  --tag-weeklynote: var(--color6);
+  --tag-weeklynote-bg: var(--color4);
+  --tag-questions: var(--color5);
+  --tag-questions-bg: var(--color5);
+  --tag-ideas: #ceb900;
+  --tag-ideas-bg: #444444d8;
+
+
+  /*Titles*/
+  --h1-color: var(--color9);
+  --h2-color: var(--color8);
+  --h3-color: var(--color7);
+  --h4-color: var(--color6);
+  --h5-color: var(--color5);
+  --h6-color: var(--color4);
+
+  /*graph*/
+
+  --graph-circle: var(--color3);
+
+  --graph-control-bg: var(--bg-color);
+
+  /*mermaid*/
+  --mermaid-active-task-color: var(--high-color);
+  --mermaid-seq-dia-color: var(--magic-low-color);
+
+  /*table*/
+  --table-background-color: var(--bg-color2);
+  --table-background-color-odd: var(--bg-color);
+  --table-border-color: #7d7d7d;
+  --table-thead-background-color: var(--color1);
+  --table-hover-raw-color: var(--color2);
+  --table-hover-color: var(--color1);
+  --table-hover-thead-color: var(--color2);
+
+  /*calendar*/
+  --calendar-week-color: var(--high-color);
+  --calendar-week-hover: var(--color1);
+  --calendar-week-background-color: var(--bg-color);
+  --calendar-today-background-color: var(--color1);
+
+  /*day planner*/
+  --day-planner-pie: var(--magic-deep-color);
+  --day-planner-timeline: #d62f2f;
+  --day-planner-line: var(--magic-low-color);
+  --day-planner-dot: var(--magic-low-color);
+  --day-planner-item-hover: var(--color1);
+  --event-item-color1: var(--color2);
+  --event-item-color2: var(--color3);
+  --event-item-color3: var(--color4);
+  --event-item-color4: var(--color5);
+  --event-item-color5: var(--color6);
+  --event-item-color6: var(--color7);
+  --event-item-color7: var(--color8);
+  --event-item-color8: var(--color9);
+  --event-item-color9: var(--color10);
+  --event-item-color10: var(--color11);
+
+
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--magic-deep-color);
+  --background-4-sliding-pane: var(--bg-color);
+
+
+  --color-view-header-gradient-1: var(--color1);
+  --color-view-header-gradient-2: var(--bg-color);
+
+  /*checkbox*/
+  --checkbox-color-0: var(--magic-main-color);
+
+
+  --activeline-background: var(--bg-color2);
+}
+
+body.color-scheme-options-lillimon-topaz.theme-dark {
+
+  /*魔方*/
+  --magic-low-color: #e0e79a;
+  --magic-main-color: #95a503;
+  --magic-deep-color: #746909;
+
+  --bg-color: #222222;
+  --bg-color2: #444444;
+
+  --color1: var(--magic-low-color);
+  --color2: var(--magic-low-color);
+  --color3: var(--magic-low-color);
+  --color4: var(--magic-low-color);
+  --color5: var(--magic-main-color);
+  --color6: var(--magic-main-color);
+  --color7: var(--magic-main-color);
+  --color8: var(--magic-main-color);
+  --color9: var(--magic-deep-color);
+  --color10: var(--magic-deep-color);
+  --color11: var(--magic-deep-color);
+  --high-color: var(--color8);
+
+
+  /*主题色设置结束**/
+
+  --background-primary: var(--bg-color);
+  --background-primary-alt: var(--bg-color2);
+  /* --background-secondary: var(--bg-color); */
+  --background-secondary-alt: var(--bg-color2);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+
+  --text-accent: var(--magic-low-color);
+  --text-accent-hover: var(--magic-main-color);
+
+
+  --interactive-accent: var(--color10);
+  /*主题强调色*/
+  --interactive-accent-rgb: 58, 91, 82;
+  /*主题强调色 rgb , 需与主题色一致（把上面的值转成rgb放下面）*/
+  --interactive-accent-hover: var(--magic-main-color);
+  /*主题强调色 鼠标悬浮时颜色*/
+
+
+  --strong-em-highlight-color: var(--color11);
+
+  --search-result-file-matched-bg: var(--high-color);
+  /* 搜索结果文字高亮颜色 */
+
+  --background-primary-bg-4-bt: var(--bg-color);
+  --background-primary-alt-bg-4-bt: var(--bg-color);
+  --background-secondary-bg-4-bt: var(--bg-color);
+  --background-secondary-alt-bg-4-bt: var(--bg-color);
+
+  --background-mobile-drawer-1: var(--bg-color);
+  --background-mobile-drawer-2: var(--bg-color);
+
+
+  --embed-color: #1156a534;
+  /*![[]] 背景颜色*/
+  --search-result-file-title-color: var(--magic-main-color);
+  --theme-color: var(--interactive-accent);
+  --theme-color-translucent: var(--magic-deep-color);
+  --theme-color-translucent-1: var(--magic-deep-color);
+  --color-specification: var(--high-color);
+
+
+  --internal-link-color-in-highlight: var(--magic-main-color);
+  /*==[[]]==双链文字颜色*/
+
+  /*list*/
+  --list-ul-block-color: var(--color6);
+  --list-ul-disc-color: var(--magic-main-color);
+  --green-1: #3dc730;
+  --list-ul-hover: var(--magic-low-color);
+  --list-ol-block-color: var(--magic-main-color);
+  --list-ol-number-color: var(--magic-main-color);
+  --list-ol-hover: var(--magic-low-color);
+
+
+  /*普通标签颜色*/
+  --tag1: var(--color11);
+  --tag2: var(--color10);
+  --tag3: var(--color9);
+  --tag4: var(--color8);
+  --tag5: var(--color7);
+  --tag6: var(--color6);
+  --tag7: var(--color5);
+  --tag8: var(--color4);
+  --tag9: var(--color3);
+
+  --color-tag-edit: var(--magic-main-color);
+  --tag-dailynote: var(--mian-color);
+  --tag-dailynote-bg: var(--color5);
+  --tag-weeklynote: var(--color3);
+  --tag-weeklynote-bg: var(--color6);
+  --tag-questions: var(--color8);
+  --tag-questions-bg: var(--color8);
+  --tag-ideas: #fcfcc0;
+  --tag-ideas-bg: #565656d8;
+
+  /*titles*/
+  --h1-color: var(--color4);
+  --h2-color: var(--color5);
+  --h3-color: var(--color6);
+  --h4-color: var(--color7);
+  --h5-color: var(--color8);
+  --h6-color: var(--color9);
+
+  --graph-circle: var(--color8);
+  /*图谱普通点颜色*/
+
+
+  /*mermaid*/
+  --mermaid-active-task-color: var(--magic-low-color);
+  --mermaid-seq-dia-color: var(--high-color);
+
+  /*table*/
+  --table-background-color: var(--bg-color2);
+  --table-background-color-odd: var(--bg-color);
+  --table-border-color: #878787;
+  --table-thead-background-color: var(--color11);
+  --table-hover-raw-color: var(--color10);
+  --table-hover-color: var(--color11);
+  ;
+  --table-hover-thead-color: var(--color10);
+
+  /*calendar*/
+  --calendar-week-color: var(--high-color);
+  --calendar-week-hover: var(--color1);
+  --calendar-week-background-color: var(--bg-color);
+  --calendar-today-background-color: var(--color1);
+
+  /*day planner*/
+  --day-planner-pie: var(--color1);
+  --day-planner-timeline: #000000;
+  --day-planner-line: var(--magic-low-color);
+  --day-planner-dot: var(--magic-low-color);
+  --day-planner-item-hover: var(--magic-main-color);
+  --event-item-color1: var(--color2);
+  --event-item-color2: var(--color3);
+  --event-item-color3: var(--color4);
+  --event-item-color4: var(--color5);
+  --event-item-color5: var(--color6);
+  --event-item-color6: var(--color7);
+  --event-item-color7: var(--color8);
+  --event-item-color8: var(--color9);
+  --event-item-color9: var(--color10);
+  --event-item-color10: var(--color11);
+
+  /*Sliding panes*/
+  --sliding-panes-header-color: var(--color1);
+
+
+  --color-view-header-gradient-1: var(--bg-color2);
+  --color-view-header-gradient-2: var(--bg-color);
+
+  /*checkbox*/
+  --checkbox-color-0: var(--magic-main-color);
+
+  --activeline-background: var(--bg-color2);
+}
+
+body.color-scheme-options-lillimon-topaz #calendar-container {
+  --color-background-heading: transparent;
+  --color-background-weeknum: transparent;
+  --color-background-day: transparent;
+  --color-background-weekend: transparent;
+  
+  --color-tr: var(--bg-color) !important;
+  --color-tr-odd: #ffdece !important;
+  
+  --color-dot: var(--text-accent);
+  --color-arrow: currentColor;
+  --color-button: var(--text-muted);
+   --color-text-weeknum: var(--calendar-week-color);
+    
+  --color-text-title: var(--text-normal);
+  --color-text-heading: var(--text-normal);
+  --color-text-day: var(--text-normal);
+  --color-text-today: var(--text-accent);
+    
+  /*===*/
+  padding: 0px 5px 0px 8px;
+  margin: -21px -8px 0px -8px;
+  line-height: 0.6;
   }
-
-
 
 /*=================== Lillian 的配色 end  ========================*/
 
@@ -5583,14 +6124,11 @@ body.color-scheme-options-autumn-topaz #calendar-container {
 
 body.color-scheme-options-lilac.theme-light {
 
-  --bg-color: #d3c8e7;
-  --bg-color2: #c0b0d6;
-  
-  --background-primary: var(--bg-color);
+  --background-primary: #d7c4f2;
   --background-primary-alt: #e8dffa;
-  --background-secondary: #e5d3ff;
-  --background-secondary-alt: var(--bg-color);
-  --background-secondary-alt-bg-4-bt: #d3c8e7; 
+  --background-secondary: #e1cefa;
+  --background-secondary-alt: #d7c4f2;
+  --background-secondary-alt-bg-4-bt: #d7c4f2; 
   --background-accent: #000;
 
   --background-modifier-border: #af9dd1;
@@ -5603,11 +6141,11 @@ body.color-scheme-options-lilac.theme-light {
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
 
-  --text-accent: #c187c9;
+  --text-accent: #c488cc;
   --text-accent-hover: #592495;
 
   --text-normal: #0e0e0e;
-  --text-muted: #7f7f7f;
+  --text-muted: #ab7ecf;
   --text-highlight: #000000;
   --text-highlight-2: #000000;
   --text-faint: #a23ac2;
@@ -5680,7 +6218,7 @@ body.color-scheme-options-lilac.theme-light {
   --theme-color: var(--interactive-accent);
   --theme-color-translucent: #c3abe9bd;
   --theme-color-translucent-1: #8649aa85;
-  --theme-color-translucent-3:  #dccaffb0;
+
 
   --color-specification: #0084ff;
   --allow-1: #ec9a3c;
@@ -5690,7 +6228,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-color-code: #e95d00;
   --text-color-code-normal: #000000;
 
-
+  --internal-link-color: #6203a2;
 
   --internal-link-color-in-highlight: #6203a2;
 
@@ -5847,7 +6385,7 @@ body.color-scheme-options-lilac.theme-light {
   --text-checked-checkbox: #9b9b9b;
 
   /*codemirror-line-bg*/
-  --activeline-background: #d3c8e7;
+  --activeline-background: #d7c4f2;
 
   /*pseudo-kanban 不修改*/
   --p-kanban-bg-color: #d3d3d32d;
@@ -5881,7 +6419,7 @@ body.color-scheme-options-lilac.theme-dark {
   --bg-color2: #b276c4;
   --background-primary: var(--bg-color);
   --background-primary-alt: var(--bg-color2);
-  --background-secondary: var(--bg-color);
+  --background-secondary: #44204b;
   --background-secondary-alt: var(--bg-color);
   --background-accent: #000;
 
@@ -5967,7 +6505,7 @@ body.color-scheme-options-lilac.theme-dark {
   --theme-color-translucent: #6d3c9bc9;/* 页面滚动条*/
   --theme-color-translucent-1: #5e2877b7;
   --color-specification: #f1a1a1;
-  --theme-color-translucent-3:  #8b77a3;
+ 
 
   --allow-1: #d18828;
   --background-blockquote: #9191911c;
@@ -5976,6 +6514,7 @@ body.color-scheme-options-lilac.theme-dark {
   --text-color-code: #d58000;
   --text-color-code-normal: #e7e7e7;
 
+  --internal-link-color: #a360da;
   --internal-link-color-in-highlight: #a360da;
 
   /*list*/
@@ -6171,104 +6710,13 @@ width: 2px;
 background-color: transparent;
 }
 
-/* scrollbar*/
-body.color-scheme-options-lilac.theme-light ::-webkit-scrollbar-thumb { background-color: var(--event-item-color3); }
-body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb { background-color: var(--event-item-color7); }
+/* scrollbar 滚动条颜色*/
+body.color-scheme-options-lilac.theme-light ::-webkit-scrollbar-thumb { background-color: #cbb5e9; }
+body.color-scheme-options-lilac.theme-dark ::-webkit-scrollbar-thumb { background-color:#683083; }
 
 /*stickies*/
 body.color-scheme-options-lilac .stickies {
   color: var(--text-normal)
-}
-
-body.color-scheme-options-lilac.theme-dark.workspace-leaf-resize-handle {
-background-color: var(--background-secondary-alt-bg-4-bt);
-width: 0px;
-height: 0%;
-}
-
-body.color-scheme-options-lilac .token.number {
-color: var(--aqua) !important;
-}
-body.color-scheme-options-lilac .token.string, 
-body.color-scheme-options-lilac .token.char,
-body.color-scheme-options-lilac .token.attr-value, 
-body.color-scheme-options-lilac .token.builtin, 
-body.color-scheme-options-lilac .token.inserted {
-color: var(--blue) !important;
-}
-
-body.color-scheme-options-lilac .cm-s-obsidian span.cm-link,
-body.color-scheme-options-lilac .cm-s-obsidian span.cm-hmd-internal-link,
-body.color-scheme-options-lilac .markdown-preview-view .internal-link {
-  text-decoration: underline;
-  color: var(--internal-link-color);
-}
-
-body.color-scheme-options-lilac .markdown-preview-view h1,
-body.color-scheme-options-lilac .markdown-preview-view h2 {
-  border-bottom: none;
-}
-
-/*lilac-tags*/
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+1){
-  border: 1px solid;
-  color: var(--tag1);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+2){
-  border: 1px solid;
-  color: var(--tag2);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+3){
-  border: 1px solid;
-  color: var(--tag3);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+4){
-  border: 1px solid;
-  color: var(--tag4);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+5){
-  border: 1px solid;
-  color: var(--tag5);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+6){
-  border: 1px solid;
-  color: var(--tag6);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+7){
-  border: 1px solid;
-  color: var(--tag7);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n+8){
-  border: 1px solid;
-  color: var(--tag8);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token).tag:nth-child(9n){
-  border: 1px solid;
-  color: var(--tag9);
-  background-color: transparent;
-}
-
-body.color-scheme-options-lilac .tag:not(.token):hover{
-  border: 1px solid var(--theme-color) ;
-  color: var(--white) ;
-  background-color: var(--theme-color) ;
 }
 
 body.color-scheme-options-lilac div .CodeMirror-line span.cm-hashtag-begin + span.cm-hashtag.cm-meta.cm-hashtag-end {
@@ -6289,6 +6737,15 @@ body.color-scheme-options-lilac  .cm-strong.cm-em {
   -webkit-text-fill-color: initial;
   background-color: initial;
 } 
+
+body.color-scheme-options-lilac.theme-dark #calendar-container {
+  --theme-color-translucent-3: #553b75;
+}
+
+body.color-scheme-options-lilac.theme-light #calendar-container {
+
+  --theme-color-translucent-3: #dccaffb0;
+}
 
 /*======@awyugan--end========*/
 
@@ -6545,12 +7002,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-important:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag1-bg);
+  background-color: var(--stag1-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#重要"] {
@@ -6569,12 +7027,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-complete:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag3-bg);
+  background-color: var(--stag3-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#完成"] {
@@ -6593,12 +7052,13 @@ span[alt*="+grid"] {
   border: none;
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-inprogress:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--stag2-bg);
+  background-color: var(--stag2-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#进行中"] {
@@ -6622,16 +7082,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-dailynote:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-dailynote:not(.cm-formatting-hashtag)::after {
   content: ' 🐈';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-dailynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-dailynote-bg);
+  background-color: var(--tag-dailynote-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#weeklynote"] {
@@ -6647,16 +7108,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-weeklynote:not(.cm-formatting-hashtag)::after {
   content: ' 🥑';
 }
 
-.cm-s-obsidian .CodeMirror-line .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
+.cm-s-obsidian .cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-weeklynote:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-weeklynote-bg);
+  background-color: var(--tag-weeklynote-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#questions"] {
@@ -6672,16 +7134,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-questions:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-questions:not(.cm-formatting-hashtag)::after {
   content: ' ❓';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-questions:not(.cm-formatting-hashtag) {
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
-  background-color: var(--tag-questions-bg);
+  background-color: var(--tag-questions-bg) !important;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 .tag[href^="#ideas"] {
@@ -6697,16 +7160,17 @@ span[alt*="+grid"] {
   font-size: var(--font-size-emoji-after-tag);
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-tag-ideas:not(.cm-formatting-hashtag)::after {
+.cm-s-obsidian span.cm-tag-ideas:not(.cm-formatting-hashtag)::after {
   content: ' 💡';
 }
 
-.cm-s-obsidian .CodeMirror-line span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
-  background-color: var(--tag-ideas-bg);
+.cm-s-obsidian span.cm-hashtag.cm-meta.cm-hashtag-end.cm-tag-ideas:not(.cm-formatting-hashtag) {
+  background-color: var(--tag-ideas-bg) !important;
   font-family: var(--font-family-special-tag) !important;
   font-weight: 600;
   color: var(--white) !important;
   border: none;
+  font-size: 0.95em;
 }
 
 /*colorful tags*/
@@ -6782,7 +7246,7 @@ div:not(.CodeMirror-activeline) .CodeMirror-line span.cm-hashtag-begin {
   opacity: 0.5;
 }
 
-div.CodeMirror-line span.cm-hashtag-begin {
+div .CodeMirror-line span.cm-hashtag-begin {
   background-color: transparent;
   color: var(--accent-strong);
   border-top-left-radius: var(--radius-l);
@@ -6859,10 +7323,10 @@ body.text-indentation-two-em *:not(blockquote) > p {
   font-size: var(--font-size-edit-blockquote);
 }
 
-.cm-s-obsidian span.cm-quote::before {
+.CodeMirror-code span.cm-quote::before {
   content: "";
   border-left: 7px solid var(--theme-color);
-  border-radius: 5px 0 0 5px;
+  border-radius: 0; /*5px 0 0 5px;*/
   height: 100%;
   margin-left: -7px;
   position: absolute;
@@ -6887,7 +7351,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 
 .HyperMD-quote.CodeMirror-line {
   background-color: var(--background-blockquote);
-  border-radius: var(--radius-s-border);
+  /*border-radius: var(--radius-s-border);*/
 }
 
 /*
@@ -6956,7 +7420,7 @@ span.cm-highlight.cm-inline-code {
   color: var(--text-highlight);
 }
 
-span.cm-strong.cm-em.cm-highlight {
+.CodeMirror-lines span.cm-strong.cm-em.cm-highlight {
   padding: 0 1px 1px;
 }
 
@@ -7278,7 +7742,8 @@ span.obsidian-search-match-highlight {
 .markdown-preview-view .task-list-item-checkbox {
   -webkit-appearance: none;
   box-sizing: border-box;
-  border: 2px solid var(--text-normal);
+  border: 2px solid var(--background-modifier-border);
+  appearance: none;
   position: relative;
   border-radius: var(--radius-xs);
   top: 4px;
@@ -7297,6 +7762,8 @@ span.obsidian-search-match-highlight {
 
 .markdown-preview-view .task-list-item-checkbox:hover {
   background-color: var(--theme-color-translucent);
+  border: none;
+  border-color: transparent;
 }
 
 /* the SVG check mark */
@@ -7327,8 +7794,8 @@ span.obsidian-search-match-highlight {
   animation: tada 1s;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"] input.task-list-item-checkbox:checked:hover,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="x"] input.task-list-item-checkbox:checked:hover {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked:hover,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked:hover {
   background-color: var(--red) !important;
 }
 
@@ -7386,6 +7853,15 @@ span.obsidian-search-match-highlight {
   color: var(--text-muted);
 }
 
+
+body.circular-checkbox .markdown-preview-view .task-list-item-checkbox {
+  border-radius: 50%;
+}
+
+body.circular-checkbox .markdown-preview-view .task-list-item-checkbox:checked {
+  background-color: var(--interactive-accent);
+}
+
 /*checkbox in edit mode*/
 /*thanks to Piotr and ishgunacar from forum*/
 .cm-s-obsidian span.cm-formatting-task {
@@ -7426,8 +7902,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 */
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"] input.task-list-item-checkbox:checked::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="x"] input.task-list-item-checkbox::before {
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox::before {
   content: " ";
   position: absolute;
   background-color: white;
@@ -7438,8 +7913,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E") !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"] input.task-list-item-checkbox:checked {
-  border: none;
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="x"]>input.task-list-item-checkbox:checked {
   background-color: var(--checkbox-color-0) !important;
 }
 
@@ -7450,10 +7924,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [>]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox::before,
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"] li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"] li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.25em;
   left: -0.24em;
@@ -7463,10 +7935,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuNzA3IDE3LjcwNyAxNi40MTQgMTJsLTUuNzA3LTUuNzA3LTEuNDE0IDEuNDE0TDEzLjU4NiAxMmwtNC4yOTMgNC4yOTN6Ii8+PC9zdmc+) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"] li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"] li.task-list-item.is-checked[data-task=">"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"]>input.task-list-item-checkbox,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-2) !important;
 }
 
@@ -7477,10 +7947,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [<]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox::before,
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.25em;
   left: -0.24em;
@@ -7490,10 +7958,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuMjkzIDYuMjkzIDcuNTg2IDEybDUuNzA3IDUuNzA3IDEuNDE0LTEuNDE0TDEwLjQxNCAxMmw0LjI5My00LjI5M3oiLz48L3N2Zz4=) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox,
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task=">"] li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task=">"] li.task-list-item.is-checked[data-task="<"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="<"]>input.task-list-item-checkbox,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="<"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-1) !important;
 }
 
@@ -7504,8 +7970,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [?]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="?"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="?"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="?"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="?"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.25em;
   left: -0.24em;
@@ -7516,8 +7982,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNEM5LjI0MyA0IDcgNi4yNDMgNyA5aDJjMC0xLjY1NCAxLjM0Ni0zIDMtM3MzIDEuMzQ2IDMgM2MwIDEuMDY5LS40NTQgMS40NjUtMS40ODEgMi4yNTUtLjM4Mi4yOTQtLjgxMy42MjYtMS4yMjYgMS4wMzhDMTAuOTgxIDEzLjYwNCAxMC45OTUgMTQuODk3IDExIDE1djJoMnYtMi4wMDljMC0uMDI0LjAyMy0uNjAxLjcwNy0xLjI4NC4zMi0uMzIuNjgyLS41OTggMS4wMzEtLjg2N0MxNS43OTggMTIuMDI0IDE3IDExLjEgMTcgOWMwLTIuNzU3LTIuMjQzLTUtNS01em0tMSAxNGgydjJoLTJ6Ii8+PC9zdmc+) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="?"] input.task-list-item-checkbox:checked,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="?"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="?"]>input.task-list-item-checkbox:checked,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="?"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-3) !important;
 }
 
@@ -7529,8 +7995,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [!]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.25em;
   left: -0.2em;
@@ -7541,8 +8007,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwMDAwMDAiPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjwvZz48Zz48Zy8+PGc+PHBhdGggZD0iTTEyLDNjLTAuNDYsMC0wLjkzLDAuMDQtMS40LDAuMTRDNy44NCwzLjY3LDUuNjQsNS45LDUuMTIsOC42NmMtMC40OCwyLjYxLDAuNDgsNS4wMSwyLjIyLDYuNTYgQzcuNzcsMTUuNiw4LDE2LjEzLDgsMTYuNjlWMTljMCwxLjEsMC45LDIsMiwyaDAuMjhjMC4zNSwwLjYsMC45OCwxLDEuNzIsMXMxLjM4LTAuNCwxLjcyLTFIMTRjMS4xLDAsMi0wLjksMi0ydi0yLjMxIGMwLTAuNTUsMC4yMi0xLjA5LDAuNjQtMS40NkMxOC4wOSwxMy45NSwxOSwxMi4wOCwxOSwxMEMxOSw2LjEzLDE1Ljg3LDMsMTIsM3ogTTE0LDE3aC00di0xaDRWMTd6IE0xMCwxOXYtMWg0djFIMTB6IE0xNS4zMSwxMy43NGMtMC4wOSwwLjA4LTAuMTYsMC4xOC0wLjI0LDAuMjZIOC45MmMtMC4wOC0wLjA5LTAuMTUtMC4xOS0wLjI0LTAuMjdjLTEuMzItMS4xOC0xLjkxLTIuOTQtMS41OS00LjcgYzAuMzYtMS45NCwxLjk2LTMuNTUsMy44OS0zLjkzQzExLjMyLDUuMDMsMTEuNjYsNSwxMiw1YzIuNzYsMCw1LDIuMjQsNSw1QzE3LDExLjQzLDE2LjM5LDEyLjc5LDE1LjMxLDEzLjc0eiIvPjwvZz48Zz48cmVjdCBoZWlnaHQ9IjMiIHdpZHRoPSIxIiB4PSIxMS41IiB5PSIxMSIvPjxyZWN0IGhlaWdodD0iMyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxIC0wLjcwNzEgMC43MDcxIDAuNzA3MSAtNC4wMzEyIDEwLjg1MzYpIiB3aWR0aD0iMSIgeD0iMTAuNTkiIHk9IjguNzkiLz48cmVjdCBoZWlnaHQ9IjMiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAxNC43Njc4IDI2LjcwMjgpIiB3aWR0aD0iMSIgeD0iMTIuNDEiIHk9IjguNzkiLz48L2c+PC9nPjwvc3ZnPg==) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="!"]>input.task-list-item-checkbox,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="!"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-4) !important;
 }
 
@@ -7554,8 +8020,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [+]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="+"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="+"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="+"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="+"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.3em;
   left: -0.22em;
@@ -7566,8 +8032,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMTFoLTZWNWgtMnY2SDV2Mmg2djZoMnYtNmg2eiIvPjwvc3ZnPg==) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="+"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="+"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="+"]>input.task-list-item-checkbox,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="+"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-5) !important;
 }
 
@@ -7578,8 +8044,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 }
 
 /*- [-]*/
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="-"] input.task-list-item-checkbox::before,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="-"] input.task-list-item-checkbox::before {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="-"]>input.task-list-item-checkbox::before,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="-"]>input.task-list-item-checkbox::before {
   content: ' ';
   top: -0.25em;
   left: -0.22em;
@@ -7588,8 +8054,8 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAxMWgxNHYySDV6Ii8+PC9zdmc+) !important;
 }
 
-.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="-"] input.task-list-item-checkbox,
-.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="-"] input.task-list-item-checkbox {
+.markdown-preview-view ul.contains-task-list li.task-list-item.is-checked[data-task="-"]>input.task-list-item-checkbox,
+.markdown-preview-view ol.contains-task-list li.task-list-item.is-checked[data-task="-"]>input.task-list-item-checkbox {
   background-color: var(--checkbox-color-6) !important;
 }
 
@@ -7809,11 +8275,64 @@ body.non-border-bottom-header .markdown-preview-view h2 {
   top: 20px;
 }
 
-/*===*/
+/*---*/
 .markdown-preview-view hr {
   border-color: var(--background-modifier-border-hr);
 }
 
+/* adapted from Obsidianite */
+body.fancy-hr .markdown-preview-view hr {
+  margin-block-start: 2.5em;
+  margin-block-end: 2.5em;
+  border: none;
+  height: 0;
+  border-bottom: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%);
+}
+
+body.fancy-hr .markdown-preview-view hr::after {
+  content: var(--fancy-hr-icon);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%)  rotate(var(--fancy-hr-rotate));
+  transform-origin: 50% 50%;
+  padding: 0.3rem;
+  color: var(--theme-color);
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
+  opacity: 0;
+  position: relative;
+}
+
+body.fancy-hr div > .CodeMirror-line span.cm-hr {
+  display: inline-block;
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-image: linear-gradient(to right, transparent 0%, var(--theme-color) 30%, var(--theme-color) 46%, transparent 46%, transparent 54%, var(--theme-color) 54%, var(--theme-color) 70%, transparent 100%);
+  left: 0;
+  top: 50%;
+}
+
+body.fancy-hr div:not(.CodeMirror-activeline) > .CodeMirror-line.HyperMD-hr::after {
+  content: var(--fancy-hr-icon);
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(var(--fancy-hr-rotate));
+  transform-origin: 50% 50%;
+  padding: 0.5rem;
+  color: var(--theme-color);
+}
 
 .nav-files-container {
   flex-grow: 1;
@@ -7977,7 +8496,11 @@ code:not([class*='language-']) {
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
   height: 100%;
-  margin-left: 2px;
+  margin-left: 4px;
+}
+
+body:not(.outliner-plugin-bls) .cm-hmd-list-indent {
+  position: unset !important;
 }
 
 
@@ -8070,7 +8593,7 @@ ol.contains-task-list ol::before {
 
 ul>li:not(.task-list-item) {
   margin-left: -0.3125em;
-  padding-left: 0.4em;
+  padding-left: 0.25em;
   border-radius: var(--radius-s);
   margin-bottom: 0.375em;
   margin-top: 0.25em;
@@ -8413,7 +8936,7 @@ body.list-vertical-line-three ol ol::before {
   content: '';
   border-left: 2px solid var(--background-modifier-border);
   position: absolute;
-  left: 0.1em;
+  left: 0.3em;
   top: 0px;
   bottom: 0px;
 }
@@ -8810,7 +9333,7 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting-link.cm-strong.cm-
  /* Status bar */
   
 body:not(.bt-status-off) .status-bar {
-  background-color:var(--background-secondary-translucent);
+  background-color:var(--background-secondary-bg-4-bt);
   z-index:30;
   border-top-left-radius:5px;
   width:auto;
@@ -8956,6 +9479,18 @@ code[class*="language-"] {
 }
 
 /*embedded*/
+
+body.naked-embed.theme-dark {
+  --embed-color: transparent !important;
+}
+body.naked-embed.theme-light {
+  --embed-color: transparent !important;
+}
+
+body.embed-hd .markdown-embed-title{
+  display: none;
+}
+
 .popover.hover-popover .markdown-preview-view .markdown-embed,
 .popover .markdown-preview-sizer.markdown-preview-section {
   height: auto;
@@ -9444,6 +9979,10 @@ div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-head
   padding-left: 4px;
 }
 
+.CodeMirror pre.HyperMD-quote.CodeMirror-line {
+  padding-left: 4px;
+}
+
 .cm-s-obsidian pre.HyperMD-header {
   padding-left: 0 !important;
   padding-top: 0.25em;
@@ -9831,7 +10370,25 @@ ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon:
   opacity: 0.5;
 }
 
-/*setting buttons*/
+/*setting panel*/
+.vertical-tab-nav-item {
+  padding: 8px 6px 8px 24px;
+}
+
+.modal.mod-settings .vertical-tab-header,
+.modal.mod-settings,
+.modal.mod-settings .vertical-tab-content-container {
+  height: 90vh;
+}
+
+.modal.mod-settings .vertical-tab-content-container {
+  padding: 30px 0 0;
+}
+
+.vertical-tab-content .setting-item {
+  padding: 13px 0;
+}
+
 .modal button:not(.mod-cta):not(.mod-warning):hover {
   background-color: var(--interactive-accent-hover);
   color: #fdfdfd;
@@ -9925,6 +10482,8 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 /* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
 /* but also with simpler classes so you can use `<span class='colour'>` as well */
 .app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
+  background: unset !important;
+  background-color:unset !important;
   white-space: pre-wrap !important;
 }
 
@@ -9936,7 +10495,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-gray-bg .popover .markdown-preview-view pre.language-note-notice,
 .popover .markdown-preview-view pre.language-note-gray-background,
 .popover .markdown-preview-view pre.language-note-gray-bg {
-  background-color: var(--background-gray);
+  background-color: var(--background-gray) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-brown-background,
@@ -9946,7 +10505,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-brown-bg,
 .popover .markdown-preview-view pre.language-note-brown-background,
 .popover .markdown-preview-view pre.language-note-brown-bg {
-  background-color: var(--background-brown);
+  background-color: var(--background-brown) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-orange-background,
@@ -9956,7 +10515,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-orange-bg,
 .popover .markdown-preview-view pre.language-note-orange-background,
 .popover .markdown-preview-view pre.language-note-orange-bg {
-  background-color: var(--background-orange);
+  background-color: var(--background-orange) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-yellow-background,
@@ -9966,7 +10525,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-yellow-bg,
 .popover .markdown-preview-view pre.language-note-yellow-background,
 .popover .markdown-preview-view pre.language-note-yellow-bg {
-  background-color: var(--background-yellow);
+  background-color: var(--background-yellow) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-green-background,
@@ -9976,7 +10535,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-green-bg,
 .popover .markdown-preview-view pre.language-note-green-background,
 .popover .markdown-preview-view pre.language-note-green-bg {
-  background-color: var(--background-green);
+  background-color: var(--background-green) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-blue-background,
@@ -9986,7 +10545,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-blue-bg,
 .popover .markdown-preview-view pre.language-note-blue-background,
 .popover .markdown-preview-view pre.language-note-blue-bg {
-  background-color: var(--background-blue);
+  background-color: var(--background-blue) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-purple-background,
@@ -9996,7 +10555,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-purple-bg,
 .popover .markdown-preview-view pre.language-note-purple-background,
 .popover .markdown-preview-view pre.language-note-purple-bg {
-  background-color: var(--background-purple);
+  background-color: var(--background-purple) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-pink-background,
@@ -10006,7 +10565,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-pink-bg,
 .popover .markdown-preview-view pre.language-note-pink-background,
 .popover .markdown-preview-view pre.language-note-pink-bg {
-  background-color: var(--background-pink);
+  background-color: var(--background-pink) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-red-background,
@@ -10016,7 +10575,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-red-bg,
 .popover .markdown-preview-view pre.language-note-red-background,
 .popover .markdown-preview-view pre.language-note-red-bg {
-  background-color: var(--background-red);
+  background-color: var(--background-red) !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-important,
@@ -10025,13 +10584,13 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-hr:after {
 .print pre.language-note-imp,
 .popover .markdown-preview-view pre.language-note-important,
 .popover .markdown-preview-view pre.language-note-imp {
-  border: 4px dashed var(--note-important);
+  border: 4px dashed var(--note-important) !important;
 }
 
 pre.language-note-important:before,
 pre.language-note-imp::before {
   content: "Important";
-  color: var(--note-important);
+  color: var(--note-important)  !important;
   font-weight: 800;
   top: -1px;
 }
@@ -10064,7 +10623,7 @@ pre.language-note-imp::before {
 .popover .markdown-preview-view pre.language-note-purple,
 .popover .markdown-preview-view pre.language-note-pink,
 .popover .markdown-preview-view pre.language-note-red {
-  background-color: transparent;
+  background-color: transparent  !important;
   margin: 3px 0;
   padding: 5px 10px;
 }
@@ -10073,64 +10632,74 @@ pre.language-note-imp::before {
 .gray,
 .print code.language-note-gray,
 .popover .markdown-preview-view pre.language-note-gray code.language-note-gray {
-  color: var(--text-gray);
+  color: var(--text-gray) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-brown code.language-note-brown,
 .brown,
 .print code.language-note-brown,
 .popover .markdown-preview-view pre.language-note-brown code.language-note-brown {
-  color: var(--text-brown);
+  color: var(--text-brown) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-orange code.language-note-orange,
 .orange,
 .print code.language-note-orange,
 .popover .markdown-preview-view pre.language-note-orange code.language-note-orange {
-  color: var(--text-orange);
+  color: var(--text-orange) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-yellow code.language-note-yellow,
 .yellow,
 .print code.language-note-yellow,
 .popover .markdown-preview-view pre.language-note-yellow code.language-note-yellow {
-  color: var(--text-yellow);
+  color: var(--text-yellow) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-green code.language-note-green,
 .green,
 .print code.language-note-green,
 .popover .markdown-preview-view pre.language-note-green code.language-note-green {
-  color: var(--text-green);
+  color: var(--text-green) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-blue code.language-note-blue,
 .blue,
 .print code.language-note-blue,
 .popover .markdown-preview-view pre.language-note-blue code.language-note-blue {
-  color: var(--text-blue);
+  color: var(--text-blue) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-purple code.language-note-purple,
 .purple,
 .print code.language-note-purple,
 .popover .markdown-preview-view pre.language-note-purple code.language-note-purple {
-  color: var(--text-purple);
+  color: var(--text-purple) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-pink code.language-note-pink,
 .pink,
 .print code.language-note-pink,
 .popover .markdown-preview-view pre.language-note-pink code.language-note-pink {
-  color: var(--text-pink);
+  color: var(--text-pink) !important;
+  background:unset !important;
 }
 
 .app-container .markdown-preview-view pre.language-note-red code.language-note-red,
 .red,
 .print code.language-note-red,
 .popover .markdown-preview-view pre.language-note-red code.language-note-red {
-  color: var(--text-red);
+  color: var(--text-red) !important;
+  background:unset !important;
 }
+
 
 /* cloze */
 .app-container .markdown-preview-view pre.language-note-cloze code.language-note-cloze,
@@ -10164,6 +10733,34 @@ pre.language-note-cloze::before {
   font-weight: 800;
   left: 22px;
 }
+
+/*hidden box*/
+/*改自 https://github.com/chokcoco/iCSS/issues/153 */
+@property --hibox {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 24px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox {
+  background-color: transparent;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox:hover {
+  color: var(--text-normal);
+  --hibox: 900px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-1) 0, var(--theme-color-translucent-1) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.4s linear;
+  color: var(--background-code);
+  color: transparent;
+}
+
 
 /*=========================================*/
 /* =========== workspace-ribbon ========== */
@@ -11502,7 +12099,7 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: right;
   right: -10px;
-  width: max(150px, 30%);
+  width: max(180px, 30%);
   max-width: 50%;
   background-color: var(--stickies-color-1);
   -webkit-transform: rotate(0deg);
@@ -11561,7 +12158,7 @@ button.kanban-plugin__new-item-button:hover {
   position: relative;
   float: left;
   box-shadow: 0 10px 10px 2px #9191912d;
-  width: max(150px, 30%);
+  width: max(180px, 30%);
   max-width: 50%;
   background-color: var(--stickies-color-2);
   -webkit-transform: rotate(0deg);
@@ -12431,6 +13028,89 @@ body.style-options-for-admonition-plugin .admonition-pro p {
   font-size: 1.1em;
 }
 
+/*hibox*/
+/*改自 https://github.com/chokcoco/iCSS/issues/153 */
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-content-holder {
+  margin: -1em 0.2em;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox *,
+body.style-options-for-admonition-plugin .admonition-hibox *::marker {
+  color: transparent !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  border-radius: var(--radius-s) !important;
+  background: radial-gradient(circle at 0px 0px, rgba(var(--admonition-color), 0.2) 0, rgba(var(--admonition-color), 0.2) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.6s linear;
+  border-left: none !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover {
+  --hibox: 1500px;
+  box-shadow: 0 0.2rem 0.5rem var(--background-modifier-box-shadow) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover * {
+  color: var(--text-normal) !important;
+  border-color: inherit !important;
+  background-color: initial !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-content-copy {
+  top: 7px;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover ol:not(.contains-task-list)>li:not(.task-list-item) {
+  border-color: var(--list-ol-block-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover ul>li:not(.task-list-item) {
+  border-color: var(--list-ul-block-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover *::marker {
+  color: var(--list-ol-number-color) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover blockquote {
+  border-color: var(--theme-color) !important;
+  background-color: var(--background-blockquote) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox:hover {
+  border-color: var(--text-normal) !important;
+}
+
+body.style-options-for-admonition-plugin .admonition-hibox .admonition-title {
+  display: none;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox:hover {
+  color: var(--text-normal);
+  --hibox: 900px;
+}
+
+.app-container .markdown-preview-view pre.language-hibox code.language-hibox {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-1) 0, var(--theme-color-translucent-1) var(--hibox), transparent var(--hibox), transparent 0);
+  transition: --hibox 0.4s linear;
+  color: var(--background-code);
+  color: transparent;
+}
+
 /* ================================== */
 /* ============ checklist =========== */
 /* ================================== */
@@ -12823,7 +13503,8 @@ body.translucent-setting-panel .modal.mod-settings .vertical-tab-content-contain
   background-color: var(--background-secondary-translucent);
 }
 
-body.translucent-setting-panel .modal-bg {
+body.translucent-setting-panel .modal-bg,
+body.translucent-setting-panel .vertical-tab-header {
   background-color: var(--background-secondary-translucent);
 }
 
@@ -12833,6 +13514,12 @@ body.translucent-setting-panel .vertical-tab-content {
   background-color: transparent;
 }
 
+body.translucent-setting-panel .vertical-tab-header,
+body.translucent-setting-panel .horizontal-tab-nav-item, 
+body.translucent-setting-panel .vertical-tab-nav-item {
+  background-color: var(--background-secondary-translucent);
+}
+
 .setting-item-description,
 .setting-item-info {
   word-wrap: break-word;
@@ -12840,12 +13527,53 @@ body.translucent-setting-panel .vertical-tab-content {
   white-space: pre-wrap;
 }
 
+.style-settings-heading {
+  margin-bottom: 5px !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="1"] .setting-item-name {
+  color: var(--h2-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="2"] .setting-item-name {
+  color: var(--h3-color)!important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="3"] .setting-item-name {
+  color: var(--h4-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading[data-level="4"] .setting-item-name {
+  color: var(--h5-color) !important;
+}
+
+.style-settings-collapse-indicator {
+  color: var(--theme-color) !important;
+}
+
+.setting-item.setting-item-heading.style-settings-heading.is-collapsed .style-settings-collapse-indicator {
+  opacity: 0.4;
+}
+
 /* ================================== */
 /* =========== RTL support ========== */
 /* ================================== */
-.CodeMirror-code.CodeMirror-rtl .HyperMD-quote {
+.CodeMirror-code.CodeMirror-rtl span.cm-quote::before {
+  content: "";
   border-right: 7px solid var(--theme-color);
+  border-radius: 0; /*5px 0 0 5px;*/
+  height: 100%;  
   border-left: none;
+  margin-right: -7px;
+  position: absolute;
+}
+
+.CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-formatting-quote + span.cm-hmd-indent-in-quote + span.cm-quote:not(.cm-formatting-quote)::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-inline-code + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-highlight + *::before,
+.CodeMirror-code.CodeMirror-rtl span.cm-quote + *::before {
+  border-right: none;
 }
 
 div[dir="rtl"] blockquote {
@@ -12947,10 +13675,6 @@ div[dir="rtl"] .markdown-preview-view li.is-collapsed div.list-collapse-indicato
   transform: translateX(40px) translateY(-23px) rotate(90deg);
 }
 
-div[dir="rtl"] ul.contains-task-list .list-collapse-indicator.collapse-indicator.collapse-icon::before {
-  margin-right: -12px;
-}
-
 div[dir="rtl"] .mermaid {
   margin-right: -60px !important;
 }
@@ -12958,6 +13682,7 @@ div[dir="rtl"] .mermaid {
 div[dir="rtl"] .mermaid svg {
   width: 100%;
 }
+
 
 /* ============ */
 /* ============ */
@@ -13094,7 +13819,7 @@ img[alt$="inlR"] {
 /*===================================================*/
 /*===================================================*/
 .is-mobile .markdown-preview-view {
-  padding: 0 30px;
+  padding: 0 16px 0 25px;
 }
 
 .is-mobile .markdown-preview-view ol>li {
@@ -13284,7 +14009,7 @@ img[alt$="inlR"] {
 /* calendar plugin */
 .is-mobile #calendar-container {
   padding: 0 4px 2px 4px;
-  margin: unset;
+  margin: unset !important;
   line-height: unset;
 }
 
@@ -13372,6 +14097,334 @@ img[alt$="inlR"] {
   color: var(--text-normal);
 }
 
+.is-mobile .HyperMD-quote.cm-line {
+  content: "";
+  border-left: 7px solid var(--theme-color);
+  border-radius: 0; /*5px 0 0 5px;*/
+  height: 100%;
+  margin-left: 0px;
+  position: relative;
+}
+
+.is-mobile .markdown-preview-view.kanban-plugin__markdown-preview-view {
+  padding: 0 5px;
+}
+
+/*===================================================*/
+/*===================================================*/
+/*=================   Live Preview   ================*/
+/*===================================================*/
+/*===================================================*/
+.markdown-source-view.is-live-preview span.cm-quote::before {
+  all: initial;
+}
+
+.markdown-source-view.mod-cm6 .cm-gutters {
+  background-color: transparent !important;
+}
+
+/*
+.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-em.cm-highlight.cm-strong,
+.markdown-source-view.is-live-preview span:not([class*=cm-formatting]).cm-highlight.cm-strong + span:not([class*=cm-formatting]).cm-highlight.cm-strong {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+
+.markdown-source-view.is-live-preview span.cm-formatting.cm-formatting-highlight.cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight + span:not([class*=cm-formatting-link-start]).cm-highlight {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+*/
+
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+  border-color: var(--theme-color);
+  background-color: var(--background-blockquote);
+}
+
+/*
+.markdown-source-view.is-live-preview .cm-formatting-link.cm-formatting-link-start.cm-highlight + .cm-highlight.cm-hmd-internal-link + .cm-highlight.cm-hmd-internal-link {
+  border-radius: var(--radius-xs);
+  padding: 0 3px 1px;
+}
+*/
+
+.markdown-source-view.is-live-preview *:not(font)>em>strong,
+.markdown-source-view.is-live-preview *:not(font)>strong>em,
+.markdown-source-view.is-live-preview .cm-strong.cm-em {
+  padding-right: 0;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-quote.cm-quote {
+  color: var(--red);
+}
+
+.markdown-source-view.is-live-preview span.code-block-flair {
+  color: #95a3b5;
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag {
+  font-family: var(--font-family-tag);
+  font-size: var(--font-size-tag);
+  text-decoration: none;
+  color: var(--tag-text);
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-begin {
+  background-color:var(--color-tag-edit);
+  color: var(--tag-text);
+  border-top-left-radius: var(--radius-l);
+  border-bottom-left-radius: var(--radius-l);
+  border-right: none;
+  text-decoration: none;
+  padding-left: 0.3em;
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-end {
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  border-radius: 0 var(--radius-l) var(--radius-l) 0;
+  padding-right: 0.3em !important;
+  border-left: none;
+  text-decoration: none;
+}
+
+span.cm-hashtag-begin+.cm-hashtag.cm-meta {
+  padding-right: 0;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+}
+
+.markdown-source-view.is-live-preview span.cm-hashtag-begin+.cm-hashtag.cm-meta+span.cm-hashtag.cm-meta.cm-hashtag-end {
+  padding-left: 0;
+  border-top-right-radius: var(--radius-l);
+  border-bottom-right-radius: var(--radius-l);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: var(--color-tag-edit);
+  color: var(--tag-text);
+  padding-right: 0.3em;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-important {
+  background-color: var(--stag1-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-weeklynote {
+  background-color: var(--tag-weeklynote-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-dailynote {
+  background-color: var(--tag-dailynote-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-ideas {
+  background-color: var(--tag-ideas-bg) !important;
+}
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-inprogress {
+  background-color: var(--stag2-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-questions {
+  background-color: var(--tag-questions-bg) !important;
+}
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-complete {
+  background-color: var(--stag3-bg) !important;
+}
+
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-dailynote,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-weeklynote,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-ideas,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-inprogress,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-important,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-questions,
+.markdown-source-view.is-live-preview .cm-formatting.cm-formatting-hashtag.cm-hashtag.cm-hashtag-begin.cm-meta.cm-tag-complete {
+  font-weight: 600;
+  font-family: var(--font-family-special-tag) !important;
+  display: inline;
+  font-size: 0.95em;
+}
+
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 2px solid var(--background-modifier-border);
+  position: relative;
+  border-radius: var(--radius-xs);
+  width: 1.3em;
+  height: 1.3em;
+  margin: 0 0.5em 0.1215em 0;
+  filter: hue-rotate(var(--theme-color));
+  transition: all 500ms;
+  cursor: pointer;
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked {
+  border: none;
+  background-color: var(--interactive-accent);
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:hover {
+  background-color: var(--theme-color-translucent);
+  border: none;
+  border-color: transparent;
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:hover::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+  animation: fade-left 1.5s;
+}
+
+.markdown-source-view.is-live-preview .task-list-item-checkbox:checked:hover::before {
+  animation: tada 1s;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="x"]:hover {
+  background-color: var(--red) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="x"]::before {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  left: 3px;
+  top: 3px;
+  right: 2px;
+  bottom: 2px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E") !important;
+}
+
+.markdown-preview-view input.task-list-item-checkbox[data-task="x"] {
+  text-decoration: none;
+  color: var(--text-checked-checkbox);
+}
+
+/*- [>]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task=">"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTAuNzA3IDE3LjcwNyAxNi40MTQgMTJsLTUuNzA3LTUuNzA3LTEuNDE0IDEuNDE0TDEzLjU4NiAxMmwtNC4yOTMgNC4yOTN6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task=">"] {
+  background-color: var(--checkbox-color-2) !important;
+  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [<]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="<"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTMuMjkzIDYuMjkzIDcuNTg2IDEybDUuNzA3IDUuNzA3IDEuNDE0LTEuNDE0TDEwLjQxNCAxMmw0LjI5My00LjI5M3oiLz48L3N2Zz4=) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="<"] {
+  background-color: var(--checkbox-color-1) !important;  text-decoration: none;
+  color: var(--text-normal);
+}
+
+/*- [?]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="?"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.24em;
+  right: 0;
+  bottom: 0;
+  background-color: var(--red);
+  transform: scale(0.8);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgNEM5LjI0MyA0IDcgNi4yNDMgNyA5aDJjMC0xLjY1NCAxLjM0Ni0zIDMtM3MzIDEuMzQ2IDMgM2MwIDEuMDY5LS40NTQgMS40NjUtMS40ODEgMi4yNTUtLjM4Mi4yOTQtLjgxMy42MjYtMS4yMjYgMS4wMzhDMTAuOTgxIDEzLjYwNCAxMC45OTUgMTQuODk3IDExIDE1djJoMnYtMi4wMDljMC0uMDI0LjAyMy0uNjAxLjcwNy0xLjI4NC4zMi0uMzIuNjgyLS41OTggMS4wMzEtLjg2N0MxNS43OTggMTIuMDI0IDE3IDExLjEgMTcgOWMwLTIuNzU3LTIuMjQzLTUtNS01em0tMSAxNGgydjJoLTJ6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="?"] {
+  background-color: var(--checkbox-color-3) !important;
+  text-decoration: none;
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [!]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="!"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.2em;
+  right: 0;
+  bottom: -0.2em;
+  background-color: var(--text-yellow);
+  transform: scale(0.75);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0cHgiIGZpbGw9IiMwMDAwMDAiPjxnPjxyZWN0IGZpbGw9Im5vbmUiIGhlaWdodD0iMjQiIHdpZHRoPSIyNCIvPjwvZz48Zz48Zy8+PGc+PHBhdGggZD0iTTEyLDNjLTAuNDYsMC0wLjkzLDAuMDQtMS40LDAuMTRDNy44NCwzLjY3LDUuNjQsNS45LDUuMTIsOC42NmMtMC40OCwyLjYxLDAuNDgsNS4wMSwyLjIyLDYuNTYgQzcuNzcsMTUuNiw4LDE2LjEzLDgsMTYuNjlWMTljMCwxLjEsMC45LDIsMiwyaDAuMjhjMC4zNSwwLjYsMC45OCwxLDEuNzIsMXMxLjM4LTAuNCwxLjcyLTFIMTRjMS4xLDAsMi0wLjksMi0ydi0yLjMxIGMwLTAuNTUsMC4yMi0xLjA5LDAuNjQtMS40NkMxOC4wOSwxMy45NSwxOSwxMi4wOCwxOSwxMEMxOSw2LjEzLDE1Ljg3LDMsMTIsM3ogTTE0LDE3aC00di0xaDRWMTd6IE0xMCwxOXYtMWg0djFIMTB6IE0xNS4zMSwxMy43NGMtMC4wOSwwLjA4LTAuMTYsMC4xOC0wLjI0LDAuMjZIOC45MmMtMC4wOC0wLjA5LTAuMTUtMC4xOS0wLjI0LTAuMjdjLTEuMzItMS4xOC0xLjkxLTIuOTQtMS41OS00LjcgYzAuMzYtMS45NCwxLjk2LTMuNTUsMy44OS0zLjkzQzExLjMyLDUuMDMsMTEuNjYsNSwxMiw1YzIuNzYsMCw1LDIuMjQsNSw1QzE3LDExLjQzLDE2LjM5LDEyLjc5LDE1LjMxLDEzLjc0eiIvPjwvZz48Zz48cmVjdCBoZWlnaHQ9IjMiIHdpZHRoPSIxIiB4PSIxMS41IiB5PSIxMSIvPjxyZWN0IGhlaWdodD0iMyIgdHJhbnNmb3JtPSJtYXRyaXgoMC43MDcxIC0wLjcwNzEgMC43MDcxIDAuNzA3MSAtNC4wMzEyIDEwLjg1MzYpIiB3aWR0aD0iMSIgeD0iMTAuNTkiIHk9IjguNzkiLz48cmVjdCBoZWlnaHQ9IjMiIHRyYW5zZm9ybT0ibWF0cml4KC0wLjcwNzEgLTAuNzA3MSAwLjcwNzEgLTAuNzA3MSAxNC43Njc4IDI2LjcwMjgpIiB3aWR0aD0iMSIgeD0iMTIuNDEiIHk9IjguNzkiLz48L2c+PC9nPjwvc3ZnPg==) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="!"] {
+  background-color: var(--checkbox-color-4) !important;
+  text-decoration: underline wavy var(--text-yellow-2);
+  color: var(--text-normal);
+  font-weight: 600;
+}
+
+/*- [+]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="+"]::before {
+  content: ' ';
+  top: -0.3em;
+  left: -0.22em;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTkgMTFoLTZWNWgtMnY2SDV2Mmg2djZoMnYtNmg2eiIvPjwvc3ZnPg==) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="+"] {
+  background-color: var(--checkbox-color-5) !important;
+  text-decoration: none;
+  color: var(--checkbox-color-5);
+}
+
+/*- [-]*/
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="-"]::before {
+  content: ' ';
+  top: -0.25em;
+  left: -0.22em;
+  background-color: white;
+  transform: scale(0.9);
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNNSAxMWgxNHYySDV6Ii8+PC9zdmc+) !important;
+}
+
+.markdown-source-view.is-live-preview input.task-list-item-checkbox[data-task="-"] {
+  background-color: var(--checkbox-color-6) !important;
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+body.circular-checkbox .markdown-source-view.is-live-preview .task-list-item-checkbox {
+  border-radius: 50%;
+}
 
 /* ============ */
 /* just for fun */
@@ -13522,6 +14575,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Nova nota"] svg.document,
 .nav-action-button[aria-label="Notă nouă"] svg.document,
 .nav-action-button[aria-label="新規ノート"] svg.document,
+.nav-action-button[aria-label="Neue Notiz"] svg.document,
 
 .nav-action-button[aria-label="New folder"] svg.folder,
 .nav-action-button[aria-label="新建文件夹"] svg.folder,
@@ -13531,6 +14585,7 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Nova pasta"] svg.folder,
 .nav-action-button[aria-label="Director nou"] svg.folder,
 .nav-action-button[aria-label="新規フォルダ"] svg.folder,
+.nav-action-button[aria-label="Neuer Ordner"] svg.folder,
 
 .nav-action-button[aria-label="Change sort order"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="排序"] svg.up-and-down-arrows,
@@ -13540,12 +14595,14 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Mudar ordenação"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"] svg.up-and-down-arrows,
 .nav-action-button[aria-label="ソート順の変更"] svg.up-and-down-arrows,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"] svg.up-and-down-arrows,
 
 .nav-action-button[aria-label="Collapse results"] svg.bullet-list,
 .nav-action-button[aria-label="折叠搜索结果"] svg.bullet-list,
 .nav-action-button[aria-label="Свернуть результаты"] svg.bullet-list,
 .nav-action-button[aria-label="Comprimi risultati"] svg.bullet-list,
 .nav-action-button[aria-label="Ciutkan hasil"] svg.bullet-list,
+.nav-action-button[aria-label="Ergebnisse zuklappen"] svg.bullet-list,
 
 .nav-action-button[aria-label="Show more context"] svg.expand-vertically,
 .nav-action-button[aria-label="显示上下文"] svg.expand-vertically,
@@ -13617,7 +14674,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Catatan baru"]::before,
 .nav-action-button[aria-label="Nova nota"]::before,
 .nav-action-button[aria-label="Notă nouă"]::before,
-.nav-action-button[aria-label="新規ノート"]::before {
+.nav-action-button[aria-label="新規ノート"]::before,
+.nav-action-button[aria-label="Neue Notiz"]::before {
   content: "\ed39";
 }
 
@@ -13628,7 +14686,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Catatan baru"]:hover::before,
 .nav-action-button[aria-label="Nova nota"]:hover::before,
 .nav-action-button[aria-label="Notă nouă"]:hover::before,
-.nav-action-button[aria-label="新規ノート"]:hover::before {
+.nav-action-button[aria-label="新規ノート"]:hover::before,
+.nav-action-button[aria-label="Neue Notiz"]:hover::before {
   content: "\ed38";
 }
 
@@ -13639,7 +14698,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Folder baru"]::before,
 .nav-action-button[aria-label="Nova pasta"]::before,
 .nav-action-button[aria-label="Director nou"]::before,
-.nav-action-button[aria-label="新規フォルダ"]::before {
+.nav-action-button[aria-label="新規フォルダ"]::before,
+.nav-action-button[aria-label="Neuer Ordner"]::before {
   content: "\e2cc";
   font-family: "Material Icons Outlined";
 }
@@ -13651,7 +14711,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Folder baru"]:hover::before,
 .nav-action-button[aria-label="Nova pasta"]:hover::before,
 .nav-action-button[aria-label="Director nou"]:hover::before,
-.nav-action-button[aria-label="新規フォルダ"]:hover::before {
+.nav-action-button[aria-label="新規フォルダ"]:hover::before,
+.nav-action-button[aria-label="Neuer Ordner"]:hover:before  {
   content: "\e2cc";
   font-family: "Material Icons";
 }
@@ -13663,7 +14724,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Ubah urutan sortir"]::before,
 .nav-action-button[aria-label="Mudar ordenação"]::before,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]::before,
-.nav-action-button[aria-label="ソート順の変更"]::before {
+.nav-action-button[aria-label="ソート順の変更"]::before,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"]::before {
   content: "\ee7f";
 }
 
@@ -13674,7 +14736,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="Ubah urutan sortir"]:hover::before,
 .nav-action-button[aria-label="Mudar ordenação"]:hover::before,
 .nav-action-button[aria-label="Schimbă ordinea de sortare"]:hover::before,
-.nav-action-button[aria-label="ソート順の変更"]:hover::before {
+.nav-action-button[aria-label="ソート順の変更"]:hover::before,
+.nav-action-button[aria-label="Sortierreihenfolge ändern"]:hover::before {
   content: "\ee82";
 }
 
@@ -13690,7 +14753,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="折叠搜索结果"]::before,
 .nav-action-button[aria-label="Свернуть результаты"]::before,
 .nav-action-button[aria-label="Comprimi risultati"]::before,
-.nav-action-button[aria-label="Ciutkan hasil"]::before {
+.nav-action-button[aria-label="Ciutkan hasil"]::before,
+.nav-action-button[aria-label="Ergebnisse zuklappen"]::before  {
   content: "\ed1a";
 }
 
@@ -13698,7 +14762,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button[aria-label="折叠搜索结果"]:hover::before,
 .nav-action-button[aria-label="Свернуть результаты"]:hover::before,
 .nav-action-button[aria-label="Comprimi risultati"]:hover::before,
-.nav-action-button[aria-label="Ciutkan hasil"]:hover:before {
+.nav-action-button[aria-label="Ciutkan hasil"]:hover:before,
+.nav-action-button[aria-label="Ergebnisse zuklappen"]:hover::before {
   content: "\ecd4";
 }
 
@@ -13706,7 +14771,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button.is-active[aria-label="折叠搜索结果"]::before,
 .nav-action-button.is-active[aria-label="Свернуть результаты"]::before,
 .nav-action-button.is-active[aria-label="Comprimi risultati"]::before,
-.nav-action-button.is-active[aria-label="Ciutkan hasil"]::before {
+.nav-action-button.is-active[aria-label="Ciutkan hasil"]::before,
+.nav-action-button.is-active[aria-label="Ergebnisse zuklappen"]::before {
   content: "\ee49";
 }
 
@@ -13714,7 +14780,8 @@ body:not(.remove-file-icons).theme-light .nav-file-title.is-active>.nav-file-tit
 .nav-action-button.is-active[aria-label="折叠搜索结果"]:hover::before,
 .nav-action-button.is-active[aria-label="Свернуть результаты"]:hover::before,
 .nav-action-button.is-active[aria-label="Comprimi risultati"]:hover::before,
-.nav-action-button.is-active[aria-label="Ciutkan hasil"]:hover::before {
+.nav-action-button.is-active[aria-label="Ciutkan hasil"]:hover::before,
+.nav-action-button.is-active[aria-label="Ergebnisse zuklappen"]:hover::before {
   content: "\ed2f";
 }
 
@@ -15316,7 +16383,7 @@ body.blockquote-style-quotation-mark .markdown-preview-view blockquote p:first-o
   content: '“';
   font-weight: 700;
   font-size: 60px;
-  font-family: Arial;
+  font-family: Arial, serif;
   color: var(--text-accent);
   position: absolute;
   top: -23px;
@@ -15711,3 +16778,110 @@ body.background-settings-workplace-style-blur .workspace-split.mod-right-split>.
 body.background-settings-workplace-style-blur .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover {
   height: 100%;
 }
+
+/*-------- Eisenhower Matrix start--- */
+/* Eisenhower Matrix from Spectrum themes */
+/* 
+/*for Blue Topaz theme-表格四象图分布 Modified  by cuman 2021-11-29*/
+/* 用法 yaml区域声明
+cssclass: matrix
+内容如下形式(表格内容最好使用嵌入形式)：
+
+|                   |             |
+| ----------------- | ----------- |
+| ![[#To-Do]]       | ![[#Doing]] |
+| ![[#Considering]] | ![[#Maybe]] |
+
+*/
+
+:root,
+.theme-dark {
+--matrix-1: var(--p-kanban-color-2);
+--matrix-2: var(--p-kanban-color-3);
+--matrix-4: var(--p-kanban-color-5);
+--matrix-5: var(--p-kanban-color-6);
+}
+:root,
+.theme-light {
+  --matrix-1: var(--p-kanban-color-2);
+  --matrix-2: var(--p-kanban-color-3);
+  --matrix-4: var(--p-kanban-color-5);
+  --matrix-5: var(--p-kanban-color-6);
+}
+.markdown-preview-view.matrix table tr {
+  display: flex;
+}
+.markdown-preview-view.matrix table th {
+  background-color: transparent;
+  background-image:none;
+}
+.markdown-preview-view.matrix table tbody>tr {
+  background-color: transparent;
+}
+
+.markdown-preview-view.matrix .internal-embed:not(.image-embed)
+{
+  border: 1px solid;
+  border-radius: 10px;
+}
+.markdown-preview-view.matrix thead {
+  background-color: transparent; 
+}
+.markdown-preview-view.matrix table tr th,
+.markdown-preview-view.matrix table tr td {
+  padding-right:0px;
+  border: 0px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.markdown-preview-view.matrix .markdown-embed 
+{
+  background-color: transparent;
+}
+.markdown-preview-view.matrix table tr th > *,
+.markdown-preview-view.matrix table tr td > * {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-secondary-bg-4-bt);
+}
+
+.markdown-preview-view.matrix table tr td {
+  background-color: transparent;
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(1) > * {
+  border-color: var(--matrix-1);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(1):hover {
+  background-color: var(--matrix-1);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(2) > * {
+  border-color: var(--matrix-2);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(1n) td:nth-child(2):hover {
+  background-color: var(--matrix-2);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(1) > * {
+  border-color: var(--matrix-4);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(1):hover {
+  background-color: var(--matrix-4);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(2) > * {
+  border-color: var(--matrix-5);
+}
+
+.markdown-preview-view.matrix table tr:nth-child(2n) td:nth-child(2):hover {
+  background-color: var(--matrix-5);
+}
+
+/*-------- Eisenhower Matrix end--- */

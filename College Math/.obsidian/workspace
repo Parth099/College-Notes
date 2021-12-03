@@ -1,16 +1,16 @@
 {
   "main": {
-    "id": "e520e963bf468379",
+    "id": "95badf5007f21240",
     "type": "split",
     "children": [
       {
-        "id": "65a1750ebab6fe01",
+        "id": "bf953ebe658f8073",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2168/Sorting/Quick Sort.md",
-            "mode": "source"
+            "file": "The Calculus of Vector Functions.md",
+            "mode": "preview"
           }
         }
       }
@@ -18,15 +18,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1f40af499dc241d2",
+    "id": "c8990ead23091c53",
     "type": "split",
     "children": [
       {
-        "id": "bf8c2e09e834a5d6",
+        "id": "592f0565a563dfdc",
         "type": "tabs",
         "children": [
           {
-            "id": "802970f4308d117b",
+            "id": "c243f54848de1958",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -34,7 +34,7 @@
             }
           },
           {
-            "id": "a40b3f1f1d41d19f",
+            "id": "8746d1e8776156c3",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -55,27 +55,27 @@
     "width": 300
   },
   "right": {
-    "id": "edc3d30a321b4907",
+    "id": "703ab118640b3cd6",
     "type": "split",
     "children": [
       {
-        "id": "c0cae68d4afa6c4a",
+        "id": "5443ff86ec2f5213",
         "type": "tabs",
         "children": [
           {
-            "id": "6314d9bdd46f4326",
+            "id": "293b9956dee52885",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2168/Sorting/Quick Sort.md",
+                "file": "The Calculus of Vector Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": false
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
               }
             }
           }
@@ -86,15 +86,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "65a1750ebab6fe01",
+  "active": "bf953ebe658f8073",
   "lastOpenFiles": [
-    "CIS2168/Sorting/Quick Sort.md",
-    "CIS2168/Sorting/Merge Sort.md",
-    "CIS2168/Data Structures/Stack.md",
-    "CIS2168/Sorting/Sorting.md",
-    "CIS2168/Sorting/Heap Sort.md",
-    "CIS2168/Sorting/Insertion Sort.md",
-    "Untitled 1.md",
-    "ALGO/Sliding Array Problems.md"
+    "The Calculus of Vector Functions.md",
+    "Calculus 3/Vectors/Equations of Lines and Planes.md",
+    "Calculus 3/Vectors/Types of Vector Products.md",
+    "Calculus 3/Concepts of Vector Calculus/Greens Theorem.md",
+    "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
+    "Calculus 3/Concepts of Vector Calculus/Line Integrals Over Vector Fields.md",
+    "Calculus 3/Concepts of Vector Calculus/Curl and Divergence.md",
+    "Calculus 3/Concepts of Vector Calculus/Arc Length.md",
+    "Calculus 3/img/projectionExample.png"
   ]
 }

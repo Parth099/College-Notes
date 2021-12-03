@@ -55,15 +55,15 @@ Now the Split only occurs when the $size$ of the array is over 1. Otherwise the 
 private static <T extends Comparable<T>> void sort(T[] in){  
     if(in.length > 1){  
         int half = in.length / 2;  
-		 T[] L = (T[])new Comparable[half];  
-		 T[] R = (T[])new Comparable[in.length - half];  
+		T[] L = (T[])new Comparable[half];  
+		T[] R = (T[])new Comparable[in.length - half];  
 
-		 for(int i = 0; i < half; i++){  
+		for(int i = 0; i < half; i++){  
 			L[i] = in[i];  
-		 }  
+		}  
 		for(int j = 0; j < in.length - half; j++){  
 			R[j] = in[half+j];  
-		 }  
+		}  
 		sort(L);  
 		sort(R);  
 		merge(in, L, R);  

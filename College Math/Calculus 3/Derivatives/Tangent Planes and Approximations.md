@@ -25,3 +25,21 @@ See that after considering $y = y_0$, this is the equation of a line with initia
 ## Tangent Line Equation
 
 $$\boxed{\large z - z_0 = f_x(x_0, y_0)(x - x_0) + f_y(x_0, y_0)(y - y_0)}$$
+
+### Linear Approximations
+Suppose we want to estimate function values around the point $(a, b, f(a, b))$
+
+Then we have: 
+$$
+L(x, y) = f(a, b) + f_x(a, b)(x - a) + f_y(a, b)(y - b)
+$$
+which is a restatement of the TL EQ from above.
+
+
+The equation above when subbed in for values reduces to:
+$$L(x, y) = Ax + By + C$$
+This *linear* equation can be used to Approximate functional output "*near*" the original point **$(x_0, y_0)$**.
+
+### Total Differential
+The total differential is the overall approximated change in $z$ WRT an initial point $(x, y, z)$
+

@@ -76,6 +76,7 @@ a_1 & a_2 & a_3 \\
 b_1 & b_2 & b_3
 \end{vmatrix}
 $$
+*Notation: The matrix inside the $det$ can also be transposed to give the same vector out*
 
 Then:
 > $(a \times b) \cdot a = 0$
@@ -83,6 +84,8 @@ Then:
 
 Note if $\vec{a}$ and $\vec{b}$ are parallel **or** $\vec{a} = \vec{b}$ then:
 $$a \times b = 0$$
+
+Recall that the function **det**() gets the area of a parallelogram after a Linear Transformation T. This is why the vectors are loaded into a matrix and passed to the determinant.  
 
 ## Cross Product Geometry 
 > $|a \times b| = \lvert a \rvert \lvert b \rvert \sin{\theta}$ 

@@ -1,4 +1,8 @@
 {
   "alwaysUpdateLinks": true,
-  "spellcheck": true
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "det"
+  ],
+  "promptDelete": false
 }

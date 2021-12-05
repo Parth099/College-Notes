@@ -3,7 +3,7 @@
 ## Mild Derivation
 Much like a line tangent to a Curve from single variable Calculus. A tangent plane compasses 2 tangent lines at a point and forms a plane. The 2 tangent lines are formed by the 2 separate [[Partial Derivatives]].
 
-Recall from [[Tangent Planes and Approximations]] that any point passing through the plane is in the form:
+Recall from [[Equations of Lines and Planes]] that any point passing through the plane is in the form:
 
 > $A(x - x_0) +B(y - y_0) + C(z - z_0) = 0$
 
@@ -40,6 +40,9 @@ The equation above when subbed in for values reduces to:
 $$L(x, y) = Ax + By + C$$
 This *linear* equation can be used to Approximate functional output "*near*" the original point **$(x_0, y_0)$**.
 
-### Total Differential
+### Total Differential (Bonus)
 The total differential is the overall approximated change in $z$ WRT an initial point $(x, y, z)$
 
+$$dz = \dfrac{\partial z}{\partial x}dx + \dfrac{\partial z}{\partial y}dy$$
+
+The $dx, dy$ represents the distance from the input.

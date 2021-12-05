@@ -37,6 +37,8 @@ This function spans segment **S** when $0 \leq t \leq 1$
 
 # Equation of a Plane
 
+Recall the Dot Product from [[Types of Vector Products]]
+
 A plane is defined a normal vector. This means its defined by a vector $\vec{n}$ such that for any point $\vec{r}$ on the plane $n \perp r \implies n\cdot r = 0$
 
 ## Derivation 

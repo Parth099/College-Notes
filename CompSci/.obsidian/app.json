@@ -13,5 +13,7 @@
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
-  "promptDelete": false
+  "promptDelete": false,
+  "foldHeading": false,
+  "showLineNumber": true
 }

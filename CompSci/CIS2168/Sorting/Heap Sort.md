@@ -89,4 +89,11 @@ public static <T extends Comparable<T>> void shrinkHeap(T[] table){
 ```
 
 ##### Code Analysis
-E
+The shrink-Heap shrinks a heap by moving the highest element $[0]$ to the back of the array $[n - k]$. Now the process is simple, after the swap from the back the heap property is not fulfilled. So we need to float the top back down since the rest is a heap$^{\alpha}$. This element is floated down in the internal *while* loop. Its children index are calculated and sees if a swap is necessary. If swapping is need the loop goes on, else the control is passed back to the main while loop which swaps from the back which starts the cycle again. 
+
+The cycle occurs until the heap is of size one at which point the array **will** be sorted.
+
+
+
+---
+**${\alpha}$**: This matters since only one element is out of heap order, once this element is in order this will be a heap again from index *0* to *n - k* where *k* is iteration count starting at 0. 

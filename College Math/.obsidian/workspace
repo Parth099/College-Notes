@@ -7,8 +7,11 @@
         "id": "247dc3622d2e9826",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,9 +88,9 @@
   },
   "active": "247dc3622d2e9826",
   "lastOpenFiles": [
+    "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
     "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
     "Calculus 3/Vectors/Equations of Lines and Planes.md",
-    "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
     "Calculus 3/Derivatives/Tangent Planes and Approximations.md",
     "Calculus 3/Vectors/Types of Vector Products.md",
     "Calculus 3/Vectors/The Calculus of Vector Functions.md",

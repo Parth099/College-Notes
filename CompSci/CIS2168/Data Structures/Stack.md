@@ -1,7 +1,7 @@
 
 
 # The Stack
-The Stack is a [[Data Structure]] created to optimize one ended Add/Remove operations.
+The Stack is a [[Data Structure]] created to optimize one ended Add/Remove operations. Follows the First in last out policy(FILO) unlike the [[Queue]]. 
 
 You can imagine this is a stack of books. You an either add a book on top or remove a book off the top. These 2 operations are the core of *Stack* DSA
 

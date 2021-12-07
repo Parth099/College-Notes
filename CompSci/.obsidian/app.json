@@ -9,7 +9,14 @@
     "reheaped",
     "subprocesses",
     "QuickSort",
-    "QuickSorting"
+    "QuickSorting",
+    "Preorder",
+    "Inorder",
+    "PostOrder",
+    "Postorder",
+    "SubTree",
+    "subtree",
+    "LinkedList"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

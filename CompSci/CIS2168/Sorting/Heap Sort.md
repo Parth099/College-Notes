@@ -3,7 +3,7 @@
 # Heap Sort
 
 ## Description
-Heap Sort is based on the Heap *Data-Structure*, specifically the **Max** heap. 
+Heap Sort is based on the [[Heap]] [[Data Structure]], specifically the **Max** heap. 
 A naive approach to this problem would be to first load all array elements into a Min/Max heap and then remove off the top of the heap. Depending on the insert direction into the new $output$ array. This can order the array in either descending or ascending. 
 
 Heap Sort consists of 2 parts: 
@@ -17,7 +17,7 @@ The **first** step is the build the heap. The word transform here is better sinc
 In an array-based heap each index represents the $i^{\text{th}}$ node in a tree which is tree that is reversed in level order*. 
 
 $$
-\text{parent}_i = \frac{\text{child - 1}}{2}
+\text{parent}_i = \frac{\text{child}_i-1}{2}
 $$
 $$
 \text{child}_L = \text{parent}_i * 2

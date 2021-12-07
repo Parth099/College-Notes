@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "6369a7cde8f2e91d",
+        "id": "688b0e69aee34c81",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
-            "mode": "source"
+            "file": "CIS2168/Data Structures/Heap.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
+                "file": "CIS2168/Data Structures/Heap.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -78,25 +78,34 @@
                 "unlinkedCollapsed": false
               }
             }
+          },
+          {
+            "id": "458faecd3942b117",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "6369a7cde8f2e91d",
+  "active": "688b0e69aee34c81",
   "lastOpenFiles": [
-    "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
-    "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
-    "CIS2168/Data Structures/Tree Guide/Trees.md",
+    "CIS2168/Data Structures/Heap.md",
     "CIS2168/Data Structures/Data Structure.md",
-    "CIS2168/Data Structures/Queue.md",
+    "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
+    "CIS2168/Sorting/IMG/InsertionSortIMG1.png.png",
+    "CIS2168/Sorting/Insertion Sort.md",
     "CIS2168/Sorting/Heap Sort.md",
-    "Untitled 1.md",
-    "Sorted_binary_tree_ALL_RGB.svg.png",
-    "CIS2168/Data Structures/IMG/BintreeTravEx.svg",
-    "CIS2168/Sorting/Insertion Sort.md"
+    "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
+    "CIS2168/Data Structures/Tree Guide/Trees.md",
+    "CIS2168/Data Structures/Queue.md",
+    "Untitled 1.md"
   ]
 }

@@ -7,5 +7,6 @@ Here is the required Vocab.
 *Key: Data in the Node*
 ![[BinTreeVocab.png]]
 
-
+## Tree Types
+1. Complete-Tree: All levels are filled except the last level which will be filled left to right.
 

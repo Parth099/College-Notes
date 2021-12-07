@@ -16,7 +16,9 @@
     "Postorder",
     "SubTree",
     "subtree",
-    "LinkedList"
+    "LinkedList",
+    "subtrees",
+    "ArrayList"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

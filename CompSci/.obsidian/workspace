@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2168/Data Structures/Heap.md",
+            "file": "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2168/Data Structures/Heap.md",
+                "file": "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +97,15 @@
   },
   "active": "688b0e69aee34c81",
   "lastOpenFiles": [
-    "CIS2168/Data Structures/Heap.md",
-    "CIS2168/Data Structures/Data Structure.md",
     "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
-    "CIS2168/Sorting/IMG/InsertionSortIMG1.png.png",
-    "CIS2168/Sorting/Insertion Sort.md",
-    "CIS2168/Sorting/Heap Sort.md",
+    "CIS2168/Data Structures/Graphs/Graph Traverals.md",
     "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
+    "CIS2168/Sorting/Heap Sort.md",
+    "CIS2168/Data Structures/Heap.md",
+    "CIS2168/Data Structures/Graphs/Graph.md",
     "CIS2168/Data Structures/Tree Guide/Trees.md",
-    "CIS2168/Data Structures/Queue.md",
-    "Untitled 1.md"
+    "CIS2168/Data Structures/Data Structure.md",
+    "CIS2168/Data Structures/Stack.md",
+    "CIS2168/Data Structures/Queue.md"
   ]
 }

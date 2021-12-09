@@ -18,11 +18,13 @@
     "subtree",
     "LinkedList",
     "subtrees",
-    "ArrayList"
+    "ArrayList",
+    "HashMap"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "foldHeading": false,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "foldIndent": false
 }

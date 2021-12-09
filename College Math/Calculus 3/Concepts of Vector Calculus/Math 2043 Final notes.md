@@ -48,3 +48,4 @@ $$\text{div }\vec{F} = \nabla \cdot \vec{F}$$
 $$\iint_S \vec{F}\cdot\mathop{d\vec{S}} = \iiint_E \text{div} \vec{F}\mathop{dV}$$
 
 Used to find the Flux where the graph of the function has too many Surface/Line Integrals to Calculate. Also, in this class when the flux requires a specific angle. 
+

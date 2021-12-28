@@ -19,12 +19,31 @@
     "LinkedList",
     "subtrees",
     "ArrayList",
-    "HashMap"
+    "HashMap",
+    "lgorithim",
+    "LeetCode",
+    "pre",
+    "CreateReactAPP",
+    "Matchers",
+    "matcher",
+    "Iterables",
+    "subfolders",
+    "args",
+    "async",
+    "Subclasses",
+    "orderTotal",
+    "arg",
+    "QueryString",
+    "BinSearch",
+    "BinarySearch",
+    "rightMostBinSearch"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
   "promptDelete": false,
   "foldHeading": false,
   "showLineNumber": true,
-  "foldIndent": false
+  "foldIndent": false,
+  "legacyEditor": true,
+  "livePreview": true
 }

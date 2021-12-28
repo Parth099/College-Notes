@@ -4,14 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "688b0e69aee34c81",
+        "id": "2edac1e4014e916b",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
-            "mode": "preview"
-          }
+          "type": "graph",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +91,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "688b0e69aee34c81",
+  "active": "2edac1e4014e916b",
   "lastOpenFiles": [
-    "CIS2168/Data Structures/Tree Guide/3 Basic Tree Traversals.md",
-    "CIS2168/Data Structures/Graphs/Graph Traverals.md",
-    "CIS2168/Data Structures/Tree Guide/Binary Search Tree.md",
-    "CIS2168/Sorting/Heap Sort.md",
+    "ALGO/Binary Searches.md",
+    "ALGO/Sliding Array Problems.md",
+    "ALGO/Rotated Array Solution.md",
+    "ALGO/LeetCode.md",
+    "Untitled.md",
+    "Software Design/Unit Testing.md",
     "CIS2168/Data Structures/Heap.md",
     "CIS2168/Data Structures/Graphs/Graph.md",
-    "CIS2168/Data Structures/Tree Guide/Trees.md",
-    "CIS2168/Data Structures/Data Structure.md",
-    "CIS2168/Data Structures/Stack.md",
-    "CIS2168/Data Structures/Queue.md"
+    "CIS2168/Data Structures/Graphs/Graph Traverals.md",
+    "Software Design/JavaScript/Unit Testing in JS.md"
   ]
 }

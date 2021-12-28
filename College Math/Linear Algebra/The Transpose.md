@@ -18,3 +18,6 @@ Then $A^T = \begin{bmatrix} 1 & a \\2 & b  \\3 & c \end{bmatrix}$
 ##### Terms: 
 $A$ is **symmetric** if $A^T = A$. Ex: $I^T = I$
 $A$ is **Anti-symmetric or Skew-symmetric** if $A^T = -A$
+
+
+ 

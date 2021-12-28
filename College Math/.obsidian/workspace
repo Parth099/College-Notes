@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
+            "file": "Sequences & Series/Series.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
+                "file": "Sequences & Series/Series.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -78,8 +78,17 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "824bae661a3c5cca",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -88,15 +97,15 @@
   },
   "active": "73a99924a192795f",
   "lastOpenFiles": [
-    "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
+    "Sequences & Series/Series.md",
+    "Sequences & Series/Sequences.md",
+    "Sequences & Series/img/geoSeries.png",
+    "Calculus 3/Derivatives/Tangent Planes and Approximations.md",
     "Calculus 3/Derivatives/Partial Derivatives.md",
-    "Calculus 3/Concepts of Vector Calculus/Greens Theorem.md",
-    "Calculus 3/Concepts of Vector Calculus/Line Integrals Over Vector Fields.md",
-    "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
-    "Q.pdf",
-    "Q.md",
-    "Pasted image 20211208123713.png",
-    "Calculus 3/Concepts of Vector Calculus/Vector Fields.md",
-    "Calculus 3/Concepts of Vector Calculus/The Line Integral.md"
+    "Linear Algebra/Untitled.md",
+    "Linear Algebra/The Transpose.md",
+    "Linear Algebra/EigenValues and EigenVectors.md",
+    "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
+    "Calculus 3/Concepts of Vector Calculus/Greens Theorem.md"
   ]
 }

@@ -81,7 +81,7 @@ If
 $$\lim_{n \to \infty} a_n \neq 0 \text{ or DNE} $$
 then $\sum a_n$ is **divergent**.
 
-## Evaluating Convergence Status Tools
+## Evaluating Convergence Status Algebraic Tools
 
 1. $\sum ca_n = c\sum a_n$
 2. $\sum a_n \pm b_n = \sum a_n \pm \sum b_n$

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sequences & Series/Series.md",
-            "mode": "preview"
+            "file": "Comparison Tests.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sequences & Series/Series.md",
+                "file": "Comparison Tests.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +97,8 @@
   },
   "active": "73a99924a192795f",
   "lastOpenFiles": [
+    "Comparison Tests.md",
+    "Sequences & Series/The Integral Test & P-Series.md",
     "Sequences & Series/Series.md",
     "Sequences & Series/Sequences.md",
     "Sequences & Series/img/geoSeries.png",
@@ -104,8 +106,6 @@
     "Calculus 3/Derivatives/Partial Derivatives.md",
     "Linear Algebra/Untitled.md",
     "Linear Algebra/The Transpose.md",
-    "Linear Algebra/EigenValues and EigenVectors.md",
-    "Calculus 3/Derivatives/MultiVariate Chain Rule.md",
-    "Calculus 3/Concepts of Vector Calculus/Greens Theorem.md"
+    "Linear Algebra/EigenValues and EigenVectors.md"
   ]
 }

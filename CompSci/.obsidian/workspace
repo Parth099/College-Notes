@@ -4,11 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "2edac1e4014e916b",
+        "id": "ad208b1883b37e0f",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Software Design/Miscellaneous JavaScript/React Notes/State & Props - 2.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -49,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "edc3d30a321b4907",
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Software Design/Miscellaneous JavaScript/React Notes/State & Props - 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,17 +96,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2edac1e4014e916b",
+  "active": "ad208b1883b37e0f",
   "lastOpenFiles": [
+    "Software Design/Miscellaneous JavaScript/React Notes/State & Props - 2.md",
+    "Software Design/Miscellaneous JavaScript/React Notes/WorkSpace Setup With Webpack.md",
+    "Software Design/Miscellaneous JavaScript/React Notes/Intro To React - 1.md",
+    "Software Design/Miscellaneous JavaScript/Testing/Unit Testing in JS.md",
+    "Software Design/Miscellaneous JavaScript/Testing/Jest Syntax.md",
+    "Software Design/Unit Testing.md",
     "ALGO/Binary Searches.md",
     "ALGO/Sliding Array Problems.md",
     "ALGO/Rotated Array Solution.md",
-    "ALGO/LeetCode.md",
-    "Untitled.md",
-    "Software Design/Unit Testing.md",
-    "CIS2168/Data Structures/Heap.md",
-    "CIS2168/Data Structures/Graphs/Graph.md",
-    "CIS2168/Data Structures/Graphs/Graph Traverals.md",
-    "Software Design/JavaScript/Unit Testing in JS.md"
+    "ALGO/LeetCode.md"
   ]
 }

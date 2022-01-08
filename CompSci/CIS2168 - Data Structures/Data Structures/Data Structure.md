@@ -1,5 +1,7 @@
 # Data Structures Covered
 
+Class Taken: Fall 21'
+
 1. Linked List
 2. Stack
 3. Queue

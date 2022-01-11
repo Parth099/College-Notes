@@ -61,7 +61,18 @@
     "devs",
     "FCs",
     "useEffect",
-    "ing"
+    "ing",
+    "homophonic",
+    "heterophonic",
+    "backlink",
+    "backlinks",
+    "descrips",
+    "pinterest",
+    "dropdown",
+    "nav",
+    "linkedin",
+    "youtube",
+    "del"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
@@ -70,5 +81,11 @@
   "showLineNumber": true,
   "foldIndent": false,
   "legacyEditor": true,
-  "livePreview": true
+  "livePreview": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }

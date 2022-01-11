@@ -7,11 +7,8 @@
         "id": "ad208b1883b37e0f",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "GENED/Mission 1 - Musical Elements.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GENED/Mission 1 - Musical Elements.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +93,15 @@
   },
   "active": "ad208b1883b37e0f",
   "lastOpenFiles": [
+    "SBDC/1 - Mica Revolutin.md",
+    "SBDC/1 - Mica Revolutin 1.md",
+    "SBDC/SEO.md",
+    "CIS2107 - Low Level Programming in C/Intro To The Class.md",
     "GENED/Mission 1 - Musical Elements.md",
+    "Software Design/Miscellaneous JavaScript/React Notes/4 - React Hooks.md",
     "GENED/Intro B - SoundScape.md",
     "GENED/Intro A - Ethnomusicology.md",
-    "Software Design/Miscellaneous JavaScript/React Notes/4 - React Hooks.md",
     "Software Design/Miscellaneous JavaScript/React Notes/3 - LifeCycle Methods.md",
-    "reactjs.org/docs/hooks-effect.html.md",
-    "Software Design/Miscellaneous JavaScript/React Notes/WorkSpace Setup With Webpack.md",
-    "CIS2168 - Data Structures/Data Structures/Data Structure.md",
-    "Software Design/Miscellaneous JavaScript/React Notes/2 - State & Props.md",
-    "Software Design/Miscellaneous JavaScript/React Notes/1 - Intro To React.md"
+    "reactjs.org/docs/hooks-effect.html.md"
   ]
 }

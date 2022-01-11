@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Sequences & Series/Series Tests.md",
-            "mode": "preview"
+            "file": "Probability Theory I/1.2 Discrete Probability Distributions.md",
+            "mode": "source"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sequences & Series/Series Tests.md",
+                "file": "Probability Theory I/1.2 Discrete Probability Distributions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +98,15 @@
   },
   "active": "440575314684c3d7",
   "lastOpenFiles": [
+    "Probability Theory I/1.2 Discrete Probability Distributions.md",
+    "Probability Theory I/1.1 Discrete Probability Distributions.md",
+    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
     "Sequences & Series/Series Tests.md",
     "Sequences & Series/The Integral Test & P-Series.md",
     "Sequences & Series/Series.md",
     "Sequences & Series/Sequences.md",
     "Sequences & Series/img/geoSeries.png",
     "Calculus 3/Derivatives/Tangent Planes and Approximations.md",
-    "Calculus 3/Derivatives/Partial Derivatives.md",
-    "Linear Algebra/Untitled.md",
-    "Linear Algebra/The Transpose.md",
-    "Linear Algebra/EigenValues and EigenVectors.md"
+    "Calculus 3/Derivatives/Partial Derivatives.md"
   ]
 }

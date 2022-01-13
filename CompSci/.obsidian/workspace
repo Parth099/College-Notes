@@ -7,8 +7,11 @@
         "id": "ad208b1883b37e0f",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "CIS2107 - Low Level Programming in C/Unix.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -65,6 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "CIS2107 - Low Level Programming in C/Unix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,15 +97,15 @@
   },
   "active": "ad208b1883b37e0f",
   "lastOpenFiles": [
+    "CIS2107 - Low Level Programming in C/Unix.md",
+    "CIS2107 - Low Level Programming in C/img/layers.png",
+    "CIS2107 - Low Level Programming in C/img.md",
     "SBDC/1 - Mica Revolutin.md",
     "SBDC/1 - Mica Revolutin 1.md",
     "SBDC/SEO.md",
     "CIS2107 - Low Level Programming in C/Intro To The Class.md",
     "GENED/Mission 1 - Musical Elements.md",
     "Software Design/Miscellaneous JavaScript/React Notes/4 - React Hooks.md",
-    "GENED/Intro B - SoundScape.md",
-    "GENED/Intro A - Ethnomusicology.md",
-    "Software Design/Miscellaneous JavaScript/React Notes/3 - LifeCycle Methods.md",
-    "reactjs.org/docs/hooks-effect.html.md"
+    "GENED/Intro B - SoundScape.md"
   ]
 }

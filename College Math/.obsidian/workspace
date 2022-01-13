@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Probability Theory I/1.2 Discrete Probability Distributions.md",
+            "file": "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
             "mode": "source"
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/1.2 Discrete Probability Distributions.md",
+                "file": "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,8 +88,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -98,15 +97,15 @@
   },
   "active": "440575314684c3d7",
   "lastOpenFiles": [
-    "Probability Theory I/1.2 Discrete Probability Distributions.md",
-    "Probability Theory I/1.1 Discrete Probability Distributions.md",
+    "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
+    "Probability Theory I/Chapter 1/Random Variable.md",
+    "Probability Theory I/Chapter 1/1.2 Discrete Probability Distributions.md",
+    "Probability Theory I/Chapter 1/1.1 Discrete Probability Distributions.md",
+    "Probability Theory I/img/classP_1.png",
+    "Probability Theory I/img/3venn.jpg",
     "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
     "Sequences & Series/Series Tests.md",
     "Sequences & Series/The Integral Test & P-Series.md",
-    "Sequences & Series/Series.md",
-    "Sequences & Series/Sequences.md",
-    "Sequences & Series/img/geoSeries.png",
-    "Calculus 3/Derivatives/Tangent Planes and Approximations.md",
-    "Calculus 3/Derivatives/Partial Derivatives.md"
+    "Sequences & Series/Series.md"
   ]
 }

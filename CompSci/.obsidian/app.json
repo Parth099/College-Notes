@@ -72,7 +72,22 @@
     "nav",
     "linkedin",
     "youtube",
-    "del"
+    "del",
+    "Comcast",
+    "Microservices",
+    "Microservice",
+    "Archicture",
+    "Leetcode",
+    "scalable",
+    "deployable",
+    "dev",
+    "MSs",
+    "Gartner",
+    "MicroService",
+    "MiniService",
+    "interdependencies",
+    "MacroService",
+    "Miniservices"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
@@ -85,7 +100,7 @@
   "pdfExportSettings": {
     "pageSize": "Letter",
     "landscape": false,
-    "margin": "0",
+    "margin": "2",
     "downscalePercent": 100
   }
 }

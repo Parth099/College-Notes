@@ -150,5 +150,129 @@ If $E$ represents the region of rings with radii $[a, b]$ then
 $$P(E) = \int_a^b{2r}\mathop{dr}$$
 
 ### The Calculus of Density Functions
---Save 
---Page 70/520
+We notice that unlike discreet sample spaces the value of $f(x)$ of the density function for an outcome $x$ is **not** the   probability of $x$ occurring.
+
+A Density function can only derive the probability of events.
+$$\begin{align*}
+E &= [a, b] \\
+P(E) &= \int_a^{b} f(x) \mathop{dx}
+\end{align*}$$
+
+We see that an event's probability is the same as its area under *density function* $f(x)$. This implies the close connection between areas & probabilities. 
+
+If $dx$ is small the probability of occurrence of an event in the form $[x, x+dx]$ where $dx$ is very small is  approximated by
+$$P([x, x+dx]) \approx f(x)\mathop{dx}$$
+
+Notice that with the integral & the approximation that 
+$$dx \to 0 \implies P(E) = 0$$
+The probability of a event of a single element is 0.
+
+### Continuous Probability Distributions Summary
+
+
+## Cumulative Distribution Functions of Continuous Random Variables
+
+Let $X$ be a continuous real-valued random variable.
+The cumulative distribution function of X is defined by:
+$$F_X(x) = P(X \leq x)$$
+If $X$ is a cts real-valued var which has a density function then it also has a cumulative distribution function. 
+
+Here is this function.
+
+Let $X$ be a CTS RV Var with density function $f(x)$. Then the ***Cumulative Distribution*** function $F(x)$ is defined by
+$$F(x) = \int_\infty^x f(t)\mathop{t}$$
+Note that 
+$$\dfrac{d}{dx}F(x) = f(x)$$
+
+### What does this all mean?
+A CDF (Cumulative Distribution Function) is used to calculate the area under the curve to the left of a given endpoint as shown above. 
+
+This is different from a PDF (Probability Density Function) since it quite literally gives you the shape of a distribution via $f(x)$ 
+
+A concrete example would be asking a question like:
+> How many people are 150 cm tall
+
+A PDF would tell you an exact number
+A CDF would tell you how many are 150 and below.
+
+Realize that for some PDFs a CDF will output 1 after some value $x_0$
+
+#### Non Concrete Example
+![[CFD_1.png]]
+Lets convert this to a Piece Wise CDF.
+
+Lets consider the first interval $0\leq x \leq 2$
+The area in this part will be in the form:
+$$\frac{1}{8}\int_0^{x_0} x^2\mathop{dx} = \frac{1}{24}x_0^3$$
+
+So far can calculate $F(x)$ for any $x$ in  $0\leq x \leq 2$.
+
+Lets consider the next part of the interval: $2\leq x \leq 4$.
+Notice that this is $F(2)$ plus some other area. (I am referring to the CDF )
+
+The area for this interval is:
+$$\begin{align*}
+F(x_0) &= F(2) + \int_2^{x_0} \frac{1}{8}x(x-4)\mathop{dx} \\
+
+F(x_0) &= \frac{1}{3} + \int_2^{x_0} \frac{1}{8}x(x-4)\mathop{dx} \\
+
+F(x_0) &= \frac{1}{3} + [\frac{1}{4}x^2 - \frac{1}{24}x^3]\biggr\rvert_2^{x_0} \\
+
+F(x_0) &= \frac{1}{4}{x_0}^2 - \frac{1}{24}{x_0}^3 - \frac{1}{3}
+\end{align*}$$
+
+Finally we can say that: 
+![[CDF_1_SOL.png]]
+
+##### Alternate Method
+We will use the same PDF from before.
+
+The function for the interval $0\leq x \leq 2$ is $\frac{1}{8}x^2$
+
+Integrate to find the area under the function.
+$$\int \frac{1}{8}x^2\mathop{dx} = \frac{1}{24}x^3 + C$$
+We must find C.  $$F(0) = 0 \implies C = 0$$
+
+Now for $2\leq x \leq 4$
+$$\int \frac{1}{8}x(4-x)\mathop{dx} = \frac{1}{4}x^2 - \frac{1}{24}x^3 + D$$
+We must find D. $$F(2) = \frac{1}{3} \implies D = -\frac{1}{3}$$
+
+$D = -\frac{1}{3}$ ensures the values produced by the 2 formulas are equal at $x_0 = 2$
+
+And thats it.
+
+#### Book Problems
+
+##### P1
+A real number is chosen from $[0, 1]$ and then squared. Let $X$ represent this value. What is the PDF, CDF of $X$?
+
+Let $U$ be the random real number.
+$$\begin{align*}
+F_X(x) &= P(X \leq x) \\
+&= P(U^2 \leq x) \\ 
+&= P(U \leq \sqrt{x}) \\
+&= \sqrt{x}
+\end{align*}$$
+
+##### Analysis
+The probability of a number being less than $\sqrt{x}$ is $\sqrt{x}$
+
+##### P2
+Let $I$ be the interval $[0, 1]$. We pick two random variables $X, Y$ from this interval $I$. Let $Z = X + Y$. 
+
+Derive the *cumulative distribution function*.'
+
+Notice that $\Omega$ is the unit square in $\mathbb{R}^2$ with a uniform density. We know that $$0 \leq Z \leq 2$$
+Let $E_z$ denote the event $Z \leq z$
+
+$$\begin{align*}
+F_Z(z) &= P(Z \leq z) \\
+&= \text{Area}(E_z)
+\end{align*}$$
+
+##### Analysis
+Why is it the area?
+
+First and foremost, the points in the area are contained by 
+$$\{(x, y) \ \rvert \ 0\leq x \leq 1, 0\leq y \leq 1 \}$$
+

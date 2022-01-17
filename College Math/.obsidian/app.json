@@ -5,7 +5,10 @@
     "det",
     "Diagonalization",
     "Monotonicity",
-    "thats"
+    "thats",
+    "cts",
+    "rv",
+    "Im"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

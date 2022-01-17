@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
-            "mode": "source"
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -98,8 +97,8 @@
   "active": "440575314684c3d7",
   "lastOpenFiles": [
     "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
-    "Probability Theory I/Chapter 1/Random Variable.md",
     "Probability Theory I/Chapter 1/1.2 Discrete Probability Distributions.md",
+    "Probability Theory I/Chapter 1/Random Variable.md",
     "Probability Theory I/Chapter 1/1.1 Discrete Probability Distributions.md",
     "Probability Theory I/img/classP_1.png",
     "Probability Theory I/img/3venn.jpg",

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Blog.md",
+            "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
             "mode": "source"
           }
         }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "edc3d30a321b4907",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Blog.md",
+                "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,10 +96,10 @@
   },
   "active": "ad208b1883b37e0f",
   "lastOpenFiles": [
-    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Blog.md",
-    "CIS4360 - Microservice Architecture/What is a Rest API.md",
+    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
+    "Software Design/What is a Rest API.md",
     "CIS4360 - Microservice Architecture/Micro Arch Lesson 1.md",
-    "CIS4360 - Microservice Architecture/What is Agile.md",
+    "Software Design/What is Agile.md",
     "CIS4360 - Microservice Architecture/Labs/lab_1_patel_parth.md",
     "CIS4360 - Microservice Architecture/img/lab1p1.png",
     "Pasted image 20220114200505.png.md",

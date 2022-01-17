@@ -87,7 +87,11 @@
     "MiniService",
     "interdependencies",
     "MacroService",
-    "Miniservices"
+    "Miniservices",
+    "DevOps",
+    "MiniServices",
+    "MacroServices",
+    "orgs"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

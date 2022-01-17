@@ -1,4 +1,4 @@
-# Blog
+# Summary
 | Abbreviation | Extended                   |
 | ------------ | -------------------------- |
 | MS           | Microservice               |
@@ -68,4 +68,30 @@ For some benefits of MS without some of the drawbacks a company an implement Min
 
 ### MSA Drawbacks
 #### The Cost of MS Adoption
---save 10/19
+- Technical and cultural: people must be willing to change
+- Agile and DevOps: Requires people with solid competency in agile and DevOps.
+- Change in data governance 
+- MSA requires new complex application infrastructure which will impact operational, networking & security models.
+
+ #### Risks
+ Because, MSA is complex its often implemented poorly resulting in poor performance. Sometimes, companies that say they are doing MSA are really just implementing MiniServices & MacroServices as many orgs are not ready to embrace the disruptions caused by MSA. This disruption is classified by need of more people with advanced architecture skills, new roles and organizational structures.
+ 
+ MSA often requires the adoption of new application infrastructure like containers. 
+ 
+Gartner Report goes on the regurgitate the preqs to adopting MSA mostly talking about how your dev teams should be prepared. 
+
+## MS Alternatives
+1. MiniServices
+
+This seems to be the in between to MS & Monolithic apps. We can create larger components than MS but they are still easier to scale than Monolithic apps.
+
+2. Low-Code Methods
+
+This is like building an APP via a visual methods. 
+ 
+ ## Gartner Recommendations
+ Gartner tells readers to approach MSA with caution, this is because most organizations don’t have the *agility* to complete the conversion. Moreover, due to its recent emergence MSA is till immature and major tools for MSA creation are a few years away. 
+ 
+ Gartner tells prospective converters to slowly turn their Monolithic application into Mini-Services and then micro services if really needed. They should not be afraid to mix architectures, there are no rules to which type of service can be used with which.  
+
+ 

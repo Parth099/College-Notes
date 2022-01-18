@@ -63,10 +63,15 @@ and $2(n+m+1) = a+b$ then
 Skipped since its alike 5.1
 ##### 5.3 Prove that if $n$ is an odd integer, then -$n$ is also odd
 $$n = 2a+1, a\in\mathbb{Z}$$
-This means that $$n*-1 = -n = -(2a+1) = -2a-1$$
-Let $b = -a, b\in\mathbb{Z}$
-$$[(-a)2]-1 = 2b-1$$
-Since $2\nmid2b-1 \implies -n$ is odd.
+This means that $$n*-1 = -n = -(2a+1)$$
+$$
+\begin{align*}
+-n &= -2a-1 \\
+&= -2a -2 +1 \\
+&= 2(-a-1)+1
+\end{align*}
+$$
+then by definition $-n$ is odd
 
 ##### 5.4 Prove that the product of two even integers is even
 Let $a, b\in\mathbb{Z}$ be even.

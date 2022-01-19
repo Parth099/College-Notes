@@ -70,3 +70,73 @@ File redirection:
  - >> output append
 
 Why is cal 9 1752 missing days?
+
+
+### Command Grouping
+A single command that execs multiple commands one in line 
+
+### `ls`
+#### Flags
+1. `-a` all files
+2. `-A` all files without "." or ".."
+3. `-F` appends "/" to dirs and to "`*`" toexecutables 
+4. `-lt` sort by time old to new
+5. `-ltr` rev of `lt`
+
+![[ls_alrt_ex.png]]
+
+Files with that the d.... in the first row are directories
+
+### EXT Command List from Slides
+1. History [number] - shows the last history that is *number* long
+2. exit/logout 
+3. shutdown
+
+#bonus 
+**Bonus** What is the diff between exit/logout
+**Bonus** `who` vs `whoami` vs `logname` vs `users`
+
+### File Permissions
+Each file has a level of Permissions, this prevents unauthorized read/write/edit.
+
+The level is shown by 
+```unix
+ls -l *filename*
+```
+
+The 3 groups are:
+1. u : user
+2. g: group
+3. and `o` is for other
+
+The 3 perms are
+- `r` is read
+- `w` is write
+- `x` is exec
+
+for directory `x` gives the list ability
+
+Each digit in the mode parameter represents the permissions  
+for a user or a class of users:
+- 1st digit is user
+- 2nd is group
+- 3rd is other
+
+![[perms_unix.png]]
+Think of this in binary. The lowest state is 000 while max is 111.
+- 1st digit is exec
+- 2nd is write
+- 3rd is read
+
+Recall the ![[ls_alrt_ex.png]]
+See that `-rw-r--r--`
+means the user has read & write while group/world has only read 
+
+we can use `chmod` to change perms
+Ex:
+```unix
+chmod 123 example.html
+chmod 777 *.cgi
+chmod 755 directory
+```
+The first line means users can exec, groups can write and world can do both. 

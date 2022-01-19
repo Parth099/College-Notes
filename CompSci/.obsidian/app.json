@@ -95,7 +95,8 @@
     "microservice",
     "microservices",
     "bugfixes",
-    "NoSQL"
+    "NoSQL",
+    "Macroservices"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

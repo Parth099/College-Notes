@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
-            "mode": "source"
+            "file": "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
+                "file": "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,15 +96,15 @@
   },
   "active": "ad208b1883b37e0f",
   "lastOpenFiles": [
+    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
+    "CIS4360 - Microservice Architecture/img/mono_calc.png",
+    "CIS4360 - Microservice Architecture/img/MS_calc.png",
+    "CIS4360 - Microservice Architecture/img/Pasted image 20220116223439.png",
+    "CIS4360 - Microservice Architecture/Parminder Singh Kocher - Microservices and Containers first edition (2018).pdf",
+    "CIS4360 - Microservice Architecture/Micro Arch Lesson 1.md",
     "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
     "Software Design/What is a Rest API.md",
-    "CIS4360 - Microservice Architecture/Micro Arch Lesson 1.md",
     "Software Design/What is Agile.md",
-    "CIS4360 - Microservice Architecture/Labs/lab_1_patel_parth.md",
-    "CIS4360 - Microservice Architecture/img/lab1p1.png",
-    "Pasted image 20220114200505.png.md",
-    "ALGO/Kadane's Algorithm.md",
-    "ALGO/LeetCode.md",
-    "ALGO/Binary Searches.md"
+    "CIS4360 - Microservice Architecture/Labs/lab_1_patel_parth.md"
   ]
 }

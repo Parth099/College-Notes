@@ -256,11 +256,12 @@ F_X(x) &= P(X \leq x) \\
 
 ##### Analysis
 The probability of a number being less than $\sqrt{x}$ is $\sqrt{x}$
+Think length of the interval divided by the length of $\Omega$ 
 
 ##### P2
 Let $I$ be the interval $[0, 1]$. We pick two random variables $X, Y$ from this interval $I$. Let $Z = X + Y$. 
 
-Derive the *cumulative distribution function*.'
+Derive the *cumulative distribution function*.
 
 Notice that $\Omega$ is the unit square in $\mathbb{R}^2$ with a uniform density. We know that $$0 \leq Z \leq 2$$
 Let $E_z$ denote the event $Z \leq z$
@@ -273,6 +274,25 @@ F_Z(z) &= P(Z \leq z) \\
 ##### Analysis
 Why is it the area?
 
-First and foremost, the points in the area are contained by 
-$$\{(x, y) \ \rvert \ 0\leq x \leq 1, 0\leq y \leq 1 \}$$
+We want the probability that $Z \leq z$. This means all numbers equal or less than Z. Many numbers can produce this. Think of the fact that 2 numbers adding up to 2 can be modeled with: 
+$$x+y = 2 \to y = 2-x$$
 
+
+![[Pasted image 20220118154255.png]]
+Sample Space: $\Omega$
+![[Pasted image 20220118154513.png]]
+$$x+y\leq1$$
+![[Pasted image 20220118154918.png]]
+$$x+1\leq1+c, \ c\in[0, 1]$$
+See that for the second picture with $c$. There is a bit of an overshoot with the integral.
+
+For $0\leq Z \leq 1$
+We can say say that:
+$$P(E_Z) = \int_0^Z x\mathop{dx} $$
+The probability that $X+Y\leq1$ is $\frac{1}{2}$ as defined both by the picture and the direct integral.
+
+For $1\leq Z \leq 2$ its a bit different.
+See in picture 2 that the black gradient. See that the integrand will be $$f(x) = 2-x$$
+for these values for $Z$.
+
+Simply because it fits our integration scheme. Its quite hard to get this in words but I will update this when I can.

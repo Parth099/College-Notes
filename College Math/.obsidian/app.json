@@ -8,7 +8,8 @@
     "thats",
     "cts",
     "rv",
-    "Im"
+    "Im",
+    "integrand"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
@@ -16,5 +17,6 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "attachmentFolderPath": "Probability Theory I/Chapter 2/img"
 }

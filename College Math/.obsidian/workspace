@@ -7,10 +7,9 @@
         "id": "af3e310b308829ec",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "pdf",
           "state": {
-            "file": "Discrete Math/Homework Set 1.md",
-            "mode": "preview"
+            "file": "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf"
           }
         }
       }
@@ -52,8 +51,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Discrete Math/Homework Set 1.md",
+                "file": "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +95,15 @@
   },
   "active": "af3e310b308829ec",
   "lastOpenFiles": [
-    "Discrete Math/Homework Set 1.md",
-    "Discrete Math/Edward A. Scheinerman - Mathematics_ A Discrete Introduction-Cengage Learning (2012).pdf",
-    "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
-    "Probability Theory I/Chapter 1/1.2 Discrete Probability Distributions.md",
-    "Probability Theory I/Chapter 1/Random Variable.md",
-    "Probability Theory I/Chapter 1/1.1 Discrete Probability Distributions.md",
-    "Probability Theory I/img/classP_1.png",
-    "Probability Theory I/img/3venn.jpg",
     "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
-    "Sequences & Series/Series Tests.md"
+    "Discrete Math/Edward A. Scheinerman - Mathematics_ A Discrete Introduction-Cengage Learning (2012).pdf",
+    "Probability Theory I/Chapter 2/img/Pasted image 20220118161857.png",
+    "Probability Theory I/Chapter 2/img/Pasted image 20220118154918.png",
+    "Probability Theory I/Chapter 2/img/Pasted image 20220118154513.png",
+    "Probability Theory I/Chapter 2/img/Pasted image 20220118154255.png",
+    "Probability Theory I/Chapter 2/img/Pasted image 20220118154153.png",
+    "Continuous Probability Distribution Example.pdf",
+    "Probability Theory I/img/CFD_1.png",
+    "Probability Theory I/img/CDF_1_SOL.png"
   ]
 }

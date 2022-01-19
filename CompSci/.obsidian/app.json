@@ -91,7 +91,11 @@
     "DevOps",
     "MiniServices",
     "MacroServices",
-    "orgs"
+    "orgs",
+    "microservice",
+    "microservices",
+    "bugfixes",
+    "NoSQL"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

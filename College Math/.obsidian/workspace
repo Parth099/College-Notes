@@ -7,9 +7,10 @@
         "id": "af3e310b308829ec",
         "type": "leaf",
         "state": {
-          "type": "pdf",
+          "type": "markdown",
           "state": {
-            "file": "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf"
+            "file": "Discrete Math/Homework Set 2.md",
+            "mode": "source"
           }
         }
       }
@@ -51,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
+                "file": "Discrete Math/Homework Set 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,15 +97,15 @@
   },
   "active": "af3e310b308829ec",
   "lastOpenFiles": [
-    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
+    "Discrete Math/Homework Set 2.md",
+    "Discrete Math/Homework Set 1.md",
     "Discrete Math/Edward A. Scheinerman - Mathematics_ A Discrete Introduction-Cengage Learning (2012).pdf",
+    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
     "Probability Theory I/Chapter 2/img/Pasted image 20220118161857.png",
     "Probability Theory I/Chapter 2/img/Pasted image 20220118154918.png",
     "Probability Theory I/Chapter 2/img/Pasted image 20220118154513.png",
     "Probability Theory I/Chapter 2/img/Pasted image 20220118154255.png",
     "Probability Theory I/Chapter 2/img/Pasted image 20220118154153.png",
-    "Continuous Probability Distribution Example.pdf",
-    "Probability Theory I/img/CFD_1.png",
-    "Probability Theory I/img/CDF_1_SOL.png"
+    "Continuous Probability Distribution Example.pdf"
   ]
 }

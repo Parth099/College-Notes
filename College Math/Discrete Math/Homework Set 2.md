@@ -40,15 +40,11 @@ Thus by Definition since $2(b-1)+1$ is odd, $x$ is by consequence also ***odd***
 
 ##### 5.15 Let $x\in\mathbb{Z}$. Prove that  $0\rvert x\iff x=0$ 
 ###### Proof: $0|x \implies x=0$
-Suppose $0|x$ for $x\neq0$
 $$\begin{align*}
-0c&=x, c\in\mathbb{Z} \\
-0&=\frac{x}{c} \\
+0\rvert x \implies 0c&=x , \ c\in\mathbb{Z}\\
+0&=x
 \end{align*}
 $$
-$\frac{x}{c}$ cannot be 0 since we predefined $x\neq0$ and $c$ is also not 0. 
-(Side effect of $x\neq0$. if $c=0$ then $0c=0$ and this $x\neq0$ is violated)
-***NEED TO RECHECK***
 
 ##### 5.18 Prove that the difference between consecutive squares is odd.
 Let $n\in\mathbb{Z}$. Then by definition $n^2, (n+1)^2\in\mathbb{Z}$

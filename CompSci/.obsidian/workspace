@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "f20d8703933b71e9",
+        "id": "11090b4c1f4646d0",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
+            "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
+                "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,17 +94,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "f20d8703933b71e9",
+  "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
+    "CIS2107 - Low Level Programming in C/1 - Unix.md",
     "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
     "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
-    "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
-    "Software Design/What is Agile.md",
-    "Software Design/What is a Rest API.md",
     "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
-    "CIS4360 - Microservice Architecture/CIS4360.md",
-    "CIS2107 - Low Level Programming in C/2 - Untitled.md",
-    "CIS2107 - Low Level Programming in C/1 - Unix.md",
-    "CIS4360 - Microservice Architecture/img/mono_calc.png"
+    "CIS4360 - Microservice Architecture/Micro Arch Lesson 1.md",
+    "CIS4360 - Microservice Architecture/Parminder Singh Kocher - Microservices and Containers first edition (2018).pdf",
+    "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
+    "Software Design/What is a Rest API.md",
+    "Software Design/What is Agile.md",
+    "CIS4360 - Microservice Architecture/CIS4360.md"
   ]
 }

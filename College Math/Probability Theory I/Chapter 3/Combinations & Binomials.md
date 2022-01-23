@@ -51,3 +51,17 @@ A *Bernoulli trials process* is a sequence of $n$ experiments such that.
 
 
 ![[BTcubic.png]]$$\text{Fig A - Sample Bernoulli Trial}$$
+
+### Examples of a Bernoulli Trial Process
+1. Tossing a coin $10$ times
+2.  A Gambler making a sequence of \$1 bets on black at a roulette table. $$P(\text{BLACK})=\frac{18}{38}$$*Note*: A win means +\$1  and a loss is -\$1
+3.  A poll that gets people opinion (agree/disagree) on statement. 
+
+### Analysis of a BTP
+We can analyze a BTP by choosing our sample space as a ***binary tree*** and assigning various probabilities to each edge, this is laid out in $\text{FIG A}$.    
+
+Let $X$ be a random variable that represents the outcome of this experiment. $X$ has to be an **ordered** triple tuple of $S|F$. Let $X_i$ represent the outcome of the $i$th trial with a distribution function $m_i$. An outcome of the entire experiment is a desired path from the root to *a* leaf. 
+
+Notice that for any $\omega_i$ the probability of it occurring (denoted by $m_i$) is the product of probabilities on its path. This indeed shows that each event is independent.
+
+## Binomial Probabilities

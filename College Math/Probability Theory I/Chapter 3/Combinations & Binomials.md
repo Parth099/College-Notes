@@ -65,3 +65,70 @@ Let $X$ be a random variable that represents the outcome of this experiment. $X$
 Notice that for any $\omega_i$ the probability of it occurring (denoted by $m_i$) is the product of probabilities on its path. This indeed shows that each event is independent.
 
 ## Binomial Probabilities
+We will be most interested in the probability that in $n$ Bernoulli trials there are exactly $j$ successes. This will be donated by: $$b(n, p, j)$$
+
+From $\text{FIG A}$ 
+$$
+\begin{align*}
+	b(3, p, 0) &= q^3\\
+	b(3, p, 1) &= 3pq^2\\
+	b(3, p, 2) &= 3p^2q\\
+	b(3, p, 3) &= p^3\\
+\end{align*}
+$$
+
+### Binomial Probability Theorem
+Given $n$ Bernoulli trials with probability $p$ of success, the chance of exactly $j$ successes is:
+**$$b(n,p,j) = \binom{n}{j}p^{\ j} q^{n-j}$$**
+for $q=1-p$
+Boldface since its *important*.
+#### Why?
+> **Path Context**
+> When I say path I mean a **full** traversal from **R**oot to *a* leaf. 
+> Note: This path **will** be unique. 
+
+Lets construct a binary tree that is $n$ levels in height. We wish to find the # of paths that lead to $j$ successes. 
+
+Note that each path we **want** is denoted with a probability:
+$$p^{\ j}q^{n-j}$$.
+How many paths like this exist? 
+Where $m_i = p^{\ j}q^{n-j}$.
+
+Firstly, There are $n$ trials and we want $j$ success. We do not care about the order of the $F/S$ This there are $$\binom{n}{j}\text{ ways of this occuring}$$
+
+And thus:
+*$$\boxed{b(n,p,j) = \binom{n}{j}p^{\ j} q^{n-j}}$$*
+
+## Binomial Probabilities Examples
+### BTP EX - 1
+> Statement
+> A **fair** coin is tossed 6 times. What is the probability that exactly three heads turn up?
+
+Information:
+$$
+\begin{align*}
+	n = 6\\
+	p = .5\\
+	j = 3
+\end{align*}
+$$
+There are 6 trials and we need 3 of them to be successful. The ways this can happen is $\binom{6}{3}$. The probability of this event is $(\frac{1}{2})^{3}(\frac{1}{2})^{3}$ 
+$$b(6, \frac{1}{2}, 3)=\binom{6}{3}(\frac{1}{2})^{3}(\frac{1}{2})^{3} = .3125$$
+
+### BTP EX - 2
+> Statement
+> A die is rolled 4 times. What is the chance we roll **only** 1 six?
+
+Information:
+$$
+\begin{align*}
+	n = 4\\
+	p = \frac{1}{6}\\
+	j = \frac{5}{6}
+\end{align*}
+$$
+$$b(4,\frac{1}{6},1) = \binom{4}{1}(\frac{1}{6})(\frac{5}{6})^3 = .386\_$$
+
+## Binomial Distributions
+
+

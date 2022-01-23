@@ -87,6 +87,11 @@ A single command that execs multiple commands one in line
 
 Files with that the d.... in the first row are directories
 
+#### mv
+```unix
+mv directoryname newdirectoryname
+```
+
 ### EXT Command List from Slides
 1. History [number] - shows the last history that is *number* long
 2. exit/logout 
@@ -140,3 +145,25 @@ chmod 777 *.cgi
 chmod 755 directory
 ```
 The first line means users can exec, groups can write and world can do both. 
+
+## File redirection
+SRC: GCP - VM
+### `>`: output redirection 
+![[fileredir.png]]
+
+- `>` : write to (overwrite)
+- `>>` : append to 😎
+
+### `<` Input redirection
+Suppose a file called `sample.txt` contains
+```text
+This is text from the file.
+```
+Redirection:
+```unix
+C:\temp> java printOut < input.txt
+Enter your input:
+You typed: This is text from the file.
+```
+`printOut.java` simply prints what you type into it
+

@@ -7,10 +7,9 @@
         "id": "11090b4c1f4646d0",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "pdf",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
-            "mode": "source"
+            "file": "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf"
           }
         }
       }
@@ -68,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
+                "file": "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,15 +95,15 @@
   },
   "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
-    "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
-    "CIS2107 - Low Level Programming in C/1 - Unix.md",
-    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
-    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
-    "CIS4360 - Microservice Architecture/Micro Arch Lesson 1.md",
-    "CIS4360 - Microservice Architecture/Parminder Singh Kocher - Microservices and Containers first edition (2018).pdf",
     "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
-    "Software Design/What is a Rest API.md",
-    "Software Design/What is Agile.md",
-    "CIS4360 - Microservice Architecture/CIS4360.md"
+    "CIS4360 - Microservice Architecture/Labs/lab2_patel_patel.pdf",
+    "CIS2107 - Low Level Programming in C/1 - Unix.md",
+    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
+    "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
+    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
+    "ALGO/Product except self.md",
+    "ALGO/Rotated Array Solution.md",
+    "ALGO/LeetCode.md",
+    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md"
   ]
 }

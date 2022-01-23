@@ -9,7 +9,8 @@
     "cts",
     "rv",
     "Im",
-    "integrand"
+    "integrand",
+    "combinatoric"
   ],
   "promptDelete": false,
   "pdfExportSettings": {

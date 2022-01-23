@@ -11,7 +11,7 @@ $3|12$ means $3$ divides $12$.
 ##### 3.1.a 
 $3 | 100$ - *false*
 See that $3 * 33 = 99$ and $3 * 34 = 102$. $$99\lt 100\lt 102$$
-This means that if $3|100$ and $3c=100$ then $$3\lt c\lt4$$
+This means that if $3|100$ and $3c=100$ then $$33\lt c\lt34$$
 Since no Integer between 3 or 4 (Exclusive or), 
 **$$3 \nmid 100$$**
 

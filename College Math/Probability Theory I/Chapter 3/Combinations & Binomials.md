@@ -130,5 +130,7 @@ $$
 $$b(4,\frac{1}{6},1) = \binom{4}{1}(\frac{1}{6})(\frac{5}{6})^3 = .386\_$$
 
 ## Binomial Distributions
+Let $n\in\mathbb{Z^{+}}$ and $p\in{(0, 1)}$.
+Let $B$ be a random variable which counts the number of success in a BTP with params $n$ \& $p$. The distribution $b(n, p, k)$ of $B$ is the ***Binomial Distribution***.
 
-
+[Demos Functional Playground](https://www.desmos.com/calculator/xf0two7wob)

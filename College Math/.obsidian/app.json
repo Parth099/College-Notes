@@ -12,7 +12,8 @@
     "integrand",
     "combinatoric",
     "th",
-    "oot"
+    "oot",
+    "params"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
@@ -21,5 +22,5 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "Probability Theory I/Chapter 2/img"
+  "attachmentFolderPath": "Probability Theory I/img"
 }

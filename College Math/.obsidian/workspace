@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Probability Theory I/Chapter 3/Combinations & Binomials.md",
-            "mode": "source"
+            "file": "Probability Theory I/Chapter 3/Combination Problem.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -69,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/Chapter 3/Combinations & Binomials.md",
+                "file": "Probability Theory I/Chapter 3/Combination Problem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +97,15 @@
   },
   "active": "550c2b42e42a21fa",
   "lastOpenFiles": [
-    "Probability Theory I/Chapter 3/Combinations & Binomials.md",
+    "Probability Theory I/Chapter 3/Combination Problem.md",
     "Probability Theory I/Chapter 3/Permutations.md",
+    "Probability Theory I/Chapter 3/Combinations & Binomials.md",
+    "Probability Theory I/img/caseA_CDF.png",
     "Discrete Math/Homework Set 1.md",
     "Discrete Math/Homework Set 2.md",
     "Untitled.md",
     "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
     "Probability Theory I/Chapter 2/Continuous Probability Distribution Example.md",
-    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
-    "Discrete Math/Edward A. Scheinerman - Mathematics_ A Discrete Introduction-Cengage Learning (2012).pdf",
-    "Probability Theory I/Chapter 2/img/Pasted image 20220118161857.png"
+    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf"
   ]
 }

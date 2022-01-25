@@ -1,4 +1,5 @@
 # The Comparison Test
+[[Series]] & [[Sequences]]
 ## Theorem
 > Suppose $a_n$ and $b_n$ are strictly positive 
 

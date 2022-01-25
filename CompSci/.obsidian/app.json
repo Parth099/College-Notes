@@ -97,7 +97,11 @@
     "bugfixes",
     "NoSQL",
     "Macroservices",
-    "itr"
+    "itr",
+    "Preprocess",
+    "downtimes",
+    "balancer",
+    "codebase"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,

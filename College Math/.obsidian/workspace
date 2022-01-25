@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Probability Theory I/Chapter 3/Combination Problem.md",
+            "file": "Probability Theory I/Chapter 3/Combinations & Binomials.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/Chapter 3/Combination Problem.md",
+                "file": "Probability Theory I/Chapter 3/Combinations & Binomials.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,15 +97,15 @@
   },
   "active": "550c2b42e42a21fa",
   "lastOpenFiles": [
+    "Probability Theory I/Chapter 3/Combinations & Binomials.md",
     "Probability Theory I/Chapter 3/Combination Problem.md",
     "Probability Theory I/Chapter 3/Permutations.md",
-    "Probability Theory I/Chapter 3/Combinations & Binomials.md",
-    "Probability Theory I/img/caseA_CDF.png",
-    "Discrete Math/Homework Set 1.md",
-    "Discrete Math/Homework Set 2.md",
-    "Untitled.md",
-    "Probability Theory I/Chapter 2/Continuous Probability Densities.md",
+    "Sequences & Series/Sequences.md",
+    "Sequences & Series/Series.md",
+    "Sequences & Series/The Integral Test & P-Series.md",
+    "Sequences & Series/Series Tests.md",
+    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
     "Probability Theory I/Chapter 2/Continuous Probability Distribution Example.md",
-    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf"
+    "Probability Theory I/Chapter 2/Continuous Probability Densities.md"
   ]
 }

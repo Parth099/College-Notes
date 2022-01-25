@@ -7,9 +7,10 @@
         "id": "11090b4c1f4646d0",
         "type": "leaf",
         "state": {
-          "type": "pdf",
+          "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf"
+            "file": "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
+            "mode": "source"
           }
         }
       }
@@ -51,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "edc3d30a321b4907",
@@ -67,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
+                "file": "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,15 +97,15 @@
   },
   "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
+    "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
+    "Untitled.md",
+    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
+    "CIS2107 - Low Level Programming in C/2 - CLang.md",
     "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
     "CIS4360 - Microservice Architecture/Labs/lab2_patel_patel.pdf",
     "CIS2107 - Low Level Programming in C/1 - Unix.md",
     "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
     "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
-    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
-    "ALGO/Product except self.md",
-    "ALGO/Rotated Array Solution.md",
-    "ALGO/LeetCode.md",
-    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md"
+    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md"
   ]
 }

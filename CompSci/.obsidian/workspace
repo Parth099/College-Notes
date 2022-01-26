@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
-            "mode": "source"
+            "file": "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,7 +52,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "edc3d30a321b4907",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
+                "file": "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,15 +97,15 @@
   },
   "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
+    "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
+    "Untitled 1.md",
+    "CIS2107 - Low Level Programming in C/2 - CLang.md",
     "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
     "Untitled.md",
     "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
-    "CIS2107 - Low Level Programming in C/2 - CLang.md",
     "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
     "CIS4360 - Microservice Architecture/Labs/lab2_patel_patel.pdf",
     "CIS2107 - Low Level Programming in C/1 - Unix.md",
-    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
-    "CIS4360 - Microservice Architecture/Labs/Blog - The Downsides of Microservices.md",
-    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md"
+    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md"
   ]
 }

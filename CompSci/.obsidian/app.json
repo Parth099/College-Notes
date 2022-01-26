@@ -101,7 +101,13 @@
     "Preprocess",
     "downtimes",
     "balancer",
-    "codebase"
+    "codebase",
+    "Preprocessing",
+    "preprocessor",
+    "libs",
+    "lvl",
+    "preprocessed",
+    "variadic"
   ],
   "showFrontmatter": true,
   "alwaysUpdateLinks": true,
@@ -116,5 +122,6 @@
     "landscape": false,
     "margin": "0",
     "downscalePercent": 100
-  }
+  },
+  "attachmentFolderPath": "CIS2107 - Low Level Programming in C/img"
 }

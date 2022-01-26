@@ -57,5 +57,56 @@ Jim Gosling at Sun Micro-systems rewrites C++ to Java
 5. Load
 6. Execute
 
+#### Phase 1: Creating A Program
+This step is when you edit the file. You can use a Text-Editor like CS code or the Linux Based Vi/Vim. Any **C** files have the *.c* extension.
+
+#### Phase 2 \& 3: Preprocessing and Compiling a C Program
+Preprocessing comes before before Compiling. It triggers special commands, called preprocessor directives, to manipulate the code before compiling. Preprocessing is mainly inspection of the code. For example when $\#$ is found the preprocessor will fetch the code. 
+```c
+#include <stdio.h>
+```
+
+While Compiled, the compiler turns the code into machine code which is **machine dependent** also know as *object-code*. A syntax error occurs when the Machine code cannot be recognized because it violates the language rules.
+
+These types of errors are called *compile errors* or *compile-time errors*. 
+
+#### Phase 4: Linking
+In most C programs, there will be functions used from external libraries. A *linker* links the object code with the missing external code to produce a **executable image** with no missing pieces.
+
+The command to compile and link a program is called `gcc`. It is using the GNU Compiler.
+
+```unix
+gcc [FILENAME]
+```
+Assuming no user errors this completes P1-4
+This will output a file called `a.out` which is an *output* file.
+
+#### Phase 5: Loading
+Before something can be ran it needs to be put on the disk. The `loader` will take the file generated from memory and put in on the disk. Additional Components from libs are also loaded.
+
+#### Phase 6: Execution
+Finally, the computer's CPU executes the program **one** instruction at a time.   
+
+### Dev Cycle Problems
+If there persists an issue we need to repeat steps 1-$p$ where $p$ is the stage you are on. If there is an illegal division like div by 0 we need to start over from Phase 1.
+
+### Machine Languages, Assembly \& High-level Languages
+Any computer understands **it's own** machine language defined by its hardware. Theses are $1$s and $0$s. Programming in binary is too *slow*. This is the lowest level of code. 
+
+Next is Assembly, it is in between Machine Language and High-Level. It uses abbreviations to represent *elementary*operations. These will be like `sum`, or `store`. We use *translator programs*called **assemblers** to convert Assembly-code into machine language. 
+
+Assembly was still too slow so we created High-level languages. These are closer to math and English to speed up programming. Translator programs called compilers convert High-lvl Languages into machine code.  
+
+Interpreters were created to execute high-lvl languages directly. They are slower because they process line by line, while a compiler translates the entire code into machine code. 
+
+Interpreters are used in scripting languages. 
+Ex. JS/PHP is preprocessed by an Interpreter
+
 ## CLASS EXT
 See Firmware
+
+### Bonus $Q$s
+What is GNU? Why isn't it like Unix.
+Machine Code VS Object Code
+#### Compiler VS Interpreter
+![[comp_vs_intp.png]]

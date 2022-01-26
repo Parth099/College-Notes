@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "550c2b42e42a21fa",
+        "id": "a7c4f6508c6ec580",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Probability Theory I/Lectures/1 - 24 - 22 Binomial Lecture.md",
+            "file": "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/Lectures/1 - 24 - 22 Binomial Lecture.md",
+                "file": "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "550c2b42e42a21fa",
+  "active": "a7c4f6508c6ec580",
   "lastOpenFiles": [
+    "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
+    "Probability Theory I/Chapter 3/Combination Problems/problems/p13.png",
+    "Probability Theory I/Chapter 3/Combination Problems/problems/Pasted image 20220125185958.png",
+    "Probability Theory I/Chapter 3/Combination Problems/Combination Problem.md",
+    "Probability Theory I/Chapter 3/Untitled.md",
     "Probability Theory I/Lectures/1 - 24 - 22 Binomial Lecture.md",
     "Probability Theory I/Chapter 3/Combinations & Binomials.md",
-    "Probability Theory I/Chapter 3/Combination Problem.md",
     "Probability Theory I/Chapter 3/Permutations.md",
     "Sequences & Series/Sequences.md",
-    "Sequences & Series/Series.md",
-    "Sequences & Series/The Integral Test & P-Series.md",
-    "Sequences & Series/Series Tests.md",
-    "Probability Theory I/Grinstead Snell - Introduction to Probability.pdf",
-    "Probability Theory I/Chapter 2/Continuous Probability Distribution Example.md"
+    "Sequences & Series/Series.md"
   ]
 }

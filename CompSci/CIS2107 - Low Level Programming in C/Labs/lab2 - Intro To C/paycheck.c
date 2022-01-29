@@ -15,7 +15,8 @@ int main(){
     scanf("%lf", &employeeNum);
     if(!isValidPosInt(employeeNum)){
         //if number is invalid
-        printf("This is not a valid Employee Number.\nPlease run the program again");
+        printf("\nThis is not a valid Employee Number.\nPlease run the program again");
+        printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }
     printf("Enter Hourly Salary: ");
@@ -23,27 +24,29 @@ int main(){
 
     //hours & payment/hr can be decimal
     if(hSalary < 0){
-        printf("This is not a valid Salary.\nPlease run the program again");
+        printf("\nThis is not a valid Salary.\nPlease run the program again");
+        printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }
     printf("Enter Weekly Time: ");
     scanf("%lf", &weekTime);
     if(weekTime < 0 || weekTime > 168.0){
         //if number is invalid
-        printf("This is not a valid Weekly Time.\nPlease run the program again");
+        printf("\nThis is not a valid Weekly Time.\nPlease run the program again");
+        printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }
     double total, overTime = 0, regPay = 0;
     total = getPayCheckAmt(hSalary, weekTime, &overTime, &regPay);
     printf("==============================");
     printf("\nEmployee Number: %0.lf", employeeNum);
-    printf("\nHourly Salary: %0.lf", hSalary);
+    printf("\nHourly Salary: $%0.lf", hSalary);
     printf("\nWeekly Time: %0.lf", weekTime);
-    printf("\nRegular Pay: %0.lf", regPay);
-    printf("\nOvertime Pay: %0.lf", overTime);
-    printf("\nNet Pay: %0.lf", regPay + overTime);
+    printf("\nRegular Pay: $%0.lf", regPay);
+    printf("\nOvertime Pay: $%0.lf", overTime);
+    printf("\nNet Pay: $%0.lf", regPay + overTime);
     printf("\n==============================");
-    printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
+    printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"\n");
 }
 
 int isValidPosInt(double num){

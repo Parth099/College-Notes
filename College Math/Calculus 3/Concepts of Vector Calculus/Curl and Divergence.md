@@ -27,7 +27,7 @@ This gives us a way to see if a field is a [[Conservative Vector Fields]]
 ### Curl of  Conservative Fields
 if $\text{curl}(\vec{F}) = \vec{0}$ then: $\vec{F}$ **is** conservative ([[Vector Fields]]).
 
-# Divergence
+## Divergence
 $$div(\vec{F}) = \nabla \cdot \vec{F}$$
 
 The divergence of a field $\vec{F}$ which is the curl of some field $\vec{f}$ is 0.
@@ -45,4 +45,5 @@ $$
 \oint \vec{F}\cdot\mathop{d\vec{r}} = \iint_D \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}(1)\mathop{dA}
 $$
 
-The rest of the terms in the curl drop to zero due to dot product.
+The rest of the terms in the curl drop to zero due to dot product since
+$$\vec{k} = \langle 0, 0, c \rangle$$

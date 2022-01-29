@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
-            "mode": "preview"
+            "file": "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
+            "mode": "source"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "edc3d30a321b4907",
@@ -69,9 +68,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": true,
                 "searchQuery": "",
@@ -88,24 +87,24 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
-    "CIS2107 - Low Level Programming in C/2.2 Introduction to C Programming.md",
-    "Untitled 1.md",
-    "CIS2107 - Low Level Programming in C/2 - CLang.md",
-    "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
-    "Untitled.md",
+    "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
     "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
-    "CIS4360 - Microservice Architecture/Labs/lab1_patel_parth.pdf",
-    "CIS4360 - Microservice Architecture/Labs/lab2_patel_patel.pdf",
-    "CIS2107 - Low Level Programming in C/1 - Unix.md",
-    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md"
+    "CIS4360 - Microservice Architecture/CIS4360.md",
+    "CIS4360 - Microservice Architecture/Lectures/1 - Lecture.md",
+    "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
+    "CIS2168 - Data Structures/Sorting/Heap Sort.md",
+    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
+    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
+    "ALGO/Kadane's Algorithm.md",
+    "ALGO/Binary Searches.md"
   ]
 }

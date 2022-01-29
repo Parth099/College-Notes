@@ -1,4 +1,5 @@
 # Special Directories
+Side Notes for: [[1 - Unix]]
 ## `/bin`
 Binaries that are **essential** to the OS.
 

@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
-            "mode": "preview"
+            "mode": "source"
           }
         }
       }
@@ -52,8 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "703ab118640b3cd6",
@@ -99,14 +98,14 @@
   "active": "a7c4f6508c6ec580",
   "lastOpenFiles": [
     "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
-    "Probability Theory I/Chapter 3/Combination Problems/problems/p13.png",
-    "Probability Theory I/Chapter 3/Combination Problems/problems/Pasted image 20220125185958.png",
-    "Probability Theory I/Chapter 3/Combination Problems/Combination Problem.md",
-    "Probability Theory I/Chapter 3/Untitled.md",
-    "Probability Theory I/Lectures/1 - 24 - 22 Binomial Lecture.md",
+    "Probability Theory I/Lectures/Combinatorics Lecture.md",
     "Probability Theory I/Chapter 3/Combinations & Binomials.md",
-    "Probability Theory I/Chapter 3/Permutations.md",
-    "Sequences & Series/Sequences.md",
-    "Sequences & Series/Series.md"
+    "Probability Theory I/Chapter 3/Combination Problems/Combination Problem.md",
+    "Calculus 3/Concepts of Vector Calculus/Curl and Divergence.md",
+    "Calculus 3/Concepts of Vector Calculus/Vector Fields.md",
+    "Calculus 3/Concepts of Vector Calculus/The Line Integral.md",
+    "Calculus 3/Concepts of Vector Calculus/The Fundamental Theorem of Line Integrals.md",
+    "Calculus 3/Concepts of Vector Calculus/Math 2043 Final notes.md",
+    "Calculus 3/Concepts of Vector Calculus/Conservative Vector Fields.md"
   ]
 }

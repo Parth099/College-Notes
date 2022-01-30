@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
+            "file": "Probability Theory I/Lectures/Combinatorics Lecture.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
+                "file": "Probability Theory I/Lectures/Combinatorics Lecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,8 +97,8 @@
   },
   "active": "a7c4f6508c6ec580",
   "lastOpenFiles": [
-    "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
     "Probability Theory I/Lectures/Combinatorics Lecture.md",
+    "Probability Theory I/Chapter 3/Combination Problems/Chapter 3.2 Combination Problems.md",
     "Probability Theory I/Chapter 3/Combinations & Binomials.md",
     "Probability Theory I/Chapter 3/Combination Problems/Combination Problem.md",
     "Calculus 3/Concepts of Vector Calculus/Curl and Divergence.md",

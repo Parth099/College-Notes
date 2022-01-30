@@ -1,3 +1,18 @@
+/*
+    name: Parth Patel
+    email: 13074@temple.edu
+    date: 1/28/22
+    course: 2107, SEC => 003 
+
+    ASSIGNMENT: LAB2
+        This is Question 2
+
+    Problem:
+        Create a store that can handle bad[numeric] inputs that properly applies discounts
+        according to predefined rules and then calcs the total price intaking the discount in the
+        calculation.
+*/
+
 #include <stdio.h>  //for IO
 #include <stdlib.h> //for exit
 #include <math.h>  //modf
@@ -14,7 +29,7 @@ int main(){
     scanf("%lf", &itemPrice);
 
     if(!isValidPosInt(itemPrice)){
-        printf("\nThis is not a valid item price. Please run the program again");
+        printf("\nThis is not a valid item price.\nPlease run the program again\n");
         printf("Thank You for using \"Temple\" store");
         exit(1);
     }
@@ -23,7 +38,7 @@ int main(){
     scanf("%lf", &quantity);
 
     if(!isValidPosInt(quantity)){
-        printf("\nThis is not a valid quantity order. Please run the program again");
+        printf("\nThis is not a valid quantity order.\nPlease run the program again\n");
         printf("Thank You for using \"Temple\" store");
         exit(1);
     }

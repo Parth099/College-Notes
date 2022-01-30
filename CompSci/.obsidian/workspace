@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
-            "mode": "source"
+            "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
+                "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -96,6 +96,7 @@
   },
   "active": "11090b4c1f4646d0",
   "lastOpenFiles": [
+    "CIS2107 - Low Level Programming in C/1 - Unix.md",
     "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
     "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
     "CIS4360 - Microservice Architecture/CIS4360.md",
@@ -104,7 +105,6 @@
     "CIS2168 - Data Structures/Sorting/Heap Sort.md",
     "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
     "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
-    "ALGO/Kadane's Algorithm.md",
-    "ALGO/Binary Searches.md"
+    "ALGO/Kadane's Algorithm.md"
   ]
 }

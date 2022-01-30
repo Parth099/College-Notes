@@ -1,3 +1,17 @@
+/*
+    name: Parth Patel
+    email: 13074@temple.edu
+    date: 1/28/22
+    course: 2107, SEC => 003
+
+    ASSIGNMENT: LAB2
+        This is Question 1 
+
+    Problem:
+        Create an Employee Logging system that catches invalid numbers and calcs their wages
+        with the rules provided.
+*/
+
 #include <stdio.h>  //for IO
 #include <stdlib.h> //for exit
 #include <math.h>  //modf
@@ -15,7 +29,7 @@ int main(){
     scanf("%lf", &employeeNum);
     if(!isValidPosInt(employeeNum)){
         //if number is invalid
-        printf("\nThis is not a valid Employee Number.\nPlease run the program again");
+        printf("\nThis is not a valid Employee Number.\nPlease run the program again\n");
         printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }
@@ -24,7 +38,7 @@ int main(){
 
     //hours & payment/hr can be decimal
     if(hSalary < 0){
-        printf("\nThis is not a valid Salary.\nPlease run the program again");
+        printf("\nThis is not a valid Salary.\nPlease run the program again\n");
         printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }
@@ -32,7 +46,7 @@ int main(){
     scanf("%lf", &weekTime);
     if(weekTime < 0 || weekTime > 168.0){
         //if number is invalid
-        printf("\nThis is not a valid Weekly Time.\nPlease run the program again");
+        printf("\nThis is not a valid Weekly Time.\nPlease run the program again\n");
         printf("\nThank you for using \"TEMPLE HUMAN RESOURCES\"");
         exit(1);
     }

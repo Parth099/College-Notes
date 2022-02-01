@@ -54,3 +54,8 @@ All this to say that its hard to determine whats dependent and whats not.
 
 ## Extension to $n$ Sets
 > Definition of  ***mutually independent***
+>
+> A Set of *events* is **mutually independent** if for any subset $${A_i, A_j, \dotso, A_m}$$ of these event sets we have
+> $$P(A_i \cap A_j \cap \dotso \cap A_m) = P(A_i)P(A_j)\dotso P(A_m)$$
+
+Sequence Definition:

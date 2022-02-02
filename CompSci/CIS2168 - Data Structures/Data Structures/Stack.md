@@ -1,5 +1,3 @@
-
-
 # The Stack
 The Stack is a [[Data Structure]] created to optimize one ended Add/Remove operations. Follows the First in last out policy(FILO) unlike the [[Queue]]. 
 

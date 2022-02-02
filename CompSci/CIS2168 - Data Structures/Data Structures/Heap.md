@@ -1,7 +1,6 @@
 # The Heap
 The Heap is an 'ordered' [[Data Structure]] with only 1 rule. For now we will think of a Heap as one of the [[Trees]]. In this course there exists only the **Min**-Heap or the **Max**-heap. In this Note the focus will be on the **Min**-heap, the max is the same just with the word *min* replaced with *max*.
 
-
 # The **Min**-Heap
 ## "Tree"-Idea
 The rule of a Min-Heap is such that the root $R$ of the tree is the smallest its children, and the tree as a whole can be defined as a **Complete**-Tree [[Trees]]. This rule applies to its subtrees: $T_L, T_R$ as well.
@@ -54,5 +53,4 @@ With these index observations an Array-based Heap can be created easily since we
 | Add    | $O(\log{n})$        |
 | Remove | $O(\log{n})$        |
 | Find   | $O(n)$              |
-
 

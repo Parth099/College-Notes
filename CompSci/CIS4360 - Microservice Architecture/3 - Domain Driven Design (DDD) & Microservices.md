@@ -26,6 +26,8 @@ The Transactional line is drawn at aggregate boundaries. **No** transaction shou
 
 ## Bounded Context
 A Bounded Context represents a *larger* organizational boundary. Within this *boundary* explicit responsibilities need to be carried out.
+
+When building models it gets progressively harder to build a single unified model as different sets of people call the same things with a different context. A "book" can mean different things to different departments, for one it may mean dimensions and weight(shipping) or it can mean price and discounts (sales).
 ### Example
 Imagine a warehouse business. Here are some sample activities going on here:
 + shipping items

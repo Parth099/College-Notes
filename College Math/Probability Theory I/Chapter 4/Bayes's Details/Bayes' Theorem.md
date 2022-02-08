@@ -52,4 +52,4 @@ $$
 **Important** Distinction
 > $$1 - P(A \ | \ B) \neq P(A \ | \ \lnot B)$$
 
-This is because we cannot be sure Events $A$ and $B$ **are** independent.
+To see why we can assign concrete events to $A$ and $B$ and see it does not work out. 

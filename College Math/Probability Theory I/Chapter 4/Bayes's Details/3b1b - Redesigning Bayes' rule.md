@@ -21,8 +21,11 @@ This $\frac{1}{11}$ is known as the Positive Predictive Value(PPV)
 It gauges how accurate a positive result really is.
 ## Test Accuracy
 Test Accuracy is measured by $2$ numbers
-1. Sensitivity : The chance its correct on those with the disease
-2. Specificity :  The chance its correct on those without the disease
+1. Sensitivity : The chance its correct on those with the disease. This is the same as $P(+|\text{condit})$
+2. Specificity :  The chance its correct on those without the disease. This is the same as $P(-|\lnot \ \text{condit})$
+
+Note to get $P(+|\lnot \ \text{condit})$ see that
+$$P(+|\lnot \ \text{condit})+P(-|\lnot \ \text{condit})=1$$
 
 In our case, 
 Sensitivity: $\frac{9}{10} = 90\%$
@@ -94,7 +97,7 @@ which is $\frac{10}{109}$
 
 We can also explore the 100 person sample space with cancer odds at $10\%$ or $1:9$
 
-$$(1:9)*10* = 10:9 = \frac{9}{19} \approx .53$$
+$$(1:9)*10 = 10:9 = \frac{9}{19} \approx .53$$
 
 ## Negative Test Results
 The Bayes Factor here will be:

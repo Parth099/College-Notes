@@ -30,7 +30,7 @@ int main(){
         puts("\nYou have entered the PIN correctly");
     }
     else{
-        printf("You have entered the PIN incorrectly %d times\n\tGoodbye!", PIN_ATTEMPTS);
+        printf("You have entered the PIN incorrectly %d times\n\tGoodbye!\n", PIN_ATTEMPTS);
         exit(0);
     }
 
@@ -67,7 +67,7 @@ int menuLogic(double *balance){
         pmBalance(balance, '+');
         break;
     case 4:
-        printf("\nThank You for using this ATM.\n\tGoodbye!");
+        printf("\nThank You for using this ATM.\n\tGoodbye!\n");
         return TRUE;
     default:
         return FALSE;

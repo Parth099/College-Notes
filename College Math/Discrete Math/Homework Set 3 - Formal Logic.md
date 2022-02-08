@@ -1,5 +1,5 @@
 # Chapter 1
-## Section 7
+## Section 7 Day 1
 ##### 7.3
 > Show the two props are the same
 > $$(x \land y) \lor (x \land \lnot y) \text{ and } x$$
@@ -63,3 +63,44 @@ $$
 	(\lnot x \land y)\lor(x \land \lnot y) &\equiv F
 \end{align*}
 $$
+
+## Sec 7 Day 2
+##### 7.5
+> Show
+> $x \leftrightarrow y \equiv \lnot x \leftrightarrow \lnot y$
+
+Know:
+$$x \leftrightarrow y \equiv (x\to y) \land (y \to x)$$
+
+RHS:
+$$\lnot x \leftrightarrow \lnot y \equiv (\lnot x\to \lnot y) \land (\lnot y \to \lnot x)$$
+
+Apply Contrapositive to both sides of RHS:
+$$x \to y \equiv \lnot y \to \lnot x$$
+This means
+$$
+\begin{align*}
+	\lnot y \to \lnot x &\equiv x \to y\\
+	\lnot x \to \lnot y &\equiv y \to x\\
+\end{align*}
+$$
+Sub back in:
+$$\lnot x \leftrightarrow \lnot y \equiv (\lnot x\to \lnot y) \land (\lnot y \to \lnot x)$$
+$$\lnot x \leftrightarrow \lnot y \equiv (x \to y) \land (y \to x)$$
+This is the same as the LHS
+$$\boxed{\lnot x \leftrightarrow \lnot y \equiv x \leftrightarrow y}$$
+##### 7.7
+> Show 
+> $$x \leftrightarrow y \equiv (x\to y) \land (\lnot x \to \lnot y)$$
+
+We know that $(1)$:
+$$x \leftrightarrow y \equiv (x\to y) \land (y \to x)$$
+
+We also know this via Contrapositive
+$$x \to y \equiv \lnot y \to \lnot x$$
+
+We can apply the Contrapositive to the 2nd part of $(1)$
+$$y \to x \equiv \lnot x \to \lnot y$$
+
+Sub it back in: 
+$$x \leftrightarrow y \equiv \boxed{(x\to y) \land (\lnot x \to \lnot y)}$$

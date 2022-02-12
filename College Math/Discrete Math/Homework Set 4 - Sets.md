@@ -82,10 +82,21 @@ $$
 > Show $B\subseteq A$ and $A\neq B$
 
 Suppose $b\in B$. Then by definition
-$$b = 6n-5 = 6n-4$$
+$$b = 6n-5 = 6n-3 - 2 = 3(n-1)-2 = 3(m) - 2$$
+for $m = n-1$
+Since $n\in\mathbb{Z}$, so is $m$.
+Thus $\boxed{B\subseteq A}$
 
-%%finishup%%
+See that the element $2\in A$. This occurs when  $n = 0$
+The element $2$ does not exist in $B$.
 
+The set definition is $6n-5$ for an integer $n$.
+Now, let $n = 1$, then $6(1) - 5 = 1$.
+Let $n = 2$, then $6(2) - 5 = 7$
+See that $1\lt 2 \lt 7$. This means that $$1\lt n\lt 2$$
+$n$ does not exist since there isn't any integers between 1 and 2. 
+Thus $2\not\in B$. Hence $A \neq B$
+ 
 ### Ext 2
 Let
 $$

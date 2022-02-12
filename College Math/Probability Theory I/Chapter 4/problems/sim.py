@@ -22,6 +22,18 @@ def matchTuple(t1, t2): #poor
 def PPV(sensitivity, specificity, prior):
     return sensitivity * prior / (sensitivity * prior + (1 - specificity) * (1 - prior))
 # EB test PPV
-print(PPV(0.36, 0.99, 0.06))
+#print(PPV(0.36, 0.99, 0.06))
 # need 0.69677419354
+
+_r = [[(x,y) for x in range(1, 7)]for y in range(1, 7)]
+r = [item for sublist in _r for item in sublist]
+cnt = 0
+for element in r:
+    x, y = element
+    if x > 3 and x + y > 7:
+        cnt += 1
+        print(x, y)
+         
+
+print(cnt)
 

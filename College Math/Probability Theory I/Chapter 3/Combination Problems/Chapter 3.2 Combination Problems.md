@@ -99,9 +99,9 @@ $j = \{0, 1, 2, 3\}$
 
 $$
 \begin{align*}
-	\text{0 Hits } &= \binom{3}{3}(.3)^{0}(.7)^{3} &= .243 \\
-	\text{1 Hits } &= \binom{3}{1}(.3)^{1}(.7)^2 &= .147 \\
-	\text{2 Hits } &= \binom{3}{2}(.3)^{2}(.7)^1 &= .063 \\
+	\text{0 Hits } &= \binom{3}{3}(.3)^{0}(.7)^{3} &= .343 \\
+	\text{1 Hits } &= \binom{3}{1}(.3)^{1}(.7)^2 &= .441 \\
+	\text{2 Hits } &= \binom{3}{2}(.3)^{2}(.7)^1 &= .189 \\
 	\text{3 Hits } &= \binom{3}{2}(.3)^{3}(.7)^0 &= .027 \\
 \end{align*}
 $$
@@ -159,3 +159,25 @@ $$
 $$
 If that is the $P(\text{Malfunction})$ then $P(\text{NOT Malfunction})$ is
 $$1-3.96 \times 10^{-6} = \boxed{0.99999605}$$
+
+Alternate Solution:
+$$b(4,.99, 4)+b(4,.99, 3)+b(4,.99, 2)$$
+
+## Special Problems
+![[sp7.png]]
+Successive Increasing Ratio:
+$$
+\begin{align*}
+\frac{b(n, p, j)}{b(n, p, j-1)} &= \frac{\binom{n}{j}p^jq^{n-j}}{\binom{n}{j-1}p^{j-1}q^{n-(j+1)}} \\
+
+&= \frac{p}{q}\frac{\binom{n}{j}}{\binom{n}{j-1}} \\
+
+&= \frac{p}{q}\frac{\frac{n!}{(n-j)!j!}}{\frac{n!}{(n-j+1)!(j-1)!}} \\
+
+&= \frac{p}{q}\frac{(n-j+1)!(j-1)!}{(n-j)!j!} \\
+
+&= \frac{p}{q}\frac{n-j+1}{j} \\
+\end{align*}
+$$
+Greatest Value for $b(n, p, j)$
+%%---%%

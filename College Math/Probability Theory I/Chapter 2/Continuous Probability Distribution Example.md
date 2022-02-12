@@ -52,4 +52,4 @@ It will be $$\frac{\frac{1}{6}}{2} = \frac{1}{12}$$
 The probability of the roots being positive seems to be
 $$\frac{1/12}{4}$$
 **$$\boxed{1/48}$$**
-I divided by 4 because its the total area of our sample space$\Omega$ while $\frac{1}{12}$ is our area probability.
+I divided by 4 because its the total area of our sample space $\Omega$ while $\frac{1}{12}$ is our area probability.

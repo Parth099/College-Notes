@@ -1,4 +1,4 @@
-# Continuous Probability Densities
+e# Continuous Probability Densities
 ## Simulation
 ### Issue with an Infinite Sample Space
 Construct a spinner with a radius of 1 unit.  We number the circle and spin the spinner and record the numbers it lands at. The sample space should be $[0, 1)$. We would prefer if each real. The issue here is that each number now has a outcome of 0, since there are infinite numbers.
@@ -49,7 +49,7 @@ Lets explore the game of darts a game of probability. Our space will be circular
 Suppose we want to know how many of these darts land on the top half.
 $$
 \begin{align*}
-\Omega &= \{(x, y)\ \rvert \ x^2 + y^2 \leq 1 \\
+\Omega &= \{(x, y)\ \rvert \ x^2 + y^2 \leq 1\} \\
 E &= \{(x, y) \ \rvert \ y \gt 0\}
 \end{align*}
 $$
@@ -102,7 +102,7 @@ $$2(b-a)\frac{(b+a)}{2}$$
 $$2(\text{Length})(\text{midpoint})$$
 We note that the $E$ depends on both length of the region & its midpoint. The midpoint is "where it is", like close to the origin or the rim.
 
-This means the density function will not be constant. In this case its given to be 2r based on simulations.  
+This means the density function will not be constant. In this case its given to be 2r based on simulations. Notice that circles that are closer to the rim are also *longer* in circumference and thus have a higher chance of being hit.
 
 ## Sample Space Coordinates
 The examples above suggest that experiments of this sort should correlate an integral & probability.   
@@ -271,7 +271,7 @@ F_Z(z) &= P(Z \leq z) \\
 &= \text{Area}(E_z)
 \end{align*}$$
 
-##### Analysis
+###### Analysis
 Why is it the area?
 
 We want the probability that $Z \leq z$. This means all numbers equal or less than Z. Many numbers can produce this. Think of the fact that 2 numbers adding up to 2 can be modeled with: 

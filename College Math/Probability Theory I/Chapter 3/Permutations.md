@@ -1,4 +1,6 @@
 # Permutations
+For: [[Probability Theory 1]]
+
 Solves problems that require the number of ways an event can unfold.
 
 > **Multiplication Principle**

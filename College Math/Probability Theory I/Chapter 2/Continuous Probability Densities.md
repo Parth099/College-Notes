@@ -1,4 +1,5 @@
-e# Continuous Probability Densities
+# Continuous Probability Densities
+For: [[Probability Theory 1]]
 ## Simulation
 ### Issue with an Infinite Sample Space
 Construct a spinner with a radius of 1 unit.  We number the circle and spin the spinner and record the numbers it lands at. The sample space should be $[0, 1)$. We would prefer if each real. The issue here is that each number now has a outcome of 0, since there are infinite numbers.

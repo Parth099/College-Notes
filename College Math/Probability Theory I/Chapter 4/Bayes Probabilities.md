@@ -1,4 +1,6 @@
 # Bayes Probabilities
+For: [[Probability Theory 1]]
+
 Continuation of [[Discrete Conditional Probability]]
 
 Recall the Last example from that note about the Bag and Balls.

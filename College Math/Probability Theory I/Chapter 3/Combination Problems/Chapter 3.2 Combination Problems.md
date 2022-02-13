@@ -1,4 +1,5 @@
 # Problems 
+For: [[Probability Theory 1]]
 ## 6
 ![[p6.png]]
 $$

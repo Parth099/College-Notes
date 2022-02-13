@@ -1,4 +1,6 @@
 # Combinations
+For: [[Probability Theory 1]]
+
 >The number of distinct subsets with $j$ elements that can be chose from a set with $n$ elements is denoted by
 >$${\binom{n}{j}} = \frac{n!}{(n-j)!j!}$$
 

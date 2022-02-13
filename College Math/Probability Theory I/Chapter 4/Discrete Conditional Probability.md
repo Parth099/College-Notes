@@ -1,4 +1,5 @@
 # Discrete Conditional Probability
+For: [[Probability Theory 1]]
 ## Conditional Probability
 This section answers questions about dependent events. We want to find the Probability that given $E$ what about $F$? 
 

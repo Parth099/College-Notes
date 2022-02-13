@@ -1,3 +1,4 @@
+For: [[Probability Theory 1]]
 # P1
 ![[p20_32.png]]
 ## P1A

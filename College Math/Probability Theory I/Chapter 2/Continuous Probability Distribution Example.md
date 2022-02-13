@@ -1,3 +1,4 @@
+For: [[Probability Theory 1]]
 ## Problem
 Choose independently two numbers $B \ \& \ C$ at random from the interval
 $$I = [-1, 1]$$

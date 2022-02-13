@@ -1,4 +1,5 @@
 # Independent Events
+For: [[Probability Theory 1]]
 ## Definition
 An Event $E$ is independent from Event $F$ and vice-versa if
 $$P(F|E) = P(F) \text{ and } P(E|F) = P(E)$$

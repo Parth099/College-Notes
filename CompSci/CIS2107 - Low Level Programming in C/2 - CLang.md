@@ -1,6 +1,6 @@
 Lectures 1/24/22 & 1/26/22 
-
 # Week 2 -  C?
+
 ## Why C?
 Often times C is the only language available:
 - Low Level embedded systems

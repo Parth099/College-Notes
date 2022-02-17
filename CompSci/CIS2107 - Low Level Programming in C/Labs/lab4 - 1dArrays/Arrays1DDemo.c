@@ -44,6 +44,7 @@ int main(void){
     reverseArray(arr, SIZE);
     printf("\nThe Reversed Array:\n");
     printIntArr(arr, SIZE);
+    reverseArray(arr, SIZE); //rev array again to get to back to fwd
 
     int s_start = 10, s_end = 19;
     reverseSelectedRangeWithinArray(arr, SIZE, s_start, s_end);

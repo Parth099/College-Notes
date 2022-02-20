@@ -5,6 +5,7 @@ Occurs when the **all** outcomes of an experiment are equally likely. This means
 $$0 \lt |S| \lt \infty$$
 The distribution function $m(\omega)$ for this case is simply $\frac{1}{|S|}$ for all $\omega\in S$. 
 
+**Note**: When a random variable is Discrete it has a Probability Mass function(*PMF*) $m(\omega_i)$ 
 ## Binomial Uniform Distribution
 More information on this can be located in [[Combinations & Binomials]]. 
 $$b(n, p, j) = \binom{n}{j}p^j (1-p)^{n-j}$$

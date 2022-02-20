@@ -31,10 +31,12 @@ $$
 F(x) &= P(T \leq x)\\
 &= \int_{0}^{x} \lambda e^{-\lambda t} \mathop{dt} \\
 &= -e^{\lambda t}\biggr|_{x = 0}^{t = x}\\
-&= 1 - e^{\lambda t}
+&= 1 - e^{\lambda x}
 \end{align}
 $$
 
+See that $P(T > x) = e^{-\lambda{x}}$
+%% sigh
 ### Example
 ![[cp5ex7.png]]
 
@@ -45,3 +47,17 @@ Then lets assume service times are given by the same types of random variables: 
 $$F_Y(t) = 1 - e^{-\mu t}$$
 
 See that both $\lambda$ and $\mu$ represent a sort of average of time. Specifically for $\mu$, it represents the average time a customer takes to get serviced. The smaller $\mu$ is the faster people get serviced. 
+%%
+
+## Normal Density
+The Normal Density Function is:
+$$f_X(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{-{(x-\mu)^2}/{2\sigma^2}}$$
+
+1. $\mu$ represents the center of the density
+2. $\sigma$ represents the spread of the density
+
+### CDF
+$$F_X(x) = \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}\sigma}e^{-{(t-\mu)^2}/{2\sigma^2}} \mathop{dt}$$
+Note that the function $F_X(x)$ cannot be integrated via antiderivatives, It must be computed via computer approximation.
+
+%%to be finished%%

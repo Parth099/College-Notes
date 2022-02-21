@@ -175,4 +175,36 @@ variables and $Y$ can be written as a function of $X$ then we use the distributi
 > $$E(g(X)) = \sum_{x\in{\Omega}}g(x)m(x)$$
 > This assumes the sum is convergent.
 
-%%## The Sum of Two Random Variables%%
+## The Sum of Two Random Variables 
+To motivate the next theorem an example will be employed
+### Example 
+> Let $X$ be a random variable that is $1$ is the outcome of a flipped coin is heads and $0$ otherwise.
+> Let $Y$ be a random variable that simply outputs the face value of the die rolled. (if you roll a one $Y = 1$)
+
+> **Questions**
+> 1. What does $X+Y$ mean?
+> 2. What is the distribution for $X+Y$?
+
+$\#2$ is easy to answer. 
+We can consider $Z = (X, Y)$ (ordered pairs) and from this we can note each outcome $(x, y)$ has occurrence $1/12$ since $0 \leq x \leq 1$ and $1\leq y \leq 6$, they are independent. Thus 
+$$\forall \omega\in\Omega, m(\omega) = 1/12$$
+
+### Flashback
+Recall in [[#Example 1]] how we were counting the number of heads in 3 tosses. We could have thought of that experiment as the sum of $X_1 + X_2 + X_3$ for 
+$$
+X_i = 
+\begin{cases}
+	1 & \text{ if heads} \\
+	0 & \text{ if tails} \\
+\end{cases}
+$$
+Now the expected value for that example was *easy* to compute. We just added the expected value for each $X_i$.
+
+### Linearity of Expectation
+> **Theorem:**
+> Let $X, Y$ be random variables with finite expected values. then,
+> $$E(X + Y) = E(X) + E(Y)$$
+> and for any constant $c$,
+> $$E(cX) = cE(X)$$
+
+%% #### Explanation %%

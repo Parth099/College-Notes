@@ -173,3 +173,57 @@ F_Y(y) =
 \end{cases}
 $$
 ---
+### EX - 4 
+> $U$ is uniform distributed on $[0, 1]$
+
+Find CDF for the following:
+$$
+\begin{align}
+	(a)\ Y &= |U - \frac{1}{2}|\\
+	(b)\ Y &= {(U-\frac{1}{2})^2}
+\end{align}
+$$
+---
+***a)***
+$$
+\begin{align}
+	F_Y(y) &= P(Y \leq y)\\
+		   &= P(|U - \frac{1}{2}| \leq y)\\
+		   &= P(-y + \frac{1}{2} \leq U \leq y + \frac{1}{2})\\
+		   &= P(U \leq y + \frac{1}{2}) - P(U \leq -y + \frac{1}{2})\\
+		   &=y + \frac{1}{2} - (-y + \frac{1}{2})\\
+		   &= 2y\\
+\end{align}
+$$
+
+$$
+\implies F_Y(y)=
+\begin{cases}
+	0  & \text{if} & y \lt 0\\
+	2y & \text{if} & 0 \leq y \leq \frac{1}{2}\\
+	1  & \text{if} & y \gt \frac{1}{2}
+\end{cases}
+$$
+
+$$
+\implies f_Y(y) = 2 \text{ on } y\in[0, 1/2]
+$$
+
+This makes logical sense. 
+See that $\frac{1}{2}$ is the highest output we can achieve on this function $g(U)$. Moreover there is 2 ways to make each data point based on the definition of $\text{abs()}$.
+
+---
+***b)***
+$$
+\begin{align}
+	F_Y(y) &= P(Y \leq y)\\
+		   &= P((U-\frac{1}{2})^2 \leq y)\\
+		   &= P(-\sqrt{y} \leq U - \frac{1}{2} \leq +\sqrt{y})\\
+		   &= P(-\sqrt{y}+ \frac{1}{2} \leq U  \leq +\sqrt{y} + \frac{1}{2})\\
+		   &= P(U \leq +\sqrt{y} + \frac{1}{2}) - P(U \leq -\sqrt{y} + \frac{1}{2})\\
+		   &= \sqrt{y} + \frac{1}{2} - (-\sqrt{y} + \frac{1}{2})\\
+		   &= 2\sqrt{y}
+\end{align}
+$$
+
+$$F_Y(y) = 2\sqrt{y} \text{ on } y\in[0, \frac{1}{4}]$$

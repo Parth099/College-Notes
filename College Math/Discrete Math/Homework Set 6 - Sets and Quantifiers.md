@@ -50,31 +50,7 @@ $$
 $$
 Since $x_1 = x_2 = 1$ in this case there exists only one unique $x$ and its $1$. Thus, the statement is true. 
 ## Bonus
-### Context of Infinite Sets
-Suppose $\{A_i : i\in I\}$ is a collection of Sets.
-The primary questions we have are 
-$$
-\begin{align*}
-\bigcup_{i\in I}A_i & =? & \bigcap_{i\in I}A_i =?
-\end{align*}
-$$
-
-#### Infinite Union
-$$
-\begin{align}
-	\bigcup_{i\in I}A_i &= \{x : x \in A_i \text{ for some } i\in I\}\\
-	&= \{x : \exists i\in I, x\in A_i\}
-\end{align}
-$$
-
-#### Infinite Intersection
-$$
-\begin{align}
-	\bigcap_{i\in I}A_i &= \{x : x \in A_i \text{ for any } i\in I\}\\
-	&= \{x : \forall i\in I, x\in A_i\}
-\end{align}
-$$
-
+For information on Infinite Sets see [[Infinite Sets and Complements]]
 ### Bonus Problem
 Lets define a set $B_n$
 $$B_n = \{x\in\mathbb{Z}:x|n\}$$

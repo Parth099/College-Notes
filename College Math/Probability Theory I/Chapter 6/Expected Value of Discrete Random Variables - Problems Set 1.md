@@ -98,7 +98,7 @@ $$a + ar + ar^2 \dotso = \frac{a}{1- r}$$
 
 $$X\sim\text{Poisson}(\lambda)$$
 $$\text{Recall }P(X = k) = e^{-\lambda}\frac{\lambda^k}{k!}$$
-
+Additional Context: [[Poisson distribution]]
 $$
 \begin{align*}
 	E(X) &= \sum_{k = 0}^{\infty} kP(X = k) \\
@@ -116,3 +116,47 @@ $$
 		 &= \lambda
 \end{align*}
 $$
+### Relation to Binomial Distribution
+Suppose $$Y \sim \text{Binom}(n, p)$$
+$$\text{Recall }P(Y = k) = \binom{n}{k}p^kq^{n-k}$$
+Then
+$$
+\begin{align}
+	E(Y) &= \sum_{k = 0}^{n} kP(Y = k)\\
+		 &= \sum_{k = 0}^{n} \binom{n}{k}p^kq^{n-k}\\
+\end{align}
+$$
+
+Now it is very unlikely that we will get any where with this. 
+We can attain the value of $E(Y)$ via the "Linearity of Expectation" from [[Expected Value of Discrete Random Variables]].
+
+> Each $T_i$ represents a trial. 
+> $T_i$ is an indicator variable for each trial. The expected value of the sum of  indicator vars will be $E(Y)$
+$$
+\begin{align}
+	E(Y) &= E(T_1) + \dotso + E(T_n) \\
+		 &= \sum_{k = 1}^n E(T_k)
+\end{align}
+$$
+
+See that
+$$
+T_k = 
+\begin{cases}
+	1 & \text{ if } & \text{success}  \\
+	0 & \text{ if } & \text{failure}  \\
+\end{cases}
+$$
+
+Then
+$$E(T_k) = 1(p) + 0(q) = p$$
+Hence
+
+$$
+\begin{align}
+	E(Y) = \sum_{k = 0}^n E(T_k) &= p + p + \dotso + p\\
+						  &= n\times p	
+\end{align}
+$$
+
+Knowing $\lambda = np$, it is amazing that the approximation of the Binomial, the Poisson, has the expected value $\lambda$.   

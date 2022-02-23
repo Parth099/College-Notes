@@ -42,10 +42,11 @@ $$
 \begin{align}
 E(X) &= E(X_1+X_2+X_3+X_4+X_5+X_6) \\
 	 &= E(X_1) + E(X_2) + E(X_3) + E(X_4) + E(X_5) + E(X_6)\\
-	 &= \sum_{i = 1}^{6}i\frac{1}{6} \\
+  ^* &= \sum_{i = 1}^{6}i\frac{1}{6} \\
 	 &= \frac{1}{6}(21) = 7/2
 \end{align}
 $$
+I wrote it like this to make it fit into a single line and to make a point about how $$E(X_i) = i\frac{1}{6}$$ due to the numbers (or lack thereof) on the dice. 
 ### (b)
 Let $X$ be the sum of the $6$ dice
 It is very hard to win. See that 5 out of 6 sides of the dice are $0$.
@@ -94,4 +95,24 @@ $$
 $$a + ar + ar^2 \dotso = \frac{a}{1- r}$$
 ## 21 - Interesting
 ![[cp6_1p21.png]]
-%%to be finished soon%%
+
+$$X\sim\text{Poisson}(\lambda)$$
+$$\text{Recall }P(X = k) = e^{-\lambda}\frac{\lambda^k}{k!}$$
+
+$$
+\begin{align*}
+	E(X) &= \sum_{k = 0}^{\infty} kP(X = k) \\
+	
+		 &= \sum_{x = 0}^{\infty} ke^{-\lambda}\frac{\lambda^k}{k!} \\
+		 
+		 &= e^{-\lambda}\sum_{x = 0}^{\infty} k\frac{\lambda^k}{k!} \\
+		 
+		 &= e^{-\lambda}(\frac{\lambda}{0!}+\frac{\lambda^2}{1!}+\frac{\lambda^3}{2!}+\frac{\lambda^4}{3!}+\dotso)\\
+		 
+		 &= \lambda e^{-\lambda}(\frac{1}{0!}+\frac{\lambda}{1!}+\frac{\lambda^2}{2!}+\frac{\lambda^3}{3!}+\dotso)\\
+		 
+		 &= \lambda e^{-\lambda}(e^{\lambda})\\ \\
+		 
+		 &= \lambda
+\end{align*}
+$$

@@ -47,7 +47,10 @@ Features
 1. Permanent IP 
 2. Load Balancing
 
+Services **will**, automatically, pick up Pods if their labeling is correct  
+
 ## Configuration
 Each config talks to the API server, the only entry point into the cluster. All config files must be in JSON or YAML.
 
 \* - there exists a lot more services than this
+

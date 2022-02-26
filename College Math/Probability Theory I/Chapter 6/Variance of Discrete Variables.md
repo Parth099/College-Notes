@@ -42,7 +42,34 @@ $$
 ## Alternate way for Calculation of Variance
 This method uses the "Linearity of Expectation" theorem from [[Expected Value of Discrete Random Variables]].
 
-%%
-	To be finished
-	pg 258 -> 268 
-%%
+> **Theorem**
+> Suppose a random variable $X$ has $E(X) = \mu$
+> Then the variance is:
+> $$V(X) = E(X^2) - \mu^2$$
+
+Why?
+$$
+\begin{align}
+	V(X) &= E((X - \mu)^2) = E(X^2 - 2\mu X + \mu^2) \\
+	     &= E(X^2) - 2\mu E(X) - \mu^2 = E(X^2) - \mu^2
+\end{align}
+$$
+See that this alternate agrees with the dice roll $V(X)$ calculated above. 
+
+## Properties of Variance
+Unlike $E(X)$, $V(X)$ is non-linear.
+### Prop 1
+> **Theorem**
+> Let $X$ be a random variable and $c$ be some constant then
+> $$V(cX) = c^2V(X)$$
+> and 
+> $$V(X + c) = V(X)$$
+
+Both can be proven via the Expectation of Linearity.
+
+### Prop 2
+Let $X, Y$ be random variables. For expectation, $E(X)+E(Y)=E(X+Y)$, yet this is untrue for $V(X+Y)$.
+Let $Y = -X$ and see what occurs for variance and for expected value. (Hint: $E(X+Y) = E(0) = 0$)
+
+However if the two random variables **are independent** then, 
+> $$V(X + Y) = V(X) + V(Y)$$

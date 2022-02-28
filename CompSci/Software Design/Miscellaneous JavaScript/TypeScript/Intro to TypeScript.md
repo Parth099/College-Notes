@@ -9,6 +9,13 @@ TS is a superset of JS, it is built on top of JavaScript adding new features and
 Since it is compiled, errors are thrown. 
 Given its name, *Type*Script adds typing to JS making it easier to debug and foresee errors. With TS we don't need type sanitize via if guards.
 
+After compiling our `TS` files with
+```unix
+tsc [FILENAME]
+```
+We can view what the new JS file looks like. The output file has the same name as out `TS` file.
+
+One of the more prominent features of `TS` is the fact that we can use modern JS-Features like destructuring and this feature will be complied down to work on older browsers. This is what `babel` does. 
 
 ## Things to learn from Example 1
 ### `const` keyword

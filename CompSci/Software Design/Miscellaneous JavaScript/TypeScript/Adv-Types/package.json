@@ -1,0 +1,17 @@
+{
+    "name": "adv-types",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "lite-server": "^2.6.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "lite-server"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

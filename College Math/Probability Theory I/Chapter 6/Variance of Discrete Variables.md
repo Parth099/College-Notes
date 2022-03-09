@@ -12,6 +12,30 @@ While we did study the expected value of random experiments we also need to stud
 
 \* - See [[Expected Value of Functions of Random Variables]]
 
+<!--
+## The Big Idea: What is Variance?
+Looking at the formula we can say that the *variance* is the squared difference from the mean. 
+
+Suppose we have 6 animals with the following weights
+$$10, 12, 13, 17, 20, 24$$
+
+The computed mean is the sum of those weights $S$ divided by $6$ :
+$$\frac{S}{6} = 16\text{ kg}$$
+
+Next lets find each weight's difference from the mean
+We will subtract the Mean from the Datapoint.
+
+| Datapoint | Distance |Distance$^2$| 
+| --------- | -------- | --- |
+| $10$      | $-6$     |36|
+| $12$      | $-4$     |16|
+| $13$      | $-3$     |9|
+| $17$      | $1$      |1|
+| $20$      | $4$      |16|
+| $24$      | $8$      |64|
+-->
+
+
 ## Standard Deviation
 The *standard deviation* of $X$ is denoted by $D(X)$ where
 $$D(X) = \sqrt{V(X)}$$.

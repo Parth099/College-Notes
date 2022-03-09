@@ -137,6 +137,106 @@ $$
 %%TBF%%
 
 ---
+## 10
+![[cp6_4p10.png]]
+
+
+### a)
+Lets first find the distribution functions
+It will be easier to find the CDF $F(r)$
+
+$$
+\begin{align}
+	F(r) &= P(|X-Y| < r) \\
+		 &= P(-r < X - Y <r) \\
+		 &= P(-r+Y < X <r + Y) \\
+\end{align}
+$$
+We Extract these two equations:
+$$
+\begin{align}
+	y &\gt x - r \\
+	y &\lt x + r
+\end{align}
+$$
+We plot and see this
+![[cp6_4p10_aid1.png]]
+See that 
+$$F(r) = 1 - (1 - r)^2 = 2r - r^2 \text{ on } r\in[0, 1]$$
+$$\implies f(r) = 2 - 2r = 2(1-r)$$
+
+Now that we have $f_r(r)$ we can get the expected value.
+
+Since $r \in [0, 1]$
+$$E(|X-Y|) = \int_0^1 rf_r(r) \ dr = \frac{1}{3}$$
+
+### b)
+$$E(W = \text{max(X, Y)})$$
+Lets attain the CDF. 
+I found this ingenious [online](https://math.stackexchange.com/questions/1114516/probability-density-function-of-maxx-y)
+
+$$
+\begin{align}
+	F(w) &=^{*}\ P(\text{max(X, Y)} \lt w) \\
+		 &=^{**} P(X \lt w \text{ and } Y \lt w) \\
+		 &= P(X \lt w) P(Y \lt w) \\
+		 &= w^2 \text { for } w\in[0, 1]
+\end{align}
+$$
+
+$$
+\implies f(w) =
+\begin{cases} 
+	2w & \text{ if } 0 \leq w \leq 1 \\
+	0  & \text{otherwise}
+\end{cases}
+$$
+
+\* - notice that for $\text{max(X, Y)} \lt w$ both $X$ and $Y$ must be less than $w$. Thus, 
+
+\*\* - both are independent
+
+$$
+\begin{align}
+E(\text{max(X, Y)}) &= \int_0^1 w f_W(w)\mathop{dw} \\
+				    &= \int_0^1 2w^2 \mathop{dw} \\
+					&= \frac{2}{3}\biggr[w^3\biggr]_{w=0}^{w=1} \\
+					&= \frac{2}{3}
+					
+\end{align}
+$$
+
+### c)
+We can attain $E(W = \text{min}(X, Y))$ the same way.
+
+$$
+\begin{align}
+	F(w) &=\ P(\text{min}(X, Y) \lt w) \\
+		 &= 1 - P(\text{min}(X, Y) \gt w) \\
+     ^{*}&= 1 - P(X \gt w) P(Y \gt w) \\
+	^{**}&= 1 - (1-w)^2 \\
+		 &= 2w - w^2 \text { for } w\in[0, 1]
+\end{align}
+$$
+
+\* - Check all possible ways the *min* can we less than $w$, its $3$
+They are:
+1. Both $x, y \tt w$
+2. One of $x, y$ is less than $w$ (2 ways)
+
+We can apply demorgans and flip in equality. 
+$$
+\implies f(w) =
+\begin{cases} 
+	2 - 2w & \text{ if } 0 \leq w \leq 1 \\
+	0        & \text{otherwise}
+\end{cases}
+$$
+
+We have already calculated this function: $wf_W(w)$ before:
+$$\int_0^1 w(2-2w) \mathop{dw} = 1/3$$
+
+---
 <!--
 [TEMP]
 $$

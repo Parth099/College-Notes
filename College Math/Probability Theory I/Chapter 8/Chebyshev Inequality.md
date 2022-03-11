@@ -6,8 +6,8 @@ $$P(|X - \mu| \geq \epsilon) \leq \frac{V(X)}{\epsilon}$$
 
 What is this says is that $\frac{V(X)}{\epsilon}$ is the upper bound for the probability of the Random Variable being of $\epsilon$ distance from the mean. 
 
-<!--
-### INEQ Proof
+
+### Proof
 We first make a note about the distance
 $$
 P(|X - \mu| \geq \epsilon) = \sum_{|x-\mu| \geq \epsilon} m(x)
@@ -18,28 +18,25 @@ This takes the sum of all $P(X = x)$ for$|x-\mu| \geq \epsilon$
 Recall that 
 $$V(X) = \sum_{x} (x - \mu)^2m(x)$$
 
-We can see that 
-$$\sum_{x} (x - \mu)^2m(x) \geq \sum_{|x-\mu| \geq \epsilon} (x - \mu)^2m(x)$$
-
-Going back to the calculation,
-
+See that 
 $$
-\sum_{|x-\mu| \geq \epsilon} \epsilon^2m(x) \leq \sum_{|x-\mu| \geq \epsilon} (x - \mu)^2m(x)
+\sum_{x} (x - \mu)^2m(x) \geq \sum_{|x - \mu| \geq \epsilon} (x - \mu)^2m(x) \geq \sum_{|x - \mu| \geq \epsilon} \epsilon^2m(x)
 $$
 
-This is because $|x-\mu|$ is at least $\epsilon$
-
-Then, 
+This is the same as 
 $$
+= \frac{1}{\epsilon^2}\sum_{|x - \mu| \geq \epsilon} m(x) = \frac{1}{\epsilon^2}P(|X - \mu| \geq \epsilon)
+$$
+
+Since 
+$$
+
 \begin{align}
-	\sum_{|x-\mu| \geq \epsilon} m(x) &= \epsilon^2\sum_{|x-\mu| \geq \epsilon} m(x) \\
-	&= \epsilon^2 P(|X - \mu| \geq \epsilon)
+	V(X) &\geq \frac{1}{\epsilon^2}P(|X - \mu| \geq \epsilon)
+	\\ \\
+	\frac{V(X)}{\epsilon^2} &\geq P(|X - \mu| \geq \epsilon)
 \end{align}
 $$
-
-
-This proof is horrible I will update it soon
--->
 
 ## Motivation
 Sat Score Distribution

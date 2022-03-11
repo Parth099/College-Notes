@@ -51,7 +51,7 @@ int main()
 
     for(size_t r = 0; r < students; r++){
         for(size_t c = 0; c < exams; c++){
-            printf("Score for Student %d Exam %d: ", r, c);
+            printf("Score for Student %lu Exam %lu: ", r, c);
             scanf("%d", (*(grades + r) + c)); //finds the address of the correct spot
         }
         puts("");
@@ -59,10 +59,11 @@ int main()
 
     void (*processGrades[4])(int, int, int[][exams]) = {printArray, minimum, maximum, average};
 
-    while(usrCh != 4){
-        usrCh = getUsrChoice(0, 4);
-        (*processGrades[usrCh])(students, exams, grades);        
-    }
+    do
+    {
+        (*processGrades[usrCh])(students, exams, grades);   
+    } while ((usrCh = getUsrChoice(0, 4)) != 4);
+    
 
 }
 
@@ -100,7 +101,7 @@ void print1DArr(size_t size, int arr[size]){
 void printArray(int students, int exams, int grades[students][exams]){
     for (size_t stu = 0; stu < students; stu++)
     {
-        printf("\nStudent[%d]: ", stu);
+        printf("\nStudent[%lu]: ", stu);
         print1DArr(exams, grades[stu]);
     }
     
@@ -152,18 +153,18 @@ double avgOfArr(size_t size, int arr[size]){
 void minimum(int students, int exams, int grades[students][exams]){
     puts("\nMinimun Grades per each Student: ");
     for(size_t s = 0; s < students; s++){
-        printf("\tStudent [%d]: %3d\n", s, findMinInArr(exams, grades[s])); 
+        printf("\tStudent [%lu]: %3d\n", s, findMinInArr(exams, grades[s])); 
     }
 }
 void maximum(int students, int exams, int grades[students][exams]){
     puts("\nMaximum Grades per each Student: ");
     for(size_t s = 0; s < students; s++){
-        printf("\tStudent [%d]: %3d\n", s, findMaxInArr(exams, grades[s])); 
+        printf("\tStudent [%lu]: %3d\n", s, findMaxInArr(exams, grades[s])); 
     }
 }
 void average(int students, int exams, int grades[students][exams]){
     puts("\nAverage Scores per Student: ");
     for(size_t s = 0; s < students; s++){
-        printf("\tStudent [%d]: %.2lf\n", s, avgOfArr(exams, grades[s])); 
+        printf("\tStudent [%lu]: %.2lf\n", s, avgOfArr(exams, grades[s])); 
     }
 }

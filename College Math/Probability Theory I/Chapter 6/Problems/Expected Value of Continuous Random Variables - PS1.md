@@ -38,7 +38,7 @@ $$\int_{-1}^{+1} x |x| \mathop{dx} = 0$$
 $$
 \begin{align}
 	E(X^2) = \int_{-1}^{+1} x^2 |x| \mathop{dx} &= 2\int_{0}^{+1} x^2 |x| \mathop{dx} \\
-	&= \frac{1}{2}
+	&= \frac{2}{4}
 \end{align}
 $$
 

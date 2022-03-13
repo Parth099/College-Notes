@@ -49,7 +49,7 @@ Thus $$V(S_n) = \sum_{i = 1}^n V(X_i) = \sum_{i = 1}^n \frac{2}{9} = \frac{2}{9}
 $$V(S_n/n) = \frac{1}{n^2}V(S_n) = \frac{2}{9n}$$
 
 Recall [[Chebyshev Inequality]]
-$$P(|X - \mu| \geq \epsilon) \leq \frac{V(X)}{\epsilon}$$
+$$P(|X - \mu| \geq \epsilon) \leq \frac{V(X)}{\epsilon^2}$$
 
 We can fill in the following
 $$P(|A_n - \mu| \geq 0.1) \leq \frac{\frac{2}{9n}}{0.1}$$

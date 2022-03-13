@@ -77,7 +77,7 @@ $$
 \begin{align}
 	Y &\leq X \\
 	E(Y) &\leq E(X) \\
-	aP(X \geq a)^{*} &\leq E(X)\\ \\
+	aP(X \geq a)\:\:^{*}&\leq E(X)\\ \\
 	P(X \geq a) &\leq \frac{E(X)}{a}
 \end{align}
 $$

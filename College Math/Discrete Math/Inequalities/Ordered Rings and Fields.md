@@ -104,3 +104,51 @@ Then,
 $$bd-ac = bd+(-bc+bc)-ac = b(d-c) + c(b-a) $$
 Since $b-a, d-c, b, c \in R^+$ and $R^+$ is closed under addition, $ac<bd$
 
+### E3
+> Show that if $a, b \in F^+$ where $F$ is an ordered field and $a \lt b$ then $$\frac{1}{a} \gt \frac{1}{b}$$ (iff proof)
+
+Suppose $a\lt b$
+Then,  $b-a\in F^+$
+See that:
+$$
+\frac{1}{a} - \frac{1}{b} = \frac{b-a}{ab} = \frac{1}{ab}(b-a)
+$$
+
+Since $a, b \in F^+$, $ab \in F^+$ via additive closure.
+Thus $\frac{1}{ab} \in F^+$
+Thus $\frac{1}{ab}(b-a) \in F^+$
+
+Therefore, $\frac{1}{a} \gt \frac{1}{b} \in F^+$ and 
+$$\boxed{\frac{1}{a} \gt \frac{1}{b}}$$
+if $a, b \in F^+$ for $a, b \in F^+$
+
+Conversely suppose $\frac{1}{a} \gt \frac{1}{b} in F^+$
+Then 
+$$
+\frac{1}{a} \gt \frac{1}{b} = \frac{1}{ab}(b-a) \in F^+
+$$
+
+Since $\frac{1}{ab} \in F^+$, $b-a$ must be an element of $F^+$. 
+
+Thus $a < b$ if $\frac{1}{a} \gt \frac{1}{b}$
+
+### E3 - ALT PROOF
+> Show that if $a, b \in F^+$ where $F$ is an ordered field and $a \lt b$ then $$\frac{1}{a} \gt \frac{1}{b}$$ (iff proof)
+
+Suppose $a<b$
+Since $a, b \in F^+$, it implies $ab \in F^+$ which implies $\frac{1}{ab} \in F^+$
+
+Since $a, b \in F^+$, we can multiply by $\frac{1}{ab}$ as it wont alter the sign since all numbers are elements of $F^+$
+
+$$\frac{1}{ab}a\lt\frac{1}{ab}b$$
+
+Thus $\frac{1}{a} \gt \frac{1}{b}$ if $a<b$
+
+Suppose $\frac{1}{a} \gt \frac{1}{b}$
+Since $a, b \in F^+$, it implies $ab \in F^+$ 
+
+$$ab\frac{1}{a} \gt ab\frac{1}{b}$$
+
+Thus, $a<b$ if $\frac{1}{a} \gt \frac{1}{b}$
+
+## ADV Examples

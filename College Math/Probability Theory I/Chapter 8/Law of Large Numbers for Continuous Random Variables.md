@@ -76,7 +76,13 @@ $$V(A_{1000}) = V(\frac{S_{1000}}{1000}) = \frac{1}{1000^2}V(S_n) = \frac{1}{100
 
 Since $\epsilon = 0.1$, the original probability  is bounded above by 
 $$
-\frac{V(A_{1000})}{0.1^2} = \frac{\frac{1}{3\cdot 1000}}{0.1^2} = \frac{1}{3\cdot1000\cdot0.1^2} = \frac{1}{30}
+\begin{align}
+\frac{V(A_{1000})}{0.1^2} 
+	&= \frac{1}{3\cdot 1000}\frac{1}{0.1^2} \\
+	&= \frac{1}{3\cdot1000\cdot0.1^2} \\
+	&= \frac{1}{30}
+\end{align}
+
 $$
 
 Thus, 

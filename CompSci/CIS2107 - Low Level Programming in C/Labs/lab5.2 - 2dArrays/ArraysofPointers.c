@@ -32,7 +32,7 @@ double avgOfArr(size_t size, int arr[size]);
 
 int main()
 {
-    int usrCh = 0;
+    int usrCh;
     //at this point choice is valid and corresponds to a function
 
     //getting user params
@@ -59,12 +59,11 @@ int main()
 
     void (*processGrades[4])(int, int, int[][exams]) = {printArray, minimum, maximum, average};
 
-    do
-    {
-        (*processGrades[usrCh])(students, exams, grades);   
-    } while ((usrCh = getUsrChoice(0, 4)) != 4);
-    
-
+    usrCh = getUsrChoice(0, 4);
+    while(usrCh != 4){
+        (*processGrades[usrCh])(students, exams, grades);  
+        usrCh = getUsrChoice(0, 4);
+    }
 }
 
 //gets user choice over integer interval [rStart, rEnd]
@@ -72,8 +71,8 @@ int getUsrChoice(int rStart, int rEnd){
     int choice;
     puts("\nEnter a choice:");
     printf("\t%d Print the array of grades\n", 0);
-    printf("\t%d Find the minimun grade\n", 1);
-    printf("\t%d Find the maximun grade\n", 2);
+    printf("\t%d Find the minimum grade\n", 1);
+    printf("\t%d Find the maximum grade\n", 2);
     printf("\t%d Print the average on all the tests for each student\n", 3);
     printf("\t%d End Program\n", 4);
 
@@ -151,7 +150,7 @@ double avgOfArr(size_t size, int arr[size]){
 
 
 void minimum(int students, int exams, int grades[students][exams]){
-    puts("\nMinimun Grades per each Student: ");
+    puts("\nMinimum Grades per each Student: ");
     for(size_t s = 0; s < students; s++){
         printf("\tStudent [%lu]: %3d\n", s, findMinInArr(exams, grades[s])); 
     }

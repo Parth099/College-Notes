@@ -44,3 +44,20 @@ Since a positive times a negative makes a negative $1\in R^-$.
 **\[contradiction\]**
 
 Hence, if $x\gt 0$ then, $\frac{1}{x} \gt 0$
+
+## Example Problems
+> Assume $R$ is an ordered ring ( or Field $F$ )  
+### P1
+> Show that if $a, b \in R$ and $a<b$ and $c<0$ that $bc<ac$ .
+
+Suppose $a<b$ is true and $c<0$. Then $b-a\in R^+$ or $b-a > 0$
+Since $c \lt 0$, $-c \in R^+$. Since $R^+$ is closed 
+$$-c(b-a) \in R^+ \text{ since } -c, b-a \in R^+$$
+
+Since $-c(b-a) \in R^+$, then $c(b-a) = bc-ac\in R^-$
+So then $bc-ac = x$ for some $x \in R^-$ thus, $bc-ac = -x$ for $-x \in R^+$
+
+Multiply both sides by $-1$
+$$-(-x) = -(ba-ac) = ac-bc $$
+
+Since $x\in R^-$, $ac-bc\in R^-$. Thus $ac> bc$

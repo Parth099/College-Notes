@@ -59,3 +59,46 @@ P(|X-\mu| \geq 315) \leq \frac{210^2}{315^2} \approx .444
 $$
 
 This means that for any distribution $P(|X-\mu| \geq 315)$ will **not** exceed $.444$ 
+
+## Downfall of the Chebyshev Inequality
+> Suppose $X$ is uniform on $[0, 1]$
+> Compare 
+> $$g(\epsilon) = P\biggr(\biggr|X - \frac{1}{2}\biggr| \geq \epsilon\biggr)$$
+> with
+> $$h(\epsilon) = \frac{V(X)}{\epsilon^2}$$
+
+See that $h$ is the Chebyshev upper-bound
+
+Consider $g(\epsilon)$
+$$
+\begin{align}
+	P\biggr(\biggr|X - \frac{1}{2}\biggr| \geq \epsilon \biggr) &= P\biggr(-\epsilon \geq X - \frac{1}{2} \geq \epsilon \biggr)
+	\\\\
+	&= P\biggr(-\epsilon + \frac{1}{2} \geq X \geq \epsilon + \frac{1}{2} \biggr)
+	\\\\
+	&= 1 - P\biggr(-\epsilon + \frac{1}{2} \leq X \leq \epsilon + \frac{1}{2} \biggr)
+	\\\\
+	g(\epsilon)&= 1 - 2\epsilon
+\end{align}
+$$
+
+$$
+\begin{align}
+	E(X) &= \frac{1}{2} \\
+	V(X) &= E((X-\mu)^2) = \int_0^1 (x-\frac{1}{2})^2 1 \mathop{dx} = \boxed{\frac{1}{12}}
+\end{align}
+$$
+
+$$
+\begin{align}
+	g(\epsilon)&= 1 - 2\epsilon \\
+	h(\epsilon)&= \frac{1}{12\epsilon^2}
+\end{align}
+$$
+
+Notice the $\epsilon \in [0, \frac{1}{2}]$
+
+Graph of the upperbound and actual $P(\text{Event})$
+![[chebys_comparison.png]]
+
+We conclude that the Chebyshev Inequality is not the best way to estimate probabilities.  

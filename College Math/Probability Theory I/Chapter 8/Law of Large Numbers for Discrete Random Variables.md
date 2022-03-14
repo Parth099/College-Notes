@@ -19,6 +19,32 @@ Note: Give the $\frac{S_n}{n}$, this law is often called the "**Law of Averages*
 
 ### 'English Explantion'
 Firstly, $|\frac{S_n}{n} - \mu|$ gives the distance of the average $A_n = \frac{S_n}{n}$ from the expected value $\mu$. Now it says that for any $\epsilon > 0$ the probability approaches zero. Thus means that as we increase $n$, $A_n \to \mu$ . 
+
+## Proof
+ Let $X_1, \dotso, X_n$ be an independent trials process with finite $E(X_i) = \mu$ and $V(X_i) = \sigma^2$. 
+ 
+ Let $S_n = \sum_{i=0}^n X_i$
+ $$E(S_n) = n\mu \implies E(\frac{S_n}{n}) = \mu$$
+ $$V(S_n) = \sigma^2n \implies V(\frac{S_n}{n}) = \frac{\sigma^2}{n}$$
+
+Using the [[Chebyshev Inequality]]
+$$
+\begin{align}
+P\biggr(\biggr|\frac{S_n}{n} - \mu\biggr|\biggr) \geq \epsilon) &\leq \frac{V(X)}{\epsilon^2} \\
+
+&\leq \frac{\sigma^2}{n\epsilon^2} \\ 
+&\lim_{n \to \infty} \frac{\sigma^2}{n\epsilon^2} = 0 \\
+\end{align}
+$$
+
+Thus
+
+$$
+\boxed{P\biggr(\biggr|\frac{S_n}{n} - \mu\biggr| \geq \epsilon \biggr)  \to 0 \text{ if } n\to \infty}
+$$
+
+
+
 ## Examples
 
 ### Quiz Question

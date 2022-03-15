@@ -30,4 +30,3 @@ Drawbacks
 4. poor scalability
 
 In a word, P2Ps are *inconsistent*. 
-

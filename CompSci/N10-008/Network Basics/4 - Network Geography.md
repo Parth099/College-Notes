@@ -33,4 +33,4 @@ Not all WANs are public. We can think of the US govt., the DOD's WAN is not publ
 
 ## Final Diagram
 #diagram
-![[../img/network_geo_diagram.png]]
+![Diagram Image](../img/network_geo_diagram.png)

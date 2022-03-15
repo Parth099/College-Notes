@@ -1,4 +1,6 @@
 # Intro to Networks
+Tags: #1_2
+
 Networks are used to create connections between machines. An example is the connection between an iPhone and an Apple Watch (Bluetooth). This is a Personal Access Network. There are many types of networks today.
 
 Before the modern era each Network had a purpose, like telephones or the internet. However in modern times, Networks have **converged** and one network can complete many actions.

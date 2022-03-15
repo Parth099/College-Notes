@@ -1,4 +1,6 @@
 # Network Components
+Tags: #2_1
+
 The question to answer here is what comprises our network?
 > **Network**: Networks are used to create connections between machines. 
 
@@ -33,3 +35,5 @@ The question to answer here is what comprises our network?
 8. Wide Area Network (WAN) Link
 	+ Physically connects two geographically different networks. This is one way to think about the internet.
 	+ An example is connections in a home, it would **not** be possible to be able to connect to the outside world without a WAN link. 
+	+ In short, it connects your *internal* network (router) to the *external* network (the world)
+

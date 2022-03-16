@@ -48,6 +48,7 @@ $$
 This is know as the *standardized sum* of $S_n$.
 It has expected value of $\mathbf{0}$ and Variance of $\mathbf{1}$
 
+See [[Sum of Variances Theorem]] for information. 
 ## Motivation
 Suppose we have a spike plot for possible values of $S_n^*$: 
 $$x_0, x_1, \dotso, x_n \text{ where }\: x_i = \frac{i - np}{{\sqrt{npq}}}$$ 
@@ -74,6 +75,9 @@ $\epsilon$: the distance between the spikes.
 
 See that $\epsilon = \frac{1}{\sqrt{npq}}$
 This has something to do with the new deviation of the $S_n^*$.
+
+Or we can view it like *this*:
+See that the normal density is **continuous**, that is the area under the curve is $\mathbf{1}$. Since the spike graph is built on the binomial distribution: the sum of the spikes is $\mathbf{1}$. This is why we cannot compare the two graphs. Recall that integration is simply the width times the height. Moreover, what we are doing for the binomial graph is simply summing the heights. If we divide by the height we can obtain the correct height.  
 
 Thus we can multiply each spike by $\frac{1}{\epsilon} = \sqrt{npq}$ to attain the proper height.
 

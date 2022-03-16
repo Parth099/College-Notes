@@ -81,3 +81,27 @@ We can standardized $X$ via
 $$
 \frac{X - \mu}{\sigma}
 $$
+
+
+
+### E($S_n^*$)
+> Suppose $X_1, \dotso, X_n$ are independent for 
+> $E(X_i) = \mu$ and $V(X) = \sigma^2$
+$$
+\begin{align}
+	E(S_n^*) &= E(\frac{S_n - n\mu}{\sqrt{n\sigma^2}}) \\
+	         &= \frac{1}{\sqrt{n\sigma^2}}E({S_n - n\mu}) \\
+			 &= \frac{1}{\sqrt{n\sigma^2}}[E(S_n) - E(np)] \\
+			 &= \boxed{0}
+\end{align}
+$$
+
+### V($S_n^*$)
+$$
+\begin{align}
+	V(S_n^*) &= V(\frac{S_n - n\mu}{\sqrt{n\sigma^2}})\\
+	         &= \frac{1}{{n\sigma^2}}V({S_n - n\mu}) \\
+			 &= \frac{1}{{n\sigma^2}}V({S_n}) \\
+			 &= \boxed{1}
+\end{align}
+$$

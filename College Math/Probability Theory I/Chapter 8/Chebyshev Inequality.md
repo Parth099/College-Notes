@@ -4,8 +4,9 @@ Let $X$ be a discrete random variable with expected value $\mu =E(X)$. Then let 
 Then, 
 $$P(|X - \mu| \geq \epsilon) \leq \frac{V(X)}{\epsilon^2}$$
 
-What is this says is that $\frac{V(X)}{\epsilon}$ is the upper bound for the probability of the Random Variable being of $\epsilon$ distance from the mean. 
+What is this says is that $\frac{V(X)}{\epsilon}$ is the upper bound for the probability of the Random Variable $X$ being of $\epsilon$ distance from the mean. 
 
+**Important**: The distribution of $X$ is **irrelevant!**
 
 ### Proof
 We first make a note about the distance

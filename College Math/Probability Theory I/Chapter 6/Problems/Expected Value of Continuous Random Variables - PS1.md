@@ -91,8 +91,8 @@ See that $\int_{-1}^{+1} ax+b \mathop{dx} = 0$ has no regard for the constant $a
 $$f_X(x) = ax + \frac{1}{2} \geq 0$$
 Since it is a linear function we can simply watch its endpoints. 
 
-At the low end $x = -1$ and  to force $f_X(x)\geq 0$, $x \geq -\frac{1}{2}$
-At the high end $x = 1$ and  to force $f_X(x)\geq 0$ and $f_X(x) \leq 1$, $x \leq \frac{1}{2}$
+At the low end $x = -1$ and  to force $0 \leq f_X(x) \leq 1$, $x \geq -\frac{1}{2}$
+At the high end $x = 1$ and  to force $0 \leq f_X(x) \leq 1$ and $f_X(x) \leq 1$, $x \leq \frac{1}{2}$
 
 With these facts, we can show that
 $$-\frac{1}{2}\leq a \leq \frac{1}{2}$$

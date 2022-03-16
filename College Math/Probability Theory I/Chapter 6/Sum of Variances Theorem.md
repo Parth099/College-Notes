@@ -61,3 +61,23 @@ $$V(A_n) = V(\frac{A_n}{n}) = \frac{1}{n^2}V({S_n}) = \frac{\sigma^2}{n}$$
 $$D(A_n) = \sqrt{\frac{\sigma^2}{n}} = \frac{\sigma}{\sqrt{n}}$$
 
 #### Deviation Observation
+Notice how the deviation tends to 0 when the number of trials $n$ tends to $\infty$. See Chapter 8: LLN for more information. 
+
+## Standardization
+Suppose $$S_{n}^{*} = \frac{S_n - n\mu}{\sqrt{n\sigma^2}}$$
+
+Then 
+$$
+\begin{align}
+	E(S_{n}^{*}) &= 0 \\
+	V(S_{n}^{*}) &= 1
+\end{align}
+$$
+
+The above properties $E(X) = 0, V(X) = 1$ is what Standardization is about. 
+
+Given that $X \sim \text{Normal}(\mu, \sigma)$
+We can standardized $X$ via
+$$
+\frac{X - \mu}{\sigma}
+$$

@@ -90,7 +90,7 @@ Therefore, $\sum_{k = 1}^n k^3 = \biggr[\frac{n(n+1)}{2}\biggr]^2$ for **any** $
 
 ### Part 3
 > Show $\forall n\in\mathbb{N}$
-> $$\prod_{k=1}^n \frac{1}{n(n+1)} = 1 - \frac{1}{n+1}$$
+> $$\sum_{k=1}^n \frac{1}{n(n+1)} = 1 - \frac{1}{n+1}$$
 
 For $n = 1$
 $$
@@ -120,3 +120,43 @@ $$
 $$
 
 Therefore $\sum_{k=1}^n \frac{1}{n(n+1)} = 1 - \frac{1}{n+1}$ is true all **any** $n\in\mathbb{N}$
+
+## 3
+> $$\text{Prove }\forall n\geq 4,\: n^3 \lt 3^n $$
+
+For $n = 1$
+$$
+\begin{align}
+	n^3 = 4^3 &= 64 \\
+	3^n = 3^4 &= 81 \\
+\end{align}
+$$
+Since $64 \lt 81$, the formula holds for $n = 1$ 
+
+Assume $\text{Prove }\forall n\geq 4,\: n^3 \lt 3^n$ for some $n \geq 4$ 
+
+Observe that 
+$$
+\begin{align}
+\frac{(n+1)^3}{n^3} &= \biggr(1+{\frac{1}{n}}\biggr)^3
+\end{align}
+$$
+
+This value maxes out at $n = 4$
+
+Thus:
+$$
+\biggr(1+{\frac{1}{n}}\biggr)^3 \leq \biggr(1+{\frac{1}{4}}\biggr)^3 = (\frac{5}{4})^3 = \frac{125}{64} \lt \frac{192}{64} = 3 
+$$
+
+
+
+Then, 
+$$
+\begin{align}
+	\biggr(1+{\frac{1}{n}}\biggr)^3n^3 &\lt 3^n \times 3\\ \\
+	(n+1)^3 &\lt 3^{n+1}
+\end{align}
+$$
+
+Therefore $\forall n\geq4,\: n^3 \lt 3^n$

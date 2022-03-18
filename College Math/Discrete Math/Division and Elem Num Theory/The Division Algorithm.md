@@ -71,4 +71,34 @@ At this point we have show that:
 $$\exists q, r\in\mathbb{Z}, b=qa+r ,0\leq r\lt a$$
 
 Now for uniqueness: 
-We need this Lemma:
+We need this Lemma: [[Lemma - Divisor ABS Value]]
+
+Suppose $q, r$ is **not** unique:
+Suppose $b = q_1a+r_1$ and $b = q_2a+r_2$ for $0\leq r_1,r_2 \lt a$
+
+Then
+$$
+q_1a+r_1 = q_2a+r_2 
+$$
+
+Thus 
+$$(q_1-q_2)a = r_2 - r_1$$
+
+Since $(q_1-q_2)a \in \mathbb{Z}$, $a|(r_2 - r_1)$
+
+Recall that $0\leq r_1,r_2 \lt a$
+
+We can note that
+$$
+0 - a \lt r_2 - r_1 \lt a - 0
+$$
+
+So $$|r_2-r_1|\lt a$$
+
+However, $a|(r_2 - r_1)$.
+Since the difference of the two $r_2-r_1$ can be at most $a-1$ and if $a|(r_2 - r_1)$, their difference is **0**.
+
+$r_2 - r_1 = 0$ implies that $q_1=q_2$ and both $b$'s are the same.
+
+Subsequently, $q, r$ are unique.
+

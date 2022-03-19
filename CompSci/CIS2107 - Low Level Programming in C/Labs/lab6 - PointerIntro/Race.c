@@ -33,18 +33,6 @@ int max(int a, int b);
 int min(int a, int b);
 void printNSpaces(unsigned n);
 
-/*
-    @Analysis
-
-    Let H be a random variable representing the Hare distribution
-    Let T be a random variable representing the Tort distribution
-
-    E(T) = .5(3) - .2(6) + .3(1) = .6
-    E(H) = .2(0) + .2(9) - .1(12) + .3(1) - .2(2) = 0.5
-
-    since E(T) > E(H), the Tort will win more often so the hare is really the underdog here.
-*/
-
 int main(){
     srand(time(NULL));
 
@@ -57,7 +45,6 @@ int main(){
 
     while(hPos < 70 && tPos < 70){
         //sleep(1);						//slows down the race
-
         hareMove(&hPos);
         tortMove(&tPos);
 
@@ -66,7 +53,7 @@ int main(){
         puts("");
     }
 
-    if(hPos >= tPos){
+    if(tPos >= hPos){
         puts("TORTOISE WINS!!! YAY!!!");
     }
     else{
@@ -102,9 +89,7 @@ void printRace(int hPos,int tPos){
     
     if(dx == 0){
         //same position
-        for(size_t i = 0; i < hPos - 1; i++){ //print all space before req printout
-            putchar(' ');
-        }
+        printNSpaces(hPos - 1);
         printf("OUCH!!!");
         return;
     }

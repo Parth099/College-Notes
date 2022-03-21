@@ -44,7 +44,7 @@ int main(){
     puts("\tAND THEY'RE OFF    !!!!");	//the spacing is modeled after the sample
 
     while(hPos < 70 && tPos < 70){
-        //sleep(1);						//slows down the race
+        sleep(1);						//slows down the race
         hareMove(&hPos);
         tortMove(&tPos);
 

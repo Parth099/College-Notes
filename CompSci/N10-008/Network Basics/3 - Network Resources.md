@@ -12,7 +12,7 @@ There are two models for this *movement*:
 ## Client Server Model
 Uses a server to provide access to files and **devices** to people on the network. *Devices* are mean things like printers.
 
-Since each resource is located one a single (or many) servers, Administration and backup are **much** easier. This model is also more scalable. 
+Since each resource is located one a single (or many) servers, Administration and backup is **much** easier. This model is also more scalable. 
 
 However since we require dedicated hardware and OSs, the cost for this system is higher. Yet, this model dominates the business market today.
 

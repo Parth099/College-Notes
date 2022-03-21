@@ -7,7 +7,9 @@ Network Topology is concerned with how a network is laid out. This can mean one 
 1. Physical - How devices are conned by media. This is like cable or wiring. 
 2. Logical: How the traffic flows between machines like computers, switches, routers and much more. 
 
+
 ![Logical-Network-Diagram](../img/Logical-Network-Diagram.png)
+
 This is an example of a **Logical** Network Diagram. 
 A *logical* diagram will ***not*** describe the locations of things **only** the connects will be shown. 
 
@@ -18,7 +20,9 @@ This Topology uses a single cable to connect all the devices. Each device will "
 This single cable is known as a "backbone".
 > **vampire-tap**: an old technology where a single cable would transport data and each device would have to *bite* into the cable to receive data.
 
+
 ![bus-topology-template](../img/bus-topology-template.png)
+
 Image from: [online.visual-paradigm](https://online.visual-paradigm.com/diagrams/templates/network-diagram/bus-topology-template/)
 
 Each devices forms a **single collision domain**. The word collision comes from the fact that if all computers talk at the same time the cable would not be able to process it. 
@@ -34,7 +38,10 @@ We can however *FDDI* ring to curb this issue. A FDDI ring will have an addition
 > **FDDI**: Fiber Distributed Data Interface
 
 ### Star Topology
+
+
 ![star-Topology](../img/star-Topology.jpg)
+
 Image from: [comparitech](https://www.comparitech.com/net-admin/network-topologies-advantages-disadvantages/)
 
 This one is the **most popular**

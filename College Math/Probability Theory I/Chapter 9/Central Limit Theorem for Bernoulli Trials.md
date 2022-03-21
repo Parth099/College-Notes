@@ -162,13 +162,21 @@ There are some slight complications however,
 
 ![Binomial_Distribution.png](./img/Binomial_Distribution.png)
 
-Notice how if we want the approximation from 3 to 4 on this graph above we must adjust our interval from $3.5$ to $4.5$
+Notice how if we want the approximation from 3 to 4 on this graph above we must adjust our interval from $2.5$ to $4.5$
 
 Just like that 
 
 $$
-P(i \leq S_n \leq j) \approx NA(\frac{i - \frac{1}{2} - np}{\sqrt{npq}}, \frac{j + \frac{1}{2} - np}{\sqrt{npq}})
+\begin{align}
+P(i \leq S_n \leq j) &\approx P(\frac{i - \frac{1}{2} - np}{\sqrt{npq}} \leq S^*_n \leq \frac{j +  \frac{1}{2} - np}{\sqrt{npq}})
+\\
+&\approx NA(\frac{i - \frac{1}{2} - np}{\sqrt{npq}}, \frac{j + \frac{1}{2} - np}{\sqrt{npq}}) \\
+
+\end{align}
 $$
+Notice that it is counting the probability of being below by $x_i$ standard deviations to $x_j$ deviations above.
+
+Note $x_k$ are $x$ values that are **translated** into 'standardized' world. Their resultant probability density is $\phi(x_k)$  
 
 ## Example for Interval-type approximations
 Estimate $P(40 \leq X \leq 60)$ where $X$ counts the number of heads on a fair coin.
@@ -197,8 +205,8 @@ Thus
 
 $$
 \begin{align}
-P(40 \leq X \leq 60) &= NA(-2.1, +2.1) \\
-                     &= 2NA(2.1) \\
+P(40 \leq X \leq 60) &= \text{NA}(-2.1, +2.1) \\
+                     &= 2\text{NA}(2.1) \\
 					 &= .9462 \\
 \end{align}
 $$

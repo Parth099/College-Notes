@@ -3,6 +3,8 @@
 
 Main Article : [Uber - Engineering](https://eng.uber.com/microservice-architecture/)
 
+I chose this option because I want to expose myself to more design principles and it gives us a glimpse of how a larger company operates WRT software.  
+
 ## The problem with *regular* MSA
 Uber has recently taken up Microservices however, it was faced the same problems many large microservice adopters have: **complexity**. As the number grows (to `2,200` in this case) Microservices get hard to manage. 
 ### Why is this a problem?

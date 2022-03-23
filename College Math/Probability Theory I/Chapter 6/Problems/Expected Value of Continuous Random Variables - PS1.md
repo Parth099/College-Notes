@@ -136,7 +136,44 @@ $$
 ![[cp6_4p9.png.png]]
 %%TBF%%
 
----
+### a)  
+$$
+\begin{align}
+	E(S) &= E(X) + E(Y) + E(Z) \\
+		 &= 3\mu
+		 \\\\
+		 
+	V(S) &= E(X) + E(Y) + E(Z) \text{ (via independence)} \\
+	&= 3\sigma^2
+\end{align}
+$$
+
+### b)
+$$
+\begin{align}
+	E(A) &= \frac{1}{3}E(S) \\
+		 &= \mu 
+		 \\\\
+		 
+	V(A) &= \frac{1}{3^2}V(S) \text{ (via independence)} \\
+	&= \frac{\sigma^2}{3}
+\end{align}
+$$
+### c)
+$$
+\begin{align}
+	V(S)   &= E(S^2) - E(S)^2 \\
+    E(S^2) &= V(S) + E(S)^2 \\
+		   &= 3\sigma^2 + 9\mu^2
+		   \\
+		   \\
+	V(A)   &= E(A^2) - E(A)^2 \\
+	E(A^2) &= V(A) + E(A)^2 \\
+		   &= \frac{\sigma^2}{3} + 	\mu^2
+\end{align}
+$$
+
+
 ## 10
 ![[cp6_4p10.png]]
 

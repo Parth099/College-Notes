@@ -116,8 +116,8 @@ The Central Limit Theorem says that
 $$
 \begin{align}
 	\sqrt{npq}\:b(n, p, j) &\approx^* \phi(x) \\
-	&=\frac{\phi(x)}{\sqrt{npq}}\\
-	&=\frac{1}{\sqrt{npq}}\phi(\frac{j - np}{\sqrt{npq}})
+	\:b(n, p, j)&\approx\frac{\phi(x)}{\sqrt{npq}}\\
+	&\approx\frac{1}{\sqrt{npq}}\phi(\frac{j - np}{\sqrt{npq}})
 \end{align}
 $$
 
@@ -177,6 +177,8 @@ $$
 Notice that it is counting the probability of being below by $x_i$ standard deviations to $x_j$ deviations above.
 
 Note $x_k$ are $x$ values that are **translated** into 'standardized' world. Their resultant probability density is $\phi(x_k)$  
+
+Side Note:
 
 ## Example for Interval-type approximations
 Estimate $P(40 \leq X \leq 60)$ where $X$ counts the number of heads on a fair coin.

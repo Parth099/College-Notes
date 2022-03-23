@@ -188,4 +188,4 @@ $$
 
 Graphic
 ![graphic_for_8_2__p3.png](./img/graphic_for_8_2__p3.png)
-Red: $f_X(x)$
+Red: $f_X(x)$ , Blue: $g(x)$, Chebyshev

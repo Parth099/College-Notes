@@ -30,8 +30,8 @@ $$
 \begin{align}
 F(x) &= P(T \leq x)\\
 &= \int_{0}^{x} \lambda e^{-\lambda t} \mathop{dt} \\
-&= -e^{\lambda t}\biggr|_{x = 0}^{t = x}\\
-&= 1 - e^{\lambda x}
+&= -e^{-\lambda t}\biggr|_{x = 0}^{t = x}\\
+&= 1 - e^{-\lambda x}
 \end{align}
 $$
 

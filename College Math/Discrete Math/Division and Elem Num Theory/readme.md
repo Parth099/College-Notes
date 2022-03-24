@@ -1,10 +1,16 @@
 # Sequence
+## Division
 1. [[The Division Algorithm]]
 	+ Req: Well-ordering Principle, [[Lemma - Divisor ABS Value]]
 
 2. [[Examples - Div Algo]]
 
-# The Main Idea:
+## Euclidean Algorithm
+1. [[Intro For GCD]]
+2. [[Euclidean Algorithm]]
+3. Problem Set: [[Homework Set 8 - GCD]]
+
+# The Main Idea for Division
 > **Divisibility Theorem**: 
 > Let $a \in \mathbb{Z}^+$
 > $$a|b \iff b \text{ mod } a = 0$$

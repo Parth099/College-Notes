@@ -21,7 +21,7 @@ Then
 
 $$
 \begin{align}
-	\prod_{k = 1}^{n+1} k! * k &= [(n+1)(n+1)!]+\sum_{k = 1}^{n} k! * k \\
+	\sum_{k = 1}^{n+1} k! * k &= [(n+1)(n+1)!]+\sum_{k = 1}^{n} k! * k \\
 	&= [(n+1)(n+1)!]+[(n+1)! - 1] \\
 	&= [(n+1)(n+1)!+[(n+1)!] - 1 \\
 	&= (n+1)! \times (n+1+1) - 1 \\
@@ -133,17 +133,16 @@ $$
 $$
 Since $64 \lt 81$, the formula holds for $n = 1$ 
 
-Assume $\text{Prove }\forall n\geq 4,\: n^3 \lt 3^n$ for some $n \geq 4$ 
-
-Observe that 
+Assume $n^3 \lt 3^n$ for some $n \geq 4$ 
+Observe that
 $$
 \begin{align}
 \frac{(n+1)^3}{n^3} &= \biggr(1+{\frac{1}{n}}\biggr)^3
 \end{align}
 $$
 
-This value maxes out at $n = 4$
-
+Since $n\geq 4$, $0\lt\frac{1}{n}\leq\frac{1}{4}$
+Then, $1+\frac{1}{n}\leq 1+\frac{1}{4}$
 Thus:
 $$
 \biggr(1+{\frac{1}{n}}\biggr)^3 \leq \biggr(1+{\frac{1}{4}}\biggr)^3 = (\frac{5}{4})^3 = \frac{125}{64} \lt \frac{192}{64} = 3 

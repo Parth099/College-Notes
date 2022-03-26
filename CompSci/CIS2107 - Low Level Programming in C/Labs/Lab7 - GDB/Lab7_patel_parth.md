@@ -27,19 +27,6 @@ GDB input (Line 1) and output (Line 2)
 
 Based on the GDB output we notice that `arr[n]` will move the array pointer (from address initial) forward $n$ spaces **and** dereference the pointer to get the value out. Since the array name (alias) points to the first element much like `arr[0]` which is a 0 shift forward we **do** expect the same value. 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<br>
-<br>
-<br>
-
-
 > 5. In `Blowfish_Init( )`, what is the value of key?
 
 The address and value:
@@ -126,14 +113,6 @@ $1 = 1753098189
 ```
 
 The value is `1753098189`
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 > 12. What is the output if we run GDB's backtrace (abbreviated "`bt`") command inside the function `F()` in `Blowfish.c` the first time `F()` is called? Briefly explain the output of the command in your own words.
 

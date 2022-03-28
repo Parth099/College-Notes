@@ -62,3 +62,38 @@ $$
 Thus $P(X\geq30) = 0.5 - \text{NA}(0, 1.6) \approx 0.0548$
 
 Both are close to the real [Binomial CDF](https://stattrek.com/online-calculator/binomial.aspx)
+
+## 10
+![[c9_1p10.png]]
+$$
+\text{Let }S_n = \sum_{i = 1}^{10000}X_i \text{ for } X_i = 
+	\begin{cases}
+		1 & \text{ if } &x = 3
+		\\
+		0 & \text{ otherwise }
+	\end{cases}
+$$
+
+Observe for $n = 10000$
+$$
+\begin{align}
+	E(X_i) &= p =\frac{1}{10}\\
+	V(X_i) &= p - p^2 = \frac{9}{100} \\
+	
+	\\
+	
+	E(S_n) &= 1000 \\
+	V(S_n) &= 900 \\
+	D(S_n) &= 30 \\
+\end{align}
+$$
+
+Now 
+$$
+\begin{align}
+	P(S_n \leq 931) &\approx P(S^*_n \leq -2.3) \\
+					&= 0.5 - \text{NA}(0, 2.3) \\
+					&\approx 0.5 - .4893 \\
+					&\approx \mathbf{.0107}
+\end{align}
+$$

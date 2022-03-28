@@ -70,14 +70,3 @@ $$\lambda = 400(\frac{1}{100}) = 4$$
 $$\to p(j) = \frac{e^{-4}4^j}{j!}$$
 Then, the number of squares that receive $j$ hits is $100\cdot p(j)$
 ![[PD_1.png]]
-
-### Ex.3
-Suppose a fix amount of blood $W$ has 40 white blood cells. Then, $X$ can be the random variable that gives the number of white blood cells in a random sample of size $W$ of blood. We can see that $X$ is binomially distributed with each white blood cell in the body representing a trial. Each cell is a trial with 2 states: stay in the body or leave it. Leaving the body is a success. This way we see that 
-$$p = \frac{W}{\text{Total Blood in body}}$$
-
-Say for the average human, 40 is the average. Thus $40=np$. We can now think if $X$ being Poisson distributed, with rate $\lambda = 40$
-
-%%
-Optional reading: 
-## Hypergeometric Distribution
-%%

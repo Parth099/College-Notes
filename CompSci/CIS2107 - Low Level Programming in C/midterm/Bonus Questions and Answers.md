@@ -48,7 +48,7 @@
 	+	`logname`:prints **your** username 
 	+   `users`
 
-3. The main difference is that a folder is a logical concept that does not necessarily map to a physical directory. A directory is an file system object. A folder is a GUI object.
+3. The main difference is that a folder is a logical concept that does not necessarily map to a physical directory. A directory is an file system object. A folder is a GUI object. This means that a directory **always** maps to a physical storage object while a folder may not map to a physical address (virtual folder). 
 
 ## 2.01 C-Lang
 1. Compiler vs interpreter
@@ -85,3 +85,7 @@
 1. ???
 
 ## 2.11.1 File Writing \[SEQ\]
+1. Most operating systems keep track of files by keeping pointers to the start of file pointers and end of file pointers. When you delete these files their pointer gets removed but their data does not. Since the file pointers do not exists this space is freed for any other data to be over written there. 
+2. Files are "persistent" and "non-volatile". Data in files do not require power to be maintained. A Stream is like a connection. An example of a Stream is reading integers from `stdin`. We are often unsure when the data will end the data is live. We process as we receive it while a file has data rewritten to it. 
+
+## 2.11.2 File Writing \[RAF\]

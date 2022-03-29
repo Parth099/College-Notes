@@ -2,12 +2,17 @@
 
 Repo of my Latex-based notes via the Note taking app: [Obsidian](https://obsidian.md/)
 
-### Current Works:
-- CIS2168: Data Structures
-- MATH2043: Calculus III
+## Fall 21'
+| Course Code | Description     |
+| ----------- | --------------- |
+| Math 2043   | Calculus 3      |
+| CIS 2168    | Data Structures | 
 
-### In Progress
-- CIS2107: Computer Systems and Low-Level Programming in C
-- CIS4360: Microservice Architecture
-- MATH2111 - Basic Concepts of Math
-- MATH3031 - Probability Theory 1
+## Spring 22'
+| Course Code | Description               |
+| ----------- | ------------------------- |
+| Math 3031   | Probability Theory 1      |
+| Math 2111   | Basic Concepts of Math    |
+| CIS 2107    | Low Level Systems and C   |
+| CIS 4360    | Microservice Architecture | 
+

@@ -10,6 +10,10 @@
 2. [[Euclidean Algorithm]]
 3. Problem Set: [[Homework Set 8 - GCD]]
 
+## Primes
+1. [[Relatively Prime and Divisibility]]
+2. Problem Set [[Homework Set 9 - Primes]]
+
 # The Main Idea for Division
 > **Divisibility Theorem**: 
 > Let $a \in \mathbb{Z}^+$

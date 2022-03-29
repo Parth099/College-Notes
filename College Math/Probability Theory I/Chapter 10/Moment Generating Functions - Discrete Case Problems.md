@@ -13,7 +13,7 @@ $$
 $$
 
 > The uses the sum of a **finite** geometric sequence
-> $$S_n = \frac{a(r^n - 1)}{r^n - 1}$$
+> $$S_n = \frac{a(r^n - 1)}{r - 1}$$
 > $r$ is the common ratio while $a$ is the first term 
 
 Lets calculate some moments.
@@ -44,7 +44,7 @@ $$
 		 
 		&= \sum_{k = 0}^{n}  \binom{n}{k} (pe^t)^k q^{n-k} \\
 		
-		&= (pe^t + q)^n
+		&= \boxed{(pe^t + q)^n}
 \end{align}
 $$
 > This is attained via the **Binomial Theorem**
@@ -76,7 +76,92 @@ $$
 $$
 
 ## Example 3 - Geometric
-> Suppose $X$ is distributed geometrically over the space $\mathbb{Z}_{\geq0}$
+> Suppose $X$ is distributed geometrically over the space $\mathbb{Z}^+$
 
+The mass function is: $p_X(j) = pq^{j-1}$
+$$
+\begin{align}
+g_X(t) &= \mathbb{E}(e^{tX})\\
+	   &= \sum_{k = 1}^{\infty} e^{tk} pq^{k-1} \\
+	   &= \frac{p}{q}\sum_{k = 1}^{\infty} e^{tk} q^{k} \\
+	   &= \frac{p}{q}\sum_{k = 1}^{\infty} (e^tq)^k\\
+	   &= \frac{p}{q} \frac{e^tq}{1 - e^tq} \\
+	   
+	   &= \frac{pe^t}{1 - e^tq}
+	   
+\end{align}
+$$
+
+### $\mu_1$
+$$
+g^{\prime}(t) = \frac{pe^t(1-e^tq) + pe^t\cdot qe^t}{(1-e^tq)^2} = \frac{pe^t}{(1-e^tq)^2}
+$$
+$$g^\prime(0) = \boxed{\frac{1}{p}}$$
+### $\mu_2$
+$$
+\begin{align}
+g^{\prime\prime}(t) &= \frac{pe^t(1-qe^t)^2 + 2pe^tqe^t(1-qe^t)}{(1-qe^t)^4} 
+\\ \\
+&= \frac{pe^t(1-qe^t)[(1-qe^t)+2qe^t]}{(1-qe^t)^4}
+\\ \\
+&= \frac{pe^t(1+qe^t)}{(1-qe^t)^3}
+
+\\\\
+
+g^{\prime\prime}(0) &= \frac{p(1+q)}{(1-q)^3} = \frac{1+q}{p^2}
+
+\end{align}
+$$
+### $\sigma^2$
+Since $$\sigma^2 = \mu_2 - \mu_1^2$$
+$$\mu_2 - \mu_1^2 = \frac{1+q}{p^2} - (\frac{1}{p})^2$$
+
+$$\sigma^2 = \boxed{q/p^2}$$
+This lines up with information from 
 ## Example 4 - Poisson
 > Suppose $X$ is Poisson distributed over the space $\mathbb{Z}_{\geq0}$
+
+Then, 
+$$
+p_X(x, \lambda) = e^{-\lambda}\frac{\lambda^x}{x!}
+$$
+
+$$
+\begin{align}
+	g(t) &= \mathbb{E}(e^{tX}) \\
+		 &= \sum_{k = 0}^\infty e^{tk} p_X(x) \\
+		 &= \sum_{k = 0}^\infty e^{tk} e^{-\lambda}\frac{\lambda^k}{k!} \\
+		 &= e^{-\lambda} \sum_{k = 0}^\infty  \frac{(e^{t}\lambda)^k}{k!} \\
+		 
+		 &= e^{-\lambda} e^{e^t\lambda} = e^{e^t\lambda - \lambda} \\
+		 
+		 &= e^{\lambda(e^t - 1)}
+\end{align}
+$$
+
+### $\mu_1$
+We now see that 
+$$g(t) = e^{\lambda(e^t - 1)}$$
+
+$$
+\begin{align}
+g^{\prime}(t) &= e^{\lambda(e^t - 1)}\lambda e^t \\
+g^\prime(0) &= \lambda 
+\end{align}
+$$
+
+### $\mu_2$
+Given that 
+$$
+\begin{align}
+g^{\prime}(t) &= e^{\lambda(e^t - 1)}\lambda e^t
+\\
+g^{\prime\prime}(t) &= \lambda e^t \cdot e^{\lambda(e^t - 1)} + e^{\lambda(e^t - 1)}\lambda e^t \lambda e^t \\
+&= e^{\lambda(e^t - 1)}\lambda e^t (1 + \lambda e^t) \\\\
+
+g^{\prime\prime}(0) &= (1)(\lambda)(1+\lambda) \\
+&= \boxed{\lambda^2 + \lambda}
+\end{align}
+$$
+
+We can note that this result aligns well with our **known** $\sigma^2$

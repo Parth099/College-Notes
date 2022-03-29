@@ -81,14 +81,47 @@ $$
 
 $h$ is known as the Ordinary Generating Function. 
 
-Observe that 
+Lets Investigate the Derivatives of $h(z)$ WRT to Z. 
+
+See that 
 $$
 \begin{align}
-	h(1) &= g(0) = \sum_{j=0}^\infty e^{0j}p(j) = 1\\
-	\\
-	h^\prime(1) &= g^\prime(0) = \mu_1 = E(X)
-	\\
-	h^{\prime\prime}(1) &= g^{{\prime\prime}}(0) - g^\prime(0) = \mu_2 - \mu_1
+h^{\prime}(z) &= \sum_{j = 1}^{n} (j)z^{j-1} p(j) \\
+&= 1p(1) + 2p(2) + \dotso + np(n)\\
+&= \mathbf{E(X)}
 \end{align}
 $$
 
+AND this:
+$$
+\begin{align}
+h^{\prime\prime}(z) &= \sum_{j = 2}^{n} (j-1)(j)z^{j-2} p(j) \\
+
+h^{\prime\prime}(1) &= \sum_{j = 2}^{n} (j-1)(j)p(j) \\
+&= E(X(X-1)) \\
+&= \mu_2 - \mu_1
+\end{align}
+$$
+
+The point here is that each probability here with $h(z)$ the coefficient of $z^j$ is $p(j)$. 
+
+### OGF Example 
+> Suppose you know that 
+> $$\begin{align}\mu_0 &= 1\\\mu_k &= \frac{1}{2}+\frac{2^k}{4}\end{align}$$
+> Find the density:
+
+We know the general definition of $M_X$ or here it is called $g(t)$
+$$
+\begin{align}
+g_X(t) &= \sum_{k = 0}^{\infty} \mu_k\frac{t^k}{k!} \\
+&= 1 + \sum_{k = 1}^{\infty} \biggr[\frac{1}{2}+\frac{2^k}{4}\biggr]\frac{t^k}{k!} \\
+
+&= 1 + \frac{1}{2}\sum_{k = 1}^{\infty}\frac{t^k}{k!} + \frac{1}{4}\sum_{k=1}^{\infty} \frac{(2t)^k}{k!} \\
+
+&= 1 + \frac{e^t}{2} + \frac{e^t}{4} - \frac{1}{2} - \frac{1}{4} \\
+
+&= \frac{1}{4} + \frac{e^t}{2} + \frac{e^t}{4}
+\end{align}
+$$
+
+The subtraction of fractions is due to the sum index starting at $1$ and **not** $0$

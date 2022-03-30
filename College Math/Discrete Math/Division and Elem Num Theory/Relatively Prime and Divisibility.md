@@ -114,9 +114,44 @@ if $p|a_{n+1}$ then, $p|a_i$ for $i = n+1$
 Therefore $\forall n\geq 2$, if $p|a_1 \cdots a_n$ then, $\exists i\in\{1, \cdots, n\}$ s.t $p|a_i$
 
 ### Example 
+#### Example A
 > Show that if $p|a^n$ then $p|a$
 
 Suppose $p|a^n$
 Then $p|\:\underbrace{a \times \cdots \times a}_{n\text{ times}}$
 
 Thus $p|a$
+
+#### Example B
+> Show that $\sqrt[n]{p}$ is irrational for any prime $p$ and $n\geq2$
+
+We can employ the same line of reasoning we used for $\sqrt{2}$
+
+Suppose $\sqrt[n]{p}$ **is** rational
+Then, $\sqrt[n]{p} = \frac{a}{b}$ for integers $a, b$ such that $\text{gcd}(a, b) = 1$. They are **fully** reduced. 
+
+Then, 
+$$
+\begin{align}
+	p &= \frac{a^n}{b^n} \\
+	p(b^n) &= a^n \\
+\end{align}
+$$
+
+Since $p, b\in\mathbb{Z}$, $p|a^n$
+Since $p|a^n$, $p|a$
+Since $p|a$, $a = pc$ for some integer $c$
+
+Then, $pb^n = (pc)^n = p^n c^n$
+Then, $b^n = p^{n-1}c^n$
+
+Since $n\geq2$, $n-1\geq 1$
+
+This means that $p|p^{n-1}c^n$ and by extension $p|b^n$
+This also means that $p|b$
+
+Since $p|a$ and $p|b$, then $\text{gcd}(a, b) = p \neq 1$
+
+This contradicts our initial assumption about $\sqrt[n]{p}$ being rational. 
+
+Thus $\sqrt[n]{p}$ is **irrational**

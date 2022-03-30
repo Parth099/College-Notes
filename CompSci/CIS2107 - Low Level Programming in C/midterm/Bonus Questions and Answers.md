@@ -89,3 +89,4 @@
 2. Files are "persistent" and "non-volatile". Data in files do not require power to be maintained. A Stream is like a connection. An example of a Stream is reading integers from `stdin`. We are often unsure when the data will end the data is live. We process as we receive it while a file has data rewritten to it. 
 
 ## 2.11.2 File Writing \[RAF\]
+The file extension is the protocol for reading the file at hand. 

@@ -188,3 +188,29 @@ $$
 	&= \frac{e^{2t}(2t-1) - 1}{2t^2}
 \end{align}
 $$
+
+#### c)
+no
+
+#### d)
+let $f_X = |1-x|$ be the density function for the interval $[0, 2]$. 
+
+Then, 
+$$
+f_X(x) = \begin{cases}
+	1 - x & \text{if} & 0 \leq x \leq 1 \\
+	x - 1 & \text{if} & 1 \lt x \leq 2 \\
+	0 & \text{otherwise}
+\end{cases}
+$$
+
+**MGF**:
+$$
+\begin{align}
+	g(t) &= \int_{0}^{2} e^{tx} f_X(x)\:dx \\
+	&= \int_{0}^{1} (1-x)e^{tx}\:dx + \int_{1}^{2} (x-1)e^{tx}\:dx \\
+	^*&= \frac{1}{t^2}(e^t - t - 1) \:+ 
+\end{align}
+$$
+
+\* - series of *Integration by Parts*

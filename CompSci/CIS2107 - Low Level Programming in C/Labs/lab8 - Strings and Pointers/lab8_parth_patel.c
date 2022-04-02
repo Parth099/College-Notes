@@ -13,6 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <math.h>
 
 //functions prototypes
 void upperLower(const char * s);
@@ -21,7 +22,7 @@ float convertStrtoFloat(const char *s1, const char *s2, const char *s3, const ch
 void compareStr(const char *s1, const char *s2);
 void comparePartialStr(const char *s1, const char *s2, int n);
 void randomize(void);
-int tokenizeTelNum(char *num);
+void tokenizeTelNum(char *num);
 void reverse(char *text);
 int countSubstr (char * line, char * sub);
 int countChar (char * line, char c);
@@ -67,12 +68,14 @@ int main() {
     comparePartialStr("Test1", "Test2", 4);
 
     //test for randomize
+    puts("");
     randomize();
-/*
+
+    puts("\n");
     //test for tokenize number
     char str[] = "(267) 436-6281";
     tokenizeTelNum(str);
-
+/*
     //test for reverse
     char line[] = "Hello world";
     reverse(line);
@@ -175,17 +178,7 @@ int randInt(int limit){
     return (rand() % limit);
 }
 
-char* copyToStrFrom(char* dest, char* word) {
-    char* wordPtr = word; //we dont want to move the real word ponter
-    while((*wordPtr) != '\0'){
-        *dest = *wordPtr;
-        dest++;
-        wordPtr++;
-    }
-    return dest;
-}
 void pushChar(char* dest, char c){
-    dest++;
     *dest = c;
 }
 
@@ -193,33 +186,69 @@ char* genSentence(void) {
     const int LIMIT = 5;
     //article, noun, verb, preposition, article and noun.
     static char sentence[50]; //50 to ensure no segfaults
-    char *writeLocation = sentence;
-    
-    char word[8];
+    char *endPoint = sentence;
+    //copy article
+    strcpy(endPoint, article[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, ' ');
+    endPoint++;
 
-    //copy in article
-    strcpy(word, article[randInt(LIMIT)]);
-    writeLocation = copyToStrFrom(writeLocation, word); //coipes the word where we need it to
-    pushChar(writeLocation, ' ');
+    strcpy(endPoint, subject[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, ' ');
+    endPoint++;
 
+    strcpy(endPoint, verb[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, ' ');
+    endPoint++;
 
-    pushChar(writeLocation, '\0');
-    printf("Word: %s|\nSen: %s|", word, sentence);
+    strcpy(endPoint, prepo[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, ' ');
+    endPoint++;
 
+    strcpy(endPoint, article[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, ' ');
+    endPoint++;
 
+    strcpy(endPoint, subject[randInt(LIMIT)]);
+    endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
+    pushChar(endPoint, '.');
+    endPoint++;
+
+    *sentence = toupper(*sentence);
+    pushChar(endPoint, '\0');
     return sentence;
-
 }
 //6.(Random Sentences) 
 void randomize(void){
-    puts("Hi");
-    char *sentence = genSentence();
+    for(int i = 0; i < 20; i++){
+        printf("%s ", genSentence());
+    }
 }
 
 //7.(Tokenizing Telephone Numbers) 
-int tokenizeTelNum(char *num) {
-  
-  
+void tokenizeTelNum(char *num) {
+    char* token = strtok(num, "()");
+    int areaCode;
+    unsigned long number = 0;
+    int lengthOfToken = 0;
+    if(token != NULL){
+        areaCode = atoi(token);
+    }
+    token = strtok(NULL, " -");
+    while(token != NULL){
+
+        number *= pow(10, lengthOfToken+1);
+        lengthOfToken = strlen(token);
+        number += atoi(token);
+
+        token = strtok(NULL, " -");
+    }
+
+    printf("%-13s: %d\n%-13s: %lu", "Area Code", areaCode, "Phone Number", number);
 }
 
 //8.(Displaying a Sentence with Its Words Reversed) 

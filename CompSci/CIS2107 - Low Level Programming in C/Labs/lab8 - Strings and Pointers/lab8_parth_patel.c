@@ -31,12 +31,15 @@ void startsWithB(char *string[]);
 void endsWithed(char *string[]);
 
 //helpers
+char* genSentence(void);
+char* copyToStrFrom(char* dest, char*  word);
+void pushChar(char* dest, char c);
 
 //globals
-const char **article = {"the", "a", "one", "some", "any"};
-const char **subject = {"boy", "girl", "dog", "town", "car"};
-const char **verb = {"drove", "jumped", "ran", "walked", "skipped"};
-const char **prepo[] = {"to", "from", "over", "under", "on"};
+const char article[5][5] = {"the", "a", "one", "some", "any"};
+const char subject[5][5]  = {"boy", "girl", "dog", "town", "car"};
+const char verb[5][8]  = {"drove", "jumped", "ran", "walked", "skipped"};
+const char prepo[5][6]  = {"to", "from", "over", "under", "on"};
 
 int main() {
 
@@ -169,12 +172,48 @@ void comparePartialStr(const char *s1, const char *s2, int n) {
 }
 
 int randInt(int limit){
-    return (rand() % limit)+ 1;
+    return (rand() % limit);
 }
 
+char* copyToStrFrom(char* dest, char* word) {
+    char* wordPtr = word; //we dont want to move the real word ponter
+    while((*wordPtr) != '\0'){
+        *dest = *wordPtr;
+        dest++;
+        wordPtr++;
+    }
+    return dest;
+}
+void pushChar(char* dest, char c){
+    dest++;
+    *dest = c;
+}
+
+char* genSentence(void) {
+    const int LIMIT = 5;
+    //article, noun, verb, preposition, article and noun.
+    static char sentence[50]; //50 to ensure no segfaults
+    char *writeLocation = sentence;
+    
+    char word[8];
+
+    //copy in article
+    strcpy(word, article[randInt(LIMIT)]);
+    writeLocation = copyToStrFrom(writeLocation, word); //coipes the word where we need it to
+    pushChar(writeLocation, ' ');
+
+
+    pushChar(writeLocation, '\0');
+    printf("Word: %s|\nSen: %s|", word, sentence);
+
+
+    return sentence;
+
+}
 //6.(Random Sentences) 
-void randomize(void) {
-   printf("%d %d %d %d", randInt(5), randInt(5), randInt(5), randInt(5));
+void randomize(void){
+    puts("Hi");
+    char *sentence = genSentence();
 }
 
 //7.(Tokenizing Telephone Numbers) 

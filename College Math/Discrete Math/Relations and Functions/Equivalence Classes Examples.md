@@ -50,7 +50,7 @@ $$
 $$
 
 if $5|(b-2)$ then $5n = b-2$ for some integer $n$. 
-Then $b$ is given by $5n+2
+Then $b$ is given by $5n+2$
 
 $$
 \begin{align}

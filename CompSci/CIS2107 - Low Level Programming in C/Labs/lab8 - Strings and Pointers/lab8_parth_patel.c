@@ -75,7 +75,8 @@ int main() {
     //test for tokenize number
     char str[] = "(267) 436-6281";
     tokenizeTelNum(str);
-/*
+
+    puts("\n");
     //test for reverse
     char line[] = "Hello world";
     reverse(line);
@@ -84,7 +85,7 @@ int main() {
     char *line1 = "helloworldworld";
     char *substring = "world";
     printf("\n\nNumber of Substrings %s inside %s: %d\n", substring, line1, countSubstr(line1, substring));
-
+/*
     //test for countChar
     char w = 'w';
     printf("\nNumber of character %c inside %s: %d\n", w, line1, countChar(line1, w));
@@ -253,14 +254,30 @@ void tokenizeTelNum(char *num) {
 
 //8.(Displaying a Sentence with Its Words Reversed) 
 void reverse(char *text) {
-    
+    size_t length = strlen(text);
+    char stringRev[length]; //buffer
+    char* token = strtok(text, " .!?");
+
+    //rev the tokens
+    while(token != NULL){
+        printf("%s\n", strrev(token));
+        token = strtok(NULL, " .!?");
+    }
 
 }
 
 //9.(Counting the Occurrences of a Substring) 
 int countSubstr (char * line, char * sub) {
-  
-  
+    int lenSub = strlen(sub);
+    int count = 0;
+    char* lnPtr = line;
+    while((*lnPtr) != '\0'){
+        if(strncmp(lnPtr, sub, lenSub) == 0){
+            count++;
+        }
+        lnPtr++;
+    } 
+    return count;
 }
 
 //10.(Counting the Occurrences of a Character) 

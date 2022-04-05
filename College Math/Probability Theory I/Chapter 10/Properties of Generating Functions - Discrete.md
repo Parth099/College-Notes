@@ -66,3 +66,5 @@ $$
 $$
 
 The addition of two binomial trials was not covered in this course but it is know as *convolution*.
+
+$$\int_{0}^{2}e^{tx}\frac{x}{2}\:dx$$

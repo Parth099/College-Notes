@@ -56,7 +56,6 @@ $X$ is uniform on $\{n, n+1, \dotso, n+k\}$. The set contains $k+1$ elements.
 $$p_X(x) = \frac{1}{n+k-n + 1} = \frac{1}{k+1}$$
 
 
-%%MISCOUNT - NEEDS FIX %%
 $$
 \begin{align}
 	g(t) &= \frac{1}{k+1}\sum_{j = n}^{n+k} e^{tj}\\ \\
@@ -209,8 +208,21 @@ $$
 \begin{align}
 	g(t) &= \int_{0}^{2} e^{tx} f_X(x)\:dx \\
 	&= \int_{0}^{1} (1-x)e^{tx}\:dx + \int_{1}^{2} (x-1)e^{tx}\:dx \\
-	^*&= \frac{1}{t^2}(e^t - t - 1) \:+ 
+	^*&= \frac{1}{t^2}(e^t - t - 1) \:+\: \frac{e^t}{t^2}(te^t - e^t + 1) \\
+	&= \frac{1}{t^2}\biggr[e^{2t}(t-1)+2e^t - t - 1\biggr]
 \end{align}
 $$
 
 \* - series of *Integration by Parts*
+
+#### e)
+Let the density be $f_X(x) = \frac{3}{8}x^2$ on the interval $[0, 2]$
+
+Then, 
+
+$$
+\begin{align}
+	g(t) &= \int_{0}^{2} e^{tx} f_X(x)\:dx \\
+		 &= \frac{3}{8}\int_0^2 x^2e^{tx}\:dx
+\end{align}
+$$

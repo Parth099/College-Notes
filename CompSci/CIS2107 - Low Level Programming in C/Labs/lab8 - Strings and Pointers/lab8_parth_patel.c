@@ -85,7 +85,7 @@ int main() {
     char *line1 = "helloworldworld";
     char *substring = "world";
     printf("\n\nNumber of Substrings %s inside %s: %d\n", substring, line1, countSubstr(line1, substring));
-/*
+
     //test for countChar
     char w = 'w';
     printf("\nNumber of character %c inside %s: %d\n", w, line1, countChar(line1, w));
@@ -93,7 +93,7 @@ int main() {
     //test for countAlpha
     char str1[] = "Hello it's me.";
     countAlpha(str1);
-
+/*
     //test for countWords
     char countstring[] = "hello world!";
     printf("\n\nNumber of words in string is: %d\n", countWords(countstring));
@@ -282,15 +282,37 @@ int countSubstr (char * line, char * sub) {
 
 //10.(Counting the Occurrences of a Character) 
 int countChar (char *line, char c) {
-  
-  
+    int count = 0;
+    
+    while(*line != '\0'){
+        if(*line == c){
+            count++;
+        }
+        line++;
+    }
+    return count;
 }
 
 
 //11.(Counting the Letters of the Alphabet in a String) 
 void countAlpha(char *string) {
- 
- 
+    printf("\n%-9s| %-15s", "Letter", "Occurrences");
+
+    int count[26] = {0};
+    char curr;
+
+    while(*string != '\0'){
+        curr = tolower(*string);
+        if(curr >= 'a' && curr <= 'z'){
+            count[curr - 'a'] += 1; 
+        }
+        string++;
+    }
+    
+    for(short i = 0; i < 26; i++){
+        if(count[i] > 0)
+            printf("\n%-10c %-15d", 'a'+i, count[i]);
+    }
 }
 
 //12.(Counting the Number of Words in a String) 

@@ -1,1 +1,0 @@
-lengthOfToken = strlen(token);

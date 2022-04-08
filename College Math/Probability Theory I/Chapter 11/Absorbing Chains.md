@@ -24,7 +24,8 @@ Also,  $\mathbf{0}$ is a $r\times t$ matrix full of zeros.
 ![[Conical_Form_powers .png]]
 While explaining $\mathbf{Q}^n$ is not easy the $I$ is. Notice how the Conical Form orders the absorbing states. They are at the bottom. This means that each absorbing row only has an entry on the main diagonal. When multiplied with it self it will not change by rules of matrix algebra.  
 
-To see why compute this product and notice how each entry in the left matrix corresponds to that entry times the row it corresponds to
+To see why compute this product and notice how each entry in the left matrix corresponds to that entry times the row it corresponds to.
+
 $$
 \begin{pmatrix}
         1 & 2

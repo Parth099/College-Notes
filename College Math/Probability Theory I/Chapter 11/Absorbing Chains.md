@@ -26,15 +26,16 @@ While explaining $\mathbf{Q}^n$ is not easy the $I$ is. Notice how the Conical F
 
 To see why compute this product and notice how each entry in the left matrix corresponds to that entry times the row it corresponds to.
 
+
 $$
 \begin{pmatrix}
         1 & 2
-\end{pmatrix}  
+\end{pmatrix}
 \begin{pmatrix}
         0 & 1\\
         6 & 7
 \end{pmatrix}
-=
+	=
 \begin{pmatrix}
         12 & 15
 \end{pmatrix} 

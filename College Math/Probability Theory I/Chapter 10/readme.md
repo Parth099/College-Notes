@@ -10,4 +10,4 @@
 
 
 ## PSets
-+ [[Probability Theory I/Chapter 10/Problem Space]]
++ [[MGF Problem Space]]

@@ -6,6 +6,7 @@
 			to process characters and strings.
  */
 
+#define SIZE_OF_SERIES 5
 
 #include <stdio.h>
 #include <memory.h>
@@ -42,6 +43,8 @@ const char subject[5][5]  = {"boy", "girl", "dog", "town", "car"};
 const char verb[5][8]  = {"drove", "jumped", "ran", "walked", "skipped"};
 const char prepo[5][6]  = {"to", "from", "over", "under", "on"};
 
+
+
 int main() {
 
     //random generator
@@ -54,17 +57,20 @@ int main() {
 
 
     //test for convertStrtoInt
-    printf("\n\nThe sum of 4 strings is: %d", convertStrtoInt("3", "4", "5", "6"));
+    puts("\n\nString -> int:");
+    printf("The sum of 4 strings is: %d", convertStrtoInt("3", "4", "5", "6"));
 
     //test for convertStrtoFloat
-    printf("\n\nThe sum of 4 strings is: %.2f", convertStrtoFloat("3.5", "4.5", "5.5", "6.5"));
+    puts("\n\nString -> float:");
+    printf("The sum of 4 strings is: %.2f", convertStrtoFloat("3.5", "4.5", "5.5", "6.5"));
 
 
-    puts("\n");
+    puts("\n\nCompareStr");
     //test for compareStr
     compareStr("Test1", "Test2");
 
     //test for comparePartialStr
+    puts("\nCompareStr - Partial");
     comparePartialStr("Test1", "Test2", 4);
 
     //test for randomize
@@ -76,7 +82,7 @@ int main() {
     char str[] = "(267) 436-6281";
     tokenizeTelNum(str);
 
-    puts("\n");
+    puts("\nReverse Words");
     //test for reverse
     char line[] = "Hello world";
     reverse(line);
@@ -93,18 +99,20 @@ int main() {
     //test for countAlpha
     char str1[] = "Hello it's me.";
     countAlpha(str1);
-/*
+
     //test for countWords
+    puts(" ");
     char countstring[] = "hello world!";
     printf("\n\nNumber of words in string is: %d\n", countWords(countstring));
 
-    //test for startsWithB
+    puts("\nwords starting with 'b':"); //not "B"
     char *series[] = {"bored", "hello", "Brother", "manual", "bothered"};
     startsWithB(series);
 
+
     //test for endsWithed
+    puts("\nwords ending with 'ed':");
     endsWithed(series);
-*/
 }
 
 // 1.(Displaying Strings in Uppercase and Lowercase) 
@@ -317,19 +325,45 @@ void countAlpha(char *string) {
 
 //12.(Counting the Number of Words in a String) 
 int countWords(char *string) {
-   
-   
+   int count = 0;
+   const char* pattern = " .?!";
+   char* token = strtok(string, pattern);
+
+   while(token != NULL){
+       count++;
+       token = strtok(NULL, pattern);
+   }
+
+   return count;
 }
 
 //13.(Strings Starting with "b") 
 void startsWithB(char *string[]) {
+    //array size is a #define const
 
- 
+    for(int i = 0; i < SIZE_OF_SERIES; i++){
+        if(*(string[i]+0) == 'b'){ //i put in the  +0 to make it more readable
+            printf("%s\n", string[i]);
+        }
+    }
 
 }
 
 //14.(Strings Ending with "ed") 
 void endsWithed(char *string[]) {
+    size_t strLength;
+    char* lastTwoLetters;
+    for(int i = 0; i < SIZE_OF_SERIES; i++){
+        strLength = strlen(string[i]);
+        if(strLength < 2){
+            continue;
+        }
+        //moves the current string to its 2nd-last char position
+        lastTwoLetters = string[i]+(strLength-2);
 
-
+        //compare string with last two letters
+        if(strcmp(lastTwoLetters, "ed") == 0){
+            printf("%s\n", string[i]);
+        }
+    }
 }

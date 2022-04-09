@@ -6,5 +6,7 @@
 	+ [[Equivalence Classes Examples]]
 3. [[More on Congruence Classes]]
 ## 2.Function Sequence
+1. [[Intro To Functions]]
+	+	[[Function Examples]]
 
 

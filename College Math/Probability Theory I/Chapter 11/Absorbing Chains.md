@@ -1,5 +1,5 @@
 # Absorbing Chains
-> A state $s_i$ is absorbing if it is impossible to leave it, meaning $p_{ii} = 1$. A Markov chain is called absorbing if it contains at least one absorbing state. 
+> A state $s_i$ is absorbing if it is impossible to leave it, meaning $p_{ii} = 1$. A Markov chain is called absorbing if it contains at least one absorbing state **and** each non absorbing state has a non zero probability to *reach* an absorbing state. This does not mean it must be one iteration away it can be any $n$ steps away. A good way to see this is to draw a graph. 
 
 If a transition matrix **is** absorbing, then each non absorbing state is called *transient*.
 

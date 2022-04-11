@@ -82,7 +82,7 @@ int main() {
     char str[] = "(267) 436-6281";
     tokenizeTelNum(str);
 
-    puts("\nReverse Words");
+    puts("\n\nReverse Words");
     //test for reverse
     char line[] = "Hello world";
     reverse(line);
@@ -196,7 +196,11 @@ char* genSentence(void) {
     //article, noun, verb, preposition, article and noun.
     static char sentence[50]; //50 to ensure no segfaults
     char *endPoint = sentence;
+
     //copy article
+
+   // const char* sentenceStrcture[5][10] = {article, subject, verb, prepo, article, subject};
+
     strcpy(endPoint, article[randInt(LIMIT)]);
     endPoint = sentence + (strlen(sentence)); //move pointer fwd LEN space to drop a space
     pushChar(endPoint, ' ');
@@ -250,7 +254,7 @@ void tokenizeTelNum(char *num) {
     token = strtok(NULL, " -");
     while(token != NULL){
 
-        number *= pow(10, lengthOfToken+1);
+        number *= (int)pow(10, lengthOfToken+1);
         lengthOfToken = strlen(token);
         number += atoi(token);
 
@@ -262,16 +266,35 @@ void tokenizeTelNum(char *num) {
 
 //8.(Displaying a Sentence with Its Words Reversed) 
 void reverse(char *text) {
-    size_t length = strlen(text);
-    char stringRev[length]; //buffer
-    char* token = strtok(text, " .!?");
 
-    //rev the tokens
-    while(token != NULL){
-        printf("%s\n", strrev(token));
-        token = strtok(NULL, " .!?");
+    //horrible code might fix later (maybe)
+    char* words[64];
+    int wordCount = 0;
+    char* temp = text;
+    int len = 0;
+    int flag = 1;
+    char currChar;
+    while(flag){
+        currChar = (*temp);
+        if(currChar == ' ' || currChar == '\0'){
+            words[wordCount] = malloc((len+ 1) * sizeof(char));
+            strncpy(words[wordCount], text, len);
+            words[wordCount][len] = '\0';
+            text += len+1;
+            len = 0;
+            wordCount++;
+        }
+        else{
+            len++;
+        }
+        if(currChar == '\0'){
+            flag = 0;
+        }
+        temp++;
     }
-
+    for(int i = wordCount - 1; i >= 0; i--){
+        printf("%s ", words[i]);
+    }
 }
 
 //9.(Counting the Occurrences of a Substring) 

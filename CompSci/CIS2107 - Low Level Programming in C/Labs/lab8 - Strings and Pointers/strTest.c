@@ -17,6 +17,6 @@ int main()
         printf("%s\n", token);
         token = strtok(NULL, "-");
     }
- 
+    printf("%d", (str+14) - str);
     return 0;
 }

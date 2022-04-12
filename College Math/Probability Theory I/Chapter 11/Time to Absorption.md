@@ -97,3 +97,39 @@ $$
 This will come out to:
 ![[time_to_abs_ex_main.png]]
 Looking at row $2$ we notice that it an equal probability to end up in absorbing state $0$ or $4$ .
+
+**Validity** and **Meaning** of $\mathbf{B}_{ij}$
+
+$\mathbf{B}_{ij}$ represents probability that transient state $s_i$ will absorb to absorbing state $s_j$ .
+
+See that
+$$
+\mathbf{B}_{ij} = \sum_{k}\mathbf{N}_{ik}\mathbf{R}_{kj}
+$$
+We already knew that this is how matrix multiplication is defined. Realize that we are summing the probability:
+
+We start in $s_i$ and then multiply each state times the chance it will be absorbed. This is the meaning of $\mathbf{R}$.  
+
+For the lecture of 4/11/22:
+This is the matrix given:
+$$
+\mathbf{P} = 
+\begin{pmatrix}
+        0.2 & 0.4 & 0.4 & 0\\
+        0.4 & 0.2 & 0.2 & 0.2\\
+        0 & 0 & 1 & 0\\
+        0 & 0 & 0 & 1
+\end{pmatrix}
+$$
+We had to find the matrix $\mathbf{B}$
+The answer was:
+$$
+\mathbf{B} = 
+\begin{pmatrix}
+        5/6 & 1/6\\
+        2/3 & 1/3
+\end{pmatrix}
+$$
+
+> Notice how the rows will still add to $1$
+

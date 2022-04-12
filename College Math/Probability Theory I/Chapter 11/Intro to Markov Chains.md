@@ -10,7 +10,7 @@ Everything we have learned so far has been an independent process. Each previous
 A Markov chain has a set of *states*:
 $$S = \{s_1, \dotso, s_r\}$$
 The process starts in one of these states and moves to another state. This change in states is a *step*. Suppose the current state is $s_i$ and it moves to $s_j$. The probability of this event is denoted by $p_{ij}$ ($i \to j$). This probability is called the *transition probability* and does not depend on the previous states (before $s_i$ this case). Note that the state **does not** have to change. This is denoted by the transition probability $p_{ii}$
-
+> If we are drawing the transition matrix as a graph the sum of the **out** probabilities is $1$. 
 ## Basic Example
 ![[markov_be.png]]
 **Key** for Weather:

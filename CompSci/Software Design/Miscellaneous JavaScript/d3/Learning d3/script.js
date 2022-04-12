@@ -1,25 +1,26 @@
-d3.selectAll("circle")
-    .attr("fill", "orange")
-    .attr("r", function (datum, index) {
-        return index * 10 + 10;
-    });
+//[40, 10, 20, 60, 30];
+let myData = [
+    { name: "Abe", grade: 40 },
+    { name: "Bob", grade: 10 },
+    { name: "Carl", grade: 20 },
+    { name: "Dimmy", grade: 60 },
+    { name: "Elaine", grade: 30 },
+];
+let maxInData = myData.reduce((prev, currObj) => {
+    return Math.max(prev, currObj.grade);
+}, myData[0].grade);
 
-//ignore e, d for now
-function updateSize(e, d) {
-    const element = d3.select(this);
-    element.attr("r", 40 * Math.random() + 5);
-}
+d3.select(".chart") //data container
+    .selectAll("circle") //we want to bind to type:circle
+    .data(myData) //with this data
+    .join("circle") //does the join
+    .attr("cx", function (d, i) {
+        return i * 100;
+    })
+    .attr("cy", 100)
+    .attr("r", (d) => d.grade) //datum usage
+    .style("fill", "#395be7")
+    .filter((d) => d.grade === maxInData) //no typecase
+    .style("fill", "red");
 
-d3.selectAll("circle").on("click", updateSize);
-
-d3.selectAll("g.item")
-    .append("text")
-    .text("A")
-    .classed("svg-text", true)
-    .style("font-size", function (d, i) {
-        return `${(i + 1) * 16}px`;
-    });
-
-d3.selectAll("circle")
-    .filter((d, i) => i % 2 == 0)
-    .classed("odd", true);
+//https://www.d3indepth.com/datajoins/

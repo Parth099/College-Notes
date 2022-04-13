@@ -35,7 +35,7 @@ $$
 	& n\text{ is odd}
 \end{cases}
 $$
-Seeing as how each power of $\mathbf{P}$ **will** contain zeros, this matrix is **not** regular. It **is** ergodic since we can move to any state from any state in $k$ steps. 
+Seeing as how each power of $\mathbf{P}$ **will** contain zeros, this matrix is **not** regular. Notice that in an odd number of steps $s_1$ cannot transition back to $s_1$. This chain is Ergodic because we can visit any state *eventually* any where we start.
 
 # Regular Markov Chains
 **Theorem**:

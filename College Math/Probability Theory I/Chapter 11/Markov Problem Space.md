@@ -97,3 +97,159 @@ This can occur if $0\to0$ or $1\to0$.
 Event $A$ has probability $q^2$ 
 Event $B$ has probability $(1-q)^2 = p^2$ 
 Since the events are independent, the probability of $A$ or $B$ is $p^2+q^2$. 
+
+# 11.2
+## 2
+**Q**: For values of $a, b$ is the following matrix absorbing. 
+
+$$
+\mathbf{P} = 
+\begin{pmatrix}  
+        1-a & a\\
+        b & 1-b  
+\end{pmatrix}
+$$
+
+We can force state $2$ to be absorbing if $a\in(0, 1)$. Then both $1-a$ and $a$ will be non-zero. This means that $p_{11}, p_{12} \gt 0$. Then $b = 0$. This will cause state two to be an absorbing state. 
+
+Also if $1$ then state two is also a absorbing state.
+
+To make $s_2$ absorbing we have the following set of values.
+$$\{(a, b):a\in(0, 1], b = 0\}$$
+
+To make $s_1$ absorbing we must route all  entries in $s_2$ back to $s_1$. 
+
+Thus $b = 1$ and $a\in(0, 1]$
+
+In the end we note that either one of these conditions must be met (not both).
+1. $a$ is 0
+2. $b$ is 0
+
+## 4
+Find the fundamental Matrix for 
+$$
+\mathbf{P} = \begin{pmatrix}        
+        1 & 0 & 0\\    
+        0.5 & 0.5 & 0\\
+        0 & 1 & 0
+\end{pmatrix}
+$$
+
+First we take it to Canonical form
+$$
+\mathbf{C} = \begin{pmatrix}         
+        0.5 & 0 & 0.5\\
+		1 & 0 & 0\\  
+        0 & 0 & 1
+\end{pmatrix}
+$$
+
+The new state order is $S = \{s_2, s_3, s_1\}$
+
+Then 
+$$
+\begin{align}
+	\mathbf{Q} &= \begin{pmatrix}         
+			0.5 & 0 \\
+			1 & 0 
+	\end{pmatrix}
+	\\ \\ 
+	\mathbf{I-Q} &= \begin{pmatrix}       
+			0.5 & 0 \\
+			-1 & 1
+	\end{pmatrix}\
+	\\ \\
+	\mathbf{(I-Q)}^{-1} &= \frac{1}{0.5}\begin{pmatrix}   
+			1 & 0 \\
+			1 & 0.5
+	\end{pmatrix}
+	\\ \\
+	\mathbf{N} &= \begin{pmatrix}   
+			2 & 0 \\
+			2 & 1
+	\end{pmatrix}
+\end{align}
+$$
+
+> The next few problems will be about utilizing this matrix $\mathbf{N}$
+
+## 6
+If
+$$
+\mathbf{P} = \begin{pmatrix}
+        1 & 0 & 0\\
+        0.5 & 0 & 0.5\\
+        0.25 & 0.25 & 0.5
+\end{pmatrix}
+$$
+Find $\mathbf{N}, \mathbf{N}\vec{c}, \mathbf{N}\mathbf{R}$. What do each of these mean?
+
+**Canonical Form**
+State order $S = \{s_2, s_3, s_1\}$
+
+$$
+\mathbf{C} = \begin{pmatrix}
+        0 & 0.5 & 0.5\\
+        0.25 & 0.5 & 0.25 \\
+		0 & 0 & 1\\
+\end{pmatrix}
+$$
+
+Then 
+$$
+\begin{align}
+	\mathbf{Q} &= \begin{pmatrix}         
+			0 & 0.5 \\
+			0.25 & 0.5 
+	\end{pmatrix}
+	\\ \\ 
+	\mathbf{I-Q} &= \begin{pmatrix}       
+			1 & -0.5 \\
+			-.25 & 0.5
+	\end{pmatrix}\
+	\\ \\
+	\mathbf{(I-Q)}^{-1} &= \frac{1}{0.5-0.125}\begin{pmatrix}   
+			0.5 & 0.5 \\
+			0.25 & 1
+	\end{pmatrix}
+	\\ \\
+	\mathbf{N} &= \begin{pmatrix}   
+			4/3 & 4/3 \\
+			2/3 & 8/3
+	\end{pmatrix}
+\end{align}
+$$
+
+The matrix $\mathbf{N}$ represents the expected time spent in state $s_{ij}$ before being absorbed to one of the absorbing states (there is only one here anyways). 
+
+$$
+\mathbf{N}\vec{c} = \begin{pmatrix}   
+			4/3 & 4/3 \\
+			2/3 & 8/3
+	\end{pmatrix}\begin{pmatrix}   
+		1\\1
+	\end{pmatrix} = 
+	\begin{pmatrix}   
+			8/3 \\
+			10/3 
+	\end{pmatrix}
+$$
+
+The **vector** $\mathbf{N}\vec{c}$ represents the expected time spent in state $s_i$ before absorbing. 
+
+$$
+\mathbf{N}\mathbf{R} = \begin{pmatrix}   
+			4/3 & 4/3 \\
+			2/3 & 8/3
+	\end{pmatrix}\begin{pmatrix}   
+			1/2 \\
+			1/4 \\
+	\end{pmatrix}
+	= 
+	\begin{pmatrix}   
+			1 \\
+			1 \\
+	\end{pmatrix}
+$$
+
+Given that $\mathbf{N}\mathbf{R}_{ij}$ represents state $s_i$ absorbing into $s_j$ this result of $\binom{1}{1}$ is trivial since there is only **one** absorbing state anyways. 

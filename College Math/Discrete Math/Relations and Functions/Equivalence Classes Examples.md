@@ -24,12 +24,12 @@ Thus $R$ is transitive.
 
 $$
 \begin{align}
-	[\:0\:] &= \{x\in\mathbb{R}, \sin 0 = \sin x\} \\
+	[\:0\:] &= \{x\in\mathbb{R}: \sin 0 = \sin x\} \\
 			&= \{\pi n: n\in\mathbb{Z}\}
 			\\\\
 			
-	[\:1\:] &= \{x\in\mathbb{R}, 1\:R\:x\} \\
-			&= \{x\in\mathbb{R}, \sin 1 = \sin x\} \\
+	[\:1\:] &= \{x\in\mathbb{R}: 1\:R\:x\} \\
+			&= \{x\in\mathbb{R}: \sin 1 = \sin x\} \\
 			&= \{1+2\pi n: n\in\mathbb{Z}\} \:\cup\:\{(\pi-1)+2\pi n: n\in\mathbb{Z}\}
 \end{align}
 $$

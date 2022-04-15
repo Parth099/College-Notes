@@ -47,7 +47,7 @@ Then $d|(3n+2)$ and $d|(7n+5)$
 > $$\text{if } d|a \text{ and } d|b \text{ then } d|(ax+by)$$ 
 
 Since $d|(3n+2)$ and $d|(7n+5)$, then 
-$$d|[3(7n+5) - 7(3n+2)] = 1$$.
+$$d|[3(7n+5) - 7(3n+2)] = 1$$
 
 Thus $d|1$.
 Since $d>1$, $d = 1$ for any integer $n$

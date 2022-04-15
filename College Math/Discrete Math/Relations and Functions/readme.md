@@ -9,4 +9,4 @@
 1. [[Intro To Functions]]
 	+	[[Function Examples]]
 
-
+2. [[Function Properties]]

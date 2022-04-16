@@ -5,6 +5,7 @@
 4. [[Time to Absorption]]
 5. [[Ergodic and Regular Markov Chains]]
 	+	[[Lecture 4-13-22]]
-6. [[Equilibrium]]
-
+6. [[Equilibrium and The fixed Vector]]
+7. [[Mean First Passage Time]]
+## Example
 + [[Markov Problem Space]]

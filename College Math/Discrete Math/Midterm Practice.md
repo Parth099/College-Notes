@@ -197,7 +197,7 @@ This $\frac{2}{x+1} \lt x$ on the interval $(-2, 1)\cup(1, \infty)$
 ### Problem 1
 Find $N$ that make the following true. 
 
-![[midterm_div_pset_1.png]]
+![[midterm_div_q1.png]]
 
 **a)**
 
@@ -285,4 +285,166 @@ Since $d\gt0$, $d = 1$ or $d = 2$
 
 Since $2\nmid2a+1$ for any integer $a$, $d\neq 2$. 
 
-Therefore $\gcd(2a+1, 4a^2+1) = 1$ and by extension $2a+1, 4a^2+1$ are relatively prime. 
+Therefore $\gcd(2a+1, 4a^2+1) = 1$ and by extension $2a+1, 4a^2+1$ are relatively prime.
+
+## Modular Arithmetic 
+### Problem 1
+**Statement**
+
+In the context of $\mathbb{Z}_{11}$ find $x$ such that 
+$$[\:3\:][\:x\:] = [\:4\:]$$
+
+Then, $[\:x\:] = [\:3\:]^{-1}[\:4\:]$
+
+We need to find a n such that $[\:3\:][\:b\:] = [\:3b\:]= [\:1\:]$
+
+Thus $3b \equiv 1 \text{ mod }11$
+Then $11|(1-3b)$ and $11n = 1-3b$ for some integer $n$
+
+Thus, $1 = 11n+3b$
+Via the Euclidean algorithm these numbers are $n=2$ and $b=-7$
+
+Thus $1 = -7*3 \text{ mod }11$
+Thus $[\:3\:]^{-1} = [\:-7\:] = [\:4\:]$
+
+Finally, $[\:x\:] = [\:4\:][\:4\:] = [\:16\:] = [\:5\:]$
+## Functions
+### Problem 1
+Determine if each set is a function and find their respective domain/range:
+
+
+![[midterm_functions_q1.png]]
+
+**b)**
+
+Let $(x, y)\in f$ and $(x, z)\in f$
+Then $y = 2x$ and $z = 2x$
+Then $y = 2x = z$
+Therefore $f$ is a function
+
+$$
+\begin{align}
+	\text{dom }f &= \mathbb{Z} \\
+	\text{im }f &= \{x\in\mathbb{Z}: 2|x\}
+\end{align}
+$$
+
+**c)**
+
+For all $x\in\mathbb{Z}$ there exists a single unique integer $y$ such that $x+y=0$. This integer $y$ is namely $-x$
+
+Thus, $f$ is a function.
+
+$$
+\begin{align}
+	\text{dom }f &= \mathbb{Z} \\
+	\text{im }f &= \mathbb{Z}
+\end{align}
+$$
+
+**d)**
+
+Let $x = 0$
+Then $(x, 1)\in f$ since $0\cdot1=0$ *and* $(x, 5)\in f$ since $0\cdot5=0$ 
+
+Since there exists more than one value for $x$ in $f$, $f$ is not a function. 
+
+**e)**
+
+Suppose $(x, y)\in f$ and $(x, z)\in f$.
+Then $y=x^2$ and $z = x^2$
+
+Since $y=z=x^2$, $f$ is a function. 
+
+$$
+\begin{align}
+	\text{dom }f &= \mathbb{Z} \\
+	\text{im }f &= \{x^2: x\in\mathbb{Z}\}
+\end{align}
+$$
+
+**g)**
+
+Let $x=0$
+Then $(x, 1)\in f$ since $0^2+1^2 = 1$ and $(x, -1)\in f$ since $0^2 + (-1)^2 = 1$.
+
+Since $-1\neq 1$, $f$ is not a function. 
+
+**h)**
+
+Suppose $x = 2$
+Then $(x, 4) \in f$ since $2|4$ and $(x, 6) \in f$ since $2|6$
+
+Since $4\neq 6$, $f$ is not a function.
+
+### Problem 2
+Find the image of each:
+
+![[midterm_functions_q2.png]]
+
+**a)**
+
+$$
+\text{im }f = \{x\in{\mathbb{Z}}: 2|x\}
+$$
+
+**b)**
+
+$$
+\begin{align}
+	\text{im }f &= \{|x|:x\in{\mathbb{Z}}\}
+	\\
+	&= \{x\in{\mathbb{Z}}: x\geq0\}
+	\\
+	&= \mathbb{Z}^{+} + \{0\}
+\end{align}
+$$
+
+I would have just put $\mathbb{N}$ but ...
+
+**c)**
+
+$$
+\text{im }f = \mathbb{Z}
+$$
+
+**d)**
+$$f(x) = \frac{1}{x^2+1}$$
+Then an element in the image would in the form $$\sqrt{\frac{1}{y} - 1}$$
+
+<!-- ask about this -->
+
+## Induction
+### Problem 1
+**Statement**
+
+Show that for $n \geq 7, \:3^n \lt n!$
+
+**Proof** 
+
+For $n = 7$,  $3^7 = 2187$ while $7! = 5040$
+thus the formula is valid for $n = 7$
+
+Assume $3^n \lt n!$ for some $n\geq 7$
+Then, $$3\cdot 3^n = 3^{n+1} \leq 3 \cdot n! \lt n \cdot n! = (n+1)!$$
+
+Therefore, for all integers greater than $6$, $3^n \leq n!$ 
+
+### Problem 2
+Show that for all $n \geq 4$, $n^3 < 3^n$
+
+For $n = 4$, $n^3 = 64$ while $3^4 = 81$
+Since $64 \lt 81$ the formula is valid for $n = 4$.
+
+Assume $n^3 < 3^n$ for some $n \geq 4$
+
+Since $n\geq 4$, $\frac{1}{n}\leq \frac{1}{4}$
+
+Thus, $$\biggr(1+\frac{1}{n}\biggr)^3 \leq \biggr(1+\frac{1}{4}\biggr)^3 = \frac{125}{64} \lt 3$$
+
+Then, 
+$$
+(n+1)^3 = \biggr(1+\frac{1}{n}\biggr)^3n^3 \lt 3 \cdot 3^n = 3^{n+1}
+$$
+
+Therefore, $\forall n\geq 4, n^3 \lt 3^n$

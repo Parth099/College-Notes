@@ -40,7 +40,11 @@ Suppose $\frac{1}{x+1} \gt x-1$
 Then $\frac{1}{x+1} - (x-1)\geq 0$
 
 $$
-\frac{1}{x+1} - (x-1) = \frac{1}{(x+1)} - \frac{(x+1)(x-1)}{x+1} = \frac{1 - (x^2 - 1)}{x+1} = \frac{2-x^2}{x+1}
+\begin{align}
+	\frac{1}{x+1} - (x-1) &= \frac{1}{(x+1)} - \frac{(x+1)(x-1)}{x+1} \\ 
+	&= \frac{1 - (x^2 - 1)}{x+1} \\
+	&= \frac{2-x^2}{x+1}
+\end{align}
 $$
 
 Thus we need to find where 

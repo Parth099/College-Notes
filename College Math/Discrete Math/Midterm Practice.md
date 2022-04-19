@@ -286,9 +286,84 @@ Since $d\gt0$, $d = 1$ or $d = 2$
 Since $2\nmid2a+1$ for any integer $a$, $d\neq 2$. 
 
 Therefore $\gcd(2a+1, 4a^2+1) = 1$ and by extension $2a+1, 4a^2+1$ are relatively prime.
+### Problem 4
+**Statement**
+
+Find $\gcd(-98, -89)$ 
+
+**Work**
+See that $\gcd(-98, -89) = \gcd(98, 89)$
+$$
+\begin{align}
+	98 &= 89(1) + 9 \\
+	89 &= 9(9)  + 8 \\
+	9  &= 8(1)  + 1 
+\end{align}
+$$
+The $\gcd$ is $1$. 
+
+**Statement + Work**
+Find the linear combinations for $\gcd(98, 89)$
+$$
+\begin{align}
+	1 &= 9 - 8\\
+	8 &= 89 - 9(9) \\
+	9 &= 98 - 89 \\
+	
+	\\
+	
+	8 &= 89 - 9(98 - 89) \\
+	  &= 10(89) - 9(98) \\
+	  
+	\\ \\
+	1 &= 9 - 8 \\
+	1 &= (98-89) - [10(89) - 9(98)] \\
+	1 &= 10(98) - 11(89)
+\end{align}
+$$
+Thus, $1 = 10\cdot 98 - 11\cdot 89$
 
 ## Modular Arithmetic 
 ### Problem 1
+**Statement**
+
+Find $\frac{[\:6\:]}{[\:7\:]}$ over $\mathbb{Z}_{10}$
+
+The there exists $[\:x\:]\in\mathbb{Z}_{10}$, then $${[\:7\:]}[\:x\:] = {[\:6\:]}$$
+Then,
+$$
+\begin{align}
+	[\:x\:] = {[\:6\:]}{[\:7\:]}^{-1}
+\end{align}
+$$
+Euclidean Algorithm, 
+$$
+\begin{align}
+	10 &= 7(1) + 3\\
+	7  &= 2(3) + 1\\
+\end{align}
+$$
+
+Reverse
+$$
+\begin{align}
+	3 &= 10 - 7 \\
+	1 &= 7 - 2(3) \\ \\
+	1 &= 7 - 2(10-7) \\
+	1 &= 7(3) - 10(2)
+\end{align}	
+$$
+Thus $7\cdot 3 \equiv \text{ mod } 10$
+Thus $[\:7\:]^{-1} = [\:3\:]$
+
+Then, $[\:6\:][\:7\:]^{-1} = [\:6\:][\:3\:] = [\:6\cdot3\:] = [\:18\:] = [\:8\:]$
+
+
+**Explanation**
+
+We first use the definition of a unit to describe $[\:x\:]$. Then we use the algorithm to find what constants lead to the unit. Then we use props of classes to find  $[\:x\:]$.   
+
+### Problem 2
 **Statement**
 
 In the context of $\mathbb{Z}_{11}$ find $x$ such that 
@@ -408,11 +483,6 @@ $$
 \text{im }f = \mathbb{Z}
 $$
 
-**d)**
-$$f(x) = \frac{1}{x^2+1}$$
-Then an element in the image would in the form $$\sqrt{\frac{1}{y} - 1}$$
-
-<!-- ask about this -->
 
 ## Induction
 ### Problem 1
@@ -423,7 +493,7 @@ Show that for $n \geq 7, \:3^n \lt n!$
 **Proof** 
 
 For $n = 7$,  $3^7 = 2187$ while $7! = 5040$
-thus the formula is valid for $n = 7$
+Since $2187\leq5040$, the formula is valid for $n = 7$
 
 Assume $3^n \lt n!$ for some $n\geq 7$
 Then, $$3\cdot 3^n = 3^{n+1} \leq 3 \cdot n! \lt n \cdot n! = (n+1)!$$

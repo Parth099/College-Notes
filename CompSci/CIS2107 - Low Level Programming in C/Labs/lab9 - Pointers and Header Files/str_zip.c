@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 unsigned my_strlen(char* s){
@@ -52,10 +51,10 @@ char* str_zip(char *s1, char *s2){
     return zipped_head;
 }
 
-int main(int argc, char const *argv[])
-{
-    char* s1 = "TempleUniv";
-    char* s2 = "Hello";
-    printf("\"%s\"", str_zip(s1, s2));
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     char* s1 = "TempleUniv";
+//     char* s2 = "Hello";
+//     printf("\"%s\"", str_zip(s1, s2));
+//     return 0;
+// }

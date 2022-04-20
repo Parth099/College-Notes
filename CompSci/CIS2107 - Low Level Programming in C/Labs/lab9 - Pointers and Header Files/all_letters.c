@@ -1,6 +1,8 @@
+#include <stdint.h>
 //assumes ints are 4 bytes
 int all_letters(char* s){
-    unsigned int letterBits = 0;
+    //cross plat 32 bit
+    uint32_t letterBits = 0;
     char currLetter = *s;
     while(currLetter != '\0'){
 
@@ -25,4 +27,12 @@ int all_letters(char* s){
     return (letterBits == 67108863) ? 1 : 0;
 }
 
+// int main(int argc, char const *argv[])
+// {
+//     char *s = "abcdefghijklmnopqrstuvwxyz";
+//     char *s2 = "abcdefghijklmnopqrstuvwx";
+
+//     printf("%d %d", all_letters(s), all_letters(s2));
+//     return 0;
+// }
 

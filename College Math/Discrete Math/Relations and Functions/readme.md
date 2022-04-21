@@ -10,3 +10,5 @@
 	+	[[Function Examples]]
 
 2. [[Function Properties]]
+3. [[Composition of Functions]]
+4. [[The Inverse]]

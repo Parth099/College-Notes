@@ -3,9 +3,11 @@
 
     /*
         STEPS TO COMPILE
+        _____________________
         gcc -c *.c
         ar rcs libmy_string.a *.o
         gcc -o strtest strtest.c -L. -lmy_string
+        
     */
 
 int main(int argc, char const *argv[])
@@ -178,10 +180,13 @@ int main(int argc, char const *argv[])
     char** chopped = str_chop_all(str_to_chop, chop_delimiter);
     printf("string to chop: '%s', on delimiter %c\n", str_to_chop, chop_delimiter);
     int i = 0;
-    while (**(chopped + i) != '\0')
+    while (*(chopped + i) != 0)
     {
         printf("%s\n", *(chopped + i));
         i++;
     }
+
+    puts("\nTesting OVER");
+    return 0;
     
 }

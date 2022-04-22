@@ -1,4 +1,4 @@
-#include <stdio.h>
+//#include <stdio.h>
 #include <stdlib.h>
 
 unsigned my_strLen(char *str){
@@ -83,11 +83,11 @@ char* replace(char *s, char *pat, char *rep){
     return replaced_head;
 }
 
-int main(int argc, char const *argv[])
-{
-    char* s = "Replace XYZ with XYZ";
-    char* pat = "XYZ";
-    char* rep = "AB";
-    printf("\"%s\"", replace(s, pat, rep));
-    return 0;
-}
+// int main(int argc, char const *argv[])
+// {
+//     char* s = "Replace XYZ with XYZ";
+//     char* pat = "XYZ";
+//     char* rep = "AB";
+//     printf("\"%s\"", replace(s, pat, rep));
+//     return 0;
+// }

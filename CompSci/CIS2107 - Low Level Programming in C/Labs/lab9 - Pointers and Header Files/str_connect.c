@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-unsigned my_strlen(char* s){
+unsigned _my_strlen(char* s){
     unsigned sz = 0;
     while (*s != '\0')
     {
@@ -15,7 +15,7 @@ char *str_connect(char **strs, int n, char c){
 
     //sums up the total length of all the strings
     for(int i = 0; i < n; i++){
-        totalLen += my_strlen(*(strs + i)); 
+        totalLen += _my_strlen(*(strs + i)); 
     }
 
     //blocksize : number of chars req

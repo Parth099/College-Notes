@@ -1,37 +1,39 @@
-// #include <stdio.h>
-int is_empty(char *s);
+#include "my_string.h"
 
-
-void rm_empties(char **words){
-    while(**words != '\0'){
-        if(is_empty(*words)){ //de ref to pointer to see if its empty
-            *(words) = *(words + 1); //def ref to get pointer access, replace pointer with next one in line
-        }
-        words++;
+void rm_empties(char** words){
+    int len = 0;
+    while(*(words+len) != 0){
+        //printf("%s", *(words+len));
+        len++;
     }
-}
 
-int is_empty(char *s){
-    while (*s != '\0')
-    {
-        if(*s != ' '){
-            break;
+    //removal time
+    int iter = 0;
+    while(*(words+iter) != 0){ //extra guard to prevent inf loops
+        if(is_empty(*(words+iter))){
+            //shift array over 1
+            for(int i = iter; i < len - 1; i++){
+                *(words + i) = *(words + i + 1);
+            }
+            len--;
+            *(words + len) = 0; //new null;
         }
-        s++;
+        else{
+            iter++; //shift one only if curr element is not space
+        }
+        
     }
-    //s is not at the end we know non space exists
-    return (*s == '\0') ? 0 : 1;    
+    
 }
 
 // int main(int argc, char const *argv[])
 // {
-//     char* s[6] = {"Hello", "bye", " ", "  ", " ", '\0'};
-//     char** s1 =  s;
 
-//     rm_empties(s);
-//     while(**s1 != '\0'){
-//         printf("%s\n", *s1);
-//         s1++;
+//     char* words[7] = {"Hello", " ", " ", "bye", "hi", 0};
+//     rm_empties(words);
+//     int i = 0;
+//     while(*(words + i) != 0){
+//         printf("%s\n", *(words + i));
+//         i++;
 //     }
-//     return 0;
 // }

@@ -8,18 +8,18 @@ void rm_empties(char** words){
     }
 
     //removal time
-    int iter = 0;
-    while(*(words+iter) != 0){ //extra guard to prevent inf loops
-        if(is_empty(*(words+iter))){
+    int currCycle = 0;
+    while(*(words+currCycle) != 0 && currCycle <= len){ //extra guard to prevent inf loops
+        if(is_empty(*(words+currCycle))){
             //shift array over 1
-            for(int i = iter; i < len - 1; i++){
+            for(int i = currCycle; i < len - 1; i++){
                 *(words + i) = *(words + i + 1);
             }
             len--;
             *(words + len) = 0; //new null;
         }
         else{
-            iter++; //shift one only if curr element is not space
+            currCycle++; //shift one only if curr element is not space
         }
         
     }

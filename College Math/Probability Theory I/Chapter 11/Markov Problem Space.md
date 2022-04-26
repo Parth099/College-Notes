@@ -674,3 +674,119 @@ $$
 Thus we have $m_{2, 1} = 7, m_{3, 1} = 10,$
 
 Since $m_{3, 1}$ represents the return time from weak $\to$ strong, it will take 10 seasons on average for a weak team to become strong. 
+
+## 3
+Suppose a candidate is running for office. They tell person A Yes or no. Then person A will tell person B but they have a 1/2 chance to flip a yes to a no and 3/4 to flip a no to a yes.
+
+**Q**: Find the expected length of time before the first time the answer is passed on incorrectly.
+
+$$
+\mathbf{P} = \begin{pmatrix}
+        1/2 & 1/2\\
+        3/4 & 1/4
+\end{pmatrix}
+$$
+
+State Order: **\{** Yes, No **\}**
+Lets find the matrix $\mathbf{Z}$
+
+$$
+\begin{align}
+	\mathbf{Z} &= (I - \mathbf{P} + \mathbf{W})^{-1} \\ \\ 
+	&= \biggr[
+	\begin{pmatrix}
+        1 & 0\\
+        0 & 1
+	\end{pmatrix} 
+	-
+	\begin{pmatrix}
+        1/2 & 1/2\\
+        3/4 & 1/4
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+        3/5 & 2/5\\
+        3/5 & 2/5
+	\end{pmatrix}
+	\biggr]^{-1}
+	\\ \\
+	&= \begin{pmatrix}
+        1.1   & -0.1\\
+        -0.15 & 1.15
+	\end{pmatrix}^{-1}
+    \\ \\
+	\mathbf{Z} &= \begin{pmatrix}
+        0.92 & 0.08\\
+        0.12 & 0.88
+	\end{pmatrix}
+\end{align}
+$$
+
+Recall how to find mean times:
+$$
+\boxed{m_{ij} = \frac{m_{ii} - m_{ij}}{w_{j}}}
+$$
+
+$$
+\begin{align}
+	m_{12} &= \frac{m_{22} - m_{12}}{w_2} = \frac{0.88 - 0.08}{2/5} = 2\\ \\ 
+	m_{21} &= \frac{m_{11} - m_{21}}{w_1} = \frac{0.92 - 0.12}{3/5} = \frac{4}{3}
+\end{align}
+$$
+
+The question states that "Yes" is the starting point so the answer is $m_{12} = 2$ since that is the expected number of steps it will take for the *yes* to be flipped into a *no*. 
+
+
+## 4
+Find the mean recurrence times $r_i$ for example 3.
+
+Here is the transition matrix:
+$$
+\mathbf{P} = \begin{pmatrix}
+        1/2 & 1/2\\
+        3/4 & 1/4
+\end{pmatrix}
+$$
+
+We also found that: 
+$$
+\vec{w} = \biggr\langle \frac{3}{5}, \frac{2}{5} \biggr\rangle 
+$$
+
+Recall that $r_i = \frac{1}{w_i}$
+Then,
+$$
+\begin{align}
+	r_1 &= \frac{1}{3/5} = 1.6\\ \\
+	r_2 &= \frac{1}{2/5} = 2.5
+\end{align}
+$$
+
+## 5
+A die is rolled repeatedly. Show by the results of this section that the mean time between occurrences of a given number is 6.
+
+$$
+\mathbf{P} = \begin{pmatrix}
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6\\
+        1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6  
+\end{pmatrix}
+$$
+
+State Configuration: $\{1,2,3,4,5,6\}$
+
+Calculating $\mathbf{Z}$ will not be fun here.
+
+See that 
+$$
+\vec{w} = 
+\biggr\langle 
+\frac{1}{6}, \frac{1}{6}, \frac{1}{6}, \frac{1}{6}, \frac{1}{6}, \frac{1}{6} \biggr\rangle 
+$$
+
+Just logically, we should be spending equal time in each state. 
+
+Since $r_i = 1/w_i$, the mean recurrence time for each number **must** be 6.

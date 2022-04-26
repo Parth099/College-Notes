@@ -724,7 +724,7 @@ $$
 
 Recall how to find mean times:
 $$
-\boxed{m_{ij} = \frac{m_{ii} - m_{ij}}{w_{j}}}
+\boxed{m_{ij} = \frac{m_{jj} - m_{ij}}{w_{j}}}
 $$
 
 $$

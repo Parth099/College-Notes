@@ -7,5 +7,6 @@
 	+	[[Lecture 4-13-22]]
 6. [[Equilibrium and The fixed Vector]]
 7. [[Mean First Passage Time]]
+8. [[Mean Passage and Recurrence Matrix]]
 ## Example
 + [[Markov Problem Space]]

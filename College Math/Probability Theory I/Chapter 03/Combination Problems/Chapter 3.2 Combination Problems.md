@@ -39,7 +39,7 @@ Ways to pick a suit $\binom{4}{1}$
 Each suit has only 1 Royal Flush
 $$\text{Answer: }\frac{\binom{4}{1}}{\binom{52}{5}}$$
 #### Alternate Method
-We need cards $10-A$ and there are $\frac{5 * 4}{20}$ ways to pick the first card.
+We need cards $10-A$ and there are $\frac{5 * 4}{52}$ ways to pick the first card.
 
 Now we have a suit:
 The next cards will have chances $\frac{4}{51}$, $\frac{3}{50}$, $\frac{2}{49}$, $\frac{1}{48}$

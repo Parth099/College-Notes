@@ -5,7 +5,7 @@
 $$
 \begin{align}
 	\int_{-1}^{+1} x f_X(x) \mathop{dx} &= \int_{-1}^{+1} x \frac{1}{2} \mathop{dx} \\
-	&= \frac{1}{4} x^2\biggr|_{-1}^1
+	&= \frac{1}{4} x^2\biggr|_{-1}^1\\
 	&= 0
 \end{align}
 $$
@@ -68,7 +68,67 @@ $$
 ### d)
 Trivial since we can see that 
 $$xf_X(x) = x^3\frac{2}{3} \ \text{ is odd}$$
+## 2
+Same problems as \#1
+### a)
+$$
+f(x) = \frac{3}{4}(1-x^2)
+$$
 
+**Expectation**
+The function we will integrate is $g(x) = xf(x)$ over the interval $[-1, 1]$
+Notice that $g(-x) = -g(x)$, thus $g$ is *odd*.
+
+Thus, 
+$$
+\int_{-1}^{1} g(x)\:dx = 0
+$$
+
+**Variance**
+The function to integrate will be $h(x) = x^2f(x)$
+
+See that $h(-x) = h(x)$; $h$ is even.
+
+Thus, 
+$$
+V(X) = \int_{-1}^{1}h(x)\:dx = 2\int_{0}^{1}h(x)\:dx = \frac{1}{5}
+$$
+And by extension, 
+$$D(X) = \frac{\sqrt{5}}{5}$$
+
+$$
+\boxed{\mu = 0, \sigma^2 = \frac{1}{5}}
+$$
+
+### b)
+$$
+f(x) = (x + 1)/2
+$$
+
+**Expectation**
+$$
+\begin{align}
+	E(X) &= \frac{1}{2}\int_{-1}^{1} x(x+1)\:dx = \frac{1}{2}\int_{-1}^{1} x^2+x\:dx \\
+	&= \frac{1}{2}\biggr[\frac{x^2}{2}+\frac{x^3}{3}\biggr]_{x=-1}^{x=1} = \mathbf{\frac{1}{3}}
+\end{align}
+$$
+
+**Variance**
+$$
+\begin{align}
+	V(X) &= \frac{1}{2}\int_{-1}^{1} x^2(x+1)\:dx = \frac{1}{2}\int_{-1}^{1} x^2+x^3\:dx \\
+	&= \frac{1}{2}\biggr[\frac{x^3}{3}+\frac{x^4}{4}\biggr]_{x=-1}^{x=1} = \mathbf{\frac{1}{3}}
+\end{align}
+$$
+
+**Deviation**
+$$
+\sqrt{V(X)} = \sqrt{\frac{1}{3}} = \frac{\sqrt{3}}{3}
+$$
+
+$$
+\boxed{\mu = \sigma^2 = \frac{1}{3}}
+$$
 
 ## 4
 ![[cp6_4p4.png]]
@@ -128,7 +188,7 @@ $$
 	   \mu &= \frac{2}{3}a \\
 	E(X^2) &= \frac{1}{3} \\\\
 	
-	\sigma^2(X) = \frac{1}{3} - \frac{4}{9}a^2 
+	\sigma^2(X) &= \frac{1}{3} - \frac{4}{9}a^2 
 \end{align}
 $$
 
@@ -210,7 +270,7 @@ $$E(|X-Y|) = \int_0^1 rf_r(r) \ dr = \frac{1}{3}$$
 ### b)
 $$E(W = \text{max(X, Y)})$$
 Lets attain the CDF. 
-I found this ingenious [online](https://math.stackexchange.com/questions/1114516/probability-density-function-of-maxx-y)
+I found this ingenious solution [online](https://math.stackexchange.com/questions/1114516/probability-density-function-of-maxx-y)
 
 $$
 \begin{align}

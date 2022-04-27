@@ -41,7 +41,7 @@ Let $X = X_1+X_2+X_3+X_4+X_5+X_6$, then
 $$
 \begin{align}
 E(X) &= E(X_1+X_2+X_3+X_4+X_5+X_6) \\
-	 &= E(X_1) + E(X_2) + E(X_3) + E(X_4) + E(X_5) + E(X_6)\\
+	 &= E(X_1) + E(X_2) + \dotso + E(X_6)\\
   ^* &= \sum_{i = 1}^{6}i\frac{1}{6} \\
 	 &= \frac{1}{6}(21) = 7/2
 \end{align}

@@ -12,12 +12,9 @@ Since it is hard to gauge what to read based on the title alone here is the sequ
 ## CTS
 1. [[Expected Value and Variance of Continuous Variables]]
 
+## P-Sets
+1. [[Expected Value of Discrete Random Variables - PS1]]
+2. [[Expected Value of Discrete Random Variables - PS2]]
+3. [[Expected Value of Continuous Random Variables - PS1]]
 ## Extras
 + [[Envelope Paradox]]
-
-## Variance and Expected Value Look Up Table
-
-| Distribution                          | $V(X)$                | $E(X)$              | Median          |
-| ------------------------------------- | --------------------- | ------------------- | --------------- |
-| Uniform on Interval $[a, b]$          |                       | $\frac{a+b}{2}$     | $\frac{a+b}{2}$ |
-| Exponential with Parameter: $\lambda$ | $\frac{1}{\lambda^2}$ | $\frac{1}{\lambda}$ | $\frac{\ln2}{\lambda}$                |

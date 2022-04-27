@@ -9,9 +9,37 @@ $$V(X) = E(X^2) - \mu^2 = \frac{2}{3}$$
 
 $$D(X) = \sqrt{V(X)} = \sqrt{2/3}$$
 
-<!---
-Skipping 2 since too similar to 1
--->
+## 2
+Find $E(X), V(X), D(X)$ if
+$$
+p_X = \begin{pmatrix}        
+        0 & 1 & 2 & 4\\      
+        1/3 & 1/3 & 1/6 & 1/6
+\end{pmatrix}
+$$
+
+**Expected Value**
+$$
+\begin{align}
+	E(X) &= \frac{1}{3}0+\frac{1}{3}1+\frac{1}{6}2+\frac{1}{6}4 \\
+	&= \frac{4}{3}
+\end{align}
+$$
+
+**Variance \& Deviation** 
+$$
+\begin{align}
+	E(X^2) &= \frac{1}{3}0+\frac{1}{3}1+\frac{1}{6}2^2+\frac{1}{6}4^2 \\
+	&= \frac{11}{3}
+
+\\\\
+	V(X) &= E(X^2) - E(X)^2 \\
+	     &= 33/9 - 16/9   \\ \\
+		 &= \boxed{\frac{17}{9}}
+	\\\\
+	\implies D(X) &= \frac{\sqrt{17}}{3} 
+\end{align}
+$$
 
 ## 4
 ![[cp6_2p4.png]]
@@ -138,4 +166,37 @@ $$
 		 &= \frac{(n+1)(n-1)}{12}
 \end{align}
 $$
-%%to be finished%%
+
+### 12
+$$
+X^{*} = \frac{X-\mu}{\sigma}
+$$
+
+**Expected Value**
+$$
+\begin{align}
+	E(X^{*}) &= E\biggr(\frac{X-\mu}{\sigma}\biggr) \\
+	&= \frac{1}{\sigma}E(X - \mu) \\
+	&= \frac{1}{\sigma}\biggr[E(X) - \mu\biggr] \\
+	&= 0
+\end{align}
+$$
+
+**Variance**
+
+$$
+\begin{align}
+	V(X^*) &= E\biggr((X^* - \mu^*)^2\biggr)
+	\\
+	&= E([X^*]^2)
+	\\
+	&= E\biggr([\frac{X-\mu}{\sigma}]^2\biggr)
+	\\
+	&= \frac{1}{\sigma^2}E\biggr([{X-\mu}]^2\biggr)
+	\\
+	&= \frac{1}{\sigma^2}V(X)
+	\\
+	&= \mathbf{1}
+ 
+\end{align}
+$$

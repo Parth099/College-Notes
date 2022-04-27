@@ -31,7 +31,8 @@ F_Y(y) &= P(Y \leq y) \\
 &= P(X^2 \leq y) \\
 ^{*}&= P(-\sqrt{y}\leq X \leq \sqrt{y}) \\
 &= P(X \leq \sqrt{y}) - P(X \leq -\sqrt{y}) \\
-&= F_X(\sqrt{y}) - F_X(-\sqrt{y})
+&= F_X(\sqrt{y}) - F_X(-\sqrt{y}) \\
+&= 2\sqrt{y}
 \end{align}
 $$
 #### EX1 - Details 

@@ -110,7 +110,25 @@ $$
 
 \* - After using Calculus I saw that we do not need it, we already know that the vertex of a quadratic occurs at $\frac{-b}{2a}$ and this would be a formal global max given $a \leq 0$ .
 
-## Continuous Case
+# Continuous Case
+## 1
+Let X be a continuous random variable with mean $\mu = 10$ and $\sigma^2 = 100/3$. Using Chebyshev’s Inequality, find an upper bound for the following probabilities.
+
+$$P(|X − 10| \geq k)$$
+for $k = 2, 5, 9, 20$
+See that 
+$$
+P(|X − 10| \geq k) \leq \frac{100/3}{k^2}
+$$
+
+| $k$ | Chebyshev Upper Bound |
+| --- | --------------------- |
+| 2   | $25/3 \implies 1$                | 
+| 5   | $4/3 \implies 1$                 |
+| 9   | $100/243$             |
+| 20  | $1/12$                |
+
+## 2
 ![cp8_2p2.png](./img/cp8_2p2.png)
 ### a)
 Since $X$ is uniform:
@@ -120,6 +138,7 @@ $$
 
 $$
 \begin{align}
+	&E(X) = \int_0^{20} xf_X(x)\:dx \\
 	&E(X) = \frac{1}{20}\int_0^{20} x\:dx = \frac{1}{40}x^2\biggr|_{x=0}^{x=20} = 10
 	\\
 	&E(X^2) = \frac{1}{20}\int_0^{20} x^2\:dx = \frac{1}{60}x^3\biggr|_{x=0}^{x=20} = \frac{400}{3}
@@ -166,12 +185,25 @@ $$
 P(|X - 10| \geq 20) &= \boxed{\mathbf{0}}
 \end{align}
 $$
+
+Think about what $|X - 10| \geq 20$ means:
+$$
+\begin{align}
+	X - 10 \geq 20 &\implies X \geq 30
+	\\
+	10 - X \geq 20 &\implies X \leq -10
+\end{align}
+$$
+
 Chebyshev upper bounds given current $E(X), V(X)$ was  $\frac{1}{12}$
 ## 3
 ![cp8_2p3.png](./img/cp8_2p3.png)
 $$
+	f(\mathbf{x}) = P(|X - 10|\geq \mathbf{x}) 
+$$
+$$
 \begin{align}
-	f(\mathbf{x}) = P(|X - 10|\geq \mathbf{x}) &= 1 - P(-\mathbf{x}\leq X-10\leq \mathbf{x}) \\
+f(\mathbf{x})&= 1 - P(-\mathbf{x}\leq X-10\leq \mathbf{x}) \\
 	&= 1 - P(10 - \mathbf{x} \leq X \leq 10 + \mathbf{x}) \\
 	&= 1 - \frac{2\mathbf{x}}{20} \\ \\
 	&= 1- \frac{\mathbf{x}}{10}

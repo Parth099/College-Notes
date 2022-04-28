@@ -76,14 +76,21 @@ $$
 #### e)
 $X$ is binomial on $\{n, n+1, \dotso, n+k\}$. The set contains $k+1$ elements. 
 
-Then, $$p_X(x) = \binom{k+1}{x}p^x q^{k+1-x}$$
-only for $x$ in the set defined above
+$$
+\begin{align}
+	g(t) = E(e^{tX}) &= \sum_{j = 0}^{k}e^{t(j+n)}\binom{k}{j}p^j q^{k-j}
+	\\
+	&= e^{tn}\sum_{j = 0}^{k}\binom{k}{j}p^je^{tj} \cdot q^{k-j}
+	\\
+	^{*} &= e^{tn}\biggr[pe^t+q\biggr]^k
+	\\ \\
+	h(z) &= z^n(pz+q)^k
+\end{align}
+$$
 
-<!-- Unfinished -->
-
+\* - Binomial Theorem 
 #### f)
 $X$ is geometric on the non-negative integers with $$p_X(j) = \frac{2}{3^{j+1}}$$
-
 
 $$
 \begin{align}
@@ -157,7 +164,9 @@ $$p = \begin{pmatrix} 0 & 1 & 2 \\ \frac{1}{4} & \frac{1}{2} & \frac{1}{4}\end{p
 ## Continuous 
 Recall that 
 $$
-\mu_k = \int_{-\infty}^{+\infty} x^k f_X(x) \mathop{dx} \to g(t) = \mathbb{E}(e^{tX}) = \int_{-\infty}^{+\infty} e^{tx} f_X(x) \mathop{dx} 
+\begin{align}
+	\mu_k &= \int_{-\infty}^{+\infty} x^k f_X(x) \mathop{dx} \\ g(t) = \mathbb{E}(e^{tX}) &= \int_{-\infty}^{+\infty} e^{tx} f_X(x) \mathop{dx} 
+\end{align}
 $$
 ## 1
 ![[c10_3p1.png]]
@@ -223,6 +232,103 @@ Then,
 $$
 \begin{align}
 	g(t) &= \int_{0}^{2} e^{tx} f_X(x)\:dx \\
-		 &= \frac{3}{8}\int_0^2 x^2e^{tx}\:dx
+		 &= \frac{3}{8}\int_0^2 x^2e^{tx}\:dx \\
+	&= \frac{3}{8}\biggr[
+	\frac{x^2}{t}e^{tx} - \frac{2x}{t^2}e^{tx} + \frac{2}{t^3}e^{tx}	 
+		 \biggr]_{x = 0}^{x = 2} \\ \\
+	&= \frac{3}{8}\frac{e^{2t}(4t^2 - 4t + 2) - 2}{t^3}\\
+\end{align}
+$$
+How nice.
+
+### 3
+Let X be a continuous random variable with values in $[0,1)$ and density $f_X$. Find the moment generating functions for X given $f_X$:
+
+$$f_X = 2e^{-2x}$$
+
+Then 
+$$
+\begin{align}
+g(t) &= E(e^{tX}) \\
+	 &= \int_{-\infty}^{+\infty}e^{tx}f_X\:dx\\
+	 &= \int_{0}^{\infty}e^{tx}\cdot2e^{-2x}\:dx
+	 \\
+	 &= 2\int_{0}^{\infty}e^{tx-2x}\:dx\\
+	 &= 2\int_{0}^{\infty}e^{x(t-2)}\:dx\\
+	 &= 2\int_{0}^{\infty}e^{x(t-2)}\:dx\\
+	 &= \lim_{b\to\infty}\frac{2}{t-2}\biggr[e^{x(t-2)}\biggr]_{x=0}^{x=b} \\
+	^* &= 
+	\lim_{b\to\infty}\frac{2}{t-2}\biggr[e^{b(t-2)} - 1\biggr] \\
+	&= \frac{2}{2-t}
+	 
+\end{align}
+$$
+
+\* Conditional Convergence: $t \lt 2$
+
+We can generalize this problem for any exponential parameter $\lambda$ 
+$$
+M(t) = \frac{\lambda}{\lambda - t}
+$$
+
+For any $t \lt \lambda$
+
+### 7
+Let $X$ be a continuous random variable with values in $[0, 1]$, uniform density function $f_X(x) = 1$ and moment generating function $g(t) = (e^t − 1)/t$. Find in terms of $g(t)$ the moment generating function for
+
++ $-X$
++ $1+X$
++ $3X$
++ $aX+b$
+
+**Part 1**
+Let $Y = -X$
+Then,
+$$
+\begin{align}
+	g_Y(t) &= E(e^{Yt})\\
+		&= E(e^{-Xt}) \\ \\
+		&= g_X(-t) \\
+		&= \frac{e^{-t} - 1}{-t}
+\end{align}
+$$
+
+**Part 2**
+Let $Y = 1+X$
+Then,
+$$
+\begin{align}
+	g_Y(t) &= E(e^{Yt})\\
+		&= E(e^{(1+X)t}) \\ 
+		&= e^{t}E(e^{tX}) \\ \\
+		&= e^{t}g_X(t)\\
+		&= e^t\frac{e^t - 1}{t}
+\end{align}
+$$
+
+**Part 3**
+Let $Y = 3X$
+Then,
+$$
+\begin{align}
+	g_Y(t) &= E(e^{Yt})\\
+		&= E(e^{3Xt}) \\ \\
+		&= g_X(3t)\\
+		&= \frac{e^{3t} - 1}{3t}
+\end{align}
+$$
+
+**Part 4**
+Let $Y = aX+b$
+Then,
+$$
+\begin{align}
+	g_Y(t) &= E(e^{Yt})\\
+		&= E\biggr(e^{(aX+b)t}\biggr) \\ 
+		&= E(e^{aXt + bt})\\
+		&= e^{bt}E(e^{aXt}) \\ \\
+		
+		&= e^{bt}g_X(at)\\
+		&= e^{bt}\frac{e^{at} - 1}{at}
 \end{align}
 $$

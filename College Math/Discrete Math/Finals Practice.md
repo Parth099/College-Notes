@@ -63,6 +63,7 @@ $$
 \end{align}
 $$
 
+\*: $2n+3$ is always odd for any integer $n$
 ## Function Problem Set
 ### Q1
 $$
@@ -182,41 +183,51 @@ $$
 \end{align}
 $$
 
-**Claim**: $f$ is *one-to-one*
+*Observe* that if $n$ is even. Then $n$ is at least 2 and thus $f(n) = \frac{n}{2} \geq 1 \gt 0$.
+If $n$ is odd. Then $n$ is at least 1 and $f(n) = \frac{n-1}{2} \leq \frac{1-1}{2} = 0$
 
-Suppose $f(a_1) = f(a_2)$
+Thus $f(n)$ has different signs when $n$ is odd or even.
+
+**Claim**: $f$ is *one-to-one*
+By the previous argument we notice that $f(a_1) = f(a_2)$ if $a_1, a_2$ are both either even or odd. 
 
 ***Case 1***: Both $a_1, a_2$ are even.
 
-Then, 
-$$
-\frac{a_1}{2} = \frac{a_2}{2}
-$$
+Then $f(a_1) = f(a_2)$ iff $\frac{a_1}{2} = \frac{a_2}{2}$.
 Thus $a_1 = a_2$
 
 ***Case 2***: Both $a_1, a_2$ are odd.
-Then, 
+Then $f(a_1) = f(a_2)$ iff $\frac{1-a_1}{2} = \frac{1-a_2}{2}$.
+Then, $-a_1 = -a_2$.
+Thus $a_1 = a_2$
+
+Since $f(a_1) = f(a_2)$ if $a_1 = a_2$, $f$ is one-to-one. 
+
+**Claim**: $f$ is onto
+Let $m \in \mathbb{Z}$
+If $m \geq 0$, let $n = 2m$.
+Then $n \in \mathbb{N}$ and $n$ is even.
+
+Then $f(n) = \frac{n}{2} = \frac{2m}{2} = m$
+
+If $m \leq 0$. Let $n = 1-2m$
+Then $n \geq 1$ and $n$ is odd. 
+Then,  $f(n) = \frac{1-n}{2} = \frac{1-(1-2m)}{2} = m$
+
+Thus, $\forall m \in \mathbb{Z}, \exists n \in \mathbb{N}$ s.t $f(n) = m$
+Therefore, $f$ is *onto*.
+
+**Bijection \& The Inverse**
+Since $f$ is both *onto* and *one-to-one*, $f$ is *bijective*. 
+
+Therefore, $f$ is a unique inverse.
+This inverse is:
 $$
-\frac{1-a_1}{2} = \frac{1-a_2}{2}
+f^{-1}(m) = \begin{cases}
+	2m & \text{if} & m \gt 0 \\
+	1-2m & \text{if} & m \leq 0 \\
+\end{cases}
 $$
-Thus $1-a_1 = 1-a_1$ and $a_1 = a_2$
-
-***Case 3***: One of $a_1, a_2$ is even, namely $a_1$. $a_2$ is odd. 
-
-Then, 
-$$
-\begin{align}
-	\frac{a_1}{2} &= \frac{1-a_2}{2} \\
-	a_1 &= 1 - a_2 \\ \\
-	a_1 + a_2 &= 1
-\end{align}
-$$
-
-Since the smallest element of $\mathbb{N}$ is 1, $a_1 + a_2 \geq 2$. Thus $a_1, a_2$ must be of the same order, even or odd. 
-
-Thus $f$ is *one-to-one*
-
-**Claim**: $f$ is  *onto*
 
 ## Function Book Problems
 ### p24.14
@@ -225,7 +236,7 @@ Try to find Left and Right inverses.
 $$
 \begin{align}
 	f : \mathbb{Z} &\to \mathbb{Z} \\
-	f(n) &= 2x
+	f(n) &= 2n
 	
 \end{align}
 $$
@@ -460,3 +471,24 @@ Thus $(x, y) \in A$
 Thus $B \subseteq A$
 
 Since $A \subseteq B$ and $B \subseteq A$, $A = B$
+
+### p10.10 with Generalization
+Let 
+$$
+\begin{align}
+	A &= \{x\in\mathbb{Z}: 4|x\}\\
+	B &= \{x \in\mathbb{Z}: 2|x\}
+\end{align}
+$$
+**Show** $A \subseteq B$
+
+Suppose $a \in A$
+Then $4|a$ and thus $a = 4n$ for an integer $n$. 
+
+See that $a = 4n = 2(2n)$. 
+Since $2n \in \mathbb{Z}$, $2|a$.
+
+This means that $a\in B$
+Therefore $A \subseteq B$
+
+## Induction

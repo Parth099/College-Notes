@@ -68,7 +68,7 @@ Thus, $(1, 1)\in g$ and $(1, -1)\in g$
 Thus $g$ is not a function and cannot exist. 
 
 ### Observation 1
-$f$ is a left inverse iff $f$ is one-to-one.
+$f$ has a left inverse iff $f$ is one-to-one.
 
 ### Example 1.2
 Consider the same example on a restricted domain. 

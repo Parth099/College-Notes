@@ -254,6 +254,14 @@ Since $1/2 \not\in \mathbb{Z}$, $f$ is not onto.
 
 Thus we can conclude that only a left inverse exists: there exists a function $g:\mathbb{Z}\to\mathbb{Z}$ such that $g(f(n)) = n$
 
+This function is:
+$$
+g(n) = \begin{cases}
+	\frac{n}{2} &\text{if}& 2\:|\:n \\
+	1 &\text{if}& 2\nmid n
+\end{cases}
+$$
+
 #### Part 2
 $$
 \begin{align}
@@ -269,13 +277,15 @@ Proof is trivial.
 **Claim**: $f$ is *onto*
 
 Suppose $y \in \mathbb{Z}$
-Thus $y = x + 10$ and $x = y - 10$
+Thus $y = x + 10$.
+Then let $x = y - 10$. Since $y \in \mathbb{Z}$, $x  \in \mathbb{Z}$
+
 Then, 
 $$
-f(x) = x-10 = y - 10 + 10 = y
+f(x) = x+10 = y - 10 + 10 = y
 $$
 
-Therefore $\forall x\in\mathbb{Z}, \exists y\in\mathbb{Z}$ s.t $f(x) = y$
+Therefore $\forall y\in\mathbb{Z}, \exists x\in\mathbb{Z}$ s.t $f(x) = y$
 
 Since the function is bijective there exists one unique inverse. 
 $$
@@ -296,8 +306,10 @@ Proof is trivial.
 
 **Claim**: $f$ is not onto. 
 Suppose $y = 5$.
-Then $f(x) = x+10 = 5$ for $x=-5$.
+Then $f(x) = x+10 = y$ for $x=-5$.
 Since $-5 \not\in \mathbb{N}$, $f$ is *not* onto. 
+
+Since $f$ is only one-to-one it only has a left inverse. 
 
 We can see that the image is: 
 $$
@@ -313,6 +325,42 @@ g(x) = \begin{cases}
 $$
 
 #### Part 4
+$$
+\begin{align}
+	f : \mathbb{Z} &\to \mathbb{Z} \\
+	f(n) &= \begin{cases}
+		\frac{n}{2} & \text{n is even} \\ 
+		\frac{n-1}{2} & \text{n is odd}
+	\end{cases}
+\end{align}
+$$
+
+**Claim**: $f$ is not *one-to-one*
+
+Consider $f(n) = 4$
+Both $f(8) = \frac{8}{2}= 4$ and $f(9) = \frac{9-1}{2} = 4$
+Since $8 \neq 9$, $f$ is not one-to-one
+
+**Claim**: $f$ is *onto*
+Let $m \in \mathbb{Z}$
+Then let $n = 2m$, then $n$ is even and $n \in \mathbb{Z}$
+Then, 
+$$
+f(n) = \frac{n}{2} = \frac{2m}{2} = m
+$$
+
+Thus, $\forall m \in \mathbb{Z}, \exists n\in\mathbb{Z}$ s.t $f(n) = m$
+Therefore, $f$ is onto.
+
+Since $f$ is only *onto* there exists only the right inverse: a function $g:\mathbb{Z}\to\mathbb{Z}$ where $f(g(n)) = n$
+
+Let $g(n) = 2n$
+
+Then $f(g(n)) = \frac{2n}{2} = n$
+
+
+
+#### Part 5
 > Recall that $\mathbb{Q} = \{\frac{a}{b}: a, b\in\mathbb{Z}, b\neq 0\}$
 
 $$
@@ -376,14 +424,11 @@ $$
 + If $f$ is onto, must $f$ be also one-to-one?
 
 **Q1**
-Suppose $f$ is one-to-one. 
-Then by definition $f(a_1) = f(a_2)$ if and only if $a_1 = a_2$
+This is not true. Consider $f(n) = 3n+1$ over the integers. This function is one-to-one yet not onto, there exists no $n$ such that $f(n) = 0$
 
 **Q2**
-Suppose $f$ is onto.
-Then, $\forall a_1\in A, \exists a_2\in A$ such that $f(a_2) = a_1$
+Consider the function $f(x) = x^3 + x^2$ over the real numbers. This function is onto, sadly this is quite hard to prove. However this function is *not* one-to-one since $f(0) = f(-1)$ and $0 \neq -1$
 
-However this does not say that $a_2$ is unique. Several $a \in A$ could map to a given $a_0$. Thus a function need not be one-to-one given that it is onto. 
 
 # Misc Items
 ## Equality of Sets
@@ -492,3 +537,136 @@ This means that $a\in B$
 Therefore $A \subseteq B$
 
 ## Induction
+### Recurrence Relation Proof
+Recurrence Details:
+$$
+\begin{align}
+	c_0 &= 3 \\
+	c_n &= c_{n-1} + n \text{ for } n \gt 0\\
+	\\
+	\text{Prove that } c_n &= \frac{n^2+n+6}{2} 
+\end{align}
+$$
+
+For $n = 0$, 
+$$c_0 = \frac{0^2+0+6}{2} = 3$$
+Thus the formula is valid for $c_0$.
+
+Assume $c_n = \frac{n^2+n+6}{2}$ for some $n \geq 0$
+
+Then, 
+$$
+\begin{align}
+	c_{n+1} &= c_{n} + (n+1) \\
+			&= \frac{n^2+n+6}{2} + n+1 \\
+			&= \frac{n^2+n+6 + 2n + 2}{2} \\
+			&= \frac{(n^2 + 2n + 1) + (n + 1) + 6}{2} \\
+			&= \frac{(n + 1)^2 + (n + 1) + 6}{2} \\
+\end{align}
+$$
+
+Therefore, for all $n \gt 0$, $c_n = \frac{n^2+n+6}{2}$ if $c_{n} = c_{n-1}+n$ and $c_0 = 3$
+
+## Quantifiers
+### 11.4
+For each of the statements prove or disprove them. Context: $x, y \in \mathbb{Z}$
+
+![[c11p4.png]]
+
+***a)***
+Let $x, y = 5$
+Then $x + y = 10 \neq 0$
+Thus the statement is not true for all integers $x, y$
+
+***b)***
+Let $x \in \mathbb{Z}$ and let $y = -x$. Then $y \in \mathbb{Z}$
+Then $x + y = x + (-x) = 0$ 
+Therefore $\forall x \: \exists y$ s.t $x+y = 0$
+
+***c)***
+Let $x$ an arbitrary integer. Then let $y = -x + 1$. Then $y$ is also an integer. 
+
+Their sum, $x+y = x+(-x+1) = 1 \neq 0$
+
+Since there exists a counter example, the statement is untrue. 
+
+***d)***
+Trivial. Take $y = -x$ for any $x$
+
+***e)***
+Let $x = y = 1$
+Then $xy = 1$ and the statement is false. 
+
+***f)***
+Let $x$ be a arbitrary integer. Let $y = 0$.
+
+Then $xy = 0$ 
+Therefore $\forall x \: \exists y$ s.t $xy = 0$
+
+***g)***
+Let $x = 0$ and $y$ an arbitrary integer. Then $xy = 0$.
+
+Therefore $\exists x \: \forall y$ s.t $xy = 0$
+
+***h)***
+Let $x = y = 0$
+Then $xy = 0$
+
+Therefore $\exists x \: \exists y$ s.t $xy = 0$
+
+### 11.7
+For each of the statements prove or disprove them. Context: $x, y \in \mathbb{Z}$
+
+> Recall $\exists !$ means "there exists unique"
+
+![[c11p7.png]]
+
+***a)***
+True. Since $-2 \not \in \mathbb{N}$ or any other complex numbers. 
+
+***b)***
+False. Both $2, -2$ squared make 4. Therefore $x$ is not unique.
+
+***c)***
+False. There exists no whole number who's square is $3$. See that $1^2 = 1$ and $2^2 = 4$ and there exists no natural number between $1$ and $2$. 
+
+***d)***
+True. Only $0$ has this effect.
+
+***e)***
+True. Only $1$ has this effect.
+
+## Divisibility
+### HW4.1
+**Statement**
+Show that 
+$$
+\gcd (a, a+3) = \begin{cases}
+	3 &\text{if}& 3\:|\:a \\
+	1 &\text{if}& 3\nmid a
+\end{cases}
+$$
+for any integer $a$
+
+**Proof**
+Let $d = \gcd (a, a+3)$. Then $d|a$ and $d|a+3$.
+This implies that $d|(a+3)-a = 3$
+Since $d \gt 0$ and $3$ is *prime*, $d$ must be 1 or 3.
+
+Suppose $3|a$, 
+Then $a = 3n$ for some integer $n$. 
+Then $a+3 = 3n+3 = 3(n+1)$. Since $n+1\in\mathbb{Z}, 3|a+3$
+
+$1$ also divides $a, a+3$ but because $1\lt 3$, $d = 3$ 
+
+Suppose $3 \nmid a$
+Then $d \neq 3$ since $3 \nmid a$.
+Thus $d = 1$
+
+Therefore, 
+$$
+\gcd (a, a+3) = \begin{cases}
+	3 &\text{if}& 3\:|\:a \\
+	1 &\text{if}& 3\nmid a
+\end{cases}
+$$

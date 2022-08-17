@@ -16,3 +16,11 @@ Repo of my Latex-based notes via the Note taking app: [Obsidian](https://obsidia
 | CIS 2107    | Low Level Systems and C   |
 | CIS 4360    | Microservice Architecture | 
 
+## Fall 22'
+| Course Code | Description          |
+| ----------- | -------------------- |
+| Math 3003   | Number Theory        |
+| Math 3043   | Numerical Analysis I |
+| CIS 3207    | OS                   |
+| CIS 3223    | DSA                  |
+| CIS 3605    | Digital Forensics    |

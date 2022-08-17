@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "11090b4c1f4646d0",
+        "id": "4b4dd9d69dab5890",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
+            "file": "CIS3605 -      Introduction to Digital Forensics/readme.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CIS2107 - Low Level Programming in C/1 - Unix.md",
+                "file": "CIS3605 -      Introduction to Digital Forensics/readme.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -87,24 +87,24 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
-  "active": "11090b4c1f4646d0",
+  "active": "4b4dd9d69dab5890",
   "lastOpenFiles": [
-    "CIS2107 - Low Level Programming in C/1 - Unix.md",
-    "CIS4360 - Microservice Architecture/Lectures/2 - Lecture.md",
-    "CIS4360 - Microservice Architecture/1 - Into To Microservices.md",
-    "CIS4360 - Microservice Architecture/CIS4360.md",
-    "CIS4360 - Microservice Architecture/Lectures/1 - Lecture.md",
-    "CIS4360 - Microservice Architecture/2 - Switching to MS.md",
-    "CIS2168 - Data Structures/Sorting/Heap Sort.md",
-    "CIS4360 - Microservice Architecture/Labs/Gartner Microservice Summary.md",
-    "CIS2107 - Low Level Programming in C/High-Level Directory Overview.md",
-    "ALGO/Kadane's Algorithm.md"
+    "CIS3605 -      Introduction to Digital Forensics/readme.md",
+    "CIS3207 -  OS/readme.md",
+    "CIS3223 - Data Structures and Algorithms/readme.md",
+    "N10-008/Network Basics/2 - Network Components.md",
+    "N10-008/Network Basics/1 - Intro to Networks.md",
+    "CIS2107 - Low Level Programming in C/3.02 Number Bases.md",
+    "CIS2107 - Low Level Programming in C/3.03 Assembly.md",
+    "CIS2107 - Low Level Programming in C/6.01 Stack Vs Heap.md",
+    "CIS2107 - Low Level Programming in C/3.01 C Compiling and Hardware.md",
+    "CIS2107 - Low Level Programming in C/2.14.1 Tricky Pointers.md"
   ]
 }

@@ -905,7 +905,7 @@ input.prompt-input:hover {
 .theme-dark .frontmatter .token,
 .theme-light .frontmatter .token,
 .markdown-preview-section .frontmatter code {
-    font-family: "Fira Code", var(--text);
+    font-family: var(--text);
     color: var(--text-faint) !important;
 }
 

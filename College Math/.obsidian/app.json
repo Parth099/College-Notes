@@ -15,7 +15,37 @@
     "oot",
     "params",
     "gameshow",
-    "iff"
+    "iff",
+    "sqrt",
+    "Datapoint",
+    "demorgans",
+    "Collary",
+    "Chebyshev",
+    "png",
+    "upperbound",
+    "HyperGeometric",
+    "Hypergeometric",
+    "Prereq",
+    "Req",
+    "Algo",
+    "Elucidian",
+    "Decon",
+    "binomially",
+    "Primality",
+    "forementioned",
+    "doesnt",
+    "representers",
+    "Ergodic",
+    "ergodic",
+    "injective",
+    "surjective",
+    "bijective",
+    "contrapositive",
+    "coprime",
+    "Combinatorics",
+    "Config",
+    "Psets",
+    "Bijection"
   ],
   "promptDelete": false,
   "pdfExportSettings": {
@@ -24,5 +54,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "Probability Theory I/Chapter 3/Combination Problems/problems"
+  "attachmentFolderPath": "Discrete Math/img",
+  "strictLineBreaks": false,
+  "showLineNumber": true
 }

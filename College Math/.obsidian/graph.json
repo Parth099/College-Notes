@@ -6,7 +6,15 @@
   "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "path:\"Probability Theory I\"",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    }
+  ],
   "collapse-display": false,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +25,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.6682232920755694,
+  "scale": 0.30374048962547046,
   "close": true
 }

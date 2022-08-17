@@ -1,1 +1,11 @@
-{}
+{
+  "workspace:export-pdf": [],
+  "app:open-vault": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "1"
+    }
+  ]
+}

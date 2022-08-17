@@ -10,9 +10,20 @@ def matToTex(matrix):
         currRow = f" {DIFF} ".join(list(map(str, row)))
         fullMatrix += "\t" + currRow + NEWLINE + "\n"
 
+    if fullMatrix:
+        fullMatrix = fullMatrix[:-3] + "\n" 
+
     return f'\\begin{MATRIX_TYPE}\n{fullMatrix}\\end{MATRIX_TYPE}'
 
-mat = [ [1, 2, 3]
+"""
+[
+    [0, 1, 0, 0, 0],
+    ["1/4", 0, "3/4", 0, 0],
+    [0, "1/2", 0, "1/2", 0],
+    [0, 0, "1/4", 0, "3/4"],
+    [0, 0, 0, 1, 0],
 ]
+"""
+mat = [[0, 1, 2, 4], ["1/3", "1/3", "1/6", "1/6"]]
+print("p_X = "+matToTex(mat))
 
-print(matToTex(mat))

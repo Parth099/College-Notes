@@ -123,7 +123,8 @@ Since NA($2.2$) is $.4861$
 $$0.5 + .4861 = .9861$$
 
 We add the $.5$ because:
-![vis_aid.png](../img/vis_aid.png)
+
+![[vis_aid.png]]
 
 Same process for April yields: 
 

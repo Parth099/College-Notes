@@ -20,7 +20,8 @@ To prove a function $f$ is one-to-one we can show directly if $a_1\neq a_2$ then
 A more common method is to argue via contrapositive.
 
 We must show that if $f(a_1) = f(a_2)$ then $a_1 = a_2$
-
+#### Horizontal Line Test
+$f:\mathbb{R} \to \mathbb{R}$ **is** one-to-one if it passed the *Horizontal Line Test*. 
 ### Onto
 To show a function is onto we must show that each element of the image has a valid mapping in the domain. 
 This means that we must show that for any $b \in B$ there exists $a\in A$ such that $f(a) = b$.
@@ -113,5 +114,3 @@ $$
 Then, $\forall n\in\mathbb{Z}\:\:\exists k\in\mathbb{Z}$ s.t $f(k) = n$. 
 Thus $f$ **is** onto. 
 
-### Horizontal Line Test
-$f:\mathbb{R} \to \mathbb{R}$ **is** one-to-one if it passed the *Horizontal Line Test*. 

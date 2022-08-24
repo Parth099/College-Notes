@@ -25,7 +25,7 @@ Often times we use this definition for functions:
 
 A function $f$ is a mapping from a set $A$ to $B$
 $$f:A\to B$$
-Still $f\subseteq A\times b$ but now $D_f = A$
+Still $f\subseteq A\times B$ but now $D_f = A$
 Now we can say the following:
 
 $\forall a\in A, \exists!b\in B\text{ s.t }(a, b)\in f$

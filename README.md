@@ -19,7 +19,6 @@ Repo of my Latex-based notes via the Note taking app: [Obsidian](https://obsidia
 ## Fall 22'
 | Course Code | Description          |
 | ----------- | -------------------- |
-| Math 3003   | Number Theory        |
 | Math 3043   | Numerical Analysis I |
 | CIS 3207    | OS                   |
 | CIS 3223    | DSA                  |

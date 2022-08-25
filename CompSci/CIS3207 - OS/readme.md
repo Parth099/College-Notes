@@ -1,7 +1,5 @@
 # Introduction to Systems Programming and Operating Systems
-| Info       | Detail                                   |
-| ---------- | ---------------------------------------- |
-| Book       |                                          |
-| Edition    |                                          |
-| Author     |                                          |
-| Instructor | [Gene Kwatny](mailto:gkwatny@temple.edu) | 
+| Info       | Detail                                          |
+| ---------- | ----------------------------------------------- |
+| Book       | [Link](https://pages.cs.wisc.edu/~remzi/OSTEP/) | 
+| Instructor | [Gene Kwatny](mailto:gkwatny@temple.edu)        |

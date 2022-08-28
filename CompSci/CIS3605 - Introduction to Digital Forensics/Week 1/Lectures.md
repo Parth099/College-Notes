@@ -1,4 +1,5 @@
 # Lectures For Week 1
+# 8.23.22
 ## Terminology
 
 1. Event
@@ -16,7 +17,8 @@ NIST offers guidance on how to prevent security issues.
 
 Incident Response (IR) Capability:
 1. having a policy
-2. creating a plan
+	+ As a company you cannot cite someone for violating some security rule if none are defined. 
+2. 	creating a plan
 3. developing procedure to handle the incident
 
 ![/img/3605_NIST.png](/img/3605_NIST.png)
@@ -37,3 +39,21 @@ collection -> examination -> analysis -> reporting
 ```
 
 The chain of command document displays the changing of hands of any and all evidence.  
+
+# 8.25.22
+## Chain Of Custody Document
+> See form on canvas for physical details.
+
+See that it contains a log of who had it and for how long they had it for. We will learn how to fill this out as the semester moves on. 
+
+## Group Discussion
+![group_diss_8_25.png](/img/group_diss_8_25.png)
+
+We said
++ USB
++ Email 
++ External Recording Devices (Camera)
++ Key loggers
++ ...
+
+## Group Forensic Activity 

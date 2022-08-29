@@ -7,12 +7,12 @@ If that statement above holds up $f(n)$ is said to be $O(g(n))$.
 ### Little O: $o(n)$
 > Little o notation is used to describe an upper bound that cannot be tight. In other words, loose upper bound of f(n). - [tutorialspoint](https://www.tutorialspoint.com/little-oh-notation-o)
 
-We say that a function $f$ is little oh of $g$ ($o(g(n))$) if:
+We say that a function $f$ is little oh of $g$ (notation: $o(g(n))$) if:
 $$
 \lim_{n\to\infty} \frac{f(n)}{g(n)} = 0
 $$
 
-Example: $n^2 \in O(n^3)$
+Example: $n^2 \in o(n^3)$
 
 ## Big Omega: $\Omega(g(n))$
 $f(n) \in O(g(n))$ if $\exists c, k\in\mathbb{R}$ s.t $\forall n \gt k, f(n) \geq c\cdot g(n)$

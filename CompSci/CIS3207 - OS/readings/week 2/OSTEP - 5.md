@@ -44,6 +44,8 @@ We can use *fork* to create a child that calls another program with `execvp` and
 
 `exec` needs the path the program is located and its command line args. What it does is that it will load the code and static data from that program onto the **current** stack, overwriting its parent code segment. The heap and stack along with other parts are reinitialized. Then the new program is ran with the `argv` provided. `exec` transforms the current program to the program specified.  After the call to `exec` it is like the current **never** existed.
 
+> Note there exists other exec flavors. 
+
 ## Why do we do it this way?
 The combination of `fork` and `exec` is built the way it is to make the shell, a **user program**, very powerful. When you run a program from the shell it will `fork` and `exec` the program and `wait` for it to finish which allows us to do chaining like this:
 

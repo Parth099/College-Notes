@@ -57,4 +57,18 @@ The way this redirection works is by the shell closing the stdin and opening `ou
 
 **Class Questions:** Can you explain file descriptors and how they are used to pipe commands
 
-//page 7 / 15
+### File Descriptor
+A File Descriptor(FD) is a unique identifier (handle) for a file or other input/output resource. We will learn more about this later but they are used in a table kept by the OS to keep track of open files and. 
+
+> Notice that each of the *stdin, stdout*, and *stderr* are **files**
+
+## Process Control And Users
+There exists other controls for process like `kill()` which is used to send signals to processes. These signals would be for  pause, die, and other useful imperatives. In fact the SIGINT(interrupt) signal is sent with the `control + c` to kill a process. `control + z` sends a SIGTSTP sends a STOP pausing the process which can be resumed later.  
+
+The signals subsystem provides a rich API to deliver events to processes and process them. We can send events to a process or a **process group**. To catch signals we use the `signal()` syscall. This raises the questions of who is sending signals when we know that *many* people can use a system at the same time. This is why the OS understands the concept of a user, a `user` has full control over programs they execute. They can send signals to them at any point. 
+
+Useful UNIX commands
+1. `kill`/`killall` 
+2. `top` - shows the process WRT their resource usage
+3. `ps` - shows active process
+

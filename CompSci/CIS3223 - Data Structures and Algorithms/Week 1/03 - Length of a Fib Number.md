@@ -7,20 +7,24 @@ $$
 
 ### Base Case
 $n = 6$ 
-$$\begin{align}
+$$
+\begin{align}
 F_6 &= 8 
 \\
 2^{6/2} = 2^3 &= 8
-\end{align}$$
+\end{align}
+$$
 
 Since $F_6 \geq 2^{\frac{6}{2}}$ the formula is valid for $n=6$
 
 $n = 7$ 
-$$\begin{align}
+$$
+\begin{align}
 F_7 &= 13 
 \\
 2^{7/2} = 2^{3}\sqrt{2} = 8 \sqrt{2} &\approx 11.31371
-\end{align}$$
+\end{align}
+$$
 
 Since $F_7 \geq 2^{\frac{7}{2}}$ the formula is valid for $n=7$
 

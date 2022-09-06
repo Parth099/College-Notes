@@ -15,16 +15,19 @@ disp("absolute error with method A: "+ abs(e_neg_5_deg_9_method1 - e_neg_5) + ne
 disp("e^-5 is approximately "+ e_neg_5_deg_9_method2 + " using method B");
 disp("absolute error with method B: "+ abs(e_neg_5_deg_9_method2 - e_neg_5) + newline)
 
-% Why method B is a lot better than method B ?
+% Why method B is a lot better than method A ?
 %
 % Method B is better than method A because we are trying to find a negative 
-% exponent for e. When calculating the sum, we notice that each term of an 
+% exponent for e. When calculating the sum for [A], we notice that each term of an 
 % even degree is positive, and each term of an odd degree is negative.Since
 % the sum oscillates, it requires more terms to converge to a better approximation. 
 % 
 % This does not occur in B since we take the inverse after completing the 
-% summation, and we do not have to deal with the oscillation.
-
+% summation, and we do not have to deal with the oscillation. 
+%
+% One of the 
+%
+%
 
 %functions at the bottom
 

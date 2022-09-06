@@ -100,3 +100,11 @@ This image displays the concept of "busy waiting". Notice that each *write* requ
 ![yes_interrupt](/img/yes_interrupt.png)
 
 This images displays the concept of using interrupts. Notice that we do not wait for writes now. When a write completed the user program is informed the write is completed. 
+
+***LECTURE 09 06 22***:
+
+**Notice** the time saved using *interrupts*. 
+
+Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another processor can complete. 
+
+Cont: [[Lecture 09-06-22]]

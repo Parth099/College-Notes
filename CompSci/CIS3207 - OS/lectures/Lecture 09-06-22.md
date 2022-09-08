@@ -36,6 +36,9 @@ When the interrupt occurs the **hardware** goes to the interrupt vector and take
 
 The last instruction in the ISR (see image), is the `RRT/RTI` which puts the old process context on the CPU **and** puts the PSW back in *user mode*. 
 
+### Creation of the Interrupt Vector:
+The interrupt vector area is created on boot by the OS scanning devices. For each device, the OS will load a interrupt handler (device driver includes this along with operational code). 
+
 ## Multiple Interrupts
 > An interrupt occurs while another interrupt is being processed
 

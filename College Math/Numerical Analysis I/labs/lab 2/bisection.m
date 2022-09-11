@@ -13,11 +13,24 @@ function [p,nit] = bisection(f,a,b,Nmax,tol)
 %         p - Solution to the problem
 %     nit - Number of iterations it takes to get convergence
 %        
-% Written by 
+% Written by Parth Patel
 % MATH3043 @ Temple University 
 % Fall 2022
 
-% Translate the Bisection Algorithm pseudocode on page 49 of 
-% Burden, Faires, Burden's 10th edition Numerical Analysis to complete this program.
-%%%% YOUR CODE goes here %%%%%%
+iter_count = 0;
+p = a + ((b - a) / 2);
+while iter_count < Nmax && abs(f(p)) > tol
+   A = f(a);
+   if A * f(p) > 0
+        a = p;
+   else
+        b = p;
+   end
+    
+   p = a + ((b - a) / 2);
+   iter_count = iter_count + 1;
+end %end while
+
+nit = iter_count;
+
 end 

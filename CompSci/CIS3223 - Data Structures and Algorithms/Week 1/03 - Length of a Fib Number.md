@@ -59,7 +59,7 @@ $$
 \begin{cases}
 	1 & \text {if}  & n \in \{0, 1\} 
 	\\
-	T(n-1) + T(n-2) + 3 & \text {otherwise}
+	T(n-1) + T(n-2) + 1 & \text {otherwise}
 \end{cases}
 $$
 

@@ -7,7 +7,7 @@ def _bisection(F, left, right, depth):
     p_0 = (left + right) / 2 
     FP = F(p_0)
 
-    print(f'p_{depth} = {p_0}')
+    print(f'ITERATION: {depth}  a={left} | b={right} | p_{depth} = {p_0} | F(p_{depth}) = {FP}')
 
     
     if depth >= MAX_ITER_DEPTH or abs(FP - p_0) <= TOL or (right - left) / 2 <= TOL:

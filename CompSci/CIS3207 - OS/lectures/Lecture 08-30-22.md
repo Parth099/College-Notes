@@ -48,6 +48,6 @@ We firstly define the Process Control Block (PCB) as a virtualization of the CPU
 
 Notice that a block of logical memory will correspond to a block of physical memory however the address may not be the same. 
 
-Suppose we have a program called `p1.c` and inside of it we declare a `int p`. If we run concurrent instances of `p1.c` and log the value of the address of `p` (`&p`). We will notice that each program will output the same address. This is because the address of `p` is the same relative to the logical space, the memory allocated for *this* process, but in reality the address of `p` can be vastly different. 
+Suppose we have a program called `p1.c` and inside of it we declare a `int p`. If we run concurrent instances of `p1.c` and log the value of the address of `p` (`&p`). We will notice that each program will output the same address. This is because the address of `p` is the same relative to the logical space, the memory allocated for *this* process, but in reality the address of `p` in both programs can be vastly different. 
 
 Speaking of running concurrent programs, the Process Scheduler, a component of the OS, chooses which programs to run based on a scheduling policy. 

@@ -40,7 +40,7 @@ The API provided by the OS is a set of `system calls`:
 ![syscalls_vs_regcalls](/img/syscalls_vs_regcalls.png)
 
 ### `syscall` vs `supervisor` calls
-A supervisor call (SVC) is a processor instruction that directs the processor to pass control of the computer to the operating system while a system call is a function is used when computer program requests a service from the kernel of the operating system it is executed on. 
+A supervisor call (SVC) is a processor instruction that directs the processor to pass control of the computer to the operating system while a system call is a function is used when computer program requests a service from the kernel of the operating system it is executed on. A `syscall` can trigger a `supervisor` call.
 
 
 ### API per OS?
@@ -105,6 +105,6 @@ This images displays the concept of using interrupts. Notice that we do not wait
 
 **Notice** the time saved using *interrupts*. 
 
-Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another processor can complete. 
+Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another process can complete. 
 
 Cont: [[Lecture 09-06-22]]

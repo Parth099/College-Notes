@@ -17,7 +17,7 @@ If Multiple Devices at the same Priority Level Request Service, the Device Close
 ## Kernel vs. User Mode
 - Places limits on accessible memory for non-kernel code.
 	- Prevents user code from overwriting the kernel
-- The timer allows the kernel to regain control of the CPU from a *runaway* programs. 
+- The timer allows the kernel to regain control of the CPU from *runaway* programs. 
 
 ### Mode Switch
 #### Kernel Mode to User Mode
@@ -39,7 +39,7 @@ These can be anything that could interfere with the kernel's function and manage
 + Send IO commands
 + Jump directly to kernel without a secure method
 
-If a user executes a privileged instruction without kernel mode it will trigger an interrupt which will *deal* with he offender
+If a user executes a privileged instruction without kernel mode it will trigger an interrupt which will *deal* with he offending process. 
 
 ## Process API
 ### Creation
@@ -79,7 +79,7 @@ The red blocks is the data from the **original** program while the blue represen
 
 ![fork_exe](/img/fork_exe.png)
 
-When fork is invoked the child is a **exact** copy of the parent. When fork is called all pages are shared between parent and child. This is done by copying the parent's page tables. The page tables are arrays of pointers to memory the process has to *deal* with. When a fork is made the memory is set to read-ONLY for the child. If a child needs to write to it a copy of only that region will be made. Since we know that processes have regions of memory that only contain code we know that that section **will never** be written to. This concept is called copy on write. Only what is needed to be written to needs to be copied. 
+When fork is invoked the child is a **exact** copy of the parent. When fork is called all pages are shared between parent and child. This is done by copying the parent's page tables. The page tables are arrays of pointers to memory the process has to *deal* with. When a fork is made the memory is set to read-ONLY for the child. If a child needs to write to it a copy of only that region of memory will be recopied so the child can use it. Since we know that processes have regions of memory that only contain code we know that that section **will never** be written to, it allows the parent process and child process to share code if needed. This concept is called copy on write. Only what is needed to be written to needs to be copied. 
 
 ##### syscall - `exec()`
 - Executed after child starts, Replace current data and code segments with those in specified file

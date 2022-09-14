@@ -21,6 +21,8 @@ RTT/RTI - return-from-(trap OR interrupt)
 Program interrupts and CPU/memory related hardware failures.
 Examples: Accessing memory you are not supposed to or trying to executing a sensitive instruction while not in kernel mode (supervisor mode).
 
+> "You commit an action and based on that action a interrupt occurs immediately"
+
 ### ASYNC
 Generated independent of the code and outside the CPU like device interrupts. 
 

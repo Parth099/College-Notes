@@ -17,9 +17,9 @@ function [p,nit] = bisection(f,a,b,Nmax,tol)
 % MATH3043 @ Temple University 
 % Fall 2022
 
-iter_count = 0;
+nit = 0;
 p = a + ((b - a) / 2);
-while iter_count < Nmax && abs(f(p)) > tol
+while nit < Nmax && abs(f(p)) > tol
    A = f(a);
    if A * f(p) > 0
         a = p;
@@ -28,9 +28,6 @@ while iter_count < Nmax && abs(f(p)) > tol
    end
     
    p = a + ((b - a) / 2);
-   iter_count = iter_count + 1;
+   nit = nit + 1;
 end %end while
-
-nit = iter_count;
-
 end 

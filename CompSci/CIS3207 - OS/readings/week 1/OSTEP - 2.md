@@ -30,4 +30,3 @@ This is a set of issues that arise when we run multiple threads at the same time
 Recall from 2107 DRAM (Dynamic RAM, [[6.02 Storage Technologies]]). It is a volatile memory. This is why if we want data to persist we need a different technology like HDDs and SSD. The OS will also manage the File System (FS). However, disk space is **not** virtualized as programs may share data. 
 
 Writing to a drive is a very intricate process and a costly one. Therefore the OS will batch commands like this in hopes of getting a bunch of them in at the same time. File writing is done via the standard library the OS provides.
-

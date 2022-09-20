@@ -27,7 +27,7 @@ def bisection(F, left, right):
     return _bisection(F, left, right, 0)
 
 #3\left(x+1\right)\left(x-1\right)\left(x-\frac{1}{2}\right)\left\{-1.25\le x\le2.5\right\}
-def poly(x):
+def poly2b(x):
     a = x + 1
     b = x - (1.0/2.0)
     c = x - 1
@@ -35,4 +35,4 @@ def poly(x):
     return 3 * a * b * c
 
 bounds = [-1.25, 2.5]
-p = bisection(poly, bounds[0], bounds[1])
+

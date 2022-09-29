@@ -62,6 +62,8 @@ Each app can implement any number of ULTs which are mapped to KLTs.
 
 ### Pros - KLT
 1. Schedule many threads from same process
+2. If one thread is blocked in a process we can schedule another thread from same process
+3. kernel routines can be MT
 
 ### Cons - KLT
 1. Time to CRUD threads due to kernel mode and management

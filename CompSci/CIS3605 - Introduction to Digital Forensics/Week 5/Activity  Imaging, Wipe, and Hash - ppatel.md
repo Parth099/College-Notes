@@ -19,9 +19,9 @@ parth@parth-HP-Laptop-15-dy1xxx:~/Desktop/3605-wipe-hash$ du -h Hard\ Drive\ B.0
 parth@parth-HP-Laptop-15-dy1xxx:~/Desktop/3605-wipe-hash$ mkdir ../3605-wipe-hash-out
 ```
 
-1. Create workspace and a file (was used for a homework)
-2. display size of said file (20k)
-3. generate output folder to store dc3dd output
+1. Create workspace and a file (was used for a prev homework)
+2. display size of said file
+3. generate output folder to store dc3dd output(s)
 
 ### Mount
 ```bash session

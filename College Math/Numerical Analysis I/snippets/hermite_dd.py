@@ -48,6 +48,6 @@ Q = hermite_dd(x, f, df)
 #print stuff 
 for row in Q:
     for element in row:
-            print("{:+12.6f}".format(element), end=' ')
+            print("{:+10.6f}".format(element), end=' ')
 
     print("")

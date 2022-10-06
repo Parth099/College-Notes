@@ -25,4 +25,4 @@ Rule 4: If it keeps using the CPU we demote it
 
 If it keeps going past its quantum we can increase it for its next run. This allows them to "find there level" where they willingly give up the CPU. 
 
-If we have too may interactive jobs, jobs in the lower queues are **unlikely** to run. This is known as starvation. The solution is to periodically boost jobs that aren't being scheduled. All modern OSs do this *boosting*. 
+If we have too may interactive jobs, jobs in the lower queues are **unlikely** to run. This is known as starvation. The solution is to periodically boost jobs that aren't being scheduled. All modern OSs do this, it is called *boosting*. 

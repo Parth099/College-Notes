@@ -30,6 +30,8 @@
 
 ![ULT](/img/ULT.png)
 
+**Note:** When a *process* is preempted by something like an internal clock that does not mean it is now *blocked*, it may be ready to run. 
+
 Notice in (b) the process is blocked. This is because a thread cannot it self commit IO tasks. It does IO tasks by using a library. Therefore the kernel sets the process's state to blocked when one of its threads calls for IO.  
 
 After the IO is done, **B** shifts back to complete and thus is *ready* to run on the CPU. The states of the threads are the same. 
@@ -48,6 +50,8 @@ Notice the overhead with Kernel `TRAP`s. You do not need to switch to kernel mod
 The kernel supports a small number of KLTs.
 Each app can implement any number of ULTs which are mapped to KLTs. 
 
+This means that the application many create $n$ threads which are mapped to $m$ kernel threads. (few ULT per KLT, see image below)
+
 ![hybrid_KLT_ULT](/img/hybrid_KLT_ULT.png)
 
 ## Pros/Cons
@@ -57,13 +61,13 @@ Each app can implement any number of ULTs which are mapped to KLTs.
 3. Customize scheduling
 
 ### Cons - ULT
-1. IO call from *any* thread will block process and block all threads
+1. IO call from *any* thread will block process and block **all** threads
 2. With **pure ULT** there is **no** real multiprocessing
 
 ### Pros - KLT
 1. Schedule many threads from same process
 2. If one thread is blocked in a process we can schedule another thread from same process
-3. kernel routines can be MT
+3. kernel routines can be multi-threaded
 
 ### Cons - KLT
-1. Time to CRUD threads due to kernel mode and management
+1. Time to CRUD threads due to kernel mode switch (user mode -> kernel mode) and management

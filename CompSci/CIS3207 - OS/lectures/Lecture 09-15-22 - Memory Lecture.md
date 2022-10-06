@@ -26,6 +26,7 @@ The primary computer memory that stores programs as they execute is “RAM” (i
 - data and instructions are both stored as binary digits in memory
 - instructions are fetched from memory one at a time and in order
 - processor decodes and executes each instruction before fetching next
+- cycle of fetching and executing continues until there are no more instructions left. 
 
 ## IO Activities
 
@@ -34,7 +35,7 @@ The primary computer memory that stores programs as they execute is “RAM” (i
 ### Memory Mapped IO (MMIO)
 Before it was programmed IO. Machine instructions to control devices (device registers, polling, ...).
 
-MMIO: Treating Device registers as locations in the machine's address space. 
+MMIO: Treating Device registers as locations in the machine's address space. This removes the need for specific device machine instructions.
 
 ![MMIO](/img/MMIO.png)
 

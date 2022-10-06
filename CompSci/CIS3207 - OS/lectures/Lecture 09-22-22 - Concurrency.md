@@ -47,7 +47,7 @@ For a web browser there can be a thread to:
 Multiple producer threads create data that is then handled by consumer threads
 
 ### Pipeline
-Task is divided into a series of subtasks where each subtasks are handled by the threads
+Task is divided into a series of subtasks where each subtask is handled by the threads
 
 ### Defer work with background thread
 One thread performs non-critical work in the background. 
@@ -76,7 +76,7 @@ int pthread_create(pthread_t *thread, pthread_attr_t *attr, void *(*start_routin
 ### Thread Code Life-cycle
 A thread has its own PC, Stack and Kernel Stack. It runs **independent** from the parent. 
 
-A parent will create the thread ans save its `thead_id`. Then the parent will wait for it to *join* and save the return value from the thread. The thread will return any type of datatype. It does so via the `pthread_exit(void *retval)`
+A parent will create the thread and save its `thead_id`. Then the parent will wait for it to *join* and save the return value from the thread. The thread will return any type of datatype. It does so via the `pthread_exit(void *retval)`
 
 ## Facts
 + OS maintains a collection of processes
@@ -119,7 +119,7 @@ The switch from Thread $A$ to $C$ is a **context-switch**.
 ### Multiple Execution History
 ![execution_history](/img/execution_history.png)
 
-This goes to show that not all interleaving combos are *safe*. You must be careful in the way memory is based shared as this is **not** in our control. The OS is really in-change of choosing which thread to run. 
+This goes to show that not all interleaving combos are *safe*. You must be careful in the way memory is based shared as this is **not** in our control. The OS is really in change of choosing which thread to run at any moment in time. 
 
 #### Variability of Execution History
 1. Size of Cache / Memory Speed (MHz)

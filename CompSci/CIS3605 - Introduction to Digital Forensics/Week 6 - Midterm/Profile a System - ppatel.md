@@ -134,3 +134,27 @@ sudo cat /var/log/syslog
 ```
 
 There are also application level logs contained here such as `mongodb` logs and login attempt logs which are **not** human readable.
+
+## System Profile
+### Generating a system profile
+I have done this assignment in a way where **minimal** GUI interaction is required. This is done to show that the process for generating a system profile can be automated (I assume it is this way in industry anyway).
+
+A simple `python` or `c` script can execute commands and write them to a file. The python script and utilize the `os` module while the `c` procedure can use the `system()` call to execute commands and open a file descriptor to write results.  
+
+### Data to include include in the chain of custody
+The chain of custody should logically contain elements that **uniquely** identity a machine. Here are some of these elements:
+1. Operating System, Kernel Version, and the processor architecture (`32bit` vs `64bit`)
+2. CPU data
+	+ Cache Sizes
+	+ Clock Speed
+	+ CPU Name and manufacturer 
+3. System Data
+	+ Ram Size
+	+ Drive data: Connected Drives (this information should be hashed like how it is on the real Chain of custody document)
+	+ file system type (HFS, FAT, exFAT, ...)
+4. Machine Identifiers
+	+ Machine Unique ID/Name
+	+ Disk identifiers
+	+ Mac Addresses of *all* network adapters
+
+These attributes can help us distinguish between devices generally and therefore can help us *sort* and *distinguish* between related evidence items. 

@@ -11,10 +11,7 @@ function S = cubicspline(x, y)
     for j = 1:dim-1
         h(j) = x(j+1) - x(j);
     end
-    
-    disp("H:");
-    disp(h);
-    
+   
     alp = zeros(dim, 1);
     
     %STEP 2
@@ -25,7 +22,6 @@ function S = cubicspline(x, y)
 
         alp(i) = p1 - p2;
     end
-
 
     %STEP 3
     l  = zeros(dim, 1);

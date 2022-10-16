@@ -135,5 +135,5 @@ Each of the extracted types (except `fws`) was able to be checked. I found that 
 | `.fws`         | $\text{46 57 53}$                                   |
 
 
-[^1]: Footer (trailer) varies, this is why it has more than one entry. Also, If we convert hex to text: $\text{25 50 44 46}\to\text{\% P D F}$
+[^1]: Footer (trailer) varies, this is why it has more than one entry. Also, If we convert hex to text: $\text{25 50 44 46}$ is `% P D F`
 [^2]: This is just *one* signature. Other signatures did not produce any results. 

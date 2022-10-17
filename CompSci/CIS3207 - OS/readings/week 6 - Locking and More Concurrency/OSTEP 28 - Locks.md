@@ -171,8 +171,27 @@ void lock(lock_t* L){
 
 A call to `yield()` will move a thread from a **running** state to **ready**. Yielding is still in terms of CPU context switching overheads. Consider 100 threads trying to acquire a lock while one of them has it. When the one that has it is preempted, the 99 will be switched on[^6] but they will just yield since they cant really run. 
 
-### Addressing Fairness
-PAGE 15/20...
+### Addressing Fairness - Using Queues
+Our previous implementations leave everything up to the scheduler as the scheduler may put on a thread that will just spin. 
+
+We will use two syscalls here:
+1. `park()` - put a thread to sleep
+2. `unpark(T_ID)` - wake up thread based on its ID
+
+Each thread that wanted the lock is put on a queue and woken up based on availability **and** not woken up before hand.  This idea is more complicated but is not covered in this class.
+
+#### Priority Inversion
+Consider the following threads using **spin-locks**:
+
+1. T1 - Low Priority
+	+ Given its **low priority** T2 will always run over T1
+2. T2 - High Priority
+
+If T2 is ever blocked (maybe IO related) T1 will run. If T1 obtains the lock and some time later T2 is unlocked the system will freeze. Since T1 will be descheduled now that T2 is done, T2 will never be able to obtain the lock. 
+
+To solve this a "knowing OS" can boost lower priority thread to overcome this *inversion*.
+
+
 
 [^1]: A thread is known as the **owner** of a lock *if* is holds the lock currently. 
 [^2]: Critical Section

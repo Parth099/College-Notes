@@ -149,8 +149,47 @@ Both C2 and P are sleeping on the same `cond_t cond`. Suppose C2 wakes up. It wi
 
 We now learn that only opposite types should be able to wake each other up. 
 
-//page 12/19
+### The Single Buffer Producer/Consumer Solution
+We need to use two condition variables that are meant to signal producers and consumers separately. 
+
+Here is how we can solve the issue:
+```c
+mutex_t mutex;
+cond_t empty, fill;
+
+void* producer(void* arg){
+	int i;
+	for(i = 0; i < loops; i++){
+		pthread_mutex_lock(mutex);
+		while(count == MAX) { pthread_cond_wait(&empty, &mutex); }
+		
+		put(i);
+		pthread_cond_signal(&fill); //wake up A consumer from queue
+		pthead_mutex_unlock(&mutex);
+	}
+}
+
+void* consumer(void* arg){
+	int i;
+	for(i = 0; i < loops; i++){
+		pthread_mutex_lock(mutex);
+		while(count == 0) { pthread_cond_wait(&fill, &mutex); }
+		
+		int item = get();
+		pthread_cond_signal(&empty); //wake up A producer from queue
+		pthead_mutex_unlock(&mutex);
+	}
+}
+```
+
+Spurious wakeups - When a signal causes two threads to wake up.
+
+## Extra: Covering Condition
+Consider a multithreaded library that allocates and frees memory. 
+
+Say that currently 0 bytes are free. T2 wants 100 bytes, T3 wants 10 and T4 just freed 20 bytes. We don't know the correct thread to wake up when T4 calls `free` since two threads both want memory. Well we know the correct thread is T3 but the scheduler may not wake up this thread.  The solution is when `free` is called, use `pthread_cond_broadcast()` over `pthread_cond_signal()` to wake up everyone.[^4]
 
 [^1]: [[OSTEP 28 - Locks]]
 [^2]: After changes be sure you unlock the variable to allow access for other threads.
 [^3]: C2 can run because we have no idea what the scheduler will schedule.
+[^4]: This is quite wasteful but required since we might wake up threads that do not meet the condition criterion.

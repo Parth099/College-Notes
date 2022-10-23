@@ -42,6 +42,8 @@ v(b_semaphore)
 	+ When released waiter finished monitor procedure; processor/lock is given back to signaler
 	+ nested signals possible	
 
+From OSTEP, we know that the Hoare Implementation says that threads should only be woken up if they are ready to run. This is why on a signal, a waiter runs **immediately**. 
+
 ### Hoare Implementation
 We have been talking about the Mesa implementation for the past few weeks. 
 

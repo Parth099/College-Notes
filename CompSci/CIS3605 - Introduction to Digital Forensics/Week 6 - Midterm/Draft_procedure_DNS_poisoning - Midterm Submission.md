@@ -22,6 +22,8 @@ If a falsified site is reported an investigator can look over the certificate of
 
 Moreover an investigator can check if this was an *isolated* incident by cleaning internal DNS caches 
 
+Note: More savvy employees may report websites they use every day no longer having a 'locked' icon on them next to their name. This is due to the websites not having a certificate. This can be a result of tampering but it may happen for non-harmful reasons. Nonetheless, it is a good idea to validate the certificate by looking at which authority issued it and when. 
+
 ## Detection 
 The first step in detection is finding illegitimate DNS records. This means that one of the chains the DNS resolution process is infected. If a company owns their DNS servers they can check records to see if there are any records they did not place. If they do not they can see if the owner of the nameserver can help with the task. 
 
@@ -44,6 +46,9 @@ Displays the ownership of a URL. If there are redirects this can be used to rule
 ### `nslookup`
 This command is the trivial case to check for a DNS poisoning attack. It will allow an investigator to query DNS records for a given domain name and view all the DNS records for a website. 
 
+### `traceroute`
+While this one is not as useful as the other commands, `traceroute` can help show the journey a packet will take to get to the destination it needs to get to. On this path you may be able to see autonomous system numbers. An investigator can cross check these ASNs to see the owners of the machines their packets are running through.   
+
 ## Mitigation
 According to [mitre](http://attack.mitre.org/techniques/T1584/002/) there is no mitigation since a lot of companies do not have **full** access to their DNS servers. Potential mitigation is owning your own DNS server to perform regular authenticity checks.
 
@@ -51,10 +56,10 @@ Another potential mitigation is making the Time-to-live of DNS records shorter s
 
 It is also helpful to understand how DNS works to create Mitigation strategies. On the client side a DNS resolver is the tool that queries (iterative or recursive) other servers to collect DNS data about a requested site that is **not** in the cache[^1]. A company should shut off any unnecessary resolvers in order to decrease the chance of one being intercepted. 
 
-If possible companies should utilize *DNSSRC*(DNS Security Extensions) which signs off on communication making it more secure[^2] but not impossible to break[^3]. 
-
 ## Eradication
-Subsequent to a poisoning attack an company could repopulate their DNS records whilst removing any false records. Each machine owned by the company will need to have their DNS cache emptied to no longer used to the cached record for the site they were trying to access. 
+Subsequent to a poisoning attack an company could repopulate their DNS records whilst removing any false records. Each machine owned by the company will need to have their DNS cache emptied to full remove falsified cache records. 
+
+If possible companies should utilize *DNSSRC*(DNS Security Extensions) which signs off on communication making it more secure[^2] but not impossible to break[^3]. 
 
 
 [^1]: https://www.computerhope.com/jargon/d/dns-resolver.htm#why-necessary

@@ -12,7 +12,7 @@ The OS controls Interrupt Servicing Priority at programmable levels in the CPU.
 
 Interrupts are acknowledged by priority level relative to the CPU. The CPU has a floating number to determine which level to service; **sync** interrupts are serviced *first*. 
 
-If Multiple Devices at the same Priority Level Request Service, the Device Closest to the CPU is Serviced
+If Multiple Devices at the same Priority Level Request Service, the Device Closest to the CPU is Serviced. ("Daisy Chaining" from Lecture 09-06-22)
 
 ## Kernel vs. User Mode
 - Places limits on accessible memory for non-kernel code.
@@ -27,15 +27,16 @@ If Multiple Devices at the same Priority Level Request Service, the Device Close
 + `RTT/RTI`
 	+ Resume suspended process
 + Context switch
-	+ run a different process which is not the same as the one that was paused
+	+ run a different process which is not the same as the one that was paused (Resume some other process)
 
 #### User Mode to Kernel Mode
-+ interrupt from a user process
++ interrupt from a user process (or outside the CPU like a device depending on priority)
 
 ### Privileged instructions
 These can be anything that could interfere with the kernel's function and management.
-+ Change PSW register
-+ Access memory outside allocated bounds
++ Change PSW register state
++ Access memory outside allocated bounds 
+	+ See [[Lecture 10-20-22 - Memory]] for a talk about bounds in memory
 + Send IO commands
 + Jump directly to kernel without a secure method
 

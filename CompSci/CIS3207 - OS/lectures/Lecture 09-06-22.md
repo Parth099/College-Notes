@@ -46,6 +46,7 @@ The interrupt vector area is created on boot by the OS scanning devices. For eac
 
 Approaches:
 1. Disable interrupts while we are handling interrupts
+	+ This leads to missed interrupts which can have fatal effects on the system (think about a missed disk interrupt)
 2. use a priority scheme
 	+ process the interrupts of more *important* devices first.
 	+ Allow 'nesting' of interrupt servicing.
@@ -58,7 +59,7 @@ Approaches:
 ### Nested Servicing
 ![nested_interrupt_handling](/img/nested_interrupt_handling.png)
 
-**Note**: We do not lose anything since we use a *kernel* stack to save data for processes. 
+**Note**: We do not lose anything since we use a *kernel* stack to save data for processes. When a ISR completes we can pop off the stack to restore the last ISR on the CPU and continue. 
 
 
 ## PSW - Processor Status Word 

@@ -15,7 +15,7 @@
 
 We have already talked about virtual memory and virtual addressing (Logical vs Physical Memory). 
 
-As a process executes, the virtual addresses it operates with **must** be mapped to physical (real) addresses. This process is trivial if the physical addresses are mapped contiguously. If it is fragmented it will take a little bit longer.
+As a process executes, the virtual addresses it operates with **must** be mapped to physical (real) addresses. This process is trivial if the physical addresses are mapped contiguously. If it is fragmented it will take a little bit longer with a different process.
 
 This translation is the job of the **MMU**: *Memory Management Unit*.
 ![mmu.png](/img/mmu.png)
@@ -48,4 +48,4 @@ The address space is not the same as memory, it is all the addressable space by 
 
 CPU tells the disk to transfer some $X$ bytes to another disk. It will simply tell the disk to do it and leave after that. The disk will **complete** the task while communicating with each other. In this instance the CPU can go work on another tasks while the disks can do data transfer. 
 
-'Bus-stealing' effects: Notice in the image above that while the disks are using the BUS the CPU cannot fetch from it. This is why caches are so important on the CPU itself, it will not need to use the bus to fetch from it. 
+'Bus-stealing' effects: Notice in the image above that while the disks are using the BUS the CPU cannot fetch from it. This is why caches are so important on the CPU itself, no bus is required to CPU fetch from caches.   

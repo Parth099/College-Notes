@@ -11,12 +11,12 @@ The OS has the following responsibility.
 
 ### Program Behavior
 A program alternates between two states. 
-1. INPUT
+1. IO (Input/Output)
 2. COMPUTING
 
 During an IO phase of a program the CPU is idle. This is an area of improvement. Parallelization can improve the overall performance of all the apps. The OS strives to keep all of its resources utilized by **overlapping independent operations when possible**. 
 
-### MultiProgramming
+### Multi-Programming
 #### Sequential
 Technique that keeps saved programs in memory and switches between them. This style of programming runs a program from start to finish before starting a new one. 
 

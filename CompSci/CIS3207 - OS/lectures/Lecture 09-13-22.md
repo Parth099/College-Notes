@@ -47,12 +47,11 @@ If we do not read the status,
 		+ initialize stack with args: `argv, argc`
 	+ Allocate Heap
 		+ used for dynamically allocated data
-		+ Ex: `malloc`, `free`
+		+ Ex: `alloc`-family, `free`
 	+ IO Setup
-		+ Each process by default has three open file descriptors
-		+ stdio, stdout, error
-	+ **START** the program via an entry point like `main`
-		+ transfers control of the program to the CPU
+		+ Each process by default has three open file descriptors: stdio, stdout, error
+	+ **START** the program by jumping to an entry point like `main`
+		+ transfers control of the program to the CPU *or* is put on the *ready* queue.
 + Destroy
 	+ `kill`
 + Wait
@@ -72,8 +71,8 @@ If we fork and exec we notice that the PCB is already set up by the parent which
 
 We can apply `wait()` on a `exec()` child (see slides for 9/13/22) and the parent will **wait** for the `exec`ed program to finish. 
 
-## Using `exec`
-1. Use one source ode that includes the code for each process
+## Using `exec` and its Programming Paradigms
+1. Use one source code that includes the code for each process (parent & child)
 
 ```c
 int main(...){

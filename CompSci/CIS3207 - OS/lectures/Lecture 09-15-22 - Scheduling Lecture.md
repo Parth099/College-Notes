@@ -36,7 +36,7 @@ When the event occurs that will **un**block a suspended process, it will be swap
 Workload - set of job descriptions (arrival time, runtime)
 Job - View as current CPU burst of a process 
 Scheduler - logic (policies) that decides which ready job to run
-Metric - measurement of scheduling quality
+Metric - a measurement dimension of scheduling quality
 
 
 ### Metrics
@@ -48,5 +48,7 @@ Metric - measurement of scheduling quality
 	+ `Initial_schedule_time – arrival_time`
 3. Minimize waiting time
 	+ minimize waiting time in the *Ready*
-4. Maximize throughput, resource utilization, CPU fairness
+4. Maximize throughput, resource utilization[^1], CPU fairness
 5. Minimize Overhead (EX: context switching, ...)
+
+[^1]: keeping expensive devices busy

@@ -2,7 +2,7 @@
 ## Process scheduling
 **Process scheduling**: Choosing which process(es) to be *running*
 
-Modern OSs are preemptive multitasking OSs. This means that they run many tasks at the same time but the share of the CPU time each process gets is controlled by the OS kernel process scheduler. The kernel determines the rules regarding CPU and process use.  
+Modern OSs are preemptive[^1] multitasking OSs. This means that they run many tasks at the same time but the share of the CPU time each process gets is controlled by the OS kernel process scheduler. The kernel determines the rules regarding CPU and process use.  
 
 
 ## More Process States
@@ -76,7 +76,7 @@ They are all share the same hardware mechanism
 2. Facility to direct an interrupt to its pre-specified handler
 3. Mechanism to save critical CPU state
 4. Mechanism to set kernel mode CPU state
-5. `return-from [Interrupt]` mechanism to return to calling program and user mode
+5. `return-from-interrupt` mechanism to return to calling program and user mode
 
 ## Interrupts
 Classes of Interrupts:
@@ -89,13 +89,20 @@ Classes of Interrupts:
 	+ "event driven"
 4. Hardware failure
 
-### Programmed IO
+### Motivation for Interrupts - Programmed IO
 Instead of interrupts as periodically ask if the device if the operation is completed. This is done via its electronic interface of the device which contain registers. These registers contain information about the IO device like bits/flags which allow us to know if our operation has been completed. Notice that asking for status (AKA busy waiting) is quite wasteful. 
+
+```c
+//example of busy wait
+while(DISK0.done_write != 1){
+	sleep(X);
+}
+```
 
 ### Interrupt control
 ![no_interrupt](/img/no_interrupt.png)
 
-This image displays the concept of "busy waiting". Notice that each *write* requires waiting for its completion. 
+This image displays the concept of "busy waiting". Notice that each *write* requires waiting for its completion. (Arrow only moves to next task once IO is complete)
 
 ![yes_interrupt](/img/yes_interrupt.png)
 
@@ -105,6 +112,8 @@ This images displays the concept of using interrupts. Notice that we do not wait
 
 **Notice** the time saved using *interrupts*. 
 
-Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another process can complete. 
+Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another process can complete. This *next* process may be interrupted however we are not doing "nothing" while the writes are active. 
 
 Cont: [[Lecture 09-06-22]]
+
+[^1]: OS has the power to take the CPU away from a process (deschedule) 

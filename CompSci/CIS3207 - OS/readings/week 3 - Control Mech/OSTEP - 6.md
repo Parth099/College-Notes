@@ -52,6 +52,9 @@ Note this time can be paused for a privileged operation.
 
 The hardware has some responsibility when an interrupt occurs, it has the job of saving some state of the program so that a interrupt can be handled and the program can resume.
 
+It is important to know that a preemptive scheduling algorithm makes a scheduling decision to choose a process for the CPU whenever a new process arrives in the Ready queue. This is because a new process may have higher priority than the currently running process and thus could preempt the current process.
+
+
 ### Saving and restoring context
 Assume that the OS has gained control it now must decide which process to run now. This decision is made by the schedule. If a **different** process needs to run a **context-switch** needs to made, it is low level code. The CPU context is restored on to the CPU (maybe from the kernel stack). However before the state is restored the context from the previous process is saved. Thus, when the `return-from-trap` instruction is executed the correct chosen process can run. 
 

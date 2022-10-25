@@ -43,7 +43,7 @@ After the IO is done, **B** shifts back to complete and thus is *ready* to run o
 + Kernel provides CRUD for threads
 + Thread Switching is done by Kernel too
 
-Notice the overhead with Kernel `TRAP`s. You do not need to switch to kernel mode. 
+Notice the overhead with Kernel `TRAP`s. You do not need to switch to kernel mode to swap threads in ULTs. 
 
 
 ## Combined Approach
@@ -56,18 +56,19 @@ This means that the application many create $n$ threads which are mapped to $m$ 
 
 ## Pros/Cons
 ### Pros - ULT
-1. no switching overhead 
+1. no switching overhead (switch to `kernel-mode`)
 2. OS agnostic
-3. Customize scheduling
+3. Customize scheduling to an application *if* needed.
 
 ### Cons - ULT
 1. IO call from *any* thread will block process and block **all** threads
-2. With **pure ULT** there is **no** real multiprocessing
+2. With **pure ULT** there is **no** real multiprocessing since a single thread being blocked blocks the process blocking the entire thread space.
 
 ### Pros - KLT
-1. Schedule many threads from same process
+1. Schedule many threads from same process on many processors
 2. If one thread is blocked in a process we can schedule another thread from same process
-3. kernel routines can be multi-threaded
+3. kernel routines can be multi-threaded (run many ISRs at once!)
 
 ### Cons - KLT
 1. Time to CRUD threads due to kernel mode switch (user mode -> kernel mode) and management
+2. Just overall more resources for the kernel to manage. 

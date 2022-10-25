@@ -144,4 +144,4 @@ When we step back into thread 2 and set ready to be 1 we signal the other thread
 
 
 
-[^1]: This is why it needs access to the mutex. Imagine if it did not, it would wait for a condition to change where the variable could never change since it would **always** be locked. 
+[^1]: This is why it needs access to the mutex. Imagine if it did not, it would wait for a condition to change where the variable could never change since it would **always** be locked. The `wait()` function unlocks the mutex and then waits. When a signal is received, it will return from the wait after acquiring the lock *again*.  

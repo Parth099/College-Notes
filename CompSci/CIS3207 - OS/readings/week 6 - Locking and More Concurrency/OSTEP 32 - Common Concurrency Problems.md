@@ -34,8 +34,6 @@ The issue is that the `if` statement and the correspond write operation can be i
 
 ### Order-Violation
 
-***Definition***: ""
-
 Example from OSTEP:
 ```c
 //Thread 1:

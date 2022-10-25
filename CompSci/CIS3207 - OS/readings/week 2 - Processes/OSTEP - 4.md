@@ -9,7 +9,7 @@ It is usually the case we want to run $\gt 1$ programs simultaneously. However, 
 
 Running many processes is what it means to **virtualize** the CPU. One way to do it is with time sharing, defined in [[Lecture 08-25-22]]. The downside is that the slower the system is, the more processes exist. 
 
-> 📖 **mechanism**: A mechanism is a low-level method that implements a needed piece of functionality. An example of a mechanism is the time-sharing mechanism; most modern OSs employ it. 
+> 📖 **mechanism**: A mechanism is a low-level method that implements a needed piece of functionality. An example of a mechanism is the time-sharing mechanism (context-switch); most modern OSs employ it. 
 
 > 📖 **Policy**: A policy is a method of high-level intelligence. Policies are algorithms that help make decisions in the OS. An example of this is a scheduling policy. This policy allows the OS to choose what program to run at what time based on program history (who ran last?).
 

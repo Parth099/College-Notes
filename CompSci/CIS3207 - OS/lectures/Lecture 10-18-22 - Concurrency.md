@@ -49,7 +49,7 @@ We have been talking about the Mesa implementation for the past few weeks.
 
 ![Hoare_Implementation](/img/Hoare_Implementation.png)
 
-A thread will leave the *urgent queue* when the waiter gives up the processor. It is called an **urgent queue** because threads from that queue are switched on first since they were **already** in the critical section.
+A thread will leave the *urgent queue* when the waiter gives up the processor. It is called an **urgent queue** because threads from that queue are switched on first since they were **already** in the critical section. They are already in the CS they are the ones that gave up the CPU in the first place under the Hoare Implementation.
 
 Implementing Urgent Queue
 ```c

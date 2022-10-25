@@ -18,7 +18,7 @@ Threads also change how the stack of the program is laid out. **There is a stack
 The fact that threads **share** an address space and process **do not**, make (1) and (2) easier to accomplish with threads. 
 
 ## Thread Creation
-Much like processes to predict *when* a thread will be ran. 
+Much like processes it is impossible to predict *when* a thread will be ran. 
 
 Creation:
 ```c

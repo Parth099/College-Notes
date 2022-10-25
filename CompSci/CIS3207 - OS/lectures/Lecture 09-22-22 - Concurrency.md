@@ -73,6 +73,8 @@ int pthread_create(pthread_t *thread, pthread_attr_t *attr, void *(*start_routin
 
 \*thread, is a reference to a `pthread_t` type object (an unsigned integer that is `typedef` as the data type `pthread_t`)
 
+The second argument, indicated as attr, references a dynamically allocated attribute structure (see /usr/include/bits/pthreadtypes.h)
+
 ### Thread Code Life-cycle
 A thread has its own PC, Stack and Kernel Stack. It runs **independent** from the parent. 
 
@@ -93,6 +95,8 @@ A parent will create the thread and save its `thead_id`. Then the parent will wa
 ### Process Vs. Threads
 A process **owns** resources whereas a thread regards to scheduling/execution. A thread cannot own resources but has state instead of resources. 
 
+A thread is a single execution sequence that represents a  separately schedulable task (this task is driven by the Program Counter).
+
 Multithreading is the ability of an OS to support multiple concurrent paths of execution within a single process.
 
 **Important**: Notice that we no longer require a context-switch if we are switching between threads of the *same process*. Thread switching is less costly then process switching. 
@@ -103,7 +107,7 @@ Multithreading is the ability of an OS to support multiple concurrent paths of e
 
 ![TCB](/img/TCB.png)
 
-Notice the TCP has CPU state (registers, PSW).
+Notice the TCB has CPU state (registers, PSW) and lives in the PCB. 
 
 ## Actions
 + Suspending a process suspends all threads
@@ -127,4 +131,5 @@ This goes to show that not all interleaving combos are *safe*. You must be caref
 2. Frequency of preemption by scheduler
 3. Number of Physical Processors
 
-> We must control interleaving through explicit synchronization
+> We must control interleaving through explicit synchronization which is covered in the later chapters
+

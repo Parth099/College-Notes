@@ -52,6 +52,7 @@ Since $d < \log_b{a} = \log_2 5 \approx 2.3219, T\in \Theta(n^{\log_25})$
 
 ## 2.4.b
 Subtract and conquer
+
 $$
 \begin{align}
 a &= 2 \\
@@ -64,6 +65,7 @@ Since $a > 1,\ T\in \Theta(n^{d}a^{n/b}) = \Theta(2^{n})$
 
 ## 2.4.c
 divide and conquer
+
 $$
 \begin{align}
 a &= 9 \\

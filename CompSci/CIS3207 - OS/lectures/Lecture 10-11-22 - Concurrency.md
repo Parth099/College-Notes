@@ -132,7 +132,7 @@ Setup:
 
 Critical Conditions (points of synchronization)
 1. Full Buffer
-	+ Producer has to sleep[^2] and not producer
+	+ Producer has to sleep[^2] and not produce
 2. Empty Buffer
 	+ Consumer should sleep[^2] if buffer empty 
 

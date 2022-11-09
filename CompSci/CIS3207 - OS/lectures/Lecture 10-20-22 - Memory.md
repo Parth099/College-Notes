@@ -50,14 +50,14 @@ With the modern implementation we **do not** change memory locations within the 
 **Relocation Register** (Base Register)
 ![reloc_register](/img/reloc_register.png)
 
-Each time the program references main memory this addition is used to find the *real* location in **physical memory**.
+Each time a program references some address $A$ a constant number $C$ is added from the base register to get the virtual to the physical address. With $L$ being the limit (see below), $A + C \lt L$ .
 
 There also exists a limit register, it will check if the memory location we are trying to access is out of the range of accessible memory for the program.
 
 **Relocation Flag**
 ![reloc_flag_rr](/img/reloc_flag_rr.png)
 
-The graphic on the right shows relocation and fragmentation for the program as it splits up its memory components:
+The graphic on the right shows relocation and fragmentation for the program as it splits up its memory components[^3]:
 1. Code
 2. Static Data
 3. Dynamic Data
@@ -78,12 +78,15 @@ The image does a good service to showing the issue here. We see that $\text{Proc
 
 The 'solution' here is to **reallocate** the processes to create a hole for $X$ to be in. The 'solution' does not really work since the overhead for relocating entire process has **high overhead**.
 
+> While the OS moves process it does no *work*.
+
+**NOTE**: Think about what happens if we need to relocate programs to fill a *hole* while they are completing some IO. 
 
 ## Methods of Flexible Address Translation
 1. Base and Limit (current)
 2. Paging
 3. Segmentation
-4. Multilevel Translation
+4. Multi-level Translation (Paging or Paging W/ Segmentation)
 
 We will also look at Efficient Address Translation hardware like TLBs (Translation Lookaside Buffers). 
 
@@ -91,3 +94,4 @@ Seeing what we saw in "Base and Limit Issues", we will attempt to make programs 
 
 [^1]: In lecture, we are calling this locality.
 [^2]: In the image above, the memory is both DRAM and main memory
+[^3]: Segmentation

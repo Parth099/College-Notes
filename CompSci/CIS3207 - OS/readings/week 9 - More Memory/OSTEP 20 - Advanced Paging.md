@@ -62,7 +62,7 @@ The MLPT is more sparse since it only allocates space for the page table relativ
 
 **Disadvantage** - Space-Time Trade Off:
 
-Given a TLB miss we will have to incur more memory address. Lastly, the MLPT is a lot more complex to implement. 
+Given a TLB miss we will have to incur more memory accesses. Lastly, the MLPT is a lot more complex to implement. 
 
 ### Example
 Lets consider a $16$ KB address space with $64$ byte pages. This is 256 frames in physical memory. 
@@ -119,14 +119,14 @@ The SHIFT is due to the fact that the PFN is a **page** number. For example if t
 ### Example Cont. 
 ![trans_MLPT](/img/trans_MLPT.png)
 
-> While not shown in the image, there are 16 PDEs. There are not numbered. Notice the first PDE contains the code and stack while the last PDE contains the Heap. 
+> While not shown in the image, there are 16 PDEs. There are not numbered. Notice the first PDE contains the code and stack while the last PDE contains the Heap.
 
 Notice that instead of allocating **16** page table pages (256 entries) we only needed 3. 
 
 ## **MULTI-MULTI-LEVEL** Paging and the TLB
 There exists a deeper nesting such as a three-level paging however the concept is the same. 
 
-The TLB works the same here. If it has the entry it is used if not it is found via a trap and loaded onto the TLB.
+The TLB works the same here. If it has the entry it is used if not it is found via a trap and loaded onto the TLB. Given an address of `<p1, p2, OFFSET>` it will map upper level bits `p1, p2 -> PFN`.
 
 ## Inverted Page Tables
 In this scheme we keep **ONE PAGE TABLE** representative of all the process on memory. 
@@ -138,6 +138,9 @@ $$
 $$
 
 The length of this table is the number of frames possible. 
+
+The downside to an IPT is the access time as each entry has to be checked to find a valid `PID, VPN` pair. A hash function can solve this issue. 
+
 
 [^1]: See [[OSTEP 18 - Paging]] to see why
 [^2]: This size does not count for any extra bits in the PTE. 

@@ -18,7 +18,7 @@ In this scheme hardware changes a virtual address[^3] to a physical address[^4].
 
 The process however thinks it **owns** the 16KB and starts its address space at 0. 
 
-The space it is wasting inside is called internal fragmentation. 
+The space it is wasting inside its address space is called internal fragmentation. 
 
 ### Dynamic (Hardware Based) Relocation
 
@@ -32,7 +32,7 @@ This allows us to place a process anywhere in memory and give it the illusion th
 
 When an instruction is fetched, the translation is in the form:
 ```c
-PHYSICAL_ADDR = VIRT_ADDR + base
+PHYSICAL_ADDR = VIRT_ADDR + base //iff VIRT_ADDR + base < LIMIT
 ```
 
 If an instruction asks to fetch at byte 128 and has a base of $32KB$ we are really fetching at 32896. The limit register helps keep a *bound* on the accessible memory by the program. If a program access memory outside of its *limit*, a CPU exception[^5] is raised.  
@@ -43,11 +43,11 @@ These registers are one per chip, they are often called the Memory Management Un
 
 Notice the instructions to modify the base/limit registers **must** be privileged[^6]. Moreover we need the CPU to be able to throw exception on a memory violation as well as an exception handler. 
 
-## Operating System Issues for Base/Bound AT
+## Operating System Issues for Base/Bound Address Translation
 
 1. The OS must find an free slot to give to a process. This is obtained through the OS's free list data structure. 
 2. The OS must also do the clean up when a process is terminated. 
-3. The base and bound registers **must** be maintained upon a context switch. Thus, the registers must be saved in some PCB. 
+3. The base and bound registers **must** be maintained upon a context switch. Thus, the registers must be saved in some PCB.
 4. OS must provide ISRs[^7] for CPU memory violation exceptions
 	+ The most likely policy is termination of offender program.
 

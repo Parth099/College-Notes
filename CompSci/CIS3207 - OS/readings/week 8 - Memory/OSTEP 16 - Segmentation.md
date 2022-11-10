@@ -52,7 +52,7 @@ This is the number we add to the base to get to the correct location.
 **Why do we do this?**
 
 ![seg_reloc](/img/seg_reloc.png)
-Look at this image and see the bottom of the stack is at $28$ KB. This means the segment that stack is on ranges from $24 \to 28$ KB. When we request an address of $15$ KB. It should be $1$ KB above the bottom of the stack much like how $15$ KB is one KB above $16$ KB.
+Look at this image and see the bottom of the stack is at $28$ KB. This means the segment that stack is on ranges from $24$ KB to $28$ KB. When we request an address of $15$ KB. It should be $1$ KB above the bottom of the stack much like how $15$ KB is one KB above $16$ KB.
 
 If we remove the top two bits we see that the rest of addressing bits can address a $4$ KB space. **Recall** we are asking for $15$ KB. This means in the 4th $4$ KB segment, we are asking for $3$ KB. This means we must travel $3$ KB down from the start of the stack **segment**[^4]. *Or* we can travel up $4 - 3$ KB from the bottom (base). 
 

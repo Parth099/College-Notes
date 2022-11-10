@@ -34,6 +34,8 @@ $$
 
 When a context switch is performed this data must be changed. 
 
+> We can think of a page table as a *one-to-one* mapping of pages to frames where each page **must** have a frame mapping yet a frame need not map back to a page (not *onto*).
+
 ### Example
 Consider a $64$ B process address space with $16$ B sized system pages. 
 
@@ -48,7 +50,7 @@ $$
 **VPN** - Virtual Page number
 **PFN** - Physical Frame number[^4]
 
-It should be evident that $\text{VPN}\neq\text{PFN}$
+It should be evident that $\text{VPN}\neq\text{PFN}$ all the time. 
 
 Anyways, now that we have our VPN and OFFSET we can find the physical address:
 
@@ -63,21 +65,21 @@ Consider a $32$ bit address space where page sizes are $4$ KB.
 
 > In a 32-bit system the total available virtual address space is $2^{32}$ **BYTES**. Instead of address each bit most modern systems address *bytes*. 
 
-In this scheme, there will be a $20$ bit VPN[^6] and $12$ bits OFFSET. A 20 bit VPN means there are $2^{20}\approx10^6$ pages the OS has to keep track of **for each process**[^7]. If we assume each page table resides in main memory and holds nothing else of value we can assume that each entry is $4$ bytes since it holds a $32$ bit address. Since each process holds a million of these, that is $4$ MB / process for the process table. This adds up on any modern system running 1000s of processes. 
+In this scheme, there will be a $20$ bit VPN[^6] and $12$ bits OFFSET. A 20 bit VPN means there are $2^{20}\approx10^6$ pages the OS has to keep track of **for each process**[^7]. If we assume each page table resides in main memory and holds nothing else of value but the frame number mapping we can assume that each entry is $4$ bytes since it holds a $32$ bit address. Since each process holds a million of these, that is $4$ MB per process for **each** process running. This adds up on any modern system running 1000s of processes. 
 
-## Information in a Page Table and PTEs
+## Information in a Page Table and PTEs (Page Table Entries)
 
 > The page table is a data structure that maps virtual address to physical ones
 
 The simplest page data structure is a linear page table which is just an *array*. This the the abstraction for the page table we will use until subsequent readings. 
 
 ### Parts of a PTE - Page Table Entry
-A **valid** but is used to *remember* if a process is *allowed* to access a page. Virtualized, a process will have empty space between the stack and the heap. In reality this space doesn't really exist however when the address to this 'empty' space is translated it points to a page that is not valid since the stack nor the heap have been extended their allocated page(s). In other words the process's page table has not marked this space is valid since we have not needed it yet. 
+A **valid** bit is used to *remember* if a process is *allowed* to access a page[^8]. Virtualized, a process will have empty space between the stack and the heap. In reality this space doesn't really exist however, when the address to this 'empty' space is translated, it points to a page that is not valid since the stack nor the heap have been extended their allocated page(s). In other words the process's page table has not marked this space is valid since we have not needed it yet. 
 
 The valid bit is **crucial** when the address space is sparse simply by marking **all** unused pages are invalid. 
 
 
-Much like [[OSTEP 16 - Segmentation]] **Protection bits** allot each page RWX[^8] permissions. 
+Much like [[OSTEP 16 - Segmentation]] **Protection bits** allot each page RWX[^9] permissions. 
 
 + **Present bit** - The `isSwapped` bit. 
 + **Reference bit** - track whether a page has been accessed
@@ -99,6 +101,7 @@ This is likely to slow down the program by a factor or two or more due to the tw
 [^3]: 64 divide by 16
 [^4]: AKA: **PPN** - Physical Page number
 [^5]: For now we will assume it is contiguous
-[^6]: $2^{32}$ addressable bits with each page being 4096 bits -> $2^{20}$ pages
+[^6]: $2^{32}$ addressable bytes with each page being 4096 bytes -> $2^{20}$ pages
 [^7]: This was a bit confusing for me but we are only using this naive approach to show how to improve paging later. Each process has a full sized page table. Thanks TA Alex! Also notice each process needs a translation where the key (VPN) is non unique. For example Process A may map page 0 to frame 2 whereas a Process B may map page 0 to frame 6. Since the keys are non-unique we require a page table per process. 
-[^8]: Read, Write, Execute
+[^8]: We will ignore the *loading* of a page for now. Assume all pages are loaded onto memory when the process is ready
+[^9]: Read, Write, Execute

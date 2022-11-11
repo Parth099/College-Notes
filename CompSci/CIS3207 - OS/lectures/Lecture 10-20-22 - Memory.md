@@ -37,6 +37,8 @@ Notice all the memory addresses start at 0.
 
 The linker will produce an image but it will have addresses ranging from $0$ to the max size of our program $M$ .
 
+> Under dynamic linking, a module is loaded only when a process actually calls the module.
+
 ### Runtime of this Program
 Notice the third graphic when loaded into memory will not work. For example, the `st 120` will not work since we can't be sure we own that area in memory. 
 

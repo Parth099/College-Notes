@@ -53,3 +53,6 @@ Therefore when we search for it on windows, it knows where it is and can launch 
 
 Here is what the IDLE looks like if you are curious:
 ![w10_forensic_d4](./img/w10_forensic_d4.png)
+
+## Sample Python Registry Structure
+![w10_forensic_d5](./img/w10_forensic_d5.png)

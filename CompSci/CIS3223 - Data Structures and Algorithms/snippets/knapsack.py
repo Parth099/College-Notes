@@ -37,12 +37,23 @@ def knapsack_dp(W, V, Weight_limit):
             else: # if it can see whats bigger (include vs not include)
                 dp[obj][w] = max(dp[obj - 1][w], dp[obj - 1][idx] + V[obj])
 
-    return dp[-1][-1]
+    #get list of items
+    items = []
+    knapsack_size = Weight_limit
+    for row in range(len(dp) - 1, 0, -1):
+        if dp[row][knapsack_size] != dp[row - 1][knapsack_size]:
+            items.append(row) #append item num that was added at that level
+            knapsack_size -= W[row]
+
+    return dp[-1][-1], dp, items[::-1]
 
 
-V = [1, 2, 5, 6]
-W = [2, 3, 4, 5]
-Weight_limit = 8
+V = [17, 9, 14, 21, 28]
+W = [4, 2, 3, 5, 6]
+Weight_limit = 11
 
-carry_max = knapsack_dp(W, V, Weight_limit)
-print(f'max weight: {carry_max}') # 9
+carry_max, dp, items = knapsack_dp(W, V, Weight_limit)
+print(f'max weight: {carry_max}, items {items}') # 9
+
+for row in dp:
+    print(row)

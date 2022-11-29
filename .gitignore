@@ -11,3 +11,7 @@ CIS4282/
 *.tar
 **__lab0
 CompSci/HCI
+College Math/Number Theory
+
+# ide
+__pycache__

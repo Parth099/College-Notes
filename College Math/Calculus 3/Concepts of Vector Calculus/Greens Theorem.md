@@ -47,4 +47,3 @@ The $\dfrac{\partial Q}{\partial x} - \dfrac{\partial P}{\partial y}$ will be ex
 *Note: The $\Delta$ imperfections stem from the fact that limits were taken to obtain $\partial$ derivatives.
 
 ---
-

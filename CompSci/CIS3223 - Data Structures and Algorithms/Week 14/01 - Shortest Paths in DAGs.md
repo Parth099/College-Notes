@@ -1,6 +1,6 @@
-| Date         |
+| Date         | 
 | ------------ |
-| Nov 28, 2022 | 
+| Nov 28, 2022 |
 
 # Shortest Paths in DAGs
 

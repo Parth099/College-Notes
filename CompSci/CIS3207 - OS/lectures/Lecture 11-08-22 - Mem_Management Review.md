@@ -82,6 +82,8 @@ The logical address are in the form: `<segment-number, offset>`.
 
 Since we do not know the number of segments. The address segment portion of the address $S$ is based on a max-segment number defined by the OS or hardware. 
 
+> The max-segment number is the maximum of segments allowed per process.
+
 **Segment Table**
 
 ![seg_table](/img/seg_table.png)
@@ -128,7 +130,8 @@ We can employ a more complex data structure for the space-time tradeoff.
 
 ### Segmentation Advantages
 1. Supports a sparse address space
-2. Decrease size of page times
+2. Decrease size of page tables
+	+ If a segment isnt used there is no need for a table for it
 
 ### Paging Advantages
 1. No **external fragmentation**

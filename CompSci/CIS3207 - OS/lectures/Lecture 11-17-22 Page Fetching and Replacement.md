@@ -19,13 +19,17 @@ This is different from FIFO since FIFO does not change its order if a page alrea
 
 ## Alternative Implementation for LRU (Approximation)
 
+Instead of trying to attain LRU we can try to archive Frequently Used (NFU) behavior. What you will see below is that we remove pages that are not frequently used rather than really worrying about the **least recently used** page. 
+
 > A reference bit is used to reduce the overhead of queues and time stamping. 
 
 1. Start program with all reference bits set to 0
 2. Have a clock interrupt
-3. When we access a page (read/write) set the reference but to 1
+3. When we access a page (read/write) set the reference bit to 1
 4. On clock interrupt increase the counter for all pages where `ref_bit = 1`. 
 5. Pages with lower counters are not accessed often and thus are removed. 
+
+This may seem like it works but there is no notion of age here. Pages that have higher numbers will tend to keep them. 
 
 ### Implementation
 Set the reference bit in the TLB via hardware (faster) and when TLB entry is ejected copy to full page table.
@@ -40,7 +44,7 @@ The $r$ bit is being rotated into the aging bits. In the end we end up with the 
 
 ![rotation_of_r_bit](/img/rotation_of_r_bit.png)
 
-We can eject the page with the lowest aging binary value. 
+The lowest aging binary value page will be *selected for replacement*.  
 
 ## Page Buffering and Enhanced FIFO
 LRU algorithms yield very good performance in minimizing page faults but have a lot of overhead. We would prefer something like FIFO which was easy to implement. 
@@ -53,6 +57,10 @@ OS keeps a circular linked list of pages associated to a process. Each entry has
 The OS keeps a pointer to a page in the circular cycle. When a replacement is required first page with a `ref_bit=0` gets replaced. On each clock interrupt all are set back to 0.
 
 ![second_chance](/img/second_chance.png)
+
+Each page is considered for replacement in a round robin manner. If the reference bit is zero then it will be replaced. If the bit is one then it will be set to zero and given a second chance. 
+
+*If* all the bits were ones then one of them will be replaced anyway. 
 
 #### Enhanced 2nd Chance
 We can add a modified/dirty bit. 
@@ -72,10 +80,15 @@ R M|
 
 + Each process is given a maximum number of frames (Resident Set, RS) to use and organized in a FIFO list.
 + When a process exceeds its RS a page is removed from the process and given to the OS to manage. The OS will manage the frame that it just took from the process and gives a free frame from the pool it reserved. 
+	+ When this page is given to the OS it is put in one of two pools
+		+ Clean List (`modified=0`)
+		+ Dirty List (`modified=1`)
 
 Now this is great when a page is requested that was given away earlier the OS can just give back the frame which is already in memory saving IO operations. 
 
-Combining Page Buffering with FIFO gives great performance. Recall the page table contains an `invalid/valid` bit. If a process gives away a page it can keep the same PTE yet set the valid bit to 0. When a process wants this page again a page fault is triggered where the page is put pack into the process and a frame is traded. 
+Combining Page Buffering with FIFO gives great performance. Recall the page table contains an `invalid/valid` bit. If a process gives away a page it can keep the same PTE yet set the valid bit to 0. When a process wants this page again a page fault is triggered where the page is put back into the process and a frame is traded with the OS. 
+
+**Note:** This only occurs if the OS kept the page intact. During a page trade or after, the OS *may* choose the recycle the page. 
 
 ![page_buffering](/img/page_buffering.png)
 

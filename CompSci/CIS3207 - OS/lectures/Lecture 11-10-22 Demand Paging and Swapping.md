@@ -61,3 +61,5 @@ The process is blocked when a missing page is requested.
 3. Restart the process that was blocked (*IO*)
 
 The number of faults more so depends on the locality of the code. 
+
+While (1, 3) are time consuming, it is really (2) that takes up most of the time since it is an IO operation. 

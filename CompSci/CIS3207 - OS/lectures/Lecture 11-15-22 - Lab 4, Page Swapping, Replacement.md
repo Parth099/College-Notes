@@ -93,6 +93,8 @@ FIFO takes advantage of locality as the likelihood of referencing a page from th
 
 *However*, FIFO fails to recognize that a program frequently returns to pages referenced in the distant past. If the oldest page has just been referenced and a new page comes along the oldest page (which was *just* access) is replaced. 
 
+> In other words it ignores when a page is referenced. FIFO only worries about the first time something is referenced. 
+
 ### Using History : LRU
 Look for the page that has not been used in the longest time and replace it instead. We can use a queue for this and update it per reference:
 
@@ -103,3 +105,7 @@ This generates a lot of overhead and thus LRU behavior must be *approximated*.
 Here is $S_2$ which causes 12 faults:
 
 ![LRU_s2](/img/LRU_s2.png)
+
+Another idea to approximate LRU behavior is to add a time entry to the PTE and update it per reference. When a page needs to be replaced look for the lowest time entry. 
+
+This presents a new slew of problems such as writing to memory each time a page is accessed as well as keeping track of time and searching a page table linearly to find the minimum entry.  

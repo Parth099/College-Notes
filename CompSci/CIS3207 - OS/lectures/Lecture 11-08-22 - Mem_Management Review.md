@@ -55,6 +55,8 @@ This results in 3 memory access per CPU address.
 2. Use the page to translate to frame
 3. Fetch
 
+> Technically, the initial access to the Page Table Base Register for the Hierarchical page table counts too. 
+
 #### Method 2 - Segmentation
 
 > Blocks are now unequal functional code components (function, main, stack, heap, ...)
@@ -110,7 +112,7 @@ We will split up segments into pages which can be mapped to any unused frames.
 In this scheme, the segment table will map to the page table for that segment. There is a page table per segment type. 
 
 $$
-\text{Segment \#} \to \text{Segment X Page Table} \to \text{Frame \#}
+\text{Segment \#} \to \text{Segment X Page Table Address} \to \text{Frame \#}
 $$
 
 Another way to think about this is that without the page initially. We start with `<seg#, OFFSET>` but we can page the `OFFSET` bits. 

@@ -1,5 +1,5 @@
 # Swapping Mechanisms
-In the previous readings we have assumed that the address space resides in main memory. This is far from the truth in modern operating systems, all pages of all process **do not** reside in main memory. 
+In the previous readings we have assumed that the address space resides in main memory. This is far from the truth in modern operating systems, not all pages of each process reside in main memory. 
 
 To support a larger address space (more processes) the OS needs to stash away unused pages in the lower portion of the memory hierarchy. This is where the hard disk comes in. The question here is that how will using a slower device help us support a larger address space. 
 
@@ -7,7 +7,7 @@ To support a larger address space (more processes) the OS needs to stash away un
 The answer is simple, it provides a very useful abstraction for developers. They can write programs larger than the amount of RAM a machine has without having to deal with edge cases. Moreover if the OS provides this abstraction developers **do not** have to manually swap out pages to disk or recall them. 
 
 ## Swap Space
-The first thing we need to ensure is that there exists space on the disk to swap to (**swap space**). The OS will need to remember the disk address of this *area*. 
+The first thing we need to ensure is that there exists space on the disk to swap to (**swap space**). The OS will need to remember the disk address of this *"swap space"*. 
 
 ![swap_space.png](swap_space.png)
 

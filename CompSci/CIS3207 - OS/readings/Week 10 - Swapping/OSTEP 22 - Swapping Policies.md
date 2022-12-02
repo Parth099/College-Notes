@@ -2,7 +2,7 @@
 > This note focuses on what occurs when little memory is free and a page needs to be replaced. 
 
 About Page Faults and Intro to Replacement:
-1. [[OSTEP 22 - Swapping Policies]]
+1. [[OSTEP 21 - Swapping Mechanisms]]
 2. [[Lecture 11-10-22 Demand Paging and Swapping]]
 
 When there is little memory left (high memory pressure), the OS starts **paging out**. The policy for choosing which page to evict is historically important. 
@@ -23,7 +23,7 @@ $$
 - $P_{\text{Miss}} \in [0, 1]$
 	- $P_{\text{Miss}} + P_{\text{Hit}} = \mathbf{1}$
 
-Given that sometimes accessing disk might be slower than main memory in magnitudes of thousands, a small change in the $P_{\text{Miss}}$ can slow down a machine.
+Given that sometimes accessing disk might be slower than main memory in magnitudes of thousands, a small change in the $P_{\text{Miss}}$ can slow down a machine drastically.
 
 ## Optimal Replacement Policy
 The Optimal Replacement Policy is to replace the page that will be accessed furthest in the future. 
@@ -71,13 +71,13 @@ The most recent item is the in the back while the next to be evicted is at the f
 
 > The Least-Frequently-Used (LFU) policy replaces the least-frequently used page when an eviction must take place.
 
-## Implementing Historical Algorithms
-Unlike FIFO, the LRU algorithm needs accounting work to be done per each memory reference to keep of which page was must recently used and which pages is to be evicted next.
+## Implementing History-based Algorithms for Page Replacement
+Unlike FIFO, the LRU algorithm needs *more* accounting work to be done per each memory reference to keep of which page was must recently used and which pages is to be evicted next.
 
 Hardware could come into play here. For example, it can update a time field per memory access. Then when a page needs to be replaced the system can scan the time stamps and remove it. However, scanning each page for a timestamp is not very efficient. 
 
 ## Approximating LRU
-First we introduce a `use` bit^[1] which is initialized to 0. Whenever a page is referenced (read/written) the use bit is set to 1. 
+First we introduce a `use` bit[^1] which is initialized to 0. Whenever a page is referenced (read/written) the use bit is set to 1. 
 
 ### Clock Algorithm
 Suppose replacement needs to occur and the current page in use is $P$ .
@@ -101,7 +101,7 @@ We did look at demand paging in [[Lecture 11-10-22 Demand Paging and Swapping]].
 There is also the literal swapping policy. How should the OS swap out pages? We could swap pages as they are called or employ grouping[^4]. 
 
 ### Thrashing
-+ Thrashing: When the memory demands of the process running exceeds the available physical memory.
++ Thrashing: When the memory demands of the processes running exceeds the available physical memory. (see [[Lecture 11-29-22 - Page Fetching Cont.]])
 
 #### Admission Control
 > "sometimes better to do less work well than to try to do everything at once poorly"
@@ -109,6 +109,7 @@ There is also the literal swapping policy. How should the OS swap out pages? We 
 Given a set of process a system may choose to run a **subset of them** with the hopes that the smaller set of processes will fit in memory[^5]. 
 
 Some systems will **end** a memory intensive process. This is clearly an issue. 
+
 
 [^1]: AKA reference bit
 [^2]: Now its dirty

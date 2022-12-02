@@ -29,7 +29,7 @@ $$
 
 We need to find $A^TA$ and $A^T\bar{b}$ and solve the generated system $\bar{x}^*$
 
-Answer: $\begin{bmatrix} 3.8 \\ 1.8 \end{bmatrix}$
+Answer: $[3.8 \ 1.8]^T$
 
 To find the error we must compute the backwards error: $\|\bar{b}-A\bar{x}^*\|$
 
@@ -124,17 +124,43 @@ $$
 With this we can configure $A\in\mathbb{R}^{4\times3}$
 
 $$
-A = \begin{pmatrix}1&-1&1\\ 1&0&0\\ 1&1&1\\ 1&2&4\end{pmatrix} \implies
-\begin{pmatrix}1&-1&1\\ 1&0&0\\ 1&1&1\\ 1&2&4\end{pmatrix} \bar{x}^* = \:\begin{pmatrix}1\\ 0\\ 0\\ -2\end{pmatrix}
+A = \begin{pmatrix}
+1&-1&1\\ 
+1&0&0\\ 
+1&1&1\\ 
+1&2&4\end{pmatrix} \implies
+\begin{pmatrix}
+1&-1&1\\ 
+1&0&0\\ 
+1&1&1\\ 
+1&2&4\end{pmatrix} \bar{x}^* = 
+\begin{pmatrix}
+1\\
+0\\ 
+0\\ 
+-2\end{pmatrix}
 $$
 
 Then we find $A^T$ and use that to find $A^TA$ and $A^T\bar{b}$
 
 $$
 \begin{align}
-\begin{pmatrix}1&1&1&1\\ -1&0&1&2\\ 1&0&1&4\end{pmatrix} &\implies \\ \\ 
-A^TA &= \begin{pmatrix}4&2&6\\ 2&6&8\\ 6&8&18\end{pmatrix} \\ \\
-A^T\bar{b} &= \begin{pmatrix}-1\\ -5\\ -7\end{pmatrix}
+\begin{pmatrix}
+1&1&1&1\\ 
+-1&0&1&2\\ 
+1&0&1&4
+\end{pmatrix} &\implies \\ \\ 
+A^TA &= 
+\begin{pmatrix}
+4&2&6\\ 
+2&6&8\\ 
+6&8&18
+\end{pmatrix} \\ \\
+A^T\bar{b} &= 
+\begin{pmatrix}
+-1\\ 
+-5\\ 
+-7\end{pmatrix}
 \end{align}
 $$
 
@@ -147,7 +173,11 @@ $$
 6&8&18&-7
 \end{pmatrix}
 \to \cdots \to 
-\begin{pmatrix}1&0&0&\frac{9}{20}\\ 0&1&0&-\frac{13}{20}\\ 0&0&1&-\frac{1}{4}\end{pmatrix} \\ \\
+\begin{pmatrix}
+1&0&0&\frac{9}{20}\\ 
+0&1&0&-\frac{13}{20}\\ 
+0&0&1&-\frac{1}{4}
+\end{pmatrix} \\ \\
 \bar{a} = \bar{x}^* =
 \begin{pmatrix}
 \frac{9}{20} \\

@@ -1,6 +1,6 @@
 # Least Squares Approximations
 ## Motivations
-1. Solve for $A\bar{z}=\bar{b}$ for **rectangular **$A$ .
+1. Solve for $A\bar{z}=\bar{b}$ for **rectangular** $A$ .
 2. fit data to a model
 
 ## Lecture 

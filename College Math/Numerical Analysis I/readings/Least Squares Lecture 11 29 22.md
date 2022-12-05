@@ -100,13 +100,21 @@ $$
 3 & 1\\
 1 & 3
 \end{bmatrix}
-\begin{bmatrix} x^*_1 \\ x^*_2 \end{bmatrix}
-=
-\begin{bmatrix} 6 \\ 4 \end{bmatrix}
+\begin{bmatrix} 
+x^{*}_1 \\ 
+x^{*}_2 
+\end{bmatrix} =
+\begin{bmatrix} 
+6 \\
+4 \end{bmatrix}
 \to 
 \bar{x}^* = 
-\begin{bmatrix} \frac{7}{4} \\ \frac{3}{4} \end{bmatrix}
+\begin{bmatrix} 
+\frac{7}{4} \\ 
+\frac{3}{4} 
+\end{bmatrix}
 $$
+
 
 ## Errors
 See that there is no meaning of "forward error" as the $\bar{x}$ in 
@@ -156,13 +164,23 @@ $$
 After solving the normal equations $\bar{x}^*$ will contain the constants to build the polynomial:
 
 $$
-\bar{x}^* = \begin{bmatrix}a_0 \\ \vdots \\ a_n\end{bmatrix} \implies P_n(x) = \sum_{k=0}^n a_kx^k
+\bar{x}^* = \begin{bmatrix}
+a_0 \\ 
+\vdots \\ 
+a_n
+\end{bmatrix} \implies P_n(x) = \sum_{k=0}^n a_kx^k
 $$
 
 $P_n(x_i)$ is represented by the $i$-th entry of $A\bar{x}^*$:
 
 $$
-\begin{bmatrix}1\ x_i\ x_i^2\ \dotso\ x_i^n \end{bmatrix}\begin{bmatrix}a_0 \\ \vdots \\ a_n\end{bmatrix} = \sum_{k=0}^n a_k(x_i)^k = \boxed{P(x_i)} 
+\begin{bmatrix}1\ x_i\ x_i^2\ \dotso\ x_i^n \end{bmatrix}
+\begin{bmatrix}
+a_0 \\ 
+\vdots \\
+a_n
+\end{bmatrix} = \sum_{k=0}^n a_k(x_i)^k = \boxed{P(x_i)} 
 $$
+
 
 Therefore $b_i - A\bar{x}^* = f(x_i) - P(x_i)$ represents the error. The $\|\cdot\|_2$ just does the squaring to remove the effect of negative error. 

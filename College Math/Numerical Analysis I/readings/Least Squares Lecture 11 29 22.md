@@ -130,3 +130,39 @@ In this context, the Euclidean norm is used ( $\ell_2$ ).
 - $\|r\|^2_2$ (squared error)
 - $\sqrt{\frac{\|r\|^2_2}{m}} = \frac{\|r\|_2}{\sqrt{m}}$ 
 	+ (RSM) - Root mean squared
+
+### How does $\|r\|=\|\bar{b}-A\bar{x}^*\|$ get the error?!
+
+Prereq: [[Least Squares Lecture 12 01 22]]
+
+It is the same as:
+
+$$
+\sum_{i=0}^{n} (y_i - y_i^*)^2
+$$
+
+
+Lets look at firstly $A$ WRT a degree $n$ model. ($P_n(x)=a_0 + a_1x + \cdots a_nx^n$)
+
+For each data point, that is for each $x_i$ there exists a $P(x_i)$ and those are the constants represented by $A$ . 
+
+Row $i$ of $A$:
+
+$$
+[\underbrace{1}_{a_0}\ x_i\ x_i^2\ \dotso\ x_i^n ]
+$$
+
+
+After solving the normal equations $\bar{x}^*$ will contain the constants to build the polynomial:
+
+$$
+\bar{x}^* = \begin{bmatrix}a_0 \\ \vdots \\ a_n\end{bmatrix} \implies P_n(x) = \sum_{k=0}^n a_kx^k
+$$
+
+$P_n(x_i)$ is represented by the $i$-th entry of $A\bar{x}^*$:
+
+$$
+\begin{bmatrix}1\ x_i\ x_i^2\ \dotso\ x_i^n \end{bmatrix}\begin{bmatrix}a_0 \\ \vdots \\ a_n\end{bmatrix} = \sum_{k=0}^n a_k(x_i)^k = \boxed{P(x_i)} 
+$$
+
+Therefore $b_i - A\bar{x}^* = f(x_i) - P(x_i)$ represents the error. The $\|\cdot\|_2$ just does the squaring to remove the effect of negative error. 

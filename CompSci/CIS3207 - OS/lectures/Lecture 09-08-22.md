@@ -3,7 +3,7 @@
 A memory cell is just a series of bits. How can a CPU know if it is fetching the address or a data value. The answer is it does not, it assumes based on the context of the running program. The instruction does determine what the CPU will fetch, it uses the context of the instruction. The instruction tells the CPU what the next fetch will be, data or OP Code. 
 
 # Lecture
-Continuation from [[Lecture 09-06-22]] with information about PSW and Priority Servicing. 
+Continuation from [[Lecture 09-06-22 - Interrupts Cont.]] with information about PSW and Priority Servicing. 
 
 ## Interrupt Priority Simplification
 The OS controls Interrupt Servicing Priority at programmable levels in the CPU. 

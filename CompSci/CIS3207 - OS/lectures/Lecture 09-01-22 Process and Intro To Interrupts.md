@@ -6,7 +6,7 @@ Modern OSs are preemptive[^1] multitasking OSs. This means that they run many ta
 
 
 ## More Process States
-![more_states](/img/more_states.png)
+![more_states](../../img/more_states.png)
 ## PCB Content
 The OS maintains a data structure of all active process.
 Information about each process is stored in a PCB:
@@ -37,7 +37,7 @@ The API provided by the OS is a set of `system calls`:
 + A system call is a function call into the OS code that runs with a high privilege level of the CPU
 + Some sensitive operations are only allowed a certain privilege levels. 
 
-![syscalls_vs_regcalls](/img/syscalls_vs_regcalls.png)
+![syscalls_vs_regcalls](../../img/syscalls_vs_regcalls.png)
 
 ### `syscall` vs `supervisor` calls
 A supervisor call (SVC) is a processor instruction that directs the processor to pass control of the computer to the operating system while a system call is a function is used when computer program requests a service from the kernel of the operating system it is executed on. A `syscall` can trigger a `supervisor` call.
@@ -56,17 +56,20 @@ Program Language libs hide the details of invoking supervisor calls.
 + Control / Security / Privacy
 	+ OS maintains all resources and makes then available
 	+ OS must keep allocated resources and its own resources private
++ Add special hardware instructions and hardware state to make the transition into the OS. This will create a mechanism to enter the OS and use its functions with security by raising the hardware privilege level. 
 
 #### Modes
 User applications execute in `USER MODE`
 + In **USER MODE** the **hardware**\* restricts what applications can do
-	+ Possible limits: accessible memory, direct access to devices
+	+ Possible limits placed on the application by the hardware: accessible memory, direct access to devices
 
 \* - see the `kernel-mode` bit in the PSW. 
 
-A TRAP or ‘Supervisor (Service) Call’ is a special hardware instruction. When a syscall has `trap` a predefined trap-handler is entered and hardware raises the privilege level to kernel mode. When a call comes in with a `trap` the current process is stopped and the new call with `trap` is executed.
+A TRAP or ‘Supervisor (Service) Call’ is a special hardware instruction. When a syscall has `trap` a predefined trap-handler is entered and hardware raises the privilege level to kernel mode. When a call comes in with a `trap` the current process is stopped and the  `trap-handler` is executed.
 
-Exit from `kernel mode` to `user mode` is done via a `Return-from-Trap` instruction which gives the control back to the user. 
+Exit from `kernel mode` to `user mode` is done via a `return-from-trap` instruction which gives the control back to the user by going back to user-mode. 
+
+
 
 Traps are part of a set of features that permit controlled entry to an OS.
 The general category is: **Interrupts**
@@ -99,12 +102,12 @@ while(DISK0.done_write != 1){
 }
 ```
 
-### Interrupt control
-![no_interrupt](/img/no_interrupt.png)
+### Alternative to Programmed IO - Interrupt control
+![no_interrupt](../../img/no_interrupt.png)
 
 This image displays the concept of "busy waiting". Notice that each *write* requires waiting for its completion. (Arrow only moves to next task once IO is complete)
 
-![yes_interrupt](/img/yes_interrupt.png)
+![yes_interrupt](../../img/yes_interrupt.png)
 
 This images displays the concept of using interrupts. Notice that we do not wait for writes now. When a write completed the user program is informed the write is completed. 
 
@@ -114,6 +117,6 @@ This images displays the concept of using interrupts. Notice that we do not wait
 
 Using *interrupts* we only complete the IO setup but not actually wait for it complete. While we wait for the operation completion, another process can complete. This *next* process may be interrupted however we are not doing "nothing" while the writes are active. 
 
-Cont: [[Lecture 09-06-22]]
+Cont: [[Lecture 09-06-22 - Interrupts Cont.]]
 
 [^1]: OS has the power to take the CPU away from a process (deschedule) 

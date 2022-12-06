@@ -78,7 +78,7 @@ The frames are usually sized in a power of $2.$
 
 The logical space is is divided into equal-sized contiguous **pages** $p_0, p_1, \dotso, p_{n-1}$ ) . 
 
-Recall what a logical address space is from [[Lecture 08-30-22]]:
+Recall what a logical address space is from [[Lecture 08-30-22 - Intro to Processes]]:
 
 > Logical Space - The memory space the program is virtualized with. A process will think that this is the space it has
 

@@ -27,24 +27,24 @@
 + Kernel is not aware of threading
 + Process is treated as single threaded for scheduling
 + Thread level context switch is provided by the library
++ The TCB is maintained by the library. 
 
-![ULT](/img/ULT.png)
+![ULT](../../img/ULT.png)
 
 **Note:** When a *process* is preempted by something like an internal clock that does not mean it is now *blocked*, it may be ready to run. 
 
 Notice in (b) the process is blocked. This is because a thread cannot it self commit IO tasks. It does IO tasks by using a library. Therefore the kernel sets the process's state to blocked when one of its threads calls for IO.  
 
-After the IO is done, **B** shifts back to complete and thus is *ready* to run on the CPU. The states of the threads are the same. 
+After the IO is done, $B$ shifts back to complete and thus is *ready* to run on the CPU. This means $B$ is placed back on the ready queue. 
 
 ***Note***: A thread *running* does not mean it is executing. Also, a thread is not blocked from an IO request but the parent process will. 
 
 ### Kernel Level Thread
 + Threads are implemented within the OS Kernel
-+ Kernel provides CRUD for threads
++ Kernel provides CRUD methods for threads
 + Thread Switching is done by Kernel too
 
 Notice the overhead with Kernel `TRAP`s. You do not need to switch to kernel mode to swap threads in ULTs. 
-
 
 ## Combined Approach
 The kernel supports a small number of KLTs.
@@ -52,7 +52,7 @@ Each app can implement any number of ULTs which are mapped to KLTs.
 
 This means that the application many create $n$ threads which are mapped to $m$ kernel threads. (few ULT per KLT, see image below)
 
-![hybrid_KLT_ULT](/img/hybrid_KLT_ULT.png)
+![hybrid_KLT_ULT](../../img/hybrid_KLT_ULT.png)
 
 ## Pros/Cons
 ### Pros - ULT

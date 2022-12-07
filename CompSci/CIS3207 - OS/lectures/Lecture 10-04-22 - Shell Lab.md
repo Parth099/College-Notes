@@ -60,7 +60,7 @@ The kernel uses three three data structures to represent an open file[^1]. The r
 	+ v-node also contains i-node
 	+ Linux has no v-node, a generic i-node is used.  
 
-![fd1](/img/fd1.png)
+![fd1](../../img/fd1.png)
 
 ## File Sharing via `Fork()`
 When a process is `forked`, the process table entry is duplicated. Notice that the file table is not duplicated since the process table just *points* to it. 
@@ -84,23 +84,21 @@ A Unix pipe has two file descriptors:
 
 Data is read in the same sequence it was written 
 
-![pipe1](/img/pipe1.png)
+![pipe1](../../img/pipe1.png)
 
-![pipes2.png](/img/pipes2.png)
+![pipes2.png](../../img/pipes2.png)
 
 ### Pipe syscall
 ```c
 int pipe(int fds[2]);
 ```
 
-**Return Value**
-$-1$ : Error
-$0$ : Success
+A call to `pipe()` returns $-1$ on failure and $0$ otherwise. 
 
 There are some `errno` associated with `pipe()`
 
-**`fds[2]`**
-This is an array of file descriptors where `fds[0]` is the reading[^2] end while `fds[1]` is the write end. 
+
+**`fds[2]`** is an array of file descriptors where `fds[0]` is the reading[^2] end while `fds[1]` is the write end. 
 
 ## Substituting I/O via `pipe()`
 If a parent just wants to send data while a child only reads, we can close the relevant file descriptors on each side (parent/child).

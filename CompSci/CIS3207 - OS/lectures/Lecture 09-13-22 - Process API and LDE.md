@@ -10,37 +10,40 @@ Here is where the programs are forked:
 int pid = fork(); 
 ```
 
+![fork_syscall_diag](../../img/fork_syscall_diag.png)
+
 In the child process, `pid=0` while the parent `pid` is equal to the **child's PID**. We can use this to branch logic based on parent and child. 
 
 Recall our issue of what is printing in what order. We saw that forked calls are *non deterministic*.
 
-The `wait` call pauses the parent **until** the child finishes.
+The `wait` call pauses the parent **until** the child finishes and exist.
 
 ```c
-int wc = wait(NULL);
+int wc = wait(&exit_status); //arg can be null
 //more code ..
 ```
-The `NULL` refers to the first child and the value inside of `wc` is the exit status of the child. After the child finishes, `//mode code` is run. We can also wait on based on `pid` with:
+
+After the child finishes, `//mode code` is run. We can also wait on based on `pid` with:
 ```c
 pid_t wait(pid_t pid);
 ```
 
 ## Termination
-A process can perform voluntary termination with `exit(status)`. Then the exit value is passed with wait: `wait(&status)`. 
+A process can perform voluntary termination with `exit(status)`. Then the exit value is passed with wait: `wait(&status)` which can be read by the parent process. 
 
-**Zombie Process**:
-PCB exists in OS but the process is not executing. This is used for the parent to read the child's exit status. 
+**Zombie Processes**:
+A Zombie Process is one where a PCB exists but, the process is not executing. This is used for the parent to read the child's exit status via `wait()`.
 
 Once the parent reads status, zombie entries removed from the OS, this is called reaping the child. 
 
-If we do not read the status, 
-- Memory leak: Zombie will continue to exist
+If the parent does not read the status(es) of its children, 
+- Results in a Memory leak: Zombie will continue to exist
 - These are found by reaper processes
 	- When a parent terminates, `init` adopts all zombies and reaps them. This is done for clean up. 
 
 ## Process API
 + Create
-	+ `fork`
+	+ Creation is handled by `fork()`
 	+ Load program into memory (maybe be performed lazily)
 	+ Then the runtime stack is allocated
 		+ stack is used for local variables, function param, return addresses
@@ -60,16 +63,16 @@ If we do not read the status,
 + Miscellaneous Control 
 	+ `pause()`
 
-![fork_syscall_diag](/img/fork_syscall_diag.png)
+
 
 ## `exec()` syscall
 ![exec_syscall_diag](/img/exec_syscall_diag.png)
 
-There are many versions of the `exec` function. Each has its own variation and purpose. 
+There are many versions of the `exec` function. Each has its own behaviors. 
 
 If we fork and exec we notice that the PCB is already set up by the parent which implies the file that were opened by the parent apply to the new code that is running. 
 
-We can apply `wait()` on a `exec()` child (see slides for 9/13/22) and the parent will **wait** for the `exec`ed program to finish. 
+We can apply `wait()` on a `exec()` child (see slides for 9/13/22) and the parent will **wait** for the `exec`-ed program to finish. 
 
 ## Using `exec` and its Programming Paradigms
 1. Use one source code that includes the code for each process (parent & child)
@@ -91,7 +94,7 @@ int main(...){
 }
 ```
 
-2. Writing code for children in separate files: Multi-process Program
+2. Writing code for children in separate files: Multi-process Program (*More practical*)
 
 ```c
 int main(){
@@ -122,4 +125,6 @@ int main(){
 ![CPU_switching_diag](/img/CPU_switching_diag.png)
 
 ## Virtual Address Space
-MMU - Memory mamanegment unit
+MMU - Memory Management Unit
+
+Continued Next Lecture: [[Lecture 09-15-22 - Part 1 - Memory Lecture]]

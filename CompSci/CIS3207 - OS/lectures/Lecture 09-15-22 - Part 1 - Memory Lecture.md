@@ -24,6 +24,7 @@ This translation is the job of the **MMU**: *Memory Management Unit*.
 The primary computer memory that stores programs as they execute is “RAM” (implemented as DRAM - *volatile*)
 
 - data and instructions are both stored as binary digits in memory
+- data and instructions are both stored in primary memory
 - instructions are fetched from memory one at a time and in order
 - processor decodes and executes each instruction before fetching next
 - cycle of fetching and executing continues until there are no more instructions left. 
@@ -49,3 +50,6 @@ The address space is not the same as memory, it is all the addressable space by 
 CPU tells the disk to transfer some $X$ bytes to another disk. It will simply tell the disk to do it and leave after that. The disk will **complete** the task while communicating with each other. In this instance the CPU can go work on another tasks while the disks can do data transfer. 
 
 'Bus-stealing' effects: Notice in the image above that while the disks are using the BUS the CPU cannot fetch from it. This is why caches are so important on the CPU itself, no bus is required to CPU fetch from caches.   
+
+
+Continued: [[Lecture 09-15-22 - Part 2 - Intro to Scheduling]]

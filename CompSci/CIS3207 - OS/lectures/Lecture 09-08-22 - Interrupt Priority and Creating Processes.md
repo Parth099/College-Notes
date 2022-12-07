@@ -10,7 +10,7 @@ The OS controls Interrupt Servicing Priority at programmable levels in the CPU.
 - Software and CPU interrupts are requested at the **highest** priority
 - Each device is assigned a **Fixed** priority for requesting interrupt servicing.
 
-Interrupts are acknowledged by priority level relative to the CPU. The CPU has a floating number to determine which level to service; **sync** interrupts are serviced *first*. 
+Interrupts are acknowledged by priority level relative to the CPU. The CPU has a floating number to determine which level to service; **synchronous** interrupts are serviced *first*. 
 
 If Multiple Devices at the same Priority Level Request Service, the Device Closest to the CPU is Serviced. ("Daisy Chaining" from Lecture 09-06-22)
 
@@ -20,10 +20,12 @@ If Multiple Devices at the same Priority Level Request Service, the Device Close
 - The timer allows the kernel to regain control of the CPU from *runaway* programs. 
 
 ### Mode Switch
+
+> Below are examples for when the OS shifts from one mode to another. 
+
 #### Kernel Mode to User Mode
-+ start new process
-	+ complete the new program loading stage
-	+ jump to the first instruction in this program
++ Start New Process/Thread
+	+ Jump to first instruction on program/thread 
 + `RTT/RTI`
 	+ Resume suspended process
 + Context switch
@@ -31,16 +33,21 @@ If Multiple Devices at the same Priority Level Request Service, the Device Close
 
 #### User Mode to Kernel Mode
 + interrupt from a user process (or outside the CPU like a device depending on priority)
+	+ Asynchronous - leads to device ISR
+	+ Synchronous
 
 ### Privileged instructions
 These can be anything that could interfere with the kernel's function and management.
+
+Examples:
+
 + Change PSW register state
 + Access memory outside allocated bounds 
 	+ See [[Lecture 10-20-22 - Memory]] for a talk about bounds in memory
 + Send IO commands
 + Jump directly to kernel without a secure method
 
-If a user executes a privileged instruction without kernel mode it will trigger an interrupt which will *deal* with he offending process. 
+If a user executes a privileged instruction without kernel mode it will trigger an interrupt which will *deal* with he offending process. The offending Process is usually killed. 
 
 ## Process API
 ### Creation
@@ -80,7 +87,13 @@ The red blocks is the data from the **original** program while the blue represen
 
 ![fork_exe](/img/fork_exe.png)
 
-When fork is invoked the child is a **exact** copy of the parent. When fork is called all pages are shared between parent and child. This is done by copying the parent's page tables. The page tables are arrays of pointers to memory the process has to *deal* with. When a fork is made the memory is set to read-ONLY for the child. If a child needs to write to it a copy of only that region of memory will be recopied so the child can use it. Since we know that processes have regions of memory that only contain code we know that that section **will never** be written to, it allows the parent process and child process to share code if needed. This concept is called copy on write. Only what is needed to be written to needs to be copied. 
+When fork is invoked the child is a **exact** copy of the parent. Initially, all pages are shared between parent and child. This is done by copying the parent's page tables. The page tables are arrays of pointers to memory the process has to *deal* with. 
+
+The memory is set to read-ONLY. If a parent or child needs to write to it, a copy of only that region of memory will be recopied so the they can modify it. Since we know that processes have regions of memory that only contain code we know that that section **will never** be written to, it allows the parent process and child process to share code if needed. This concept is called *copy on write*. Only what is needed to be written to needs to be copied. 
+
+
+
+The Kernel makes COW (copy-on-write) read-only and page faults when a child or parent tries to write to it. The ISR for the page fault will duplicate this page and update page tables to the contents could be modified. 
 
 ##### syscall - `exec()`
 - Executed after child starts, Replace current data and code segments with those in specified file

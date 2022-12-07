@@ -33,10 +33,10 @@ When the event occurs that will **un**block a suspended process, it will be swap
 	+ Process to determine which process gets CPU and when.
 
 ### Vocab
-Workload - set of job descriptions (arrival time, runtime)
-Job - View as current CPU burst of a process 
-Scheduler - logic (policies) that decides which ready job to run
-Metric - a measurement dimension of scheduling quality
++ Workload - set of job descriptions (arrival time, runtime)
+	+ Job - View as current CPU burst of a process 
++ Scheduler - logic (policies) that decides which ready job to run
++ Metric - a measurement dimension of scheduling quality
 
 
 ### Metrics
@@ -48,7 +48,9 @@ Metric - a measurement dimension of scheduling quality
 	+ `Initial_schedule_time – arrival_time`
 3. Minimize waiting time
 	+ minimize waiting time in the *Ready*
-4. Maximize throughput, resource utilization[^1], CPU fairness
+4. Maximize throughput, resource utilization[^1]
 5. Minimize Overhead (EX: context switching, ...)
+6. Maximize Fairness
+	+ All Jobs get the same amount of CPU over some time interval. 
 
 [^1]: keeping expensive devices busy

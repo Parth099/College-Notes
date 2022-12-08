@@ -262,7 +262,7 @@ void put_forks(int p){
 
 This causes a deadlock. Supposes everyone grabs a left fork. 
 
-We need to ensure they get forks in a different order. This is discussed in [[Lecture 10-18-22 - Concurrency]]
+We need to ensure they get forks in a different order. This is discussed in [[Lecture 10-18-22 - Semaphores and Monitors]]
 
 ## Thread Throttling - Admission Control
 This helps us stop too many threads from doing the same thing. 

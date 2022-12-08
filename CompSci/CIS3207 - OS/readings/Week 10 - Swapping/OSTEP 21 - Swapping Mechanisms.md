@@ -9,9 +9,9 @@ The answer is simple, it provides a very useful abstraction for developers. They
 ## Swap Space
 The first thing we need to ensure is that there exists space on the disk to swap to (**swap space**). The OS will need to remember the disk address of this *"swap space"*. 
 
-![swap_space.png](swap_space.png)
+![swap_space.png](../../../img/swap_space.png)
 
-4 page physical memory with 4 process. The 4th process is not active; all its pages are swapped. 
+4 page physical memory with 4 process. The 4th process is not active (suspended); all its pages are swapped. 
 
 ## Table Entry and the TLB
 The TLB in this section is "hardware managed". If a page mapping is not located in the TLB the hardware will search for it via the PTBR[^1] and update the TLB. The instruction that caused the *TLB miss* **will be repeated** however this time, the entry will exist in the TLB. 
@@ -46,12 +46,9 @@ If the number of pages left in memory are less than $LW$ a swap daemon runs. The
 
 Here is an alternate interpretation I found:
 
-![cs350_watermark](/img/cs350_watermark.png)
+![cs350_watermark](../../../img/cs350_watermark.png)
 
 By grouping a lot of swaps together there are some performance benefits. This is because it reduces seek and rotational overheads of a disk
-
-
-
 
 [^1]: Page Table Base Register
 [^2]: When the hardware does not know what to do it will hand control to the OS

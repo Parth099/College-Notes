@@ -60,5 +60,5 @@ Relocation of process is quite easy *if they are paused*[^8]. The OS has to find
 [^4]: The literal address on the memory
 [^5]: More on exceptions: [[8.1 - Exceptions]]
 [^6]: Only possible in only in kernel mode
-[^7]: [[Lecture 09-06-22]] about ISR and Interrupt Service Vectors
+[^7]: [[Lecture 09-06-22 - Interrupts Cont.]] about ISR and Interrupt Service Vectors
 [^8]: Process cannot be blocked if you want to move it in memory. 

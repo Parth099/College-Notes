@@ -28,15 +28,15 @@ Given that sometimes accessing disk might be slower than main memory in magnitud
 ## Optimal Replacement Policy
 The Optimal Replacement Policy is to replace the page that will be accessed furthest in the future. 
 
-> You can see how this will be hard to implement however it is the ideal policy if it can be written.
+> It is not possible to write such a policy because it can see into the future. 
 
 ### Short Example
 
 Suppose a process calls the following pages: $0, 1, 2, 0, 1, 3, 0, 3, 1, 2, 1$ and the cache can fit at most 3 pages.
 
-![optimal_replacement_policy](/img/optimal_replacement_policy.png)
+![optimal_replacement_policy](../../../img/optimal_replacement_policy.png)
 
-Initially, the cache is empty ("**cold start**") and it misses all the time. See that $2$ is the first to be evicted since it will be the latest to be accessed by the process. 
+Initially, the cache is empty ("**cold start**"), meaning it will miss for each page. See that $2$ is the first to be evicted since it will be the latest to be accessed by the process. 
 
 Types of cache misses:
 1. compulsory miss (the cold start misses above)
@@ -51,20 +51,20 @@ Sadly there is no way to build a policy that is able to predict the future.
 ### FIFO
 To avoid the complexity of a replacement algorithm many early operating systems employed FIFO replacement. 
 
-![fifo_replacement](/img/fifo_replacement.png)
+![fifo_replacement](../../../img/fifo_replacement.png)
 
-FIFO cannot judge the importance of pages and thus performs badly. 
+FIFO cannot judge the importance or age of pages and thus performs badly. 
 
 ### Random
-> Random
+> Eviction at random. 
 
 ## Using History: LRU / LFU
 
 ### LRU - Least Recently Used
 
-We are counting on the fact that *because* a page was used in the past it will be used again. We use recency of access, a principle of locality, to inform future page use. 
+We are counting on the fact that *because* a page was used in the past it will be used again. We use recency of access, a principle of locality to inform future page usage. 
 
-![LRU_replacement](/img/LRU_replacement.png)
+![LRU_replacement](../../../img/LRU_replacement.png)
 The most recent item is the in the back while the next to be evicted is at the front. 
 
 ### LFU - Least Frequently Used
@@ -89,7 +89,7 @@ There are many variants of the clock algorithm, for example we do not have to in
 ### Dirty Pages
 + Dirty/Modified Bit - Has the page been modified?
 
-If a page has been modified[^2], it must be written back to disk before eviction (expensive!). What happens if its not dirty? It can simple be deleted as if its needed it can be recalled from its origin. 
+If a page has been modified[^2], it must be written back to disk before eviction (expensive!). What happens if its not dirty? It can simply be deleted as if its needed it can be recalled from its origin. 
 
 A dirty bit can be added along with the clock algorithm above. A dirty bit is set when a page is written to. The clock algorithm should be modified then to evict clean pages first and then dirty pages. 
 
@@ -99,6 +99,7 @@ While we did explore page replacement, there is still the question of what pages
 We did look at demand paging in [[Lecture 11-10-22 Demand Paging and Swapping]]. The OS could also guess in terms of locality which pages will be accessed next and *prefetch* them, usually if $P$ is accessed the OS may bring into memory $P+1$ . 
 
 There is also the literal swapping policy. How should the OS swap out pages? We could swap pages as they are called or employ grouping[^4]. 
++ Batching page-outs vs singular page-outs
 
 ### Thrashing
 + Thrashing: When the memory demands of the processes running exceeds the available physical memory. (see [[Lecture 11-29-22 - Page Fetching Cont.]])

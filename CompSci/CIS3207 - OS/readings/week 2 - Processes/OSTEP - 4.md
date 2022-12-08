@@ -7,7 +7,7 @@ It is usually the case we want to run $\gt 1$ programs simultaneously. However, 
 > How can we run many processes on **one CPU** ⁉️
 > How to provide the illusion of many CPUs on a system with few or one CPU?
 
-Running many processes is what it means to **virtualize** the CPU. One way to do it is with time sharing, defined in [[Lecture 08-25-22]]. The downside is that the slower the system is, the more processes exist. 
+Running many processes is what it means to **virtualize** the CPU. One way to do it is with time sharing, defined in [[Lecture 08-25-22 - Intro to OS]]. The downside is that the slower the system is, the more processes exist. 
 
 > 📖 **mechanism**: A mechanism is a low-level method that implements a needed piece of functionality. An example of a mechanism is the time-sharing mechanism (context-switch); most modern OSs employ it. 
 
@@ -67,6 +67,6 @@ Like any other software, the OS has many data structures to help it keep track o
 
 A register context will hold, for a stopped process, the contents of its registers. When a process is stopped, this context data is *saved* in memory. The process is restored by restoring this context (placing these contents back into the physical registers). This is known as *context-switching*. 
 
-Recall **Process Control Block (PCB)** from [[Lecture 08-25-22]], which stores information about a process. 
+Recall **Process Control Block (PCB)** from [[Lecture 08-25-22 - Intro to OS]], which stores information about a process. 
 
 > 📝 **Note**: more states exist than the three above. Some other ones are: `initial`, `final` (aka `zombie`). 

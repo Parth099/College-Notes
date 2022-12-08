@@ -29,13 +29,13 @@ If a page is not present in the TLB, we need to copy a block into it. This is ch
 
 New model:
 
-![TLB_model](/img/TLB_model.png)
+![TLB_model](../../img/TLB_model.png)
 
 > p - page, f - frame. The page is from the program while the frame is real memory. 
 
 **Example TLB**
 
-![TLB_EX](/img/TLB_EX.png)
+![TLB_EX](../../img/TLB_EX.png)
 
 ## EAT - Effective Access Time
 Assume cycle time is $1$ microsecond
@@ -73,7 +73,7 @@ If the bit is set to "invalid" the frame for the page we want to access is not (
 These are also known as the `present/absent` bits. 
 
 ## Structure of the Page Table
-![pt_struct](/img/pt_struct.png)
+![pt_struct](../../img/pt_struct.png)
 
 The PTE as more entries than just the frame number. 
 

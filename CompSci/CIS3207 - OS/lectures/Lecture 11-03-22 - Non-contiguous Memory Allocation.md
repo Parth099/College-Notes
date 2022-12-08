@@ -1,5 +1,5 @@
 # Lab Design Model
-![proj3_model](/img/proj3_model.png)
+![proj3_model](../../img/proj3_model.png)
 
 # Lecture 11-3-22
 
@@ -17,7 +17,7 @@ A Simple Technique us to use a two-level page table.
 
 ### Example
 
-![two_lvl_page](/img/two_lvl_page.png)
+![two_lvl_page](../../img/two_lvl_page.png)
 
 
 Consider a logical address on a 32-bit machine with 1K page size.
@@ -36,18 +36,18 @@ $p_1$ is an index to the other page where as $p_2$ is the displacement within th
 Before we took page numbers $\to$ frame numbers. 
 
 With this, we break up the page table into blocks. 
-![multilvl_page_table_m2](/img/multilvl_page_table_m2.png)
+![multilvl_page_table_m2](../../img/multilvl_page_table_m2.png)
 
-![multilvl_page_table_m3](/img/multilvl_page_table_m3.png)
+![multilvl_page_table_m3](../../img/multilvl_page_table_m3.png)
 
-![multilvl_page_table_m4](/img/multilvl_page_table_m4.png)
+![multilvl_page_table_m4](../../img/multilvl_page_table_m4.png)
 
 **Issue**: 3 memory access to get to a cell. 
 
 ## Inverted Page Table
 One entry per frame: An entry consists of the virtual address of the page (page number) stored in that real memory location, with information about the process that owns that page. 
 
-![invert_page_arch](/img/invert_page_arch.png)
+![invert_page_arch](../../img/invert_page_arch.png)
 
 > There can only be a one page inside a frame
 
@@ -69,7 +69,7 @@ Examples of logical Segments:
 
 Example Of Segmentation:
 
-![logical_view_of_seg.png](/img/logical_view_of_seg.png)
+![logical_view_of_seg.png](../../img/logical_view_of_seg.png)
 
 See that with the help of protection bits segmentation allows the sharing of segments such as a code segment. 
 

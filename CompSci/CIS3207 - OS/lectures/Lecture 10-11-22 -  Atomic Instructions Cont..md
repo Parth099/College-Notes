@@ -24,10 +24,11 @@ int Test_and_set(int *old_ptr, int new){
 
 Test and set is really just trying to lock the mutex and seeing if you were successful. 
 
-![TestAndSet_spin_lock](/img/TestAndSet_spin_lock.png)
+![TestAndSet_spin_lock](../../img/TestAndSet_spin_lock.png)
 
 Using this spin lock:
 ```c
+//lock1 is some global variable
 do{
 	lock(lock_t *lock1);  //ACQUIRE LOCK
 	//run critical section
@@ -65,10 +66,13 @@ do {
 } while(TRUE);
 -->
 
-![swap_cc](/img/swap_cc.png)
+![swap_cc](../../img/swap_cc.png)
 
-## Spin Lock
-![atomic_spin_lock_1](/img/atomic_spin_lock_1.png)
+## Spin Locks
+![atomic_spin_lock_1](../../img/atomic_spin_lock_1.png)
+
+Notice that original is only updated *if* the lock is unlocked. 
+
 Use:
 ```c
 void lock(lock_t *lock){
@@ -81,9 +85,9 @@ If unlocked, then lock; if locked save memory writing as we don't have to do a r
 
 ## Scheduler and Locks/Unlocks
 
-> Scheduler is Unaware of Locks/Unlocks
+> Scheduler is unaware of Locks/Unlocks
 
-![Scheduler_locking](/img/Scheduler_locking.png)
+![Scheduler_locking](../../img/Scheduler_locking.png)
 
 Notice that $B$ is busy waiting since it needs the lock that $A$ has. While $A$ gets its work done, $B$ just busy waits. $B$ is wasting CPU time. This issue is exacerbated with extra threads on the Scheduler. 
 
@@ -100,7 +104,7 @@ void unlock(){
 }
 ```
 
-![yield_syscall](/img/yield_syscall.png)
+![yield_syscall](../../img/yield_syscall.png)
 
 ## Spinlock vs Sleeping Mutex
 + Most userspace lock implementations are of the sleeping or blocking mutex kind
@@ -154,13 +158,13 @@ With MLFQ, the low process will never run when compared to the high priority pro
 + `Sleep()` puts caller to sleep a queue to be awakened later
 + `Wakeup(x)` awakens the blocked process $x$ 
 
-![solution_b_sleeping](/img/solution_b_sleeping.png)
+![solution_b_sleeping](../../img/solution_b_sleeping.png)
 
 The `count == 1` exists because the only time we hit $1$ is from `count=0`, which is when the consumer sleeps.
 
 This solution introduces an race condition when preempted on the second red circle. The `wakeup` will be *missed*.
 
-![solution_b_sleeping_1](/img/solution_b_sleeping_1.png)
+![solution_b_sleeping_1](../../img/solution_b_sleeping_1.png)
 
 ## Condition Variables (CV) - waiting and signaling
 
@@ -174,9 +178,6 @@ Operations:
 1. `wait` - atomically release lock and relinquish processor until signaled
 2. `signal` - awaken a waiter (if any)
 3. `broadcast` - wake up all waiters (if any)
-
-
-
 
 [^1]: System call to put the thread back to ready state. 
 [^2]: sleep, **not** busy-wait

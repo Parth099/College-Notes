@@ -1,7 +1,7 @@
 # Lecture 10 27 22
 Recall our solution (Base and Limit registers) from last time to form an address space for **contiguous** programs. 
 
-![addr_trans_concept](/img/addr_trans_concept.png)
+![addr_trans_concept](../../img/addr_trans_concept.png)
 
 Memory Location: Moving the program around in memory. 
 
@@ -10,7 +10,7 @@ Memory Location: Moving the program around in memory.
 
 There is code that runs that locates these libraries and inserts them into code. This is called a *stub*, this stub it will be replaced by the address to the library routines. 
 
-![lib_stub](/img/lib_stub.png)
+![lib_stub](../../img/lib_stub.png)
 
 In statement "CRp is code RR", RR stands for replacement register. 
 
@@ -30,27 +30,28 @@ When you call `malloc(1)` it is unlikely you will get $1$ byte. You may get $4, 
 
 To reduce fragmentation we need to compact. 
 
-![ext_frag](/img/ext_frag.png)
+![ext_frag](../../img/ext_frag.png)
 
 Notice a program **cannot** be moved when it is doing IO. 
 
 ## Non-Contiguous Memory Allocation
 Two ways to represent a memory cell
-1. Direct Integer
-2. Binary Integer
+1. Direct Integer (left)
+2. Binary Integer (right)
 
-![mem_rep_bin_int](/img/mem_rep_bin_int.png)
+![mem_rep_bin_int](../../img/mem_rep_bin_int.png)
 
 
 We can even partition the memory into blocks. 
 
-![mem_rep_bin_int](/img/mem_block.png)
+![mem_rep_bin_int](../../img/mem_block.png)
 
 The integers on the left are block numbers. 
 
 ### Paging
-+ Process consists of fixed-size memory blocks called pages (frames or page-frames)
++ Process consists of fixed-size memory blocks called pages
 	+ frame size is determined by hardware
+	+ In the logical address space blocks are called pages whilst physical blocks are called frames. 
 + Page is a contiguous sequence of bytes
 + Eliminates external fragmentation
 
@@ -82,14 +83,14 @@ Recall what a logical address space is from [[Lecture 08-30-22 - Intro to Proces
 
 > Logical Space - The memory space the program is virtualized with. A process will think that this is the space it has
 
-![how_to_addr_under_pagging](/img/how_to_addr_under_pagging.png)
+![how_to_addr_under_pagging](../../img/how_to_addr_under_pagging.png)
 
 If a program is placed into 5 pages we can place them into any 5 frames. 
 
 ### Page table
 > Each process has a page-table inside the PCB. 
 
-![page_table](/img/page_table.png)
+![page_table](../../img/page_table.png)
 
 ### Summary
 + Divide physical memory into fixed-sized blocks called frames
@@ -99,14 +100,14 @@ If a program is placed into 5 pages we can place them into any 5 frames.
 + Internal fragmentation, but minimal
 
 ### Address Translation Scheme
-![page_offset](/img/page_offset.png)
+![page_offset](../../img/page_offset.png)
 
 Notice the system knows how large a block is. This is how it knows how to subtract off the $n$ bits.  
 
-![mmu_page](/img/mmu_page.png)
+![mmu_page](../../img/mmu_page.png)
 
 ### Example
-![page_e1](/img/page_e1.png)
+![page_e1](../../img/page_e1.png)
 
 ### Page-table Management
 We said the OS keeps track of the free frames but it also has a cleaning process as well. 

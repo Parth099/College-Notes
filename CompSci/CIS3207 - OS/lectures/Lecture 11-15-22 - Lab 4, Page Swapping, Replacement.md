@@ -78,11 +78,11 @@ In general, the number of page faults decreases with the number of frames. (Expe
 
 With $S_1:$
 
-![fifo_lecture_ra](/img/fifo_lecture_ra.png)
+![fifo_lecture_ra](../../img/fifo_lecture_ra.png)
 
 With $S_2$ and 3 frames:
 
-![fifo_s2](/img/fifo_s2.png)
+![fifo_s2](../../img/fifo_s2.png)
 
 
 ### Optimal Algorithm
@@ -98,13 +98,13 @@ FIFO takes advantage of locality as the likelihood of referencing a page from th
 ### Using History : LRU
 Look for the page that has not been used in the longest time and replace it instead. We can use a queue for this and update it per reference:
 
-![LRU_replacement_trace](/img/LRU_replacement_trace.png)
+![LRU_replacement_trace](../../img/LRU_replacement_trace.png)
 
 This generates a lot of overhead and thus LRU behavior must be *approximated*. 
 
 Here is $S_2$ which causes 12 faults:
 
-![LRU_s2](/img/LRU_s2.png)
+![LRU_s2](../../img/LRU_s2.png)
 
 Another idea to approximate LRU behavior is to add a time entry to the PTE and update it per reference. When a page needs to be replaced look for the lowest time entry. 
 

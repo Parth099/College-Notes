@@ -76,11 +76,11 @@ Location will be the same within the segment and the frame[^1]. Table maps progr
 ## Segmentation Lecture
 Epic Segmentation Graphic:
 
-![logical_view_of_seg](/img/logical_view_of_seg.png)
+![logical_view_of_seg](../../img/logical_view_of_seg.png)
 
 The logical address are in the form: `<segment-number, offset>`. 
 
-![virtual_addr](/img/virtual_addr.png)
+![virtual_addr](../../img/virtual_addr.png)
 
 Since we do not know the number of segments. The address segment portion of the address $S$ is based on a max-segment number defined by the OS or hardware. 
 
@@ -88,13 +88,13 @@ Since we do not know the number of segments. The address segment portion of the 
 
 **Segment Table**
 
-![seg_table](/img/seg_table.png)
+![seg_table](../../img/seg_table.png)
 
 The `segment_number` is used to index the table to fetch the segment address **and** size of said segment. 
 
 **Concrete Example Of a Segment Translation**
 
-![seg_trans_ex](/img/seg_trans_ex.png)
+![seg_trans_ex](../../img/seg_trans_ex.png)
 
 The issue with segmentation is that we cannot say that for any $K$ segments we can find any $K$ frames in memory to place segments into **without moving processes**.
 
@@ -103,7 +103,7 @@ The solution is below.
 ### Segmentation WITH Paging
 Segmentation with Paging Graphic:
 
-![seg_page.png](/img/seg_page.png)
+![seg_page.png](../../img/seg_page.png)
 
 > Since segments are contiguous we can **page** them!
 
@@ -151,7 +151,7 @@ For example in a `c` program we can load the page for the `main` entry routine h
 
 A `page-fault` is a interrupt generated when a program attempts to access a non-resident page. The interrupt routine will get the OS to load the page and re-doing the instruction that triggered the trap after setting the present but to $1$ .
 
-![demand_paging](/img/demand_paging.png)
+![demand_paging](../../img/demand_paging.png)
 
 On program load, all the present bits are $0$ to setup **demand paging**. With demand paging we sacrifice time for speed. 
 

@@ -2,9 +2,9 @@
 ## Semaphores
 Two operations:
 1. P(s) (down)
-	+ Atomically decrement the value of semaphore[^1]	
+	+ **Atomically** decrement the value of semaphore[^1]	
 2. V(s) (up) 
-	+ Atomically increment the value of semaphore[^2] and release a waiter if queue is non-empty
+	+ **Atomically** increment the value of semaphore[^2] and release a waiter if queue is non-empty
 
 ## Monitors (Synchronization)
 
@@ -15,7 +15,7 @@ Rules for a Monitor/Synchronization Object:
 2. In the image below Door 1 is *always unlocked*
 3. However, door 2 is *unlocked* only if there is no activity in the main room (any guard procedure)
 
-![moniter_room.png](/img/moniter_room.png)
+![moniter_room.png](../../img/moniter_room.png)
 
 Notice that this type of monitor can be implemented via a semaphore.
 
@@ -25,7 +25,7 @@ p(b_semaphore)
 v(b_semaphore)
 ```
 
-`b_semaphore` is a **binary** semaphore. 
+> `b_semaphore` is a **binary** semaphore. 
 
 ## Synchronization in a Monitor - Condition Variable
 > How can semaphores provide the functionality of condition variables?
@@ -47,28 +47,9 @@ From OSTEP, we know that the Hoare Implementation says that threads should only 
 ### Hoare Implementation
 We have been talking about the Mesa implementation for the past few weeks. 
 
-![Hoare_Implementation](/img/Hoare_Implementation.png)
+![Hoare_Implementation](../../img/Hoare_Implementation.png)
 
-A thread will leave the *urgent queue* when the waiter gives up the processor. It is called an **urgent queue** because threads from that queue are switched on first since they were **already** in the critical section. They are already in the CS they are the ones that gave up the CPU in the first place under the Hoare Implementation.
-
-Implementing Urgent Queue
-```c
-semaphore mutex = 1;
-semaphore next  = 0; //blocking semaphore
-
-int next_count = 0; 
-
-//any Procedure F
-P(mutex);
-	Body of F()
-		
-//if there are waiters in the urgent queues 
-if next_count > 0
-	V(next) //release them
-else
-	V(mutex) //if no one is waiting, release mutex
-	//allows for new thread to enter
-```
+A thread will leave the *urgent queue* when the waiter gives up the processor. It is called an **urgent queue** because threads from that queue are switched on **first** since they were **already** in the critical section. They are already in the CS they are the ones that gave up the CPU in the first place under the Hoare Implementation.
 
 Implementing Condition Queues
 ```c
@@ -101,11 +82,11 @@ function signal(x){
 ```
 
 ## Dining-Philosophers Problem
-![Dining-Philosophers-Problem](/img/Dining-Philosophers-Problem.png)
+![Dining-Philosophers-Problem](../../img/Dining-Philosophers-Problem.png)
 
 Philosophers think all day, they get hungry and need the rice. The rice is the `dataset` and the chopsticks are a way to access the rice. A chop stick is a semaphore each initialized to 1. 
 
-![shared_chop_sticks](/img/shared_chop_sticks.png)
+![shared_chop_sticks](../../img/shared_chop_sticks.png)
 
 This is where the semaphore comes in. **ONLY If** two adjacent chopsticks are picked up then they can eat.
 
@@ -143,7 +124,7 @@ DiningPhilosopher.putdown(i)
 
 Here is some monitor code for this issue.
 
-![Monitor_DPilosopher](/img/Monitor_DPilosopher.png)
+![Monitor_DPilosopher](../../img/Monitor_DPilosopher.png)
 
 ## Barriers
 Synchronization mechanism where groups of processes work together in phases. Processes go to the next phase only when all are at the end of a particular phase.
@@ -152,7 +133,7 @@ Example of this problem:
 
 Image a image processing problem where a thread T gets a group of pixels to smooth over. After they all finish the *new* image gets re-smoothed. Much like the image below, we can only re-smooth **if** the threads are all finished their pixel block of the image. 
 
-![barrier](/img/barrier.png)
+![barrier](../../img/barrier.png)
 
 ### Barrier implementation via Semaphores
 ```c

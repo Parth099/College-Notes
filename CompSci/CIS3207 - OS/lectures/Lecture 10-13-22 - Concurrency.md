@@ -27,18 +27,17 @@ In short, condition variables provide mutual exclusion and condition synchroniza
 
 ### Class Example: Intro to Condition Variables
 
-![cond_var_class](/img/cond_var_class.png)
+![cond_var_class](../../img/cond_var_class.png)
 
-Recall that when we come back from the `Pthread_cond_wait(&c,&m)` the rock **must** be reacquired.
+Recall that when we come back from the `Pthread_cond_wait(&c,&m)` the lock **must** be reacquired.
 
 ### Class Example: Producer and Consumer
 
-![cond_var_pro_con.png](/img/cond_var_pro_con.png)
+![cond_var_pro_con.png](../../img/cond_var_pro_con.png)
 
 ## Semaphore
 + Synchronization primitive like condition variables
-+ Semaphore is a variable with an underlying counter (Block/Wakeup &
-Counting)
++ Semaphore is a variable with an underlying counter (Block/Wakeup & Counting)
 + Two functions on a semaphore variable
 	+ up/post increments the counter and releases a waiter
 	+ down/wait does the opposite, it blocks the caller
@@ -81,10 +80,10 @@ V(S){
 }
 ```
 
-Notice that a **binary semaphore** is just the mutex lock we have been learning about. This is because if `semaphore=0` the next caller to down shift is will block themselves. 
+Notice that a **binary semaphore** is just the mutex lock we have been learning about. This is because if `semaphore=0` (after initial `P()`) the next caller to down shift will block themselves. 
 
-A non-binary semaphore can be a resource counter, we can allow up to $N$ threads access to some data. 
+A non-binary semaphore can be a resource counter: we can allow up to $N$ threads access to some data. 
 
 ### Binary Semaphore Example
 
-![binary_semaphore_ex](/img/binary_semaphore_ex.png)
+![binary_semaphore_ex](../../img/binary_semaphore_ex.png)

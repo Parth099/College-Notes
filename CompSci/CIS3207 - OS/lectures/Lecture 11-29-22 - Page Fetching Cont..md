@@ -31,7 +31,7 @@ The smaller the amount of memory per process the more process can coexist in mai
 
 Beyond a certain size the number of page allocation does not matter:
 1. Too many frames: unused frames
-2. Beyond a certain size the number page faults do not decreased 
+2. Beyond a certain size the number page faults do not decrease
 
 ### Resident Set Size Allocation Polices
 #### Fixed Allocation
@@ -64,7 +64,8 @@ If the allocation here is too large:
 #### Variable Allocation w/ Global Scope
 Easy to implement as OS maintains a list of free frames. A free frame (if possible) is added to the resident set when a fault occurs.
 
-If there are no free pages, the OS must choose a page to replace in memory.
+If there are no free pages, the OS must choose a page to replace that is *already* in memory.
++ Choosing a global page can have negative effects on victim process. 
 
 > This works really well with Page Buffering (See [[Lecture 11-17-22 Page Fetching and Replacement]])
 
@@ -74,13 +75,13 @@ If there are no free pages, the OS must choose a page to replace in memory.
 
 + When a process is loaded give it a certain number of page frames 
 + When a fault occurs select a page to replace among the resident set of the faulting process
-+ Reevaluate periodically the allocation provided to a process to inc/decrement it for memory performance. 
++ Periodically reevaluate the allocation provided to a process to inc/decrement it for memory performance. 
 
 ### Working Set 
 
 > Program needs a certain set of pages resident in memory to run efficiently. If this frame criterion is not met, a lot of page faults occur. 
 
-The optimal working set of a process is the set of pages that will be needed in the immediate future and thus should be resident. 
+The optimal working set of a process is the set of pages that will be needed in the immediate future and thus should be resident. This cannot be determined and hence it is named "optimal working set".
 
 #### Locality Of Reference Experiment
 ![Locality_of_Reference](../../img/Locality_of_Reference.png)
@@ -93,9 +94,17 @@ Given a small time window $\Delta t$ we notice that not a lot of frames are requ
 The humps are generated from the process moving between working sets. 
 
 
-**Relation Between Working Set Size and $k=\Delta t$**
+**Relation Between Working Set Size and window size**
 
 ![Working_Set_Size_relation_to_time](../../img/Working_Set_Size_relation_to_time.png)
+
+$$
+w(k, t) = \underbrace{(t-k, t)}_{\text{time interval}}
+$$
+
+The window size is in virtual time units $(t-k, t)$ . 
++ Virtual time could be instruction cycles with 1 instruction per cycle, or any other consistent unit.
++ Virtual time is time elapsing whilst the process is running on the CPU. 
 
 ### Working Set Strategy
 > Variable Allocation, Local Scope
@@ -108,7 +117,7 @@ The humps are generated from the process moving between working sets.
 
 ### Working Set Model
 + Working Set Window 
-	+ a fixed number of page references
+	+ a fixed number of page references (as shown in the last image)
 + $WSS_i$ - working set size of Process $P_i$ = total number of pages references in the most recent interval $\Delta$
 	+ if $\Delta$ is too small it will not encompass entire locality
 	+ if $\Delta$ is too big it it will encompass several localities
@@ -125,8 +134,24 @@ $D > m$ causes **thrashing** where little work is being done due to too many IO 
 
 **Definition: Thrashing** - A state in which the system spends most of its time swapping process pieces rather than executing instructions. Thrashing will decrease the degree of Multiprogramming. 
 
+> See that if $D \gt \sum_i \text{WSS}_i$ each time a process is given time on the CPU it will likely need to bring its pages back if $D >> \sum_i \text{WSS}_i$
+
 ### Working Set Implementation
-However, it is hard to predict working set size before hand. We need to keep track when pages are referenced. 
+However, it is hard to predict working set size before hand. We need to keep track when pages are referenced to ensure when we replace a page it is really the oldest page referenced (LRU). 
 
 ### Working Set Algorithm
 ![Working_Set_Algorithm](../../img/Working_Set_Algorithm.png)
+
+Assume the $r$ and $m$ bits work as before. Now there is a clock interrupt that runs which will clear each page's $r$ bit back to 0. On a asynchronous page fault a page will be selected to be replaced. 
+
+If $r=1$ , the current time is written to the "last used" field. Since this page is referenced recently[^1] it will not be replaced.  
+
+If $r=0$ , this page is candidate for removal. The difference between its last use and current clock time is compared to $t$ as shown on the image. 
+
+If all pages's age is less than $t$ then the *oldest* page such that $r=0$ is replaced. The WS Algorithm keeps scanning here. One scan can result in many removals. 
+
+
+If no pages are found with $r=0$ , a clean page with $r=1$ is replaced, if it exists[^2]. 
+
+[^1]: We can assume this page is referenced in the last clock tick. 
+[^2]: If nothing exists, evict the LRU page. 

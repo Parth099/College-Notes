@@ -4,17 +4,17 @@ Recall how the signaling solution failed for the produce/consumer archetype.
 
 > Signaling was when we used boolean variables to block process whether it is the producer or the consumer
 
-![signaling_attempt](/img/signaling_attempt.png)
+![signaling_attempt](../../img/signaling_attempt.png)
 
 The basis of the problem is the fact that we take a decision based on the state of the variable but do not act on it **immediately**. To solve this, we must make critical sections of code ***atomic***. 
 
 We will attempt to make these functionally atomic:
 
-![update_signaling](/img/update_signaling.png)
+![update_signaling](../../img/update_signaling.png)
 
 Process/Thread view
 
-![ME__CR](/img/ME__CR.png)
+![ME__CR](../../img/ME__CR.png)
 
 ## Synchronization Approaches
 1. Busy Waiting
@@ -35,7 +35,7 @@ Might be OK in a multi-processor system but **not** uni-processor.
 ### Strict Alternation or Hand-off Synchronization
 A special case for the critical section problem.
 
-![turn_based_sync](/img/turn_based_sync.png)
+![turn_based_sync](../../img/turn_based_sync.png)
 
 ## Vocab
 - CSEntry - Protocol to enter critical section (CS)
@@ -76,7 +76,7 @@ void release(bool *lock){
 
 This wont work still due to race condition.
 
-Consider $T1, T2$ working at the same time. While $T1$ attempts to `aqquire` the lock, it is preempted at $(\mathbf{I})$ , when $T2$ goes to `aqquire` it will see that the lock is `false` and it will be able to acquire it. Now both $T1$ and $T2$ will be in the critical sector. 
+Consider $T_1, T_2$ working at the same time. While $T_1$ attempts to `aqquire()` the lock, it is preempted at $(\mathbf{I})$ , when $T_2$ goes to `aqquire` it will see that the lock is `false` and it will be able to acquire it. Now both $T_1$ and $T_2$ will be in the critical section. 
 
 ## Synchronization Hardware
 We need to make the `acquire` a single instruction where it will `test` the value of the lock and also set it.
@@ -110,8 +110,10 @@ int TestAndSet(int *old_ptr, int new){
 ### The Test & Set ‘Function’
 We can use the TS function to set the lock and copy its value to see if we can go into the critical section.
 
-![TS_1](/img/TS_1.png)
+![TS_1](../../img/TS_1.png)
 
 - Spin-lock : Lock that is busy waiting
 
 Suppose $T1$ gets preempted at `TS(lock, cc);`. Since it has to finish the instruction, it **will** set the lock to **true** before the thread is switched out. Now of $T2$ uses `TS(lock, cc2)` it will see **false**.
+
+`Test-and-set` *works* however using spin locks is not ideal for performance. 

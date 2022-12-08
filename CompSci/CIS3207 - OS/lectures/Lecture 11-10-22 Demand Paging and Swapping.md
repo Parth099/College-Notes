@@ -19,7 +19,7 @@ Demand Paging is a another advantage of paging.
 There can be many faults per instruction. When the first *invalid* address is seen a page fault occurs and that page is loaded. This instruction is repeated where another reference will cause a page fault causing its corresponding page to be loaded in.   
 
 ### Handling Page Faults
-![handle_pg_fau](/img/handle_pg_fau.png)
+![handle_pg_fau](../../img/handle_pg_fau.png)
 
 The OS **owns all frames** and it can allocate a frame for a requested page.  
 
@@ -51,7 +51,7 @@ $$
 
 $p_t$ - time to service a page fault (see below)
 
-![time_consume_page_fault](/img/time_consume_page_fault.png)
+![time_consume_page_fault](../../img/time_consume_page_fault.png)
 
 The process is blocked when a missing page is requested. 
 

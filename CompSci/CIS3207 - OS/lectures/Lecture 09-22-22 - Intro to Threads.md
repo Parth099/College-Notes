@@ -110,7 +110,7 @@ Multithreading is the ability of an OS to support multiple concurrent paths of e
 
 Notice the TCB has CPU state (registers, PSW).
 
-> The TCB does not live inside the PCB
+> The location of the TCB depends on the thread implementation
 
 ## OS Actions that Affect Threads
 In an OS that supports threads, scheduling and dispatching is done on a thread basis.

@@ -43,7 +43,7 @@ Examples:
 
 + Change PSW register state
 + Access memory outside allocated bounds 
-	+ See [[Lecture 10-20-22 - Memory]] for a talk about bounds in memory
+	+ See [[Lecture 10-20-22 - Intro to Memory Address Translation]] for a talk about bounds in memory
 + Send IO commands
 + Jump directly to kernel without a secure method
 

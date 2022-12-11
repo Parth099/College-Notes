@@ -2,7 +2,7 @@
 
 After picking a starting node, all distances are $\infty$ .
 
-![dijkstra_graph.png](../../../img/dijkstra_graph.png)
+![dijkstra_graph.png](../../img/dijkstra_graph.png)
 
 Start Node: $A$
 
@@ -42,7 +42,7 @@ This is the completed table:
 
 ## Spanning Tree 
 
-![dijkstra_spanning](../../../img/dijkstra_spanning.png)
+![dijkstra_spanning](../../img/dijkstra_spanning.png)
 
 This is generated from the table above since we have each of the $\text{parent} \to \text{child}$ relations. 
 

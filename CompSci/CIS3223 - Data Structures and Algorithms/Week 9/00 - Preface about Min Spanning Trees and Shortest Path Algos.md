@@ -8,7 +8,7 @@ This is **not** to be confused with a shortest path algorithm which presents a p
 
 Credit: [MathStackExchange]()
 
-![MST_vs_spanning.png](../../../img/MST_vs_spanning.png)
+![MST_vs_spanning.png](../../img/MST_vs_spanning.png)
 
 Consider a graph $G$ where:
 

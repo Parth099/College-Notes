@@ -11,7 +11,7 @@ $$
 ## $O(n)$ Heapify
 Place items in a binary tree. 
 
-![heap_sort](../../../img/heap_sort_1.jpg)
+![heap_sort](../../img/heap_sort_1.jpg)
 
 By definition of a heap, any node with no children is a heap. 
 
@@ -54,21 +54,21 @@ The amount of work that needs to be done to *fix* a heap is directly proportiona
 
 ## Example
 
-![heap_sort](../../../img/heap_sort_1.jpg)
+![heap_sort](../../img/heap_sort_1.jpg)
 
 For the last 5 nodes there is no work to be done since they are already valid sub-heaps. 
 
 The first change that needs to be made is swapping $5 \leftrightarrow 29$ as well as $11 \leftrightarrow 16$
 
-![heap_sort](../../../img/heap_sort_2.jpg)
+![heap_sort](../../img/heap_sort_2.jpg)
 
 Next we consider all subheaps of height $2$ . There is only one, it is rooted at $\mathbf{7}$ .
 
-![heap_sort](../../../img/heap_sort_3.jpg)
+![heap_sort](../../img/heap_sort_3.jpg)
 
 
 Finally the root is floated down. (the three) 
-![heap_sort](../../../img/heap_sort_4.jpg)
+![heap_sort](../../img/heap_sort_4.jpg)
 
 
 ## Heap Sort

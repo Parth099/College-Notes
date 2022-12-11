@@ -50,7 +50,7 @@ The two choices in the $\max(\dotso)$ represent choosing between $S(u)=1$ or $S(
 
 ![topological_ind_set](../../img/topological_ind_set.png)
 
-The second image is a Topological Sort (See ![[../Week 11/01 - Topological Sort]])
+The second image is a Topological Sort (See ![[01 - Topological Sort]])
 
 > If $u$ is a leaf, $L(u) =1= S(u)$ . This is because leaves do not *go anywhere*. 
 

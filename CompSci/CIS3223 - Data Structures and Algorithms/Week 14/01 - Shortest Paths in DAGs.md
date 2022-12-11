@@ -6,6 +6,8 @@
 
 > There are no cycles in a DAG this means we can employ a faster algorithm than Dijkstra's Shortest Page algorithm.
 
+Runtime: $O(|E|+|V|)$
+
 ![flow_network](../../img/flow_network.png)
 
 Consider that DAG.
@@ -126,3 +128,4 @@ This goes on resulting in:
 | **DIST**   | 0   | 3   | 3   | 4   | 4   | 5   | 6   | 
 | ---------- | --- | --- | --- | --- | --- | --- | --- |
 | **VERTEX** | s   | b   | a   | d   | c   | e   | z   |
+

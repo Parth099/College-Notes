@@ -38,4 +38,4 @@ $$
 
 This relation can be used to check the work at each step. 
 
-Since the $2\times2$ for each step is calculated in $O(1)$ time, the entire algorithm has $O(n^2)$ complexity. 
+Since the $2\times2$ for each step is calculated in $O(1)$ time, the entire algorithm has $O(n^3)$ complexity. The outer loop will run at most $2n$ times. 

@@ -16,19 +16,12 @@ def selectK(S: list[Vector], k: int) -> Vector:
         rand_idx = randrange(0, n) #set [0, n)
         pivot = S[rand_idx]
 
-        # there is no need for S_right
-        S_left, S_eq, S_right = [], [], []
 
-        # put elements in currect box
-        for element in S:
-            
-            if element < pivot:
-                S_left.append(element)
-            elif element == pivot:
-                S_eq.append(element)
-            else:
-                # this part is not required we do not need the size of left partition 
-                S_right.append(element)
+        # put items in a bucket
+        S_left = list(filter(lambda x: x < pivot, S))
+        S_eq = list(filter(lambda x: x == pivot, S))
+        S_right = list(filter(lambda x: x > pivot, S))
+
 
         LEN_SL = len(S_left)
         LEN_SEQ = len(S_eq)

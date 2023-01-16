@@ -31,7 +31,7 @@ For $\xi(x)$ between $x$ and $x_0$
 1. Lagrange Interpolation
 2. Hermite Interpolation
 3. Divided Differences
-4. Splices
+4. Splines
 
 ## Chapter 4
 1. Numerical Differentiation

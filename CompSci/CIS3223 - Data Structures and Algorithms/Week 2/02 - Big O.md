@@ -20,7 +20,7 @@ If
 $$
 f \prec g \prec h
 $$
-where the symbol $\prec$ means "dominates", then, 
+where the symbol $\prec$ means "dominated by", then, 
 $$
 f\times g \in O(h)
 $$

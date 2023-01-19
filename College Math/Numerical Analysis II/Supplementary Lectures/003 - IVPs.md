@@ -8,7 +8,7 @@ Steps to solving:
 ## Example 1
 
 $$
-y'=2y;\; y(x) = Ce^{2x};\; y(0) = 3
+y'=2y ; \; y(x) = Ce^{2x} ; \; y(0) = 3
 $$
 
 $$
@@ -28,7 +28,7 @@ The particular solution is $y=3e^{2x}$
 ## Example 2
 
 $$
-e^yy'=1;\;y(x)=\ln{(x+C)};\;y(0)=0
+e^yy'=1; \; y(x)=\ln{(x+C)}; \; y(0)=0
 $$
 
 $$
@@ -54,7 +54,8 @@ $$
 
 $$
 \begin{align}
-y'&=re^{rx}\\y''&=r^2e^{rx}
+y'&=re^{rx}\\
+y''&=r^2e^{rx}
 \end{align}
 $$
 

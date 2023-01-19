@@ -3,7 +3,8 @@
 
 $$
 \begin{align}
-P &= \text{Population}\\ t &= \text{Time}
+P &= \text{Population}\\
+t &= \text{Time}
 \end{align}
 $$
 

@@ -1,0 +1,1 @@
+Resource: [Youtube - Professor Leonard](https://www.youtube.com/playlist?list=PLDesaqWTN6ESPaHy2QUKVaXNZuQNxkYQ_)

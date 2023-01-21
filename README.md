@@ -29,9 +29,9 @@ Repo of my Latex-based notes via the Note taking app: [Obsidian](https://obsidia
 
 ## Spring 23'
 
-| Course Code | Description                |
-| ----------- | -------------------------- |
-| Math 3044   | Numerical Analysis II      |
-| CIS 3296    | Software Design            |
-| CIS 3715    | Principles of Data Science |
-| CIS 4382    | Research in CIS            |
+| Course Code | Description                        |
+| ----------- | ---------------------------------- |
+| Math 2121   | Mathematical Modeling & Simulation |
+| CIS 3296    | Software Design                    |
+| CIS 3715    | Principles of Data Science         |
+| CIS 4382    | Research in CIS                    |

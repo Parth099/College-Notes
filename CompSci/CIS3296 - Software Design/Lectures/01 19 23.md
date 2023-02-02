@@ -51,6 +51,8 @@ Steps:
 + Add code to implement functionality
 + Continue TDD process until module is finished
 
+> Red $\to$ Green $\to$ Refactor
+
 Note: It may not be to test a unit on every possible scenario it may need to handle. 
 
 ### TDD Rhythm for the Lab

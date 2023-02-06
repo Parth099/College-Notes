@@ -99,3 +99,4 @@ Now there is only once place in the code where all the core policy types exist.
 + Addition
 	+ Little to test
 	+ Less change of ripple effects
+

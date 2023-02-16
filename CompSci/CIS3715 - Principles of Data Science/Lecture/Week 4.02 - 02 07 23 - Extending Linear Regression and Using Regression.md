@@ -64,6 +64,8 @@ $$
 x = (x_1, x_2) \stackrel{\phi(x)}{\longrightarrow} \{1, x_1, x_1^2, x_2, x_2^2, x_1x_2 \} 
 $$
 
+> $x_1x_2$ represents the correlation between the two variables. 
+
 ### Fitting Non Linear Data
 
 ![fitting_non_linear_data](../img/fitting_non_linear_data.png)
@@ -82,8 +84,25 @@ $$
 
 $\lambda$ - hyperparameter[^2]
 
-Minimizing the magnitude of $\vec{w}$ allows it to be as small as possible with the chance of some $w_i$ being $0$ . 
+$$
+\lambda = 
+\begin{cases}
+\lt 0 & & \text{not a valid value} \\
+0 & \text{then} & \text{no regularization} \\
+\text{large } \lambda & \text{then} & \text{very small }\vec{w}
+\end{cases}
+$$
 
+
+Minimizing the magnitude of $\vec{w}$ (directly or gradient descent) allows it to be as small as possible with the chance of some $w_i$ being $0$ . 
+
+## Ridge Regression vs Lasso
+
+> Recall: $\ell_1 = \sum |a_i|$
+
++ Ridge: the second term above uses $\ell_2$ (i.e $\lambda\|\vec{w}\|_2^2$  )
++ Lasso: the second term above uses $\ell_1$ (i.e $\lambda\|\vec{w}\|_1$ ) 
+	+ More likely to generate sparse vectors. 
 
 [^1]: Regularization refers to techniques that are used to calibrate machine learning models in order to minimize the adjusted loss function and prevent overfitting or underfitting.
 [^2]:A hyperparameter is a parameter whose value is used to control the learning process

@@ -27,10 +27,6 @@ Here is what it looks like when we are given a new sample $x_{n+1}$ :
 
 ## Linear Regression
 
-**Applications**:
-1. Stock Prices
-2. 
-
 Recall the goal of learning some mapping function for linear regression:
 
 $$x_i \stackrel{f(x)}{\longrightarrow} y_i$$
@@ -150,3 +146,46 @@ $$
 $$
 \sqrt{E} = \sqrt{\frac{1}{n} \sum_{i=1}^n e_i^2}
 $$
+
+## Misc
+
+A linear model can be overfitted if too high of a weight is given to unimportant variables:
+
+$$
+f(\vec{x}) = w_0 + w_1x_1 + w_2x_2 + \dotso + w_nx_n
+$$
+
+### Example
+**Data**:
+
+| $x$ | $y$   |
+| --- | ----- |
+| 1   | 5.14  |
+| 2   | 10.67 |
+| 3   | 16.17 |
+| 4   | 20.12 |
+
+Then:
+
+$$
+\overbrace{
+\begin{bmatrix}
+1   & 1  \\
+1   & 2 \\
+1   & 3 \\
+1   & 4
+\end{bmatrix}
+}^{X}
+\vec{w}
+=
+\underbrace{
+\begin{pmatrix}
+5.14  \\
+10.67 \\
+16.17 \\
+20.12 
+\end{pmatrix}
+}_{\vec{y}}
+$$
+
+We would like a $\vec{w}$ such that $X\vec{w}$ gets us as close to $y$ (ground) truth as possible. The next lecture [[Week 4.02 - 02 07 23 - Extending Linear Regression and Using Regression]] will speak more on this. 

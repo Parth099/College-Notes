@@ -41,13 +41,18 @@ $$
 P(A | B) = \frac{P(A \cap B)}{P(B)}
 $$
 
+Chose to optimize for 
++ Recall, if the cost of `FN` is high (medical diagnosis)
++ Precision, if the cost of `FP` is high (filtering spam emails)
+	+ Here we are okay with a few more `FN` since we would rather let in a few spam emails than miss important emails
+
 ##### Recall
 
 $$
 \text{Recall} = \frac{TP}{TP + FN}
 $$
 
-Recall will measure the proportion of positives classified correctly out of all real Positive instances. 
+Recall measures the proportion of positive instances that were correctly identified by the model, out of all the positive instances that actually exist in the data.
 
 A large recall means more positives instances would be found by the classifier.
 
@@ -57,7 +62,7 @@ $$
 \text{Precision} = \frac{TP}{TP + FP}
 $$
 
-Precision will measure the proportion of positive predictions is actually correct.
+Precision measures the proportion of positive instances that were correctly identified by the model, out of all the instances that the model predicted as positive.
 
 A large precision implies a higher probability a positive prediction is correct. 
 
@@ -67,3 +72,17 @@ A large precision implies a higher probability a positive prediction is correct.
 $$
 F_1 = \frac{2}{\frac{1}{\text{Recall}}+\frac{1}{\text{Precision}}} = \frac{2\times\text{Recall}\times\text{Precision}}{\text{Recall}+\text{Precision}}
 $$
+
+### Hyperparameter Selection Method
+<!-- forgot to add this in the main commit -->
+
+![hyperp_3fold](../img/hyperp_3fold.png)
+
+A *new* set, the validation set, is used for hyperparameter selection, during the training phase
+
+Steps:
+1. Select some hyperparameters where $\lambda \in \mathbb{R}_{\geq0}$
+	+ $\lambda=0$ is just linear regression
+2. For each $\lambda$ , train via training set and validate (test) via validation set.
+3. Select the best performing $\lambda$ as the hyperparameter and retrain the model. However, without the validation set this time. 
+

@@ -4,7 +4,7 @@
 
 $$
 \min_{\vec{w}} 
-\biggr[
+-\biggr[
 y_i\log{p_i} + (1-y_i)\log{(1-p_i)}
 \biggr]
 $$

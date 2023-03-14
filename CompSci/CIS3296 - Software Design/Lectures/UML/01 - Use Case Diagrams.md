@@ -37,7 +37,7 @@ The `<<extends>>` relationship represent exceptional cases. They are **factored 
 
 ![use_case_extends](../../img/use_case_extends.png)
 
-> Watch the direction of the relationship. It should "A" extends "B" in the direction of the arrow. 
+> Watch the direction of the relationship. It should read "A" extends "B" in the direction of the arrow. 
 
 #### `<<includes>>`[^1]
 

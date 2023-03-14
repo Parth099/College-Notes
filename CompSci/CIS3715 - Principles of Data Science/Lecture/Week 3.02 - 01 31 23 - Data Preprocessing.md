@@ -24,7 +24,8 @@ If $\gt 50\%$ of the feature values are missing, *dropping* the feature might be
 
 Otherwise filling in values might be the next best option. The value for filling in data depends on the type of distribution. 
 + Long Tail distribution: `Median`
-+ Non-Long Tail Distribution: `Mean` 
+	+ Why? The head may hold most of the values but they do not represent the breadth of data which is why the median might be a better measure. The median is less sensitive to extreme values unlike the mean. 
++ Non-Long Tail Distribution: `Mean` or `Median`
 
 > This answers the question for *Numerical* Features but what about **Categorical**?
 

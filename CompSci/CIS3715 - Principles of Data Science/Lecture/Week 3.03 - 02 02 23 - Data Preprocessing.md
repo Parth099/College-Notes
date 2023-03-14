@@ -8,13 +8,13 @@ From: [[Week 3.02 - 01 31 23 - Data Preprocessing]]
 ### Label Encoding
 If a feature $x_i$ can retain the following values:
 
-```
+```txt
 <1H OCEAN, INLAND, NEAR OCEAN, NEAR BAY, ISLAND
 ```
 
 We can give each categorical value a numerical value. 
 
-```
+```txt
 <1H OCEAN     1
 INLAND        2
 NEAR OCEAN    3
@@ -65,7 +65,7 @@ $$
 x' = \frac{x-x_\min}{x_\max - x_\min}
 $$
 
-This transformation would occur to each feature (column). 
+This transformation $\mathbb{R}\to[0, 1]$ would occur to each feature (column). 
 
 Consider the `median_house_value` column. 
 

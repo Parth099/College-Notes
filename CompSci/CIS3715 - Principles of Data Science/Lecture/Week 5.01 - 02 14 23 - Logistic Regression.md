@@ -115,9 +115,16 @@ $$
 
 That is what we have to minimize. [^2]
 
+###### Loss Function
+
+$$
+\min_{\vec{w}} - \biggr[ \sum_{i=1}^n y_i\log(p_i) + (1-y_i)\log(1-p_i) \biggr]
+$$
 
 ###### Overfitting
 To avoid overfitting we do the same as [[Week 4.02 - 02 07 23 - Extending Linear Regression and Using Regression]], add a regularization term.
+
+
 
 --- 
 ### Multi-Class Classification

@@ -46,7 +46,7 @@ $$
 And finally compute the variance:
 
 $$
-\frac{1}{n} \sum_{i=1}^n w^T(\bar{x} - x_i) \to
+\overbrace{\frac{1}{n} \sum_{i=1}^n w^T(\bar{x} - x_i)}^{\text{def of Variance}} \to
 \frac{1}{n} \sum_{i=1}^n w^T\tilde{x}_i
 $$
 
@@ -87,8 +87,10 @@ $$
 If we only wanted two dimensions:
 
 $$
-\hat{X} = \overbrace{W^T}^{[w_1 w_2]^T}\tilde{X} \in \mathbb{R}^{2 \times n}
+\hat{X} = {W^T}\tilde{X} \in \mathbb{R}^{2 \times n}
 $$
+
+Note: $W_T = [w_1 w_2]^T$ where $\dim W^T = \mathbb{R}^{2 \times d}$ and $\dim{\tilde{X}} = \mathbb{R}^{d \times n}$
 
 > This can be extended to $k$ dimensions:
 

@@ -74,8 +74,61 @@ For example a function declared as `__global__` is known as a kernel function to
 	+	Each thread belongs to some block
 	+	Each block has vector groups called "warps" (the unit in SIMD)
 3. Threads distinguish computation by querying their grid/block location 
-	+ the location of a thread can serve as its `id`.
+	+ the location of a thread inside a block and grid can serve as its `id` since it will be unique. 
 
 <!-- 55.19 / 1.16.16 -->
 
-[^1] Thats why they are threads. 
+#### Examples
+> Since i cannot run the code there is no guarantee it is correct. 
+
+##### Add
+```c
+# pointers since we need to move vars to device (GPU) memory initially.
+__global__ void add(int *a, int *b, int *c) {
+	*c = *a + *b;
+}
+
+
+int main(void){
+	int a, b, c;           // host variables
+	int *d_a, *d_b, *d_c;  // device copies
+	
+	int size = sizeof(int);
+	
+	//allocate space for device copies for a, b, c
+	cudaMalloc((void**)&d_a, size);
+	cudaMalloc((void**)&d_b, size);	
+	cudaMalloc((void**)&d_c, size);
+	
+	// testing values
+	a = 2; b = 7;
+	
+	// copy values to device
+	cudyMemcpy(d_a, &a, size, cudaMemmpyHostToDevice);
+	cudyMemcpy(d_b, &b, size, cudaMemmpyHostToDevice);
+	
+	add<<<1, 1>>>(d_a, d_b, d_c); //run kernal function
+	
+	cudaMemcpy(&c, d_c, size, cudaDeviceHostToHost);
+	
+	cudaFree(d_a); cudaFree(d_b); cuda(d_c);
+	
+	return 0;
+	
+}
+```
+
+##### Vector Add
+```c
+// not working code just for sake of example
+__global__ void add(int *a, int *b, int *c) {
+	int tid = blockIdx.x * blockDim.x  + threadIdx.x
+	// n is the size of the vector
+	while(tid < n) {
+		c[tid] = a[tid] + b[tid];
+		tid += blockIdx.x * blockDim.x;
+	}
+}
+```
+
+[^1]: Thats why they are threads. 

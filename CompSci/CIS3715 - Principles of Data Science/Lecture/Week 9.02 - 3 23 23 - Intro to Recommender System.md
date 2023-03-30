@@ -27,4 +27,4 @@ In CF, ratings of like-minded are utilized to provide recommendations based on t
 ### Memory based CF: User-CF
 **Motivation**: If users have similar tastes in the past, they will have similar tastes in the future. 
 
-If we want to give recommendations to person $k$ about item $i,$ we have to find a number of peers who liked the same items as $k$ and have rated item $i$ and use that information to predict of $k$ will like $i$ .
+If we want to give recommendations to person $k$ about item $i,$ we have to find a number of *similar* peers who liked the same items as $k$ and have rated item $i$ and use that information to predict of $k$ will like $i$ .

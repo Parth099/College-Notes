@@ -71,7 +71,7 @@ $$
 ### Normalized Discounted Cumulative Gain
 
 $$
-NDCG_\text{pos} = \frac{IDCG_\text{pos}}{DCG_\text{pos}}
+NDCG_\text{pos} = \frac{DCG_\text{pos}}{IDCG_\text{pos}}
 $$
 
 

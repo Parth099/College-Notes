@@ -42,6 +42,8 @@ If there is a lot of object chaining, `A.B.C.D`, usually this is not good.
 ### Cohesion
 + Cohesion, on the other hand, refers to the degree to which the elements within a single software component are related to each other.
 	+ High cohesion means that the elements are strongly related and work together towards a common goal, while low cohesion indicates that the elements are loosely related and may not work together effectively.
++ Represents the organization of the class
+	+ If there is a bug how hard will it be to find the `class` or `method` that caused it. 
 
 
 

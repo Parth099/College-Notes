@@ -47,3 +47,23 @@ $$
 Then $a - c = n(k_1-k_2)$ which is in the form $n*k$ for some $k = k_1-k_2$
 
 ### Converse
+
+By assumption, $a=nk+c$.
+
+The division algorithm states that $c=qn+r$ for 
+
+$$
+\begin{align}
+(1)&\ q, r\in \mathbb{Z} \\
+(2)&\ 0 \leq r \leq n
+\end{align}
+$$
+
+Thus,
+
+$$
+a = nk+c = nk+qn + r = n(k+q) + r
+$$
+
+This implies that $a$ also has a remainder $r$ when dividing by $n$
+

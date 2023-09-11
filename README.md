@@ -35,3 +35,11 @@ Repo of my Latex-based notes via the Note taking app: [Obsidian](https://obsidia
 | CIS 3296    | Software Design                    |
 | CIS 3715    | Principles of Data Science         |
 | CIS 4382    | Research in CIS                    |
+
+## Fall 23'
+
+| Course Code | Description               |
+| ----------- | ------------------------- |
+| Math 3098   | Modern Algebra            |
+| CIS 4398    | Computer Science Capstone |
+| CIS 4360    | Financial Computing       |

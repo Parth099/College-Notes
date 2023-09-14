@@ -9,15 +9,15 @@ This makes me think Michael may have done this to frame the other two. After see
 I opened drive B to path `/img_Hard Drive B.001/USBCocktails&OysterMenu`. 
 
 ### Q1:
-![marco_clockout.png](/img/marco_clockout.png)
+![marco_clockout.png](../../img/marco_clockout.png)
 
 I found a file named `timeStamp.txt` which had Marco's timestamps. It says that Marco clocked out at **10:00 PM** on 3/21 .
 
 ### Q2:
-![marco_building_report](/img/marco_building_report.png)
+![marco_building_report](../../img/marco_building_report.png)
 This image on this drive had the daily schedule on it. Assuming it is Marco's, he is reporting to **Building B** after dinner. 
 
 ### Q3
-![marcoemail](/img/marcoemail.png)
+![marcoemail](../../img/marcoemail.png)
 
 When the regex pattern matching tool did not return any relevant results I assumed the email was hidden inside an image. Before moving to more advanced techniques, I simply looked over the images and saw the email was contained in a screenshot. 

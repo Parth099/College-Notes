@@ -96,8 +96,6 @@ def csv_to_table(csv_file_name: str, fields_map: Set, db_connection: sqlite3.Con
         StockSplits = row['StockSplits']
         Ticker = row['Ticker']
 
-        print("INSERT")
-
         cursor.execute(INSERT_ROW_QUERY, (Ticker, AsOfDate, Open, High, Low, Close, Volume, 0, Dividend))
 
 
@@ -175,9 +173,6 @@ def run():
         list_of_tickers = list(pd.read_csv(fname, header=None).iloc[:, 0])
         print(f"Read tickers from {fname}")
         
-
-    list_of_tickers = list_of_tickers[:5]
-
     print(list_of_tickers)
     print(opt.start_date, opt.end_date)
 

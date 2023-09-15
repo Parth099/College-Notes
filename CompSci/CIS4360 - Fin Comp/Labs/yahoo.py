@@ -14,14 +14,9 @@ import os
 import multiprocessing as mp # :)
 
 import pandas as pd
-import numpy as np
 import sqlite3
 
-# pip install pandas-datareader
-import pandas_datareader as pdr
-
 import yfinance as yf
-
 import option
 
 from typing import List, Tuple, Set
@@ -29,7 +24,8 @@ from typing import List, Tuple, Set
 # https://www.geeksforgeeks.org/python-stock-data-visualisation/
 
 # Type defs
-download_singlar_data_to_csv_func_args = List[Tuple[option.Option, str]]
+download_singlar_data_to_csv_func_arg = Tuple[option.Option, str]
+download_singlar_data_to_csv_func_args = List[download_singlar_data_to_csv_func_arg]
 
 
 def get_daily_from_yahoo(ticker: str, start_date, end_date):
@@ -44,7 +40,12 @@ def get_daily_from_yahoo(ticker: str, start_date, end_date):
     df = stock.history(period="1d", start=start_date, end=end_date)
     return df
 
-def download_singlar_data_to_csv(args: download_singlar_data_to_csv_func_args):
+def download_singlar_data_to_csv(args: download_singlar_data_to_csv_func_arg):
+    """downloads a single ticker to csv file
+
+    Args:
+        args (download_singlar_data_to_csv_func_arg): arguments to function, see type hint
+    """
 
     opt, ticker = args
 
@@ -58,17 +59,31 @@ def download_singlar_data_to_csv(args: download_singlar_data_to_csv_func_args):
     daily_df.to_csv(f"{output_dir}\\{ticker}_daily.csv")
 
 def download_data_to_csv(opt: option.Option, list_of_tickers: List[str]):
+    """Runs the function `download_singlar_data_to_csv` in parallel
+
+    Args:
+        opt (option.Option): Python object with fallback defaults or custom injected options
+        list_of_tickers (List[str]): List of Stock Ticker to call data for
+    """
 
     no_tickers = len(list_of_tickers)
     no_cpus = mp.cpu_count()
 
     function_args = list(zip([opt]*no_tickers, list_of_tickers)) # args for each parellel call (no need to create new opt objects we can use same pointer)
 
-    # run parallel jobs to download csvs faster!
+    # run parallel jobs to download CSVs faster!
     with mp.Pool(processes = no_cpus) as parallel_pool:
         parallel_pool.map(download_singlar_data_to_csv, function_args)
         
 def csv_to_table(csv_file_name: str, fields_map: Set, db_connection: sqlite3.Connection, db_table: str):
+    """Takes CSV File Data from the file system and INSERTs into Sql File
+
+    Args:
+        csv_file_name (str): name of csv file
+        fields_map (Set): Set of Table headers
+        db_connection (sqlite3.Connection): connection to sqlite db
+        db_table (str): name of table
+    """
 
     def insert_function(row: pd.Series):
         AsOfDate = row['AsOfDate']
@@ -80,6 +95,8 @@ def csv_to_table(csv_file_name: str, fields_map: Set, db_connection: sqlite3.Con
         Dividend = row['Dividend']
         StockSplits = row['StockSplits']
         Ticker = row['Ticker']
+
+        print("INSERT")
 
         cursor.execute(INSERT_ROW_QUERY, (Ticker, AsOfDate, Open, High, Low, Close, Volume, 0, Dividend))
 
@@ -109,23 +126,10 @@ def csv_to_table(csv_file_name: str, fields_map: Set, db_connection: sqlite3.Con
     # instead of looping over rows we can just use df.apply and apply an insert function along the rows
     df.apply(insert_function, axis=1)
 
-    cursor.close()
     db_connection.commit()
+    cursor.close()
+    #db close happens in caller function
 
-
-
-    '''TODO: delete from the table any old data for the ticker
-     hint: sql = f"delete from {db_table} .... ", then call execute
-     turn the dataframe into tuples
-    
-     insert data by using a insert ... values statement under executemany method
-     hint: sql = f"insert into {db_table} (Ticker, AsOfDate, ...)  VALUES (?, ?, ...) "
-     print(sql)
-
-     remember to close the db connection 
-    '''
-
-    # end TODO
 
 def save_daily_data_to_sqlite(opt, daily_file_dir, list_of_tickers):
     # read all daily.csv files from a dir and load them into sqlite table
@@ -143,6 +147,7 @@ def save_daily_data_to_sqlite(opt, daily_file_dir, list_of_tickers):
         print(file_name)
         csv_to_table(file_name, fields_map, db_conn, db_table)
 
+    #db_conn.close()
     
 def _test():
     ticker = 'MSFT'
@@ -170,6 +175,8 @@ def run():
         list_of_tickers = list(pd.read_csv(fname, header=None).iloc[:, 0])
         print(f"Read tickers from {fname}")
         
+
+    list_of_tickers = list_of_tickers[:5]
 
     print(list_of_tickers)
     print(opt.start_date, opt.end_date)

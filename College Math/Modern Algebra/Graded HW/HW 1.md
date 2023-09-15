@@ -1,3 +1,7 @@
+| Homework | Name        | TUID        |
+| -------- | ----------- | ----------- |
+| HW1      | Parth Patel | 915 805 716 | 
+
 # HW 1
 
 ## Problem 1.1
@@ -13,13 +17,11 @@ k = 3q+r \text{ where } &q, r \in \mathbb{Z} \\
 \end{align}
 $$
 
----
-
 Suppose $r = 0$ ,
 
 Since $k = 3q$ then it follows that $3|k*(k+1)*(k+2)$ since $3$ is a divisor of $k$.
 
----
+
 
 Suppose $r = 1$ ,
 
@@ -27,15 +29,12 @@ Then $k = 3q+1$ implying that $k+2 = 3q+3 = 3(q+1) = 3p$ for some $p\in\mathbb{Z
 
 Since $k+2$ can be represented as $3p$ it means $3|k+2$ and it logically follows that $3|k*(k+1)*(k+2)$
 
----
 
 Suppose $r = 2$ , 
 
 Then $k = 3q+2$ implying that $k+1 = 3q+3 = 3(q+1) = 3p$ for some $p\in\mathbb{Z}$ .
 
 Since $k+1$ can be represented as $3p$ it means $3|k+1$ and it logically follows that $3|k*(k+1)*(k+2)$
-
----
 
 Therefore $3|k*(k+1)*(k+2)$ for any $k\in\mathbb{Z}$
 

@@ -18,7 +18,7 @@ import locale
 
 
 TestCaseDictEntries = Union[Literal["loan_amount"], Literal["int_rate"], Literal["term"]]
-TestCase = Dict[TestCaseDictEntries, float | int]
+TestCase = Dict[TestCaseDictEntries, Union[float, int]]
 
 def calc_next_month_balance(prev_balance: float, level_payment: float, int_rate: float) -> float:
     """Get Next Month's Balance

@@ -81,12 +81,12 @@ def _test2():
     for (i, mortgageCalculator) in enumerate(test_cases, start=1):
         level_payment = mortgageCalculator.calc_level_payment()
         analytical_level_payment = mortgageCalculator.compute_level_payment_analytically()
-        print(f"Case {i}:")
+        print(f"Case {i}: (periods per year={MortgageCalculator.MORTGAGECALCULATOR_NUM_PERIODS})")
         print(f"\tloan_amount={locale.currency(mortgageCalculator.loan_amount, grouping=True)}")
         print(f"\tint_rate={mortgageCalculator.int_rate}")
         print(f"\tterm={mortgageCalculator.term}")
-        print(f"\tNumerical  Level Payment={locale.currency(level_payment, grouping=True)} (monthly)")
-        print(f"\tAnalytical Level Payment={locale.currency(analytical_level_payment, grouping=True)} (monthly)\n")
+        print(f"\tNumerical  Level Payment={locale.currency(level_payment, grouping=True)}")
+        print(f"\tAnalytical Level Payment={locale.currency(analytical_level_payment, grouping=True)}\n")
 
 if __name__ == "__main__":
     locale.setlocale( locale.LC_ALL, '' )

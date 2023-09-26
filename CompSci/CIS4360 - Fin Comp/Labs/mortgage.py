@@ -15,8 +15,6 @@ from bisection_method import bisection
 
 import locale
 
-
-
 TestCaseDictEntries = Union[Literal["loan_amount"], Literal["int_rate"], Literal["term"]]
 TestCase = Dict[TestCaseDictEntries, float | int]
 
@@ -81,10 +79,6 @@ def calc_level_payment(loan_amount, int_rate, mortgage_term) -> float:
     level_payment_approx, num_iter = bisection(bisection_f, x_left, x_right, 1e-6, return_x_list=False)
 
     return level_payment_approx
-
-
-
-
     
 def test1():
     loan_amount = 240000
@@ -94,8 +88,6 @@ def test1():
     print(level_payment)
     print(last_month_balance(loan_amount, int_rate, term, level_payment))
 
-
-
 def test2():
     # level_payment = loan_amount * (1+int_rate * term)/(12*term) / 2
     # print(level_payment)
@@ -103,7 +95,7 @@ def test2():
 
     test_cases: List[TestCase] = [
         {
-            "loan_amount": 240000,
+            "loan_amount": 240_000,
             "int_rate": 0.05,
             "term":  30,
         },
@@ -113,7 +105,7 @@ def test2():
             "term":  15,
         },
         {
-            "loan_amount": 5400,
+            "loan_amount": 5_400,
             "int_rate": 0.20,
             "term":  6,
         },

@@ -25,3 +25,4 @@ Thus only $1, 3, 7, 9$ are valid remainders.
 Since $p|a$ and $p|a+bc$, $p|a+bc-(a)=bc$
 
 Since $p$ is prime and divides $bc$ it must follow that $p|b$ or $p|c$ .
+

@@ -1,3 +1,4 @@
+
 '''
 @project       : Temple University CIS 4360 Computational Methods in Finance
 @Instructor    : Dr. Alex Pang
@@ -85,8 +86,8 @@ def test1():
     int_rate = 0.05
     term = 30
     level_payment = loan_amount * (1+int_rate * term)/(12*term) / 2
-    print(level_payment)
-    print(last_month_balance(loan_amount, int_rate, term, level_payment))
+    print("level_payment_guess:",level_payment)
+    print(f"last_month_balance with level_payment={locale.currency(level_payment)}:", last_month_balance(loan_amount, int_rate, term, level_payment))
 
 def test2():
     # level_payment = loan_amount * (1+int_rate * term)/(12*term) / 2
@@ -133,3 +134,4 @@ if __name__ == "__main__":
     test1()
     test2()
     run()
+    

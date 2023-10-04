@@ -20,6 +20,42 @@ For any portfolio which consists of multiple or simple financial instrument:
 
 Level Payment Amount - Amt to money to be paid per money to pay off house in 30 years. 
 
+We learned in week 3 how to find the level payment via Excel (Numerical). 
+
+### Math
+
++ $B_i$ is Balance left at month $i$
++ $P$ Principle
++ $r$ rate of interest (**CAN BE ANANUALIZED, we assume monthly**)
+
+$$
+\begin{align}
+B_{i+1} &= B_i - P \\\\
+\text{Interest Payment} &= {B_i r} \\
+P &= L - \text{Interest Payment} \\ \\ \\
+
+B_{i+1} &= B_i(1+r) - L \\\\
+
+B_1 &= B_0(1+r)-L \\
+B_2 &= [B_0(1+r)-L](1+r)-L \\
+B_3 &= [[B_0(1+r)-L](1+r)-L](1+r) - L \\
+&= B_0(1+r)^3 - L[1+(1+r)+(1+r)^2] \\ \\
+&= \vdots \\ \\
+B_n &= B_0(1+r)^n - \underbrace{L\sum_{j=0}^{n-1}(1+r)^j}_{\text{Geometric sum}} \\
+&= B_0(1+r)^n - L\biggr( \frac{(1+r)^n-1}{(1+r)-1} \biggr) 
+\implies
+\boxed{L = \frac{B_0 (1+r)^nr}{(1+r)^n-1}}
+\end{align}
+$$
+
+> In table below $r$ is a Annual Interest Rate
+
+| Month $i$ | Level Payment | Interest          | Principle           | Ending Balance |
+| --------- | ------------- | ----------------- | ------------------- | -------------- |
+| $1$       | $L$           | $B_0\frac{r}{12}$ | $L-B_0\frac{r}{12}$ | $B_1$          |
+| $2$       | $L$           | $B_1\frac{r}{12}$ | $L-B_1\frac{r}{12}$ | $B_2$          |
+
+
 
 ## Equity Market Overview
 

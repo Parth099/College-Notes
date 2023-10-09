@@ -1,4 +1,4 @@
-# Set 5
+# Set 6
 
 ## 1.3.8
 
@@ -35,3 +35,4 @@ SInce $p^n$ is a factor of $a^n$ , $p^n|a^n$ if $a^n$ .
 ## 1.3.17
 
 > Find $(a, b) = p \implies (a^2, b^2)=?$ 
+

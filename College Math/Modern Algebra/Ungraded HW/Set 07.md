@@ -1,7 +1,7 @@
 # Set 7
 ## 2.1.6
 
-> If $a= b \mod n$ and $k|n$, is it true that $a= b \mod k$? Justify your answer.
+> If $a= b \bmod n$ and $k|n$, is it true that $a= b \bmod k$? Justify your answer.
 
 Since $a= b \mod n$ , $n|a-b$ and since $k|n$ it implies that $k|a-b$.
 
@@ -10,9 +10,16 @@ Therefore $a= b \mod k$ .
 
 ## 2.1.7
 
+> If $a$ is an integer show that $a^2$ is not congruent to $2\bmod4$ or $3\bmod4$ 
+
+
+
+### 2.1.7 - Mod Solution
+
 Integers under $\mod 4$ will have one of four remainders: $0, 1, 2$ , or $3$ .
 
-When squared these remainders will move to $0$ or $1$ . Therefore $a^2 \not\equiv 2 \mod 4$ and $a^2 \not\equiv 3 \mod 4$ .
+When squared these remainders will move to $0$ or $1$ . Therefore $a^2 \not\equiv 2 \bmod 4$ and $a^2 \not\equiv 3 \bmod 4$ .
+
 
 ## 2.1.8
 
@@ -27,4 +34,4 @@ $$
 
 Now $r=1, 3$ since $r=0, 2$ means $a$ will be even. 
 
-This implies that either $a=1\mod4$ or $a=3\mod4$ .
+This implies that either $a=1\bmod4$ or $a=3\bmod4$ .

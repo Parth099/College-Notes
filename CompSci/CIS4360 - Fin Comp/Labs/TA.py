@@ -11,9 +11,6 @@ Technical Indicators
 '''
 
 import os
-import enum
-import calendar
-import math
 import pandas as pd
 import numpy as np
 import sqlite3
@@ -83,7 +80,7 @@ class ExponentialMovingAverages(object):
         
     def run(self):
         '''
-        Calculate all the expo moving averages as a dict
+        Calculate all the moving averages for all `periods`
         '''
         for period in self.periods:
             self._ema[period] = self._calc(period, price_source = 'Close')
@@ -108,21 +105,28 @@ class RSI(object):
 
     def run(self):
         '''
+        Runs the RSI calulations, needs to be called before `RSI.get_series`
         '''
 
         diff = self.ohlcv_df[RSI.PRICE_SOURCE].diff(periods=1)
         
-        gain, loss = diff.copy(), diff.copy()
-        
-        # remove datapoints we dont need
+        # copy to ensure changes dont propagate to main df
+        gain = diff.copy()
+        loss = diff.copy()
+
+        # remove datapoints we dont need for RS calc
         gain[gain < 0] = 0 
         loss[loss > 0] = 0
 
-        avg_gain = gain.ewm(self.period, min_periods = self.period).mean()
-        avg_loss = loss.ewm(self.period, min_periods = self.period).mean()
+        # perform RS counting using EMA and not SMA
+        avg_gain = gain.ewm(span=self.period, min_periods = self.period).mean()
+        avg_loss = loss.ewm(span=self.period, min_periods = self.period).mean()
 
+        # finalize calc
         rs = np.abs(avg_gain / avg_loss)
         self.rsi = 100 - (100/ (1 + rs))
+
+        # remove any nulls if required
         self.rsi = self.rsi[~np.isnan(self.rsi)]
 
 class VWAP(object):
@@ -136,6 +140,7 @@ class VWAP(object):
 
     def run(self):
         '''
+        Runs the VWAP calulations, needs to be called before `VWAP.get_series`
         '''
         # use HLC as shown by Trading view
         volume = self.ohlcv_df['Volume']

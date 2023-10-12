@@ -51,6 +51,9 @@ class Fetcher(object):
         stock = yf.Ticker(ticker)
         df = stock.history(start=start_date, end=end_date)
         print("obtained API data: ", ticker)
+
+        if df.shape[0] == 0: print(f"No data found for ticker=${ticker}")
+
         return df
 
     def download_data_to_csv(self, list_of_tickers: List[str]):
@@ -71,6 +74,13 @@ class Fetcher(object):
 
         
     def csv_to_table(self, csv_file_name: str, fields_map: Dict[str, str], db_table: str):
+        """Takes CSV File Data from the file system and INSERTs into Sql File
+
+        Args:
+            csv_file_name (str): name of csv file
+            fields_map (dict): Set of Table headers
+            db_table (str): name of table
+        """
 
         def insert_function(row: pd.Series):
             AsOfDate = row['AsOfDate']
@@ -144,6 +154,7 @@ def run():
         list_of_tickers = list(pd.read_csv(fname, header=None).iloc[:, 0])
         print(f"Read tickers from {fname}")
         
+    list_of_tickers = ['AAPL']
     print(list_of_tickers)
     print(opt.start_date, opt.end_date)
 
@@ -155,6 +166,10 @@ def run():
 
     fetcher.download_data_to_csv(list_of_tickers)
     fetcher.save_daily_data_to_sqlite(opt.output_dir, list_of_tickers)
+
+    db_connection.close()
+
+
     
 if __name__ == "__main__":
     #_test()

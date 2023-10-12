@@ -127,12 +127,8 @@ class RSI(object):
 
 class VWAP(object):
 
-    CUMSUM_COLUMN = 'Cum_Vol'
-    CUMSUM_PRICE_COLUMN = 'Cum_Vol_Price'
-    VWAP_COLUMN = 'VWAP'
-
     def __init__(self, ohlcv_df: pd.DataFrame):
-        self.ohlcv_df = ohlcv_df.copy()
+        self.ohlcv_df = ohlcv_df
         self.vwap = None
 
     def get_series(self):

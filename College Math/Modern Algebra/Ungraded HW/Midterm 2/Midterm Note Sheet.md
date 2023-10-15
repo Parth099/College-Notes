@@ -1,4 +1,12 @@
 # Midterm Note Sheet
+
+```
+define FIELDS
+define Integral Domains
+
+define when which is which
+```
+
 ## 3.1 Rings
 **DEF**
 A Ring $R$ is a non-empty set equipped with two operations: $+, \cdot$ . They satisfy these following axioms:
@@ -56,7 +64,15 @@ $$
 **UNIT**: If $\exists u \in R$ where $au=1_R=ua$ then $a$ is an unit.  
 
 **DEF**
-Integral Domain: Product of non-zero is non-zero (ex: $\mathbb{Z}, \mathbb{Z}_p$) (no zero divisors)
+Integral Domain: Product of non-zero is non-zero (ex: $\mathbb{Z}, \mathbb{Z}_p$) (no zero divisors). This implies that any product that is zero implies one of the elements involved is a zero.
 
 **DEF**
 Field: Each element $0_R \neq a \in R$ has a unit.  (ex: $\mathbb{R}$). Each field is an Integral Domain.
+Every finite Integral Domain is a field. 
+
+**List of Known c-Ring Rules**
++ $a\cdot 0 = 0$
++ $a(-b)=-ab$
++ $-(-a)=a$
++ $-(a+b)=-a+-b$
++ $(-a)(-b)=ab$

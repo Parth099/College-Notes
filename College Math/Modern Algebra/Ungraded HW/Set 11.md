@@ -27,11 +27,11 @@ $$
 $$
 \begin{align}
 (a+b)(a-b) &= a(a-b)+b(a-b) \\
-&= aa-ab+ba-bb
+&= a^2-ab+ba-b^2
 \end{align}
 $$
 
-If $R$ commutative: then $aa-bb$ is the answer
+If $R$ commutative: then $a^2-b^2$ is the answer
 
 ### b)
 $$

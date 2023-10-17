@@ -1,6 +1,6 @@
 | Homework | Name        | TUID        |
 | -------- | ----------- | ----------- |
-| HW1      | Parth Patel | 915 805 716 | 
+| HW2      | Parth Patel | 915 805 716 | 
 
 # HW 2
 ## Problem 2.1
@@ -59,7 +59,6 @@ $$
 Call this integer $t$ .
 
 Since $\exists t \in \mathbb{Z}$ such that $a|b$ .
-
 
 ## Problem 2.2
 
@@ -180,7 +179,8 @@ For every element $[e]$ in $\mathbb{Z}_n - \{[0]\}$ , $e$ can either be coprime 
 
 This means $\mathcal{U} \cup \mathcal{Z} = \mathbb{Z}_n - \{[0]\}$ , yet $\mathcal{U} \cap \mathcal{Z} = \emptyset$
 
-Therefore $\mathcal{U}, \mathcal{Z}, \{[0]\}$ make up disjoint sets of $\mathbb{Z}_n$
+Therefore $\mathbb{Z}_n$ , can be partitioned with resulting sets: $\mathcal{U}, \mathcal{Z}, \{[0]\}$ .
+
 
 ## Problem 2.4
 
@@ -238,10 +238,10 @@ $$
 [3]^1&=[3], [3]^2=[9]=[1], [3]^3=[3]\neq[0]\\
 [4]^1&=[4], [4]^2=[16]=[0]\\
 [5]^1&=[5], [5]^2=[25]=[1], [5]^3=[5]\neq[0]\\
-[6]^1&=[6], [6]^2=[36]=[4], [6]^3=[24]=[6]=[0]\\
+[6]^1&=[6], [6]^2=[36]=[4], [6]^3=[24]=[0]\\
 [7]^1&=[7], [7]^2=[49]=[1], [7]^3=[7]\neq[0]\\
 \end{align}
 $$
 
-Under $\mathbb{Z}_6$ only $[0]$ is nilpotent.
+Under $\mathbb{Z}_8$ only $[0], [2], [4], [6]$ are nilpotent.
 

@@ -205,7 +205,10 @@ $$
 If $n < 0$ then it must follow
 
 $$
-f(n) = f\biggr((-1)+\dotso+(-1)\biggr) = f(-1)+\dotso+f(-1) = (-1_R) + \dotso + (-1_R) 
+\begin{align}
+f(n) = f\biggr((-1)+\dotso+(-1)\biggr) &= f(-1) + \dotso + (-1) \\
+&= (-1_R) + \dotso + (-1_R) 
+\end{align}
 $$
 
 This shows that $f(n) = n \cdot 1_R$

@@ -78,3 +78,21 @@ Every finite Integral Domain is a field.
 + $(-a)(-b)=ab$
 
 ## 3.3 Homomorphisms and Isomorphisms 
+
+## 4.1 Polynomial Rings
+
+**T4.2** If $R$ is a Integral Domain and $f,g$ are non-zero polynomials in $R[x]$ then:
+
+$$
+\deg[f \cdot g] = \deg f + \deg g
+$$
+
+it then follows that $R$ being an ID implies $R[x]$ is as well.
+
+**T4.4** If $R$ is simply a ring then *T4.2* is:
+
+$$
+\deg[f \cdot g] \leq \deg f + \deg g
+$$
+
+**T4.5** Let $R$ be an ID with $f\in R[x]$ then $f(x)$ is a unit in $R[x]$ iff $f(x)$ is a constant polynomial in $R$ . If $R$ was a field then the units in $F[x]$ are the non-zero constants in $F$ . (last part is iffy) 

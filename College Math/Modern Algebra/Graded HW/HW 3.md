@@ -68,7 +68,7 @@ Suppose $M$ was not closed under addition and $M = \{1_R\}$ . Then $1_R \in S$ s
 Let $t_1 \in T$ such that $t_1=(r_1, s_1)$ for $r_1\in R$ and $s_1 \in S$
 Let $t_2 \in T$ such that $t_2=(r_2, s_2)$ for $r_2\in R$ and $s_2 \in S$
 
-Then we can define component operations via:
+Then we can define component operations 'addition' and 'multiplication' via:
 
 $$
 \begin{align}
@@ -93,6 +93,11 @@ $$
 
 \end{align}
 $$
+
+<br>
+<br>
+<br>
+<br>
 
 **Defining Sets**
 **Units**
@@ -126,6 +131,47 @@ N &=\ \biggr\{ t \in T\ \biggr|\ \exists n \in \mathbb{Z}_{\gt 0} : \underbrace{
 &=\ \biggr\{ (r, s) \in T\ \biggr|\ \exists n \in \mathbb{Z}_{\gt 0} : r^n = 0_R,\ s^n = 0_S  \biggr\} \\
 \end{align}
 $$
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
 
 ## Problem 3.3
 ### 3.3a
@@ -186,6 +232,20 @@ Since $f$ is both injective and surjective $f$ is bijective.
 
 $\overline{R}$ is not a subring of $T$ since $1_T = (1_R, 1_S) \not\in \overline{R}$
 
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
 ## Problem 3.4
 
 Let $R$ be any ring. 
@@ -213,4 +273,4 @@ $$
 
 This shows that $f(n) = n \cdot 1_R$
 
-Since no specific $f$ was chosen to be the ring homomorphism it must follow that this one is unique.
+Since no specific $f$ was chosen to be the ring homomorphism it must follow that it is unique.

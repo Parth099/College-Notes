@@ -105,9 +105,3 @@ Thus, $(f \circ g)$ is isomorphic.
 
 ???
 
-## 3.3.31
-
-> Let $f:R\to S$ be a homomorphism and let $T$ be a subring of $S$. 
-> $$P = \{r\in R | f(r) \in T\}$$
-> Show $P$ is subring of $R$ .
-

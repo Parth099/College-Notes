@@ -26,14 +26,6 @@ $$
 \end{align}
 $$
 
-> I am assuming multiplicative ring identities exist as the problem states $1 \neq 0$ for both rings $S$ and $R$ .
-
-$$
-\begin{align}
-
-\end{align}
-$$
-
 ### Defining-Sets
 **Units**
 $$
@@ -48,27 +40,63 @@ $$
 
 **Zero Divisors**
 
+*Preface*
+Let 
 $$
 \begin{align}
-Z &=\ \biggr\{ t \in T\setminus \{0_T\} \ \biggr|\ \exists t^{\prime} \in T \setminus \{0_T\} : t t^{\prime} = 0_T  \biggr\} \\
-&=\ \biggr\{ (r, s) \in T \setminus \{0_T\} \ \biggr|\ \exists (r^{\prime}, s^{\prime}) \in R \times S \setminus \{(0_R, 0_S)\} : (r, s)\cdot (r^{\prime}, s^{\prime}) = (0_R, 0_S)  \biggr\} \\
-&=\ \biggr\{ (r, s) \in T \setminus \{0_T\} \ \biggr|\ \exists (r^{\prime}, s^{\prime}) \in R \times S \setminus \{(0_R, 0_S)\} : (r\cdot r^{\prime}, s\cdot s^{\prime}) = (0_R, 0_S)  \biggr\} \\
-&=\ \biggr\{ (r, s) \in T \setminus \{0_T\} \ \biggr|\ \exists (r^{\prime}, s^{\prime}) \in R \times S \setminus \{(0_R, 0_S)\} : r\cdot r^{\prime} = 0_R , s\cdot s^{\prime} = 0_S \biggr\}
+X_R &= \{r \in R\ |\ \exists0_R \neq r' \in R: rr^{\prime} = 0_R\} \\
+S_R &= \{s \in S\ |\ \exists0_S \neq s' \in R: ss^{\prime} = 0_S\}
 \end{align}
 $$
 
-Define the following sets: These are the units in $R$ and $S$ respectively and they contain their neutral element $0$ too as per the set definition.
+---
+
+Let
 
 $$
 \begin{align}
-Z_r &= \{r \in R | \exists r'\in{R}\setminus\{0_R\}: rr' = 0_R\} \\
-Z_s &= \{s \in S | \exists s'\in{S}\setminus\{0_S\}: ss' = 0_S\} \\
+Z &= \{\text{all zero divisors of }T\} \\
+Z^{\prime} &= \biggr((X_R \times S) \cup (R \times X_S)\biggr)
 \end{align}
 $$
 
-Notice that $Z = Z_r \times Z_s \setminus \{(0_R, 0_S)\}$
+Consider $(r, s) \in Z^{\prime}$ . Then either $(r, s) \in (X_R \times S)$ or $(r, s) \in (R \times X_S)$
 
-> *Comment*: I do not understand why my definition of $Z$ is different from the one on the answer sheet. I did not just want to put the answer on the answer sheet because I did not understand how it was derived.  
+Suppose $(r, s) \in (X_R \times S) \setminus \{0_T\}$ ,
+
+Since $r\in X_R, \exists r^{\prime} \in X_R: rr^{\prime} = 0_R$ .
+Then fix an $s^{\prime} \in S$ to $s^{\prime} = 0_S$ . Notice that $(r, s)(r^{\prime}, s^{\prime}) = 0_T$ meaning $(r, s) \in Z$
+
+Suppose $(r, s) \in (R \times X_S) \setminus \{0_T\}$ ,
+
+Since $s\in X_S, \exists s^{\prime} \in X_S: ss^{\prime} = 0_S$ .
+Then fix an $r^{\prime} \in R$ to $r^{\prime} = 0_R$ . Notice that $(r, s)(r^{\prime}, s^{\prime}) = 0_T$ meaning $(r, s) \in Z$
+
+$$
+\therefore Z^{\prime} \subseteq Z
+$$
+
+---
+
+Let $(r, s) \in Z$, then $\exists(r^{\prime}, s^{\prime}) \in Z: (r, s)(r^{\prime}, s^{\prime}) = 0_T$ with $(r^{\prime}, s^{\prime}) \neq (0_R, 0_S)$
+
+Notice only one of $r$ and $s$ have to be a zero divisor for $(r, s)$ to a zero divisor or both can be. 
+
+Suppose $r$ is the zero divisor, then $r \in X_R$ and $s$ can be any member of $S$ since $s \cdot 0_S = 0_S$ . Therefore, $\exists r^{\prime} \in X_R: rr^{\prime} = 0_R$ . Therefore $(r, s)(r^{\prime}, 0_S) = 0_T$. Therefore if $r$ is a zero divisor $(r, s) \in (X_R \times S)$ .
+
+Suppose $s$ is the zero divisor, then $s \in X_S$ and $r$ can be any member of $R$ since $r \cdot 0_R = 0_R$ . Therefore, $\exists s^{\prime} \in X_S: ss^{\prime} = 0_S$ . Therefore $(r, s)(0_R, s^{\prime}) = 0_T$. Therefore if $s$ is a zero divisor $(r, s) \in (R \times X_S)$ .
+
+Since $(r, s)\in (X_R \times S)$ or $(r, s)\in(R \times X_S)$ : 
+
+$$
+(r, s) \in (X_R \times S) \cup (R \times X_S)
+$$
+
+$$
+\therefore Z \subseteq Z^{\prime}
+$$
+
+Since $Z^{\prime} \subseteq Z$ and $Z \subseteq Z^{\prime}$ , $\boxed{Z = Z^{\prime}}$
 
 **Nilpotent**
 

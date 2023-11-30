@@ -55,3 +55,71 @@ We know that $f(a)=0_F$ .
 Given the equivalence class of associates. If $f, g$ are associates then $f R g$ , pick $h$ a monic representative of the equivalence class of $f$ and $g$ .
 
 Since $h, f$ and $g$ only differ by a constant (as per the definition of associates) it is evident that they contain the same roots. 
+
+
+## 4.4.15
+![4.4.15](../Problems/4.4.15.png)
+
+Let $f = x^2+1 \in \mathbb{Z}_p[x]$
+
+### $\Leftarrow$
+
+Suppose there exists integers $a, b \in \mathbb{Z}_p$ such that $p=a+b$ with $ab \equiv 1 \bmod p$ .
+
+Then consider $(ax+1)(bx+1)$
+
+$$
+\begin{align}
+(ax+1)(bx+1) &= abx^2+(a+b)x+1 \\
+&= x^2+1
+\end{align}
+$$
+
+Since there exists a factorization where each factor is non-constant and a lower degree than $f$ it is reducible.
+
+### $\Rightarrow$
+
+Suppose $x^2+1$ is reducible under $\mathbb{Z}_p[x]$ then it follows there exists a factorization $(ax+c)(bx+d)$ since $\deg f = 2$ .
+
+$$
+(ax+c)(bx+d) = abx^2 + (ad+bc)x + cd
+$$
+
+It follows that $cd=1$ implying $c=d=1$
+
+Thus it is required that $ab=[1]_p$ and $a+b=[0]_p$
+
+## 4.4.19
+![4.4.19](../Problems/4.4.19.png)
+
+
+### a)
+
+#### $\Rightarrow$
+Suppose $f$ has a multiple root at $a$ with multiplicity $k\geq 2$ . Then $f$ looks like:
+
+$$
+f = (x-a)^k q(x) + \underbrace{r(x)}_{0_F}
+$$
+
+This means that $f^\prime$ looks like:
+
+$$
+(x-a)^kq^{\prime}(x) + k(x-a)^{k-1}q(x)
+$$
+
+Notice that $f'(a)=0$
+
+#### $\Leftarrow$
+
+Suppose both $f, f^\prime$ have a root at $a$
+
+Since $f^\prime$ has a root at $a$ it looks like:
+
+$$
+f^\prime = (x-a)^kq(x)
+$$
+
+for $k\geq 1$
+
+...

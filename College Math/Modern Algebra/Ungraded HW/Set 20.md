@@ -31,7 +31,7 @@ Since we are dividing by $x-a$ we know that either $\deg{r} = 0$ or $r = 0_F$ . 
 Notice then that 
 
 $$
-f(a) = \underbrace{a-a}_{0}q(a) + \overbrace{r(a)}^{r} = r
+f(a) = \underbrace{(a-a)}_{0}q(a) + \overbrace{r(a)}^{r} = r
 $$
 
 Thus, $(1)^{10}+(1)^8 = 2$ which is also the remainder. 

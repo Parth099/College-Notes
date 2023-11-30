@@ -1,98 +1,86 @@
 # Midterm Note Sheet
 
-```
-define FIELDS
-define Integral Domains
+## Terms
++ **Field** - $\forall 0_R\neq b\in R: \exists b^{-1} \in R$
++ **Integral Domain** - Non zero commutative ring where for any ***non-zero*** $a, b \in R: a\cdot b \neq 0_R$
+	+ Implies no zero divisors
+	+ "cancellable" multiplication under non-zero conditions
+	+ ***T:*** Each *finite* ID is a **Field**.
++ **monomorphism** - injective (*1\:1*) homomorphism
++ **epimorphism** - surjective (*onto*) homomorphism
++ **Ring Unit** - An element in the ring where its multiplicative inverse also exists in the ring.
 
-define when which is which
-```
-
-## 3.1 Rings
-**DEF**
-A Ring $R$ is a non-empty set equipped with two operations: $+, \cdot$ . They satisfy these following axioms:
-
-For $a, b, c \in R:$
-
-$$
-\begin{align}
-a \in R \text{ and } b \in R &\implies a+b \in R \text{ and } ab \in R \\
-a+(b+c) &= (a+b)+c \\
-a+b &= b+a \\
-\exists 0_R \in R&: a+0_R=a \\
-\forall a\in R, &\exists x\in R: a+x=0_R \\
-a(bc) &= a(bc) \\
-a\cdot(b+c) &= ab+ac
-\end{align}
-$$
-
-+ A ***commutative ring*** is a ring where $ab=ba$
-+ A ring with an *identity* is a ring $R$ where $\exists 1_R \in R: a\cdot1_R = a = 1_R a$
-
-**T3.2**
-Let $R$ be a ring and $S \subseteq R$ such that
-
-For $a, b \in S$
+**Multiplying Polynomials**
 
 $$
-\begin{align}
-a, b \in S &\implies a+b\in S \\
-a, b \in S &\implies a\cdot b\in S \\
-&0_R \in S \\
-\forall a \in S,  &\exists x\in S : a+x=0_R
-\end{align}
+fg = \sum_{i\geq 0}\biggr[ \sum_{j,k\geq 0;\ j+k=i} a_jb_k \biggr]x_i
 $$
 
-then $S$ is a subring of $R$ .
+## Core Topics
+### Subrings
 
-## 3.2 Properties of Rings
-**T3.3**: For any $a\in R$ the solution $x$ for $a+x=0_R$ is unique. 
-**T3.4**: $a+b=a+c \implies b=c$
-**T3.6**:
+To show that $S$ is a subring of $R$ you need to ensure
 
-Let $R$ be a ring and $S \subseteq R$ such that $S\neq \emptyset$ .
+1. $S \neq \emptyset$
+2. $S \subseteq R$
+3. $0_R \in S$ and $1_R \in S$
+4. $S$ is **closed** under *subtraction* and *multiplication*
 
-If:
-1. $S$ is closed under subtraction
-2. $S$ is closed under multiplication
-3. $1_R \in S$   
 
-$$
-\implies S \text{ subring of } R
-$$
+Note about Homomorphism of rings: Let $f: R\to S$ be a homomorphism of rings. Then $\text{im} f$ is a subring of $S$ .
 
-**DEF**
-**UNIT**: If $\exists u \in R$ where $au=1_R=ua$ then $a$ is an unit.  
+### Ring Homomorphisms
 
-**DEF**
-Integral Domain: Product of non-zero is non-zero (ex: $\mathbb{Z}, \mathbb{Z}_p$) (no zero divisors). This implies that any product that is zero implies one of the elements involved is a zero.
+Let $R$ and $S$ be rings. Then a function $f: R\to S$ is a homomorphism if:
 
-**DEF**
-Field: Each element $0_R \neq a \in R$ has a unit.  (ex: $\mathbb{R}$). Each field is an Integral Domain.
-Every finite Integral Domain is a field. 
+1. $f(1_R) = 1_S$
+2. $f(a+b)=f(a)+f(b)$
+3. $f(ab) = f(a)f(b)$
 
-**List of Known c-Ring Rules**
-+ $a\cdot 0 = 0$
-+ $a(-b)=-ab$
-+ $-(-a)=a$
-+ $-(a+b)=-a+-b$
-+ $(-a)(-b)=ab$
+for any $a, b \in R$
 
-## 3.3 Homomorphisms and Isomorphisms 
+### Associates in Rings
 
-## 4.1 Polynomial Rings
+#### Preface 
 
-**T4.2** If $R$ is a Integral Domain and $f,g$ are non-zero polynomials in $R[x]$ then:
+1. $aR=auR$ for $u$ a unit.
+2. $b|a \iff bv|au$ where $v, u \in R$ units.
 
-$$
-\deg[f \cdot g] = \deg f + \deg g
-$$
+--- 
 
-it then follows that $R$ being an ID implies $R[x]$ is as well.
+> Association is a *equivalence relation*.
 
-**T4.4** If $R$ is simply a ring then *T4.2* is:
+Elements $r$ and $s$ in $R$ are associates if there exists a unit $u$ such that $$r=us$$ 
 
-$$
-\deg[f \cdot g] \leq \deg f + \deg g
-$$
+### Irreducibility
 
-**T4.5** Let $R$ be an ID with $f\in R[x]$ then $f(x)$ is a unit in $R[x]$ iff $f(x)$ is a constant polynomial in $R$ . If $R$ was a field then the units in $F[x]$ are the non-zero constants in $F$ . (last part is iffy) 
+
+#### General Rings
+Let $R$ be an integral domain (ID). 
+
+***T:*** An element $r \in R$ is called irreducible if $r \neq 0$ and $r \not \in R^{\times}$ and $r$ only has the trivial divisors. 
+
+Notice by the above definition the trivial divisors are associates of $1$ and $r$ :
+
++ All $1_Ru$ for $u\in R^\times$
++ All $ru$ for $u\in R^\times$
+
+
+***T:*** $r \in R$ is irreducible if
++ $r \neq 0_R,\, r\not\in R^\times$
++ Whenever $r=ab$ (factored) one of $a$ or $b$ is a unit.
+ 
+#### Polynomial Rings
+
+The following is equivalent to saying $0 \neq f\in F[x]$ is irreducible. 
+
+**IMPORTANT**: $f$ is required to be non-constant
+
+1. The only monic divisors are $1_F$ and $\tilde{f}$ 
+2. For all factorizations $f=ab$ , either $a$ or $b$ is a constant (units: $F^\times$ )
+3. $f$ cannot be factored into two other polynomials with both lower degree
+4. For any $a\in F[x]$, $f\nmid a \implies (a, f)=1$
+5. $f|ab \implies f|a \text{ or } f|b$  
+
+
+
